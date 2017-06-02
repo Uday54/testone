@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_GWk2MMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"
+    xmlns:_GXn_EMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"
+    xmlns:_GexwQsT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GexwQsT2EeGIlOhhn7SrtQ"
+    xmlns:_y2GbsChgEeOjHu3a6otf0Q="http://www.ibm.com/xtools/bpmn/2.0/_y2GbsChgEeOjHu3a6otf0Q"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_y2GbsChgEeOjHu3a6otf0Q" name="Verify Invoice" expressionLanguage="http://www.w3.org/1999/XPath"
+    targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_y2GbsChgEeOjHu3a6otf0Q" typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_y2GbsyhgEeOjHu3a6otf0Q"
+      visible="true" type="Bpmn2" element="_y2GbsihgEeOjHu3a6otf0Q" name="Verify%20Invoice Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_zTPDsihgEeOjHu3a6otf0Q" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_z6IEiChgEeOjHu3a6otf0Q" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Service%20Processes/Financial%20Transaction%20Processing/IPaymentProcessing/Verify%20Payment%20Amount%20Service.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_GexwQsT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_z6IrkChgEeOjHu3a6otf0Q" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:extension xmi:id="_y2GbsShgEeOjHu3a6otf0Q" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_y2KtIihgEeOjHu3a6otf0Q" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_OwfbciiMEeO1PvbDA98QvA" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_y2GbsihgEeOjHu3a6otf0Q" name="Verify Invoice">
+    <bpmn2:documentation id="_y2LUMChgEeOjHu3a6otf0Q">SHORT NAME: Vrfy Invc&#xD;
+&#xD;
+B LEVEL ROOT: Verify Invoice&#xD;
+&#xD;
+DEFINITION: To check or determine the completeness and appropriateness of an invoice instruction.&#xD;
+&#xD;
+DESCRIPTION: This activity string encompasses the activities necessary to verify the details of an Invoice Instruction. &#xD;
+&#xD;
+This includes identifying and verifying the involved party, retrieving the customer invoice profile and identifying what services they have subscribed to. In addition, previous batch details may be retrieved. The following verifications should be undertaken:&#xD;
+&#xD;
+Verify Batch Details (if subscribed to)&#xD;
+Verify Payment Date Details (if subscribed to)&#xD;
+Verify Payment Amount (if subscribed to)&#xD;
+Verify Receiver Details (if subscribed to)&#xD;
+&#xD;
+FLOW DIAGRAM: UC: Verify Invoice</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_y2KtIChgEeOjHu3a6otf0Q">
+      <tagging:tag id="_y2KtIShgEeOjHu3a6otf0Q">Arrangement Reporting</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_y2LUMShgEeOjHu3a6otf0Q">
+      <bpmn2:dataInput id="_0Ys24yhgEeOjHu3a6otf0Q" name="Invoice Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj4ysT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_y2LUMihgEeOjHu3a6otf0Q">
+        <bpmn2:dataInputRefs>_0Ys24yhgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_zTPDsShgEeOjHu3a6otf0Q" name="Enterprise Process" partitionElementRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_zTPDsyhgEeOjHu3a6otf0Q">The default role for all enterprise process activities not explicitly assigned to other roles.</bpmn2:documentation>
+      <bpmn2:flowElementRef>_z6IEgChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z6IEhihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z6IrmChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z6IrmihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z6IrnihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z6JSoShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z6JSoyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z6JSpyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z6JSrShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0JNCWShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0JNCWihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0JNCWyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0LpSUChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0LpSUyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0LpSVihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0LpSWShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0LpSXChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0P3D-yhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0P3D_ChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0P3D_ihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0P3D_yhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0P3EAShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0P3EAihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0P3EAyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0P3EBChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0P3EBShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0P3EBihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0Ys24ShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0Ys24ihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HxkSx0IZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_IOxzP0IZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_z6IEgChgEeOjHu3a6otf0Q" name="Verify Date Time Details"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_kNNfsyhgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_z6IEgShgEeOjHu3a6otf0Q">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_OwfbcSiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_z6IEgihgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_0e6zoyhgEeOjHu3a6otf0Q" name="Invoice Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj4ysT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_0e6zpChgEeOjHu3a6otf0Q" name="Invoice Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj4ysT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_z6IEgyhgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_0e6zoyhgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_z6IEhChgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_0e6zpChgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_0kugvihgEeOjHu3a6otf0Q" name="Invoice Details">
+        <bpmn2:sourceRef>_y2GbsChgEeOjHu3a6otf0Q:_0Ys24yhgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y2GbsChgEeOjHu3a6otf0Q:_0e6zoyhgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_0kugvyhgEeOjHu3a6otf0Q" name="Invoice Details">
+        <bpmn2:sourceRef>_y2GbsChgEeOjHu3a6otf0Q:_0e6zpChgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y2GbsChgEeOjHu3a6otf0Q:_0Ys24ShgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_z6IEhShgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_z6IEhihgEeOjHu3a6otf0Q" name="Verify Payment Amount"
+        isForCompensation="false" calledElement="_GexwQsT2EeGIlOhhn7SrtQ:_GexwRMT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_z6IEhyhgEeOjHu3a6otf0Q">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_OwgpkCiMEeO1PvbDA98QvA">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_z6IEiShgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_z6IEjChgEeOjHu3a6otf0Q" name="Payment Instruction" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj4x8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_z6IrkShgEeOjHu3a6otf0Q" name="Payment Amount Details Complete"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GdIxMMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_z6IEiihgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_z6IEjChgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_z6IEiyhgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_z6IrkShgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_z6IroChgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_y2GbsChgEeOjHu3a6otf0Q:_z6IrnihgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y2GbsChgEeOjHu3a6otf0Q:_z6IEjChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_z6JSqChgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_y2GbsChgEeOjHu3a6otf0Q:_z6IrkShgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y2GbsChgEeOjHu3a6otf0Q:_z6JSpyhgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_z6JSrChgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_z6IrmChgEeOjHu3a6otf0Q" name="Map to Verify Payment Amount"
+        isForCompensation="false" calledElement="_y2GbsChgEeOjHu3a6otf0Q:_z6IrkihgEeOjHu3a6otf0Q">
+      <bpmn2:extensionElements xmi:id="_OwgpkSiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_z6IrmyhgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_0e6zpShgEeOjHu3a6otf0Q" name="Invoice Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj4ysT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_z6IrnShgEeOjHu3a6otf0Q" name="Payment Instruction"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj4x8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_z6JSqihgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_0e6zpShgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_z6IrnChgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_z6IrnShgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_0kugwChgEeOjHu3a6otf0Q" name="Invoice Details">
+        <bpmn2:sourceRef>_y2GbsChgEeOjHu3a6otf0Q:_0Ys24ShgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y2GbsChgEeOjHu3a6otf0Q:_0e6zpShgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_z6IrnyhgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_y2GbsChgEeOjHu3a6otf0Q:_z6IrnShgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y2GbsChgEeOjHu3a6otf0Q:_z6IrnihgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_z6IrmShgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_z6IrmihgEeOjHu3a6otf0Q" sourceRef="_z6IrmChgEeOjHu3a6otf0Q"
+        targetRef="_z6IEhihgEeOjHu3a6otf0Q"/>
+    <bpmn2:dataObject id="_z6IrnihgEeOjHu3a6otf0Q" name="Payment Instruction" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj4x8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_z6JSoShgEeOjHu3a6otf0Q" name="Map from Verify Payment Amount"
+        isForCompensation="false" calledElement="_y2GbsChgEeOjHu3a6otf0Q:_z6IroShgEeOjHu3a6otf0Q">
+      <bpmn2:extensionElements xmi:id="_OwgpkiiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_z6JSpChgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_z6JSpihgEeOjHu3a6otf0Q" name="Payment Amount Details Complete"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GdIxMMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_0e6zpihgEeOjHu3a6otf0Q" name="Invoice Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj4ysT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_z6JSpShgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_z6JSpihgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_z6JSqyhgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_0e6zpihgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_z6JSqShgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_y2GbsChgEeOjHu3a6otf0Q:_z6JSpyhgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y2GbsChgEeOjHu3a6otf0Q:_z6JSpihgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_0kugwShgEeOjHu3a6otf0Q" name="Invoice Details">
+        <bpmn2:sourceRef>_y2GbsChgEeOjHu3a6otf0Q:_0e6zpihgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y2GbsChgEeOjHu3a6otf0Q:_0Ys24ihgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_z6JSoihgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_z6JSoyhgEeOjHu3a6otf0Q" sourceRef="_z6IEhihgEeOjHu3a6otf0Q"
+        targetRef="_z6JSoShgEeOjHu3a6otf0Q"/>
+    <bpmn2:dataObject id="_z6JSpyhgEeOjHu3a6otf0Q" name="Payment Amount Details Complete"
+        isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GdIxMMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_z6JSrShgEeOjHu3a6otf0Q" name="Verify Receiver Details"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_kNM4oChgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_z6JSrihgEeOjHu3a6otf0Q">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_OwgpkyiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_z6JSryhgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_0e7asChgEeOjHu3a6otf0Q" name="Invoice Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj4ysT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_z6JSsChgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_0e7asChgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_0kugwihgEeOjHu3a6otf0Q" name="Invoice Details">
+        <bpmn2:sourceRef>_y2GbsChgEeOjHu3a6otf0Q:_0Ys24ihgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y2GbsChgEeOjHu3a6otf0Q:_0e7asChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_z6JSsShgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:exclusiveGateway id="_0JNCWShgEeOjHu3a6otf0Q"/>
+    <bpmn2:exclusiveGateway id="_0JNCWihgEeOjHu3a6otf0Q"/>
+    <bpmn2:exclusiveGateway id="_0JNCWyhgEeOjHu3a6otf0Q"/>
+    <bpmn2:startEvent id="_0LpSUChgEeOjHu3a6otf0Q" name="Start">
+      <bpmn2:messageEventDefinition id="_0LpSUShgEeOjHu3a6otf0Q" name="Invoice Details Identified">
+        <bpmn2:documentation id="_0LpSUihgEeOjHu3a6otf0Q">FULL NAME: Identification Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A decision has been made to regard a person or thing as being a specific instance,  based on available evidence.&#xD;
+&#xD;
+EXAMPLES OF USE: A customer has been identified after comparing their signature with a specimen on file.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="_0LpSUyhgEeOjHu3a6otf0Q" name="End">
+      <bpmn2:messageEventDefinition id="_0LpSVChgEeOjHu3a6otf0Q" name="Payment Amount Not Verified">
+        <bpmn2:documentation id="_0LpSVShgEeOjHu3a6otf0Q">FULL NAME: Acceptance Not Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to not accept a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has not accepted the obligation of paying a cheque when it has refused to certify or endorse the cheque for negotiation. The payment of a Bill of Exchange has not been guaranteed when a Banker's Acceptance is not given.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_0LpSVihgEeOjHu3a6otf0Q" name="End:1">
+      <bpmn2:messageEventDefinition id="_0LpSVyhgEeOjHu3a6otf0Q" name="Receiver Details Not Verified">
+        <bpmn2:documentation id="_0LpSWChgEeOjHu3a6otf0Q">FULL NAME: Acceptance Not Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to not accept a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has not accepted the obligation of paying a cheque when it has refused to certify or endorse the cheque for negotiation. The payment of a Bill of Exchange has not been guaranteed when a Banker's Acceptance is not given.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_0LpSWShgEeOjHu3a6otf0Q" name="End:2">
+      <bpmn2:messageEventDefinition id="_0LpSWihgEeOjHu3a6otf0Q" name="Receiver Details Verified">
+        <bpmn2:documentation id="_0LpSWyhgEeOjHu3a6otf0Q">FULL NAME: Acceptance Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to accept a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has accepted the obligation of paying a cheque when it certifies or endorses the cheque for negotiation. The payment of a Bill of Exchange is guaranteed when a Banker's Acceptance has been given or negotiated.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_0LpSXChgEeOjHu3a6otf0Q" name="End:3">
+      <bpmn2:messageEventDefinition id="_0LpSXShgEeOjHu3a6otf0Q" name="Date Details Not Verified">
+        <bpmn2:documentation id="_0LpSXihgEeOjHu3a6otf0Q">FULL NAME: Acceptance Not Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to not accept a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has not accepted the obligation of paying a cheque when it has refused to certify or endorse the cheque for negotiation. The payment of a Bill of Exchange has not been guaranteed when a Banker's Acceptance is not given.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="_0P3D-yhgEeOjHu3a6otf0Q" sourceRef="_z6IEgChgEeOjHu3a6otf0Q"
+        targetRef="_0JNCWShgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0P3D_ChgEeOjHu3a6otf0Q" name="Payment Date Details Verified"
+        sourceRef="_0JNCWShgEeOjHu3a6otf0Q" targetRef="_z6IrmChgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_0P3D_ShgEeOjHu3a6otf0Q">FULL NAME: Confirmation Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to endorse a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: Susan Brown's promotion to acting supervisor has been confirmed, and she will now retain the post permanently.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_0P3D_ihgEeOjHu3a6otf0Q" sourceRef="_z6JSoShgEeOjHu3a6otf0Q"
+        targetRef="_0JNCWihgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0P3D_yhgEeOjHu3a6otf0Q" name="Payment Amount Verified"
+        sourceRef="_0JNCWihgEeOjHu3a6otf0Q" targetRef="_z6JSrShgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_0P3EAChgEeOjHu3a6otf0Q">FULL NAME: Confirmation Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to endorse a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: Susan Brown's promotion to acting supervisor has been confirmed, and she will now retain the post permanently.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_0P3EAShgEeOjHu3a6otf0Q" sourceRef="_z6JSrShgEeOjHu3a6otf0Q"
+        targetRef="_0JNCWyhgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0P3EAihgEeOjHu3a6otf0Q" name="Invoice Details Identified"
+        sourceRef="_0LpSUChgEeOjHu3a6otf0Q" targetRef="_z6IEgChgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0P3EAyhgEeOjHu3a6otf0Q" name="Payment Amount Not Verified"
+        sourceRef="_0JNCWihgEeOjHu3a6otf0Q" targetRef="_0LpSUyhgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0P3EBChgEeOjHu3a6otf0Q" name="Receiver Details Not Verified"
+        sourceRef="_0JNCWyhgEeOjHu3a6otf0Q" targetRef="_0LpSVihgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0P3EBShgEeOjHu3a6otf0Q" name="Receiver Details Verified"
+        sourceRef="_0JNCWyhgEeOjHu3a6otf0Q" targetRef="_0LpSWShgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0P3EBihgEeOjHu3a6otf0Q" name="Date Details Not Verified"
+        sourceRef="_0JNCWShgEeOjHu3a6otf0Q" targetRef="_0LpSXChgEeOjHu3a6otf0Q"/>
+    <bpmn2:dataObject id="_0Ys24ShgEeOjHu3a6otf0Q" name="Invoice Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj4ysT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_0Ys24ihgEeOjHu3a6otf0Q" name="Invoice Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj4ysT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:startEvent id="_HxkSx0IZEeSedtiJ0SK07w" name="Start:1"/>
+    <bpmn2:sequenceFlow id="_IOxzP0IZEeSedtiJ0SK07w" name="Invoked By Business Process"
+        sourceRef="_HxkSx0IZEeSedtiJ0SK07w" targetRef="_z6IEgChgEeOjHu3a6otf0Q"/>
+  </bpmn2:process>
+  <bpmn2:globalTask id="_z6IrkihgEeOjHu3a6otf0Q" name="Map to Verify Payment Amount">
+    <bpmn2:ioSpecification id="_z6IrkyhgEeOjHu3a6otf0Q">
+      <bpmn2:dataInput id="_z6IrlihgEeOjHu3a6otf0Q" name="Invoice Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj4ysT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_z6IrlyhgEeOjHu3a6otf0Q" name="Payment Instruction" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj4x8T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_z6IrlChgEeOjHu3a6otf0Q">
+        <bpmn2:dataInputRefs>_z6IrlihgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_z6IrlShgEeOjHu3a6otf0Q">
+        <bpmn2:dataOutputRefs>_z6IrlyhgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_z6IroShgEeOjHu3a6otf0Q" name="Map from Verify Payment Amount">
+    <bpmn2:ioSpecification id="_z6IroihgEeOjHu3a6otf0Q">
+      <bpmn2:dataInput id="_z6IrpShgEeOjHu3a6otf0Q" name="Payment Amount Details Complete"
+          isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GdIxMMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_z6JSoChgEeOjHu3a6otf0Q" name="Invoice Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj4ysT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_z6IroyhgEeOjHu3a6otf0Q">
+        <bpmn2:dataInputRefs>_z6IrpShgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_z6IrpChgEeOjHu3a6otf0Q">
+        <bpmn2:dataOutputRefs>_z6JSoChgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+</bpmn2:definitions>

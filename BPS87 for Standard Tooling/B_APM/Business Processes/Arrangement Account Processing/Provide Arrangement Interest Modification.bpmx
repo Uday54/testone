@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_UfkbkLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"
+    xmlns:_UhWkQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"
+    xmlns:_UhqGQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UhqGQLxuEeGCw9HgBpY34g"
+    xmlns:_VHf-QLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_VHf-QLxuEeGCw9HgBpY34g"
+    xmlns:_VHzgWrxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_VHzgWrxuEeGCw9HgBpY34g"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_VHzgWrxuEeGCw9HgBpY34g" name="Provide Arrangement Interest Modification"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_VHzgWrxuEeGCw9HgBpY34g"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_VHzgXbxuEeGCw9HgBpY34g"
+      visible="true" type="Bpmn2" element="_VHzgXLxuEeGCw9HgBpY34g" name="Provide Arrangement Interest Modification Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_VIjHIrxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_VIjHQrxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_zJTlHbxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="Modify%20Arrangement%20Interest%20Details.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_VHf-QLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_zJTlH7xuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Maps.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UhqGQLxuEeGCw9HgBpY34g"/>
+  <bpmn2:extension xmi:id="_VHzgW7xuEeGCw9HgBpY34g" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_qQj-shwqEeOMUpRtwvEXUw" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_GRS5cfxiEeOPPNUUqxVo0g" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_VHzgXLxuEeGCw9HgBpY34g" name="Provide Arrangement Interest Modification">
+    <bpmn2:documentation id="_VIjHILxuEeGCw9HgBpY34g">SHORT NAME: Prvd AR Intrst Mdfctn&#xD;
+&#xD;
+B LEVEL ROOT: Provide * Details&#xD;
+&#xD;
+DEFINITION: To put an interest modification at the disposal of someone or supply an interest modification.&#xD;
+&#xD;
+DESCRIPTION: This workflow encompasses the activities necessary for the financial institution to modify the interest details for an arrangement to support the subsequent adjustment of either accrued or capitalized interest for that arrangement. If the arrangement interest details have been inaccurately recorded for an arrangement, then any interest calculations for that arrangement will be incorrect. Arrangement interest details correspond to the various parameters which are used in the calculation of interest. These include the interest date specified on an accounting entry, the interest price group specified for the arrangement, interest rate types, base rates, interest margins, amount intervals, whether the amount intervals are stepped or tiered and interest accrual limits. Correction of these details will enable interest to be recalculated and adjusted, and will also ensure correct calculation of interest in the future. This workflow begins after the receipt of an interest adjustment request, or after an interest calculation error has been detected for an arrangement. It handles the analysis of the arrangement details, the verification that an interest adjustment is required and the modification of the arrangement interest details. This workflow ends with the approval of the arrangement modification, or with a request to rework the arrangement modification which was made, or with the sending of a communication, either to a customer or internally within the bank, in the case where an interest adjustment is not required. &#xD;
+&#xD;
+This workflow excludes the recalculation and adjustment of interest. This is handled in the workflow 'Provide Interest Accrual'.&#xD;
+&#xD;
+FLOW DIAGRAM: WF Chart for Provide Arrangement Inst Modfn&#xD;
+&#xD;
+IBM Unique ID: CBPC2172</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_qQj-sBwqEeOMUpRtwvEXUw">
+      <tagging:tag xmi:id="_GRHTQPxiEeOPPNUUqxVo0g" id="_qQj-sRwqEeOMUpRtwvEXUw">Arrangement Account Processing</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_VIjHP7xuEeGCw9HgBpY34g">
+      <bpmn2:dataInput id="_VIjHQbxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+          itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+      <bpmn2:dataOutput id="_VIjHR7xuEeGCw9HgBpY34g" name="Communication Details"
+          isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+      <bpmn2:inputSet id="_VIjHQLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInputRefs>_VIjHQbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_VIjHRrxuEeGCw9HgBpY34g">
+        <bpmn2:dataOutputRefs>_VIjHR7xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_VIjHIbxuEeGCw9HgBpY34g" name="Enterprise Process" partitionElementRef="_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_VIjHI7xuEeGCw9HgBpY34g">The default role for all enterprise process activities not explicitly assigned to other roles.&#xD;
+&#xD;
+IBM Unique ID: CBPC04225</bpmn2:documentation>
+      <bpmn2:flowElementRef>_VIjHJLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VIjHJ7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VIjHKrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VIjHLbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VIjHLrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VIjHMbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VIjHNLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VIjHNbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VIjHOLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VIjHObxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VIjHOrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VIjHO7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VIjHPLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VIjHPbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VIjHPrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VIjHQ7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ea9GrrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ea9Gr7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ea9GvbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ea9GvrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ea9GwLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ebQBkrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ebQBlLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ebQBlbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ebQBl7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ebQBorxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ebZym7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ebZynrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ebZyobxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ebZypLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ebZyp7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ebZyqrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ebZyrrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ebZysLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ebi8g7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_b1B90EIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_b1B900IVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_VIjHJLxuEeGCw9HgBpY34g" name="Modify Arrangement Interest Details"
+        isForCompensation="false" calledElement="_VHf-QLxuEeGCw9HgBpY34g:_VHf-QrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_VIjHJrxuEeGCw9HgBpY34g">Modify the Arrangement interest details so that they are correctly specified for the Arrangement.  Details which may require adjustment include the interest price group specified for the arrangement, interest rate types, base rates, interest margins, amount intervals, whether the amount intervals are stepped or tiered, interest accrual limits and the interest bearing date specified for accounting entries.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_GRS5cPxiEeOPPNUUqxVo0g">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ea9GubxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_ea9Gu7xuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_ebQBmbxuEeGCw9HgBpY34g" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_ea9GurxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_ea9Gu7xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ebQBmLxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_ebQBmbxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_b1B90kIVEeSFpMLLUsMfuA" name="Arrangement Details">
+        <bpmn2:sourceRef>_VHzgWrxuEeGCw9HgBpY34g:_b1B90EIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VHzgWrxuEeGCw9HgBpY34g:_ea9Gu7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_ebQBmrxuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_VHzgWrxuEeGCw9HgBpY34g:_ebQBmbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VHzgWrxuEeGCw9HgBpY34g:_ebQBl7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_VIjHJbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_VIjHJ7xuEeGCw9HgBpY34g" name="Request AR Interest Modification Rework"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_VHzgVrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_VIjHKbxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_GRS5cvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ebZykrxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_ebZylLxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_ebZyk7xuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_ebZylLxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_ebZylbxuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_VHzgWrxuEeGCw9HgBpY34g:_ebQBorxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VHzgWrxuEeGCw9HgBpY34g:_ebZylLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_VIjHKLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_VIjHKrxuEeGCw9HgBpY34g" name="Verify Interest Miscalculation"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_VHzgWLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_VIjHLLxuEeGCw9HgBpY34g">If a miscalculation has occurred and an interest adjustment is required for the Arrangement, then an interest miscalculation is verified.  Otherwise, an interest miscalculation is not verified.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_GRS5c_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ea9GsrxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_ebGQkbxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_ea9GtLxuEeGCw9HgBpY34g" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_ebGQkLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_ebGQkbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ea9Gs7xuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_ea9GtLxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_ebGQkrxuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_VHzgWrxuEeGCw9HgBpY34g:_ea9GwLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VHzgWrxuEeGCw9HgBpY34g:_ebGQkbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_b1B90UIVEeSFpMLLUsMfuA" name="Arrangement Details">
+        <bpmn2:sourceRef>_VHzgWrxuEeGCw9HgBpY34g:_ea9GtLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VHzgWrxuEeGCw9HgBpY34g:_b1B90EIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_b1B91EIVEeSFpMLLUsMfuA" name="Arrangement Details">
+        <bpmn2:sourceRef>_VHzgWrxuEeGCw9HgBpY34g:_ea9GtLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VHzgWrxuEeGCw9HgBpY34g:_b1B900IVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_VIjHK7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:exclusiveGateway id="_VIjHLbxuEeGCw9HgBpY34g"/>
+    <bpmn2:callActivity id="_VIjHLrxuEeGCw9HgBpY34g" name="Generate Communication Details"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_a4E8UBwrEeOMUpRtwvEXUw">
+      <bpmn2:documentation id="_VIjHMLxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_GRS5dPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ebZytbxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_ebZyt7xuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_OgjwkBwsEeOMUpRtwvEXUw" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_ebi8hrxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_ebZytrxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_ebZyt7xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_OgjwkBwsEeOMUpRtwvEXUw</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ebi8hbxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_ebi8hrxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_ebZyuLxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_VHzgWrxuEeGCw9HgBpY34g:_ebZysLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VHzgWrxuEeGCw9HgBpY34g:_ebZyt7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_ebi8h7xuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_VHzgWrxuEeGCw9HgBpY34g:_ebi8hrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VHzgWrxuEeGCw9HgBpY34g:_VIjHR7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_VIjHL7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_VIjHMbxuEeGCw9HgBpY34g" name="Analyze Arrangement Details"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_VBsRTbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_VIjHM7xuEeGCw9HgBpY34g">Analyze the Arrangement interest details in order to provide the basis for determining whether or not an interest adjustment is required.  Examine the arrangement interest details and verify whether or not they have been correctly specified.  These details include the interest price group specified for the arrangement, interest rate types, base rates, interest margins, amount intervals, whether the amount intervals are stepped or tiered and interest accrual limits.  Analyze the transaction history for the arrangement to establish whether or not the interest date has been correctly specified for all accounting entries in the specified period.  If any aspect of the interest details are incorrect for the arrangement, then record the corrective action required .</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_GRS5dfxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ea9GwbxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_ebZyrLxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_ea9Gw7xuEeGCw9HgBpY34g" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_ebZyq7xuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_ebZyrLxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ea9GwrxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_ea9Gw7xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_ebZyrbxuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_VHzgWrxuEeGCw9HgBpY34g:_VIjHQbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VHzgWrxuEeGCw9HgBpY34g:_ebZyrLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_ea9GxLxuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_VHzgWrxuEeGCw9HgBpY34g:_ea9Gw7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VHzgWrxuEeGCw9HgBpY34g:_ea9GwLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_VIjHMrxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:exclusiveGateway id="_VIjHNLxuEeGCw9HgBpY34g"/>
+    <bpmn2:callActivity id="_VIjHNbxuEeGCw9HgBpY34g" name="Approve Arrangement Interest Modification"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_VHzgVLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_VIjHN7xuEeGCw9HgBpY34g">If the interest changes made are appropriate for the arrangement, then the arrangement interest modification is approved.  If not, then arrangement interest modification rework is required.  The  approval must be performed by an authorized employee of the Financial Institution.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_GRS5dvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ebQBm7xuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_ebQBnbxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_ebQBpLxuEeGCw9HgBpY34g" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_ebQBnLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_ebQBnbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ebQBo7xuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_ebQBpLxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_ebQBnrxuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_VHzgWrxuEeGCw9HgBpY34g:_ebQBl7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VHzgWrxuEeGCw9HgBpY34g:_ebQBnbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_ebQBpbxuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_VHzgWrxuEeGCw9HgBpY34g:_ebQBpLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VHzgWrxuEeGCw9HgBpY34g:_ebQBorxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_VIjHNrxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:exclusiveGateway id="_VIjHOLxuEeGCw9HgBpY34g"/>
+    <bpmn2:startEvent id="_VIjHObxuEeGCw9HgBpY34g" name="Start">
+      <bpmn2:messageEventDefinition id="_ebZymbxuEeGCw9HgBpY34g" name="Interest Adjustment Request Received">
+        <bpmn2:documentation id="_ebZymrxuEeGCw9HgBpY34g">FULL NAME: Service Request Received&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request for the provision of a service has been received by the Financial Institution.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used either when the precise nature of the service is, as yet, unknown, or where multiple service types are covered.&#xD;
+&#xD;
+For example, a customer has made an appointment to discuss personal loans. The Financial Institution does not yet know whether she will apply for a loan, or simply wants information at this stage.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="_VIjHOrxuEeGCw9HgBpY34g" name="End">
+      <bpmn2:messageEventDefinition id="_ebZynLxuEeGCw9HgBpY34g" name="Arrangement Interest Mod Rework Requested">
+        <bpmn2:documentation id="_ebZynbxuEeGCw9HgBpY34g">FULL NAME: Rework Requested&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+ &#xD;
+DEFINITION: A choice has been made to postpone a decision on a proposed course of action by requesting some rework. This rework will typically take the form of the inclusion of additional information, further analysis and change of assumptions, expansion to a greater degree of detail, revision of figures or an improvement in quality.&#xD;
+&#xD;
+EXAMPLES OF USE: A decision is made to postpone a decision on the possible acquisition of an insurance company by the Financial Institution by requesting additional supporting information on business volume projections for the next five years.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_VIjHO7xuEeGCw9HgBpY34g" name="End:1">
+      <bpmn2:messageEventDefinition id="_ebZyn7xuEeGCw9HgBpY34g" name="Arrangement Interest Modification Approved">
+        <bpmn2:documentation id="_ebZyoLxuEeGCw9HgBpY34g">FULL NAME: Approval Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to approve a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: A personal loan can be offered to John Smith because his application has been approved by the Financial Institution.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_VIjHPLxuEeGCw9HgBpY34g" name="End:2">
+      <bpmn2:messageEventDefinition id="_ebZyorxuEeGCw9HgBpY34g" name="Communication Completed">
+        <bpmn2:documentation id="_ebZyo7xuEeGCw9HgBpY34g">FULL NAME: Expected Activity Completed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected specific, but otherwise not categorized occurrence of interest to the business has ended.&#xD;
+&#xD;
+EXAMPLES OF USE: A plan to relocate headquarters staff has been set in motion on the completion of negotiations to buy a development site.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="_VIjHPbxuEeGCw9HgBpY34g" name="Start:1">
+      <bpmn2:messageEventDefinition id="_ebZypbxuEeGCw9HgBpY34g" name="Arrangement Interest Mod Rework Requested">
+        <bpmn2:documentation id="_ebZyprxuEeGCw9HgBpY34g">FULL NAME: Rework Requested&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+ &#xD;
+DEFINITION:  A choice has been made to postpone a decision on a proposed course of action by requesting some rework.  This rework will typically take the form of the inclusion of additional information, further analysis and change of assumptions, expansion to a greater degree of detail, revision of figures or an improvement in quality.&#xD;
+&#xD;
+EXAMPLES OF USE: A decision is made to postpone a decision on the possible acquisition of an insurance company by the Financial Institution by requesting additional supporting information on business volume projections for the next five years.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:startEvent id="_VIjHPrxuEeGCw9HgBpY34g" name="Start:2">
+      <bpmn2:messageEventDefinition id="_ebZyqLxuEeGCw9HgBpY34g" name="Interest Miscalculation Identified">
+        <bpmn2:documentation id="_ebZyqbxuEeGCw9HgBpY34g">FULL NAME: Identification Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A decision has been made to regard a person or thing as being a specific instance,  based on available evidence.&#xD;
+&#xD;
+EXAMPLES OF USE: A customer has been identified after comparing their signature with a specimen on file.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:callActivity id="_VIjHQ7xuEeGCw9HgBpY34g" name="XMap AR Details to Comm Details"
+        isForCompensation="false" calledElement="_UhqGQLxuEeGCw9HgBpY34g:_U_J6pbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_VIjHRbxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_GRTggPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ebZysbxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_ebi8gbxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_ebZys7xuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_ebi8gLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_ebi8gbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ebZysrxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_ebZys7xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_b1B91UIVEeSFpMLLUsMfuA" name="Arrangement Details">
+        <bpmn2:sourceRef>_VHzgWrxuEeGCw9HgBpY34g:_b1B900IVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VHzgWrxuEeGCw9HgBpY34g:_ebi8gbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_ebZytLxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_VHzgWrxuEeGCw9HgBpY34g:_ebZys7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VHzgWrxuEeGCw9HgBpY34g:_ebZysLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_VIjHRLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_ea9GrrxuEeGCw9HgBpY34g" sourceRef="_VIjHKrxuEeGCw9HgBpY34g"
+        targetRef="_VIjHLbxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_ea9Gr7xuEeGCw9HgBpY34g" name="Interest Miscalculation Verified"
+        sourceRef="_VIjHLbxuEeGCw9HgBpY34g" targetRef="_VIjHJLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ea9GsLxuEeGCw9HgBpY34g">FULL NAME: Confirmation Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to endorse a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: Susan Brown's promotion to acting supervisor has been confirmed, and she will now retain the post permanently.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_ea9GvbxuEeGCw9HgBpY34g" sourceRef="_VIjHNLxuEeGCw9HgBpY34g"
+        targetRef="_VIjHMbxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_ea9GvrxuEeGCw9HgBpY34g" name="Arrangement Details Analyzed"
+        sourceRef="_VIjHMbxuEeGCw9HgBpY34g" targetRef="_VIjHKrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ea9Gv7xuEeGCw9HgBpY34g">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_ea9GwLxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_ebQBkrxuEeGCw9HgBpY34g" name="Arrangement Condition Details Modified"
+        sourceRef="_VIjHJLxuEeGCw9HgBpY34g" targetRef="_VIjHNbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ebQBk7xuEeGCw9HgBpY34g">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_ebQBlLxuEeGCw9HgBpY34g" sourceRef="_VIjHNbxuEeGCw9HgBpY34g"
+        targetRef="_VIjHOLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_ebQBlbxuEeGCw9HgBpY34g" name="Arrangement Interest Mod Rework Not Approved"
+        sourceRef="_VIjHOLxuEeGCw9HgBpY34g" targetRef="_VIjHJ7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ebQBlrxuEeGCw9HgBpY34g">FULL NAME: Postponement Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to postpone a decision on a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: A decision has been made to postpone final judgement on whether to develop a proposed new Product until new development budget figures are available.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_ebQBl7xuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_ebQBorxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_ebZym7xuEeGCw9HgBpY34g" name="Interest Adjustment Request Received"
+        sourceRef="_VIjHObxuEeGCw9HgBpY34g" targetRef="_VIjHNLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_ebZynrxuEeGCw9HgBpY34g" name="Arrangement Interest Mod Rework Requested"
+        sourceRef="_VIjHJ7xuEeGCw9HgBpY34g" targetRef="_VIjHOrxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_ebZyobxuEeGCw9HgBpY34g" name="Arrangement Interest Modification Approved"
+        sourceRef="_VIjHOLxuEeGCw9HgBpY34g" targetRef="_VIjHO7xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_ebZypLxuEeGCw9HgBpY34g" name="Communication Completed"
+        sourceRef="_VIjHLrxuEeGCw9HgBpY34g" targetRef="_VIjHPLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_ebZyp7xuEeGCw9HgBpY34g" name="Arrangement Interest Mod Rework Requested"
+        sourceRef="_VIjHPbxuEeGCw9HgBpY34g" targetRef="_VIjHNLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_ebZyqrxuEeGCw9HgBpY34g" name="Interest Miscalculation Identified"
+        sourceRef="_VIjHPrxuEeGCw9HgBpY34g" targetRef="_VIjHNLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_ebZyrrxuEeGCw9HgBpY34g" name="Interest Miscalculation Not Verified"
+        sourceRef="_VIjHLbxuEeGCw9HgBpY34g" targetRef="_VIjHQ7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ebZyr7xuEeGCw9HgBpY34g">FULL NAME: Confirmation Not Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to not endorse a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: Susan Brown's promotion to acting supervisor has not been confirmed so no confirmation letter has been issued.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_ebZysLxuEeGCw9HgBpY34g" name="Communication Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_ebi8g7xuEeGCw9HgBpY34g" name="Communication Required"
+        sourceRef="_VIjHQ7xuEeGCw9HgBpY34g" targetRef="_VIjHLrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ebi8hLxuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_b1B90EIVEeSFpMLLUsMfuA" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_b1B900IVEeSFpMLLUsMfuA" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+  </bpmn2:process>
+</bpmn2:definitions>

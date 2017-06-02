@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_UfkbkLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"
+    xmlns:_UhWkQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"
+    xmlns:_b5IDELxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_b5IDELxuEeGCw9HgBpY34g"
+    xmlns:_bjqwf7xuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_bjqwf7xuEeGCw9HgBpY34g"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_b5IDELxuEeGCw9HgBpY34g" name="Administer Direct Debit Change Details"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_b5IDELxuEeGCw9HgBpY34g"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_b5IDE7xuEeGCw9HgBpY34g"
+      visible="true" type="Bpmn2" element="_b5IDErxuEeGCw9HgBpY34g" name="Administer Direct Debit Change Details Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_b5a-ArxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_b5a-I7xuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_zPa0JbxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../Modify%20Payment%20Mandate.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_bjqwf7xuEeGCw9HgBpY34g"/>
+  <bpmn2:extension xmi:id="_b5IDEbxuEeGCw9HgBpY34g" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_xn6xUhwrEeOMUpRtwvEXUw" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_MF4HMfxiEeOPPNUUqxVo0g" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_b5IDErxuEeGCw9HgBpY34g" name="Administer Direct Debit Change Details">
+    <bpmn2:documentation id="_b5a-ALxuEeGCw9HgBpY34g">SHORT NAME: Admin Drct Dbt Chng Dtls&#xD;
+&#xD;
+B LEVEL ROOT: Administer * Details&#xD;
+&#xD;
+DEFINITION: To be in direct charge of, or to steward, the administration of a payment mandate received as part of a Direct Debit instruction.&#xD;
+&#xD;
+DESCRIPTION: This workflow encompasses all the activities necessary for the financial institution to administer a payment mandate received as part of a Direct Debit instruction. &#xD;
+&#xD;
+From a Single European Payment Area (SEPA) perspective, the original mandate has been dematerialized and its details are now sent as part of the instruction. The mandate related data must be transmitted to the beneficiary's bank along with each collection of a one off or recurrent SEPA direct debit or with a one off collection to indicate that the mandate is still effect. The mandate related data must be transmitted by the beneficiary's bank to the customer's bank in electronic form as part of the collection in one single flow.&#xD;
+&#xD;
+This process includes administering the modification and termination of an existing payment mandate. &#xD;
+&#xD;
+FLOW DIAGRAM: WF Chart for Administer DD Change Details&#xD;
+&#xD;
+IBM Unique ID: CBP10882</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_xn6xUBwrEeOMUpRtwvEXUw">
+      <tagging:tag id="_xn6xURwrEeOMUpRtwvEXUw">Financial Transaction Processing</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_b5a-ILxuEeGCw9HgBpY34g">
+      <bpmn2:dataInput id="_b5a-JbxuEeGCw9HgBpY34g" name="Payment Instruction" isCollection="false"
+          itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDorxuEeGCw9HgBpY34g"/>
+      <bpmn2:dataInput id="_b5a-JrxuEeGCw9HgBpY34g" name="Payment Mandate Instruction"
+          isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UrySoLxuEeGCw9HgBpY34g"/>
+      <bpmn2:dataOutput id="_b5a-IrxuEeGCw9HgBpY34g" name="Payment Mandate Instruction"
+          isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UrySoLxuEeGCw9HgBpY34g"/>
+      <bpmn2:inputSet id="_b5a-JLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInputRefs>_b5a-JbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_b5a-JrxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_b5a-IbxuEeGCw9HgBpY34g">
+        <bpmn2:dataOutputRefs>_b5a-IrxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_b5a-AbxuEeGCw9HgBpY34g" name="Creditor Bank" partitionElementRef="_UhWkQLxuEeGCw9HgBpY34g:_boSKsbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_b5a-A7xuEeGCw9HgBpY34g">The bank that extends credit by giving another entity permission to borrow money if it is paid back at a later date&#xD;
+&#xD;
+IBM Unique ID: CBP10878</bpmn2:documentation>
+      <bpmn2:flowElementRef>_b5a-BLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_b5a-B7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_b5a-CrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_b5a-DbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_b5a-ELxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_b5a-E7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_b5a-FrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_b5a-GbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_b5a-GrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_b5a-G7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_b5a-HLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_b5a-HbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_b5a-HrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_b5a-H7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_rGxR8LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_rGxR8bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_rGxR9LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_rGxR9bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_rGxR-LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_rG6b4LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_rG6b4rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_rG6b5LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_rG6b5rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_rG6b6rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_rG6b7bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_rG6b7rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_rG6b8LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_rKfUULxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eQvydEIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eQvyd0IVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_jQhfIEIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_jQhfIUIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_b5a-BLxuEeGCw9HgBpY34g" name="Verify Payment Mandate"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_bkRNkrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_b5a-BrxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_MF4HMPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_rHN94LxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_rHN94rxuEeGCw9HgBpY34g" name="Payment Mandate Instruction"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UrySoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_Rit6AhwsEeOMUpRtwvEXUw" name="Payment Instruction" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDorxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_rHN94bxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_rHN94rxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_Rit6AhwsEeOMUpRtwvEXUw</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_Rit6AxwsEeOMUpRtwvEXUw" name="OutputSet1"/>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_McPIaRwsEeOMUpRtwvEXUw" name="Payment Mandate Instruction">
+        <bpmn2:sourceRef>_b5IDELxuEeGCw9HgBpY34g:_b5a-JrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_b5IDELxuEeGCw9HgBpY34g:_rHN94rxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_b5a-BbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_boSKsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_b5a-B7xuEeGCw9HgBpY34g" name="Accept Payment Mandate"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_bkaXUbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_b5a-CbxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_MF4uQPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_rHqp0LxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_rKy2UbxuEeGCw9HgBpY34g" name="Payment Mandate Instruction"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UrySoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_rHqp0rxuEeGCw9HgBpY34g" name="Payment Mandate Instruction"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UrySoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_rKy2ULxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_rKy2UbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_rHqp0bxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_rHqp0rxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_rKy2UrxuEeGCw9HgBpY34g" name="Payment Mandate Instruction">
+        <bpmn2:sourceRef>_b5IDELxuEeGCw9HgBpY34g:_rKfUULxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_b5IDELxuEeGCw9HgBpY34g:_rKy2UbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_rHqp07xuEeGCw9HgBpY34g" name="Payment Mandate Instruction">
+        <bpmn2:sourceRef>_b5IDELxuEeGCw9HgBpY34g:_rHqp0rxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_b5IDELxuEeGCw9HgBpY34g:_b5a-IrxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_b5a-CLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_boSKsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_b5a-CrxuEeGCw9HgBpY34g" name="Determine Payment Mandate Requirement"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_bkRNjLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_b5a-DLxuEeGCw9HgBpY34g">For DD Change Details process, determination activity will lead to:&#xD;
+1. Decision that no change is required&#xD;
+2. Decision that DD Payment Mandate must be modified&#xD;
+3. Decision that DD Payment Mandate must be terminated</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_MF4uQfxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_rHXH0bxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_rLYsMrxuEeGCw9HgBpY34g" name="Payment Mandate Instruction"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UrySoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_rHXH07xuEeGCw9HgBpY34g" name="Payment Mandate Instruction"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UrySoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_Rit6BhwsEeOMUpRtwvEXUw" name="Customer Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIqrxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_rLYsMbxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_rLYsMrxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_rHXH0rxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_rHXH07xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_Rit6BhwsEeOMUpRtwvEXUw</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_rLYsM7xuEeGCw9HgBpY34g" name="Payment Mandate Instruction">
+        <bpmn2:sourceRef>_b5IDELxuEeGCw9HgBpY34g:_b5a-JrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_b5IDELxuEeGCw9HgBpY34g:_rLYsMrxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_eQvydUIVEeSFpMLLUsMfuA" name="Payment Mandate Instruction">
+        <bpmn2:sourceRef>_b5IDELxuEeGCw9HgBpY34g:_rHXH07xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_b5IDELxuEeGCw9HgBpY34g:_eQvydEIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_eQvyeEIVEeSFpMLLUsMfuA" name="Payment Mandate Instruction">
+        <bpmn2:sourceRef>_b5IDELxuEeGCw9HgBpY34g:_rHXH07xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_b5IDELxuEeGCw9HgBpY34g:_eQvyd0IVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_b5a-C7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_boSKsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_b5a-DbxuEeGCw9HgBpY34g" name="Modify Payment Mandate"
+        isForCompensation="false" calledElement="_bjqwf7xuEeGCw9HgBpY34g:_bjqwgbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_b5a-D7xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_MGGJoPxiEeOPPNUUqxVo0g">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_rKDPcLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_rKDPcrxuEeGCw9HgBpY34g" name="Payment Mandate Instruction"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UrySoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_rKfUUrxuEeGCw9HgBpY34g" name="Payment Mandate Instruction"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UrySoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_rKDPcbxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_rKDPcrxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_rKfUUbxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_rKfUUrxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_eQvyeUIVEeSFpMLLUsMfuA" name="Payment Mandate Instruction">
+        <bpmn2:sourceRef>_b5IDELxuEeGCw9HgBpY34g:_eQvyd0IVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_b5IDELxuEeGCw9HgBpY34g:_rKDPcrxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_rKfUU7xuEeGCw9HgBpY34g" name="Payment Mandate Instruction">
+        <bpmn2:sourceRef>_b5IDELxuEeGCw9HgBpY34g:_rKfUUrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_b5IDELxuEeGCw9HgBpY34g:_rKfUULxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_b5a-DrxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_boSKsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_b5a-ELxuEeGCw9HgBpY34g" name="Terminate Payment Mandate"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_bkRNkLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_b5a-ErxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_MGGJofxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_rHg40LxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_rHg40rxuEeGCw9HgBpY34g" name="Payment Mandate Instruction"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UrySoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_rHzzw7xuEeGCw9HgBpY34g" name="Payment Mandate Instruction"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UrySoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_rHg40bxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_rHg40rxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_rHzzwrxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_rHzzw7xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_eQvydkIVEeSFpMLLUsMfuA" name="Payment Mandate Instruction">
+        <bpmn2:sourceRef>_b5IDELxuEeGCw9HgBpY34g:_eQvydEIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_b5IDELxuEeGCw9HgBpY34g:_rHg40rxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_rHzzxLxuEeGCw9HgBpY34g" name="Payment Mandate Instruction">
+        <bpmn2:sourceRef>_b5IDELxuEeGCw9HgBpY34g:_rHzzw7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_b5IDELxuEeGCw9HgBpY34g:_b5a-IrxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_b5a-EbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_boSKsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_b5a-E7xuEeGCw9HgBpY34g" name="Reject Payment Mandate"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_bkRNlrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_b5a-FbxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_MGGJovxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_rLFxQLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_rLFxQrxuEeGCw9HgBpY34g" name="Payment Instruction" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDorxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_Rit6BxwsEeOMUpRtwvEXUw" name="Payment Mandate Instruction"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UrySoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_rLFxQbxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_rLFxQrxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_Rit6BxwsEeOMUpRtwvEXUw</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_rLFxQ7xuEeGCw9HgBpY34g" name="Payment Instruction">
+        <bpmn2:sourceRef>_b5IDELxuEeGCw9HgBpY34g:_b5a-JbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_b5IDELxuEeGCw9HgBpY34g:_rLFxQrxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_b5a-FLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_boSKsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_b5a-FrxuEeGCw9HgBpY34g" name="Retrieve Payment Mandate Details"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_bl5lGrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_b5a-GLxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_MGGJo_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_rG6b87xuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_rLidMbxuEeGCw9HgBpY34g" name="Payment Instruction" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDorxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_rG6b9bxuEeGCw9HgBpY34g" name="Payment Mandate Instruction"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UrySoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_rLidMLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_rLidMbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_rG6b9LxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_rG6b9bxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_rLidMrxuEeGCw9HgBpY34g" name="Payment Instruction">
+        <bpmn2:sourceRef>_b5IDELxuEeGCw9HgBpY34g:_b5a-JbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_b5IDELxuEeGCw9HgBpY34g:_rLidMbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_b5a-F7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_boSKsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:exclusiveGateway id="_b5a-GbxuEeGCw9HgBpY34g"/>
+    <bpmn2:exclusiveGateway id="_b5a-GrxuEeGCw9HgBpY34g"/>
+    <bpmn2:endEvent id="_b5a-G7xuEeGCw9HgBpY34g" name="End">
+      <bpmn2:messageEventDefinition id="_rGxR8rxuEeGCw9HgBpY34g" name="Payment Mandate Rejected">
+        <bpmn2:documentation id="_rGxR87xuEeGCw9HgBpY34g">FULL NAME: Rejection Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to reject a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: A mortgage refusal will be sent to William Brown because his application has been rejected.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="_b5a-HLxuEeGCw9HgBpY34g" name="Start">
+      <bpmn2:messageEventDefinition id="_McPIZxwsEeOMUpRtwvEXUw" name="Payment Mandate Modification Requested">
+        <bpmn2:documentation id="_McPIaBwsEeOMUpRtwvEXUw">FULL NAME: Communication Received&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication driven&#xD;
+&#xD;
+DEFINITION: Some form of substantive contact has become known to the enterprise.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during early stages or at high levels of modelling to denote that a particular activity or set of activities is enabled by the receipt of some type of communication.&#xD;
+&#xD;
+This Trigger Type is used when the specific nature of the communication is, as yet, unknown, or where multiple types of communication are concerned.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="_b5a-HbxuEeGCw9HgBpY34g" name="End:1">
+      <bpmn2:messageEventDefinition id="_rGxR9rxuEeGCw9HgBpY34g" name="Payment Mandate Terminated">
+        <bpmn2:documentation id="_rGxR97xuEeGCw9HgBpY34g">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_b5a-HrxuEeGCw9HgBpY34g" name="End:2">
+      <bpmn2:messageEventDefinition id="_rG6b6LxuEeGCw9HgBpY34g" name="Payment Mandate Changes Not Required">
+        <bpmn2:documentation id="_rG6b6bxuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_b5a-H7xuEeGCw9HgBpY34g" name="End:3">
+      <bpmn2:messageEventDefinition id="_rG6b67xuEeGCw9HgBpY34g" name="Payment Mandate Accepted">
+        <bpmn2:documentation id="_rG6b7LxuEeGCw9HgBpY34g">FULL NAME: Acceptance Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to accept a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has accepted the obligation of paying a cheque when it certifies or endorses the cheque for negotiation. The payment of a Bill of Exchange is guaranteed when a Banker's Acceptance has been given or negotiated.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="_rGxR8LxuEeGCw9HgBpY34g" sourceRef="_b5a-BLxuEeGCw9HgBpY34g"
+        targetRef="_b5a-GbxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_rGxR8bxuEeGCw9HgBpY34g" sourceRef="_b5a-CrxuEeGCw9HgBpY34g"
+        targetRef="_b5a-GrxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_rGxR9LxuEeGCw9HgBpY34g" name="Payment Mandate Rejected"
+        sourceRef="_b5a-E7xuEeGCw9HgBpY34g" targetRef="_b5a-G7xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_rGxR9bxuEeGCw9HgBpY34g" name="Payment Mandate Modification Requested"
+        sourceRef="_b5a-HLxuEeGCw9HgBpY34g" targetRef="_b5a-FrxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_rGxR-LxuEeGCw9HgBpY34g" name="Payment Mandate Terminated"
+        sourceRef="_b5a-ELxuEeGCw9HgBpY34g" targetRef="_b5a-HbxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_rG6b4LxuEeGCw9HgBpY34g" name="Payment Mandate Modification Required"
+        sourceRef="_b5a-GrxuEeGCw9HgBpY34g" targetRef="_b5a-DbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_rG6b4bxuEeGCw9HgBpY34g">FULL NAME: Communication Received&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication driven&#xD;
+&#xD;
+DEFINITION: Some form of substantive contact has become known to the enterprise.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during early stages or at high levels of modelling to denote that a particular activity or set of activities is enabled by the receipt of some type of communication.&#xD;
+&#xD;
+This Trigger Type is used when the specific nature of the communication is, as yet, unknown, or where multiple types of communication are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_rG6b4rxuEeGCw9HgBpY34g" name="Payment Mandate Modified"
+        sourceRef="_b5a-DbxuEeGCw9HgBpY34g" targetRef="_b5a-B7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_rG6b47xuEeGCw9HgBpY34g">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_rG6b5LxuEeGCw9HgBpY34g" name="Payment Mandate Retrieved"
+        sourceRef="_b5a-FrxuEeGCw9HgBpY34g" targetRef="_b5a-BLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_rG6b5bxuEeGCw9HgBpY34g">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution retrieves information on deposit products and makes it available for use by a clerk following a customer enquiry. The Financial Institution completes the specification of a new foreign exchange service, and the details are made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_rG6b5rxuEeGCw9HgBpY34g" name="Payment Mandate Not Verified"
+        sourceRef="_b5a-GbxuEeGCw9HgBpY34g" targetRef="_b5a-E7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_rG6b57xuEeGCw9HgBpY34g">FULL NAME: Acceptance Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to accept a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has accepted the obligation of paying a cheque when it certifies or endorses the cheque for negotiation. The payment of a Bill of Exchange is guaranteed when a Banker's Acceptance has been given or negotiated.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_rG6b6rxuEeGCw9HgBpY34g" name="Payment Mandate Changes Not Required"
+        sourceRef="_b5a-GrxuEeGCw9HgBpY34g" targetRef="_b5a-HrxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_rG6b7bxuEeGCw9HgBpY34g" name="Payment Mandate Accepted"
+        sourceRef="_b5a-B7xuEeGCw9HgBpY34g" targetRef="_b5a-H7xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_rG6b7rxuEeGCw9HgBpY34g" name="Payment Mandate Verified"
+        sourceRef="_b5a-GbxuEeGCw9HgBpY34g" targetRef="_b5a-CrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_rG6b77xuEeGCw9HgBpY34g">FULL NAME: Acceptance Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to accept a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has accepted the obligation of paying a cheque when it certifies or endorses the cheque for negotiation. The payment of a Bill of Exchange is guaranteed when a Banker's Acceptance has been given or negotiated.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_rG6b8LxuEeGCw9HgBpY34g" name="Payment Mandate Termination Required"
+        sourceRef="_b5a-GrxuEeGCw9HgBpY34g" targetRef="_b5a-ELxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_rG6b8bxuEeGCw9HgBpY34g">FULL NAME: Information Request Received&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request for information is received by Financial Institution.&#xD;
+&#xD;
+EXAMPLES OF USE: Mr. Green has requested that details about the bank's different types of personal account products are sent to him.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_rKfUULxuEeGCw9HgBpY34g" name="Payment Mandate Instruction"
+        isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UrySoLxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_eQvydEIVEeSFpMLLUsMfuA" name="Payment Mandate Instruction"
+        isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UrySoLxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_eQvyd0IVEeSFpMLLUsMfuA" name="Payment Mandate Instruction"
+        isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UrySoLxuEeGCw9HgBpY34g"/>
+    <bpmn2:startEvent id="_jQhfIEIVEeSFpMLLUsMfuA" name="Start:1"/>
+    <bpmn2:sequenceFlow id="_jQhfIUIVEeSFpMLLUsMfuA" name="Invoked By Business Process"
+        sourceRef="_jQhfIEIVEeSFpMLLUsMfuA" targetRef="_b5a-FrxuEeGCw9HgBpY34g"/>
+  </bpmn2:process>
+</bpmn2:definitions>

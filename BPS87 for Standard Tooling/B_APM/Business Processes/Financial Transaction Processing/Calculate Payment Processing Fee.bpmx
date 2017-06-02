@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_UfkbkLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"
+    xmlns:_UhWkQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"
+    xmlns:_bou2prxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_bou2prxuEeGCw9HgBpY34g"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_bou2prxuEeGCw9HgBpY34g" name="Calculate Payment Processing Fee"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_bou2prxuEeGCw9HgBpY34g"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_bou2qbxuEeGCw9HgBpY34g"
+      visible="true" type="Bpmn2" element="_bou2qLxuEeGCw9HgBpY34g" name="Calculate Payment Processing Fee Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_bpCYorxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_bpCYq7xuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"/>
+  <bpmn2:extension xmi:id="_bou2p7xuEeGCw9HgBpY34g" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_sRVuMhwrEeOMUpRtwvEXUw" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_JvA9gfxiEeOPPNUUqxVo0g" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_bou2qLxuEeGCw9HgBpY34g" name="Calculate Payment Processing Fee">
+    <bpmn2:documentation id="_bpCYoLxuEeGCw9HgBpY34g">SHORT NAME: Calc Pymnt Fee&#xD;
+&#xD;
+B LEVEL ROOT: Calculate * Value&#xD;
+&#xD;
+DEFINITION: To determine the fees using mathematical procedures.&#xD;
+&#xD;
+DESCRIPTION: Calculate the fees due for a payment. Fees may vary depending on the payment processing system used.&#xD;
+&#xD;
+FLOW DIAGRAM: AS Chart for Calculate Payment Fees&#xD;
+&#xD;
+IBM Unique ID: CBP08911</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_sRVuMBwrEeOMUpRtwvEXUw">
+      <tagging:tag id="_sRVuMRwrEeOMUpRtwvEXUw">Financial Transaction Processing</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_bpCYqLxuEeGCw9HgBpY34g">
+      <bpmn2:dataInput id="_bpCYqrxuEeGCw9HgBpY34g" name="Transaction Details" isCollection="false"
+          itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UqJT67xuEeGCw9HgBpY34g"/>
+      <bpmn2:dataOutput id="_eNUq4EIVEeSFpMLLUsMfuA" name="Accounting Unit" isCollection="false"
+          itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+      <bpmn2:inputSet id="_bpCYqbxuEeGCw9HgBpY34g">
+        <bpmn2:dataInputRefs>_bpCYqrxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_bpCYr7xuEeGCw9HgBpY34g">
+        <bpmn2:dataOutputRefs>_eNUq4EIVEeSFpMLLUsMfuA</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_bpCYobxuEeGCw9HgBpY34g" name="Enterprise Process" partitionElementRef="_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_bpCYo7xuEeGCw9HgBpY34g">The default role for all enterprise process activities not explicitly assigned to other roles.&#xD;
+&#xD;
+IBM Unique ID: CBP06187</bpmn2:documentation>
+      <bpmn2:flowElementRef>_TId2UEIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_byWdQUIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_byWdQkIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eNUq40IVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eNUq6kIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_TId2UEIVEeSFpMLLUsMfuA" name="Calculate Fee" isForCompensation="false"
+        calledElement="_UhWkQLxuEeGCw9HgBpY34g:_aWek3rxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_TId2UUIVEeSFpMLLUsMfuA">For Credit Cards arrangements' payments methods, in order to adhere to US Credit Card Act of 2009 the Section 102 of the Act must be complied with.&#xD;
+Financial Institution as the credit card issuer can not charge customers additional fees to pay their bills by mail, electronic transfer or other methods that are allowed, except for expedited service.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_fZne4UIVEeSFpMLLUsMfuA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_eNUq5EIVEeSFpMLLUsMfuA">
+        <bpmn2:dataInput id="_eNUq5kIVEeSFpMLLUsMfuA" name="Transaction Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UqJT67xuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_h6ZZkEIVEeSFpMLLUsMfuA" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_h6ZZkUIVEeSFpMLLUsMfuA" name="Fee Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIrrxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_eNUq7EIVEeSFpMLLUsMfuA" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_eNUq5UIVEeSFpMLLUsMfuA">
+          <bpmn2:dataInputRefs>_eNUq5kIVEeSFpMLLUsMfuA</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_h6ZZkEIVEeSFpMLLUsMfuA</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_h6ZZkUIVEeSFpMLLUsMfuA</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_eNUq60IVEeSFpMLLUsMfuA">
+          <bpmn2:dataOutputRefs>_eNUq7EIVEeSFpMLLUsMfuA</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_eNUq50IVEeSFpMLLUsMfuA" name="Transaction Details">
+        <bpmn2:sourceRef>_bou2prxuEeGCw9HgBpY34g:_bpCYqrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_bou2prxuEeGCw9HgBpY34g:_eNUq5kIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_eNUq7UIVEeSFpMLLUsMfuA" name="Accounting Unit">
+        <bpmn2:sourceRef>_bou2prxuEeGCw9HgBpY34g:_eNUq7EIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_bou2prxuEeGCw9HgBpY34g:_eNUq4EIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_TId2UkIVEeSFpMLLUsMfuA" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:startEvent id="_byWdQUIVEeSFpMLLUsMfuA" name="Start:1">
+      <bpmn2:messageEventDefinition id="_eNUq4UIVEeSFpMLLUsMfuA" name="Payment Processing System Identified">
+        <bpmn2:documentation id="_eNUq4kIVEeSFpMLLUsMfuA">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="_byWdQkIVEeSFpMLLUsMfuA" name="End:1">
+      <bpmn2:messageEventDefinition id="_eNUq6EIVEeSFpMLLUsMfuA" name="Fee Calculated">
+        <bpmn2:documentation id="_eNUq6UIVEeSFpMLLUsMfuA">FULL NAME: Value Calculated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the mathematical determination of a monetary, financial amount.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has calculated a monthly loan repayment figure using loan amount, interest rate and term. The Financial Institution has calculated an amount which represents the total current commercial loan exposure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Calculate, Accumulate and sometimes Determine.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="_eNUq40IVEeSFpMLLUsMfuA" name="Payment Processing System Identified"
+        sourceRef="_byWdQUIVEeSFpMLLUsMfuA" targetRef="_TId2UEIVEeSFpMLLUsMfuA"/>
+    <bpmn2:sequenceFlow id="_eNUq6kIVEeSFpMLLUsMfuA" name="Fee Calculated" sourceRef="_TId2UEIVEeSFpMLLUsMfuA"
+        targetRef="_byWdQkIVEeSFpMLLUsMfuA"/>
+  </bpmn2:process>
+</bpmn2:definitions>

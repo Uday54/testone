@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_UfkbkLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"
+    xmlns:_UhWkQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"
+    xmlns:_c87CYLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_c87CYLxuEeGCw9HgBpY34g"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_c8oHd7xuEeGCw9HgBpY34g" name="Review Insurance Portfolio"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_c8oHd7xuEeGCw9HgBpY34g"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_c8oHerxuEeGCw9HgBpY34g"
+      visible="true" type="Bpmn2" element="_c8oHebxuEeGCw9HgBpY34g" name="Review Insurance Portfolio Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_c8x4crxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_zQAqBrxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="Retrieve%20Current%20Insurance%20Arrangement%20Value.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_c87CYLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_TdWasxwsEeOMUpRtwvEXUw" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"/>
+  <bpmn2:extension xmi:id="_c8oHeLxuEeGCw9HgBpY34g" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_64ioIxwrEeOMUpRtwvEXUw" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_KN1ngfxiEeOPPNUUqxVo0g" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_c8oHebxuEeGCw9HgBpY34g" name="Review Insurance Portfolio">
+    <bpmn2:documentation id="_c8x4cLxuEeGCw9HgBpY34g">SHORT NAME: Rvw Insrnce Ptfolio&#xD;
+&#xD;
+B LEVEL ROOT: Review * Details&#xD;
+&#xD;
+DEFINITION: To look at or examine an insurance portfolio again.&#xD;
+&#xD;
+DESCRIPTION: This workflow encompasses the activities necessary to review the financial institution's insurance portfolio, for its own risk management. Define the insurance objective, retrieve operational loss history, forecast operational risk exposure, retrieve current insurance arrangement values, and compare this value to the risk exposure. In addition, calculate the insurance coverage requirement and either cancel or renew existing policies or define and request a new insurance arrangement through an insurance broker.&#xD;
+&#xD;
+Under Pillar 1 of the Basel II directive, the Advanced Measurement Approach (AMA) stipulates that a bank will be allowed to recognize the risk mitigating impact of insurance in the measures of operational risk used for regulatory minimum capital requirements. The recognition of insurance will be limited to 20% of the total operational risk capital charge. To facilitate using risk mitigation, the following must apply:&#xD;
+&#xD;
+(i) The insurance provider has a minimum claims paying ability rating of A (or equivalent).&#xD;
+&#xD;
+(ii) The insurance policy must have an initial term of no less than one year. For policies with a residual term of less than one year, the bank must make appropriate haircuts reflecting the declining residual term of the policy, up to a full 100% haircut for policies with a residual term of 90 days or less;&#xD;
+&#xD;
+(iii) The insurance policy has a minimum notice period for cancellation and non-renewal of the contract.&#xD;
+&#xD;
+(iv) The insurance policy has no exclusions or limitations based upon regulatory action or for the receiver or liquidator of a failed bank.&#xD;
+&#xD;
+(v) The insurance coverage has been explicitly mapped to the actual operational risk loss exposure of the institution.&#xD;
+&#xD;
+(vi) The insurance is provided by a third party entity. In the case of insurance through captives and affiliates, the exposure has to be laid off to an independent third party entity, for example through re-insurance, that meets the eligibility criteria.&#xD;
+&#xD;
+(vii) The framework for recognizing insurance is well reasoned and documented.&#xD;
+&#xD;
+(viii) The bank discloses the reduction of the operational risk capital charge due to insurance.&#xD;
+&#xD;
+FLOW DIAGRAM: WF Chart for Review Insurance Portfolio&#xD;
+&#xD;
+IBM Unique ID: CBPC1557</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_64ioIBwrEeOMUpRtwvEXUw">
+      <tagging:tag id="_64ioIRwrEeOMUpRtwvEXUw">Product Management</tagging:tag>
+      <tagging:tag id="_64ioIhwrEeOMUpRtwvEXUw">ValueChain_RegulatoryCompliance_Review</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:lane id="_c8x4cbxuEeGCw9HgBpY34g" name="Risk Manager" partitionElementRef="_UhWkQLxuEeGCw9HgBpY34g:_U6igVbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_c8x4c7xuEeGCw9HgBpY34g">Manager responsible for the process of identification, analysis and either acceptance or mitigation of uncertainty in investment decision-making. Essentially, risk management occurs anytime an investor or fund manager analyzes and attempts to quantify the potential for losses in an investment and then takes the appropriate action (or inaction) given their investment objectives and risk tolerance.&#xD;
+&#xD;
+IBM Unique ID: CBPC04505</bpmn2:documentation>
+      <bpmn2:flowElementRef>_c8x4dLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c8x4d7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c8x4eLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c8x4ebxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c8x4fLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c8x4f7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c8x4grxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c8x4hbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c8x4iLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c8x4i7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c8x4jLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c8x4j7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c8x4krxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c8x4lbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c8x4lrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c8x4l7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c8x4mLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c8x4mbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c8x4mrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_uWMbUrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_uWMbU7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_uWMbVLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_uWMbVrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_uWMbWLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_uWMbWrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_uWVlQLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_uWVlQrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_uWVlRLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_uWVlRrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_uWVlSLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_uWVlSrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_uWVlTLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_uWVlT7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_uWVlUrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_uWVlVbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_uWVlWLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_uWVlW7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_c8x4dLxuEeGCw9HgBpY34g" name="Define Insurance Objective"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_c8e9orxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_c8x4drxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KN1ngPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_c8x4dbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igVbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:exclusiveGateway id="_c8x4d7xuEeGCw9HgBpY34g"/>
+    <bpmn2:parallelGateway id="_c8x4eLxuEeGCw9HgBpY34g"/>
+    <bpmn2:callActivity id="_c8x4ebxuEeGCw9HgBpY34g" name="Forecast Operational Risk Exposure"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_c8e9pLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_c8x4e7xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KN1ngvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_c8x4erxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igVbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_c8x4fLxuEeGCw9HgBpY34g" name="Request Increase Insurance Arrangement"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_c8e9prxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_c8x4frxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KN1ng_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_c8x4fbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igVbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_c8x4f7xuEeGCw9HgBpY34g" name="Request Insurance Arrangement Renewal"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_c8oHcbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_c8x4gbxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KN1nhPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_c8x4gLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igVbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_c8x4grxuEeGCw9HgBpY34g" name="Retrieve Current Insurance Arrangement Value"
+        isForCompensation="false" calledElement="_c87CYLxuEeGCw9HgBpY34g:_c87CYrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_c8x4hLxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KN21oPxiEeOPPNUUqxVo0g">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_TdWasBwsEeOMUpRtwvEXUw" name="InputOutputSpecification1">
+        <bpmn2:dataInput id="_TdWashwsEeOMUpRtwvEXUw" name="Arrangement Identifier"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkVm0LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_TdWatRwsEeOMUpRtwvEXUw" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_TdWasRwsEeOMUpRtwvEXUw" name="InputSet1">
+          <bpmn2:dataInputRefs>_TdWashwsEeOMUpRtwvEXUw</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_TdWatBwsEeOMUpRtwvEXUw" name="OutputSet1">
+          <bpmn2:dataOutputRefs>_TdWatRwsEeOMUpRtwvEXUw</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:resourceRole id="_c8x4g7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igVbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_c8x4hbxuEeGCw9HgBpY34g" name="Retrieve Operational Loss History"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_c8oHc7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_c8x4h7xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KN21ofxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_c8x4hrxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igVbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_c8x4iLxuEeGCw9HgBpY34g" name="Calculate Insurance Coverage Requirement"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_c8e9nLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_c8x4irxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KN21ovxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_c8x4ibxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igVbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:exclusiveGateway id="_c8x4i7xuEeGCw9HgBpY34g"/>
+    <bpmn2:callActivity id="_c8x4jLxuEeGCw9HgBpY34g" name="Cancel Insurance Arrangement"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_c8oHdbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_c8x4jrxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KN21o_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_c8x4jbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igVbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_c8x4j7xuEeGCw9HgBpY34g" name="Compare Insurance AR Coverage To Risk Exposure"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_c8e9nrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_c8x4kbxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KN21pPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_c8x4kLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igVbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_c8x4krxuEeGCw9HgBpY34g" name="Define Insurance Arrangement Condition"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_c8e9oLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_c8x4lLxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KN21pfxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_c8x4k7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igVbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:startEvent id="_c8x4lbxuEeGCw9HgBpY34g" name="Start">
+      <bpmn2:messageEventDefinition id="_Moc_ehwsEeOMUpRtwvEXUw" name="Insurance Portfolio Review Scheduled">
+        <bpmn2:documentation id="_Moc_exwsEeOMUpRtwvEXUw">FULL NAME:  Event Scheduled&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION:  An expected occurrence of interest to the business has resulted in the planning of an event to occur at a specified time in the future.&#xD;
+&#xD;
+EXAMPLES OF USE:  A meeting has been scheduled as a result of a customer enquiry activity to discuss product requirements.  A loan repayment schedule has been created to establish of a series of repayment due dates.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:startEvent id="_c8x4lrxuEeGCw9HgBpY34g" name="Start:1">
+      <bpmn2:timerEventDefinition id="_uWVlTbxuEeGCw9HgBpY34g" name="Date Reached">
+        <bpmn2:documentation id="_uWVlTrxuEeGCw9HgBpY34g">FULL NAME: Date Reached&#xD;
+&#xD;
+TRIGGER CATEGORY: Time Driven&#xD;
+&#xD;
+DEFINITION: A Time Trigger Type denoting that a specified date has been reached.&#xD;
+&#xD;
+EXAMPLES OF USE: On 25th June 1993, an insurance policy has matured and a payment to the customer is generated.</bpmn2:documentation>
+      </bpmn2:timerEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:startEvent id="_c8x4l7xuEeGCw9HgBpY34g" name="Start:2">
+      <bpmn2:messageEventDefinition id="_uWVlULxuEeGCw9HgBpY34g" name="Operational Risk Condition Changed">
+        <bpmn2:documentation id="_uWVlUbxuEeGCw9HgBpY34g">FULL NAME: Status Changed&#xD;
+&#xD;
+TRIGGER CATEGORY: Condition Driven&#xD;
+&#xD;
+DEFINITION: A business condition is invoked when something identified as being of importance to the business has moved to a new value in its particular classification.&#xD;
+&#xD;
+EXAMPLES OF USE: A customer who gets married is automatically moved into a lower risk category for term loan repayment, whereas a customer who becomes unemployed is moved into a higher risk category.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="_c8x4mLxuEeGCw9HgBpY34g" name="End">
+      <bpmn2:messageEventDefinition id="_uWVlU7xuEeGCw9HgBpY34g" name="Insurance Arrangement Cancelled">
+        <bpmn2:documentation id="_uWVlVLxuEeGCw9HgBpY34g">FULL NAME: Cancellation Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to cancel a proposed or requested arrangement or a scheduled business activity.&#xD;
+&#xD;
+EXAMPLES OF USE: Sally Jones has cancelled her request for a current account. A proposed staff training course has been cancelled due to too many illnesses.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_c8x4mbxuEeGCw9HgBpY34g" name="End:1">
+      <bpmn2:messageEventDefinition id="_uWVlVrxuEeGCw9HgBpY34g" name="Increased Insurance Arrangement Requested">
+        <bpmn2:documentation id="_uWVlV7xuEeGCw9HgBpY34g">FULL NAME: Notification Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a notice has been caused by the enterprise to be directed or transmitted to another place.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has notified a product owner about a request for information received from a potential customer, or has sent a notice detailing an increase in the interest rate charged on variable rate loans to all respective borrowers.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_c8x4mrxuEeGCw9HgBpY34g" name="End:2">
+      <bpmn2:messageEventDefinition id="_uWVlWbxuEeGCw9HgBpY34g" name="Insurance Arrangement Renewal Requested">
+        <bpmn2:documentation id="_uWVlWrxuEeGCw9HgBpY34g">FULL NAME: Notification Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a notice has been caused by the enterprise to be directed or transmitted to another place.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has notified a product owner about a request for information received from a potential customer, or has sent a notice detailing an increase in the interest rate charged on variable rate loans to all respective borrowers.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="_uWMbUrxuEeGCw9HgBpY34g" sourceRef="_c8x4d7xuEeGCw9HgBpY34g"
+        targetRef="_c8x4dLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_uWMbU7xuEeGCw9HgBpY34g" sourceRef="_c8x4eLxuEeGCw9HgBpY34g"
+        targetRef="_c8x4d7xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_uWMbVLxuEeGCw9HgBpY34g" name="Operational Risk Exposure Forecast"
+        sourceRef="_c8x4ebxuEeGCw9HgBpY34g" targetRef="_c8x4grxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_uWMbVbxuEeGCw9HgBpY34g">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_uWMbVrxuEeGCw9HgBpY34g" name="Insurance Objective Defined"
+        sourceRef="_c8x4dLxuEeGCw9HgBpY34g" targetRef="_c8x4hbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_uWMbV7xuEeGCw9HgBpY34g">FULL NAME: Acceptance Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to accept a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has accepted the obligation of paying a cheque when it certifies or endorses the cheque for negotiation. The payment of a Bill of Exchange is guaranteed when a Banker's Acceptance has been given or negotiated.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_uWMbWLxuEeGCw9HgBpY34g" name="Operational Loss History Retrieved"
+        sourceRef="_c8x4hbxuEeGCw9HgBpY34g" targetRef="_c8x4ebxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_uWMbWbxuEeGCw9HgBpY34g">FULL NAME: Expected Activity Completed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected specific, but otherwise not categorized occurrence of interest to the business has ended.&#xD;
+&#xD;
+EXAMPLES OF USE: A plan to relocate headquarters staff has been set in motion on the completion of negotiations to buy a development site.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_uWMbWrxuEeGCw9HgBpY34g" sourceRef="_c8x4iLxuEeGCw9HgBpY34g"
+        targetRef="_c8x4i7xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_uWVlQLxuEeGCw9HgBpY34g" name="Increased Insurance Coverage Not Required"
+        sourceRef="_c8x4i7xuEeGCw9HgBpY34g" targetRef="_c8x4f7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_uWVlQbxuEeGCw9HgBpY34g">FULL NAME: Rejection Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to reject a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: A mortgage refusal will be sent to William Brown because his application has been rejected.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_uWVlQrxuEeGCw9HgBpY34g" name="Insurance Arrangement Not Required"
+        sourceRef="_c8x4i7xuEeGCw9HgBpY34g" targetRef="_c8x4jLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_uWVlQ7xuEeGCw9HgBpY34g">FULL NAME: Rejection Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to reject a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: A mortgage refusal will be sent to William Brown because his application has been rejected.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_uWVlRLxuEeGCw9HgBpY34g" name="Current Insurance AR Value Retrieved"
+        sourceRef="_c8x4grxuEeGCw9HgBpY34g" targetRef="_c8x4j7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_uWVlRbxuEeGCw9HgBpY34g">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_uWVlRrxuEeGCw9HgBpY34g" name="Insurance AR Coverage To Risk Exposure Analyzed"
+        sourceRef="_c8x4j7xuEeGCw9HgBpY34g" targetRef="_c8x4iLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_uWVlR7xuEeGCw9HgBpY34g">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_uWVlSLxuEeGCw9HgBpY34g" name="Modified Insurance Coverage Req Calculated"
+        sourceRef="_c8x4i7xuEeGCw9HgBpY34g" targetRef="_c8x4krxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_uWVlSbxuEeGCw9HgBpY34g">FULL NAME: Quantity Determined&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the calculation of a non-monetary, non-financial amount.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has determined the number of active deposit accounts or personal customers it has.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_uWVlSrxuEeGCw9HgBpY34g" name="Increased Insurance Arrangement Defined"
+        sourceRef="_c8x4krxuEeGCw9HgBpY34g" targetRef="_c8x4fLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_uWVlS7xuEeGCw9HgBpY34g">FULL NAME: Quantity Determined&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the calculation of a non-monetary, non-financial amount.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has determined the number of active deposit accounts or personal customers it has.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_uWVlTLxuEeGCw9HgBpY34g" name="Insurance Portfolio Review Scheduled"
+        sourceRef="_c8x4lbxuEeGCw9HgBpY34g" targetRef="_c8x4eLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_uWVlT7xuEeGCw9HgBpY34g" name="Date Reached" sourceRef="_c8x4lrxuEeGCw9HgBpY34g"
+        targetRef="_c8x4eLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_uWVlUrxuEeGCw9HgBpY34g" name="Operational Risk Condition Changed"
+        sourceRef="_c8x4l7xuEeGCw9HgBpY34g" targetRef="_c8x4d7xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_uWVlVbxuEeGCw9HgBpY34g" name="Insurance Arrangement Cancelled"
+        sourceRef="_c8x4jLxuEeGCw9HgBpY34g" targetRef="_c8x4mLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_uWVlWLxuEeGCw9HgBpY34g" name="Increased Insurance Arrangement Requested"
+        sourceRef="_c8x4fLxuEeGCw9HgBpY34g" targetRef="_c8x4mbxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_uWVlW7xuEeGCw9HgBpY34g" name="Insurance Arrangement Renewal Requested"
+        sourceRef="_c8x4f7xuEeGCw9HgBpY34g" targetRef="_c8x4mrxuEeGCw9HgBpY34g"/>
+  </bpmn2:process>
+</bpmn2:definitions>

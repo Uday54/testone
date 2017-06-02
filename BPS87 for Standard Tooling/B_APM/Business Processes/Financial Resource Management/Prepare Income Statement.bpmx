@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_U3jdz7xuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_U3jdz7xuEeGCw9HgBpY34g"
+    xmlns:_UfkbkLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"
+    xmlns:_UhWkQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"
+    xmlns:_dol1mbxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_dol1mbxuEeGCw9HgBpY34g"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_bIZw2rxuEeGCw9HgBpY34g" name="Prepare Income Statement" expressionLanguage="http://www.w3.org/1999/XPath"
+    targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_bIZw2rxuEeGCw9HgBpY34g" typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_bIZw3bxuEeGCw9HgBpY34g"
+      visible="true" type="Bpmn2" element="_bIZw3LxuEeGCw9HgBpY34g" name="Prepare Income Statement Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_bI_morxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_zOOhXbxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="Allocate%20Reserve%20Funds.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_dol1mbxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_zOOhXrxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../Financial%20Transaction%20Processing/Apply%20Accounting%20Entry%20Details.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_U3jdz7xuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_RHmEQxwsEeOMUpRtwvEXUw" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"/>
+  <bpmn2:extension xmi:id="_bIZw27xuEeGCw9HgBpY34g" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_jMMuoxwrEeOMUpRtwvEXUw" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_JWFgIfxiEeOPPNUUqxVo0g" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_bIZw3LxuEeGCw9HgBpY34g" name="Prepare Income Statement">
+    <bpmn2:documentation id="_bI_moLxuEeGCw9HgBpY34g">SHORT NAME: Prpr Income Stment&#xD;
+&#xD;
+B LEVEL ROOT: Prepare General Business Event&#xD;
+&#xD;
+DEFINITION: To make an income statement ready or suitable for use.&#xD;
+&#xD;
+DESCRIPTION: This workflow encompasses the activities necessary to prepare an income statement to an appropriate standard. Determine any loss write off requirements and any loss reserve requirements and write these off to the appropriate control account. &#xD;
+&#xD;
+In addition, generate regulatory reports, when required. &#xD;
+&#xD;
+An income statement is a financial statement that summarizes the revenues and expenses for a particular accounting period. The difference between these two items is the net income (income after tax) or the net loss. &#xD;
+&#xD;
+This statement is also known as the Profit and Loss Account (P&amp;L). &#xD;
+&#xD;
+FLOW DIAGRAM: WF Chart for Prepare Income Statement&#xD;
+&#xD;
+IBM Unique ID: CBPC04569</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_jMMuoBwrEeOMUpRtwvEXUw">
+      <tagging:tag id="_jMMuoRwrEeOMUpRtwvEXUw">Financial Resource Management</tagging:tag>
+      <tagging:tag id="_jMMuohwrEeOMUpRtwvEXUw">ValueChain_WealthManagement_Settle</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:lane id="_bI_mobxuEeGCw9HgBpY34g" name="Financial Accountant" partitionElementRef="_UhWkQLxuEeGCw9HgBpY34g:_U0lCQbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_bI_mo7xuEeGCw9HgBpY34g">A party who performs accounting functions such as audits or financial statement analysis.&#xD;
+&#xD;
+IBM Unique ID: CBPC04501</bpmn2:documentation>
+      <bpmn2:flowElementRef>_bI_mprxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_mqbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_mrLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_mr7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_msrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_ms7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_mtrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_mubxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_mvbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_mwLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_mw7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_mxrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_mybxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_mzLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_mzbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_m0LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_m0bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_m1LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_m17xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_m2rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_m3bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_m4LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_m47xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_m5rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_m57xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_m6LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_m6bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_m6rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_m7LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bJJXoLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFRycrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFRydLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFRydbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFRyd7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFRyeLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFRyerxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFRyfLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFRyfrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFRyf7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFRygbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFRygrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFRyhLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFRyhrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFRyiLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFRyirxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFRyjLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFRyjrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFRykLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFRykrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFRylLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFRylrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFRymLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFRynLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFRyn7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFa8YLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFa8Y7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFa8ZLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFa8ZrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFa8Z7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFa8abxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFa8b7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFa8cLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:lane id="_bI_mpLxuEeGCw9HgBpY34g" name="Chief Financial Officer" partitionElementRef="_UhWkQLxuEeGCw9HgBpY34g:_bA8d5bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_bI_mpbxuEeGCw9HgBpY34g">The senior manager responsible for overseeing the financial activities of an entire company.&#xD;
+&#xD;
+IBM Unique ID: CBP05159</bpmn2:documentation>
+      <bpmn2:flowElementRef>_bI_murxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bI_m67xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bJJXobxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFa8ZbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFa8a7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_nFa8dLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_bI_mprxuEeGCw9HgBpY34g" name="Retrieve Non Interest Expense"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_bIZw1LxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_bI_mqLxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JWFgIPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_bI_mp7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U0lCQbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_bI_mqbxuEeGCw9HgBpY34g" name="Retrieve Non Interest Income"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_bIZw1rxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_bI_mq7xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JWFgIvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_bI_mqrxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U0lCQbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_bI_mrLxuEeGCw9HgBpY34g" name="Determine Loss Write Off Requirement"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_bIZwyrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_bI_mrrxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JWFgI_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_bI_mrbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U0lCQbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_bI_mr7xuEeGCw9HgBpY34g" name="Determine Regulatory Reporting Requirement"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_dpB6i7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_bI_msbxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JWGHMPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_bI_msLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U0lCQbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:exclusiveGateway id="_bI_msrxuEeGCw9HgBpY34g"/>
+    <bpmn2:callActivity id="_bI_ms7xuEeGCw9HgBpY34g" name="Generate Regulatory Report"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_DjdJ0hwsEeOMUpRtwvEXUw">
+      <bpmn2:documentation id="_bI_mtbxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JWGHMfxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_RHmEQBwsEeOMUpRtwvEXUw" name="InputOutputSpecification1">
+        <bpmn2:dataInput id="_RHmEQhwsEeOMUpRtwvEXUw" name="Involved Party Identifier"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00mLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_RHmERRwsEeOMUpRtwvEXUw" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_RHmEQRwsEeOMUpRtwvEXUw" name="InputSet1">
+          <bpmn2:dataInputRefs>_RHmEQhwsEeOMUpRtwvEXUw</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_RHmERBwsEeOMUpRtwvEXUw" name="OutputSet1">
+          <bpmn2:dataOutputRefs>_RHmERRwsEeOMUpRtwvEXUw</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:resourceRole id="_bI_mtLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U0lCQbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_bI_mtrxuEeGCw9HgBpY34g" name="Initiate Income Statement Preparation"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_bIZwzLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_bI_muLxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JWGHMvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_bI_mt7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U0lCQbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:parallelGateway id="_bI_mubxuEeGCw9HgBpY34g"/>
+    <bpmn2:callActivity id="_bI_murxuEeGCw9HgBpY34g" name="Authorize Financial Statement"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_bBGPEbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_bI_mvLxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JWGHM_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_bI_mu7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_bA8d5bxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_bI_mvbxuEeGCw9HgBpY34g" name="Record Net Income" isForCompensation="false"
+        calledElement="_UhWkQLxuEeGCw9HgBpY34g:_bIZw2LxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_bI_mv7xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JWGHNPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_bI_mvrxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U0lCQbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_bI_mwLxuEeGCw9HgBpY34g" name="Allocate Reserve Funds"
+        isForCompensation="false" calledElement="_dol1mbxuEeGCw9HgBpY34g:_dol1m7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_bI_mwrxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JWGuQPxiEeOPPNUUqxVo0g">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_RHmERhwsEeOMUpRtwvEXUw" name="InputOutputSpecification1">
+        <bpmn2:dataInput id="_RHv1QRwsEeOMUpRtwvEXUw" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_RHv1QBwsEeOMUpRtwvEXUw" name="InputSet1">
+          <bpmn2:dataInputRefs>_RHv1QRwsEeOMUpRtwvEXUw</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:resourceRole id="_bI_mwbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U0lCQbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_bI_mw7xuEeGCw9HgBpY34g" name="Record Profit or Loss"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_bIZwzrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_bI_mxbxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JWGuQfxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_bI_mxLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U0lCQbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_bI_mxrxuEeGCw9HgBpY34g" name="Apply Accounting Entry Details"
+        isForCompensation="false" calledElement="_U3jdz7xuEeGCw9HgBpY34g:_U3jd0bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_bI_myLxuEeGCw9HgBpY34g">In this context, capital and control accounting entries are required to be posted.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JWGuQvxiEeOPPNUUqxVo0g">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_RHv1QhwsEeOMUpRtwvEXUw" name="InputOutputSpecification1">
+        <bpmn2:dataInput id="_RHv1RBwsEeOMUpRtwvEXUw" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_RHv1RhwsEeOMUpRtwvEXUw" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_RHv1QxwsEeOMUpRtwvEXUw" name="InputSet1">
+          <bpmn2:dataInputRefs>_RHv1RBwsEeOMUpRtwvEXUw</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_RHv1RRwsEeOMUpRtwvEXUw" name="OutputSet1">
+          <bpmn2:dataOutputRefs>_RHv1RhwsEeOMUpRtwvEXUw</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:resourceRole id="_bI_mx7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U0lCQbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_bI_mybxuEeGCw9HgBpY34g" name="Calculate Gross Income"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_bIZwwrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_bI_my7xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JWGuQ_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_bI_myrxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U0lCQbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:parallelGateway id="_bI_mzLxuEeGCw9HgBpY34g"/>
+    <bpmn2:callActivity id="_bI_mzbxuEeGCw9HgBpY34g" name="Report Income Statement Position"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_bIZwwLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_bI_mz7xuEeGCw9HgBpY34g">INTERNAL CONTROL (SARBANES-OXLEY, BASEL II)&#xD;
+----------------------------------------------------------------------------------------&#xD;
+&#xD;
+This relates to Section 302, certification of financial statements, of the Sarbanes-Oxley Act of 2002.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JWGuRPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_bI_mzrxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U0lCQbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:exclusiveGateway id="_bI_m0LxuEeGCw9HgBpY34g"/>
+    <bpmn2:callActivity id="_bI_m0bxuEeGCw9HgBpY34g" name="Calculate Net Income" isForCompensation="false"
+        calledElement="_UhWkQLxuEeGCw9HgBpY34g:_bOXO2LxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_bI_m07xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JWGuRfxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_bI_m0rxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U0lCQbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_bI_m1LxuEeGCw9HgBpY34g" name="Report Material Financial Event"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_bBGPE7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_bI_m1rxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JWGuRvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_bI_m1bxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U0lCQbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_bI_m17xuEeGCw9HgBpY34g" name="Retrieve Interest Expense"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_bIZw0LxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_bI_m2bxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JWGuR_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_bI_m2LxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U0lCQbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_bI_m2rxuEeGCw9HgBpY34g" name="Calculate Net Interest Income"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_bIZwxLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_bI_m3LxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JWGuSPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_bI_m27xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U0lCQbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_bI_m3bxuEeGCw9HgBpY34g" name="Retrieve Interest Income"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_bIZw0rxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_bI_m37xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JWGuSfxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_bI_m3rxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U0lCQbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_bI_m4LxuEeGCw9HgBpY34g" name="Calculate Net Non Interest Income"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_bIZwxrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_bI_m4rxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JWGuSvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_bI_m4bxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U0lCQbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_bI_m47xuEeGCw9HgBpY34g" name="Determine Finance Svc Loss Reserve Requirement"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_bIZwyLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_bI_m5bxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JWGuS_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_bI_m5LxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U0lCQbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:endEvent id="_bI_m5rxuEeGCw9HgBpY34g" name="End">
+      <bpmn2:messageEventDefinition id="_nFRymrxuEeGCw9HgBpY34g" name="Regulatory Report Not Required">
+        <bpmn2:documentation id="_nFRym7xuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="_bI_m57xuEeGCw9HgBpY34g" name="Start">
+      <bpmn2:timerEventDefinition id="_nFRynbxuEeGCw9HgBpY34g" name="Date Reached">
+        <bpmn2:documentation id="_nFRynrxuEeGCw9HgBpY34g">FULL NAME: Date Reached&#xD;
+&#xD;
+TRIGGER CATEGORY: Time Driven&#xD;
+&#xD;
+DEFINITION: A Time Trigger Type denoting that a specified date has been reached.&#xD;
+&#xD;
+EXAMPLES OF USE: On 25th June 1993, an insurance policy has matured and a payment to the customer is generated.</bpmn2:documentation>
+      </bpmn2:timerEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:startEvent id="_bI_m6LxuEeGCw9HgBpY34g" name="Start:1">
+      <bpmn2:messageEventDefinition id="_L_6_4hwsEeOMUpRtwvEXUw" name="Income Statement Review Scheduled">
+        <bpmn2:documentation id="_L_6_4xwsEeOMUpRtwvEXUw">FULL NAME:  Event Scheduled&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION:  An expected occurrence of interest to the business has resulted in the planning of an event to occur at a specified time in the future.&#xD;
+&#xD;
+EXAMPLES OF USE:  A meeting has been scheduled as a result of a customer enquiry activity to discuss product requirements.  A loan repayment schedule has been created to establish of a series of repayment due dates. An end of period has been reached which triggers the completion of a financial statement.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="_bI_m6bxuEeGCw9HgBpY34g" name="End:1">
+      <bpmn2:messageEventDefinition id="_nFa8YbxuEeGCw9HgBpY34g" name="Communication Completed">
+        <bpmn2:documentation id="_nFa8YrxuEeGCw9HgBpY34g">FULL NAME: Expected Activity Completed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected specific, but otherwise not categorized occurrence of interest to the business has ended.&#xD;
+&#xD;
+EXAMPLES OF USE: A plan to relocate headquarters staff has been set in motion on the completion of negotiations to buy a development site.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:exclusiveGateway id="_bI_m6rxuEeGCw9HgBpY34g"/>
+    <bpmn2:exclusiveGateway id="_bI_m67xuEeGCw9HgBpY34g"/>
+    <bpmn2:exclusiveGateway id="_bI_m7LxuEeGCw9HgBpY34g"/>
+    <bpmn2:endEvent id="_bJJXoLxuEeGCw9HgBpY34g" name="End:2">
+      <bpmn2:messageEventDefinition id="_nFa8bbxuEeGCw9HgBpY34g" name="Loss Reserve Modification Not Required">
+        <bpmn2:documentation id="_nFa8brxuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_bJJXobxuEeGCw9HgBpY34g" name="End:3">
+      <bpmn2:messageEventDefinition id="_nFa8crxuEeGCw9HgBpY34g" name="Financial Statement Authorized">
+        <bpmn2:documentation id="_nFa8c7xuEeGCw9HgBpY34g">FULL NAME: Authorization Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A proposed course of action has received permission from someone with sufficient status.&#xD;
+&#xD;
+EXAMPLES OF USE: John Smith can have an overdraft facility of one thousand currency units because it has been authorized by an appropriate bank officer.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="_nFRycrxuEeGCw9HgBpY34g" name="Non Interest Income Retrieved"
+        sourceRef="_bI_mqbxuEeGCw9HgBpY34g" targetRef="_bI_mprxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_nFRyc7xuEeGCw9HgBpY34g">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_nFRydLxuEeGCw9HgBpY34g" sourceRef="_bI_mr7xuEeGCw9HgBpY34g"
+        targetRef="_bI_msrxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_nFRydbxuEeGCw9HgBpY34g" name="Regulatory Report Required"
+        sourceRef="_bI_msrxuEeGCw9HgBpY34g" targetRef="_bI_ms7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_nFRydrxuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_nFRyd7xuEeGCw9HgBpY34g" sourceRef="_bI_mubxuEeGCw9HgBpY34g"
+        targetRef="_bI_mtrxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_nFRyeLxuEeGCw9HgBpY34g" name="Income Statement Preparation Initiated"
+        sourceRef="_bI_mtrxuEeGCw9HgBpY34g" targetRef="_bI_mqbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_nFRyebxuEeGCw9HgBpY34g">FULL NAME: Expected Activity Initiated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected specific, but otherwise not categorized occurrence of interest to the business has commenced.&#xD;
+&#xD;
+EXAMPLES OF USE: A procedure to optimise foreign currency holdings has been set in motion at beginning of an important series of international trade talks.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_nFRyerxuEeGCw9HgBpY34g" name="Accounting Entry Required"
+        sourceRef="_bI_mvbxuEeGCw9HgBpY34g" targetRef="_bI_mxrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_nFRye7xuEeGCw9HgBpY34g">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_nFRyfLxuEeGCw9HgBpY34g" name="Accounting Entry Required"
+        sourceRef="_bI_mwLxuEeGCw9HgBpY34g" targetRef="_bI_mxrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_nFRyfbxuEeGCw9HgBpY34g">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_nFRyfrxuEeGCw9HgBpY34g" sourceRef="_bI_mzLxuEeGCw9HgBpY34g"
+        targetRef="_bI_mybxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_nFRyf7xuEeGCw9HgBpY34g" name="Income Before Tax Calculated"
+        sourceRef="_bI_mybxuEeGCw9HgBpY34g" targetRef="_bI_mw7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_nFRygLxuEeGCw9HgBpY34g">FULL NAME: Value Calculated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the mathematical determination of a monetary, financial amount.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has calculated a monthly loan repayment figure using loan amount, interest rate and term. The Financial Institution has calculated an amount which represents the total current commercial loan exposure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Calculate, Accumulate and sometimes Determine.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_nFRygbxuEeGCw9HgBpY34g" sourceRef="_bI_m0LxuEeGCw9HgBpY34g"
+        targetRef="_bI_mzbxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_nFRygrxuEeGCw9HgBpY34g" name="Income Statement Recorded"
+        sourceRef="_bI_mzbxuEeGCw9HgBpY34g" targetRef="_bI_murxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_nFRyg7xuEeGCw9HgBpY34g">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_nFRyhLxuEeGCw9HgBpY34g" name="Net Income Calculated"
+        sourceRef="_bI_m0bxuEeGCw9HgBpY34g" targetRef="_bI_mvbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_nFRyhbxuEeGCw9HgBpY34g">FULL NAME: Value Calculated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the mathematical determination of a monetary, financial amount.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has calculated a monthly loan repayment figure using loan amount, interest rate and term. The Financial Institution has calculated an amount which represents the total current commercial loan exposure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Calculate, Accumulate and sometimes Determine.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_nFRyhrxuEeGCw9HgBpY34g" name="Accounting Entry Balanced"
+        sourceRef="_bI_mxrxuEeGCw9HgBpY34g" targetRef="_bI_m1LxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_nFRyh7xuEeGCw9HgBpY34g">FULL NAME: Value Calculated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the mathematical determination of a monetary, financial amount.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has calculated a monthly loan repayment figure using loan amount, interest rate and term. The Financial Institution has calculated an amount which represents the total current commercial loan exposure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Calculate, Accumulate and sometimes Determine.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_nFRyiLxuEeGCw9HgBpY34g" name="Material Financial Event Reported"
+        sourceRef="_bI_m1LxuEeGCw9HgBpY34g" targetRef="_bI_mr7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_nFRyibxuEeGCw9HgBpY34g">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_nFRyirxuEeGCw9HgBpY34g" name="Material Financial Event Reported"
+        sourceRef="_bI_m1LxuEeGCw9HgBpY34g" targetRef="_bI_m0LxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_nFRyi7xuEeGCw9HgBpY34g">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_nFRyjLxuEeGCw9HgBpY34g" name="Interest Expense Retrieved"
+        sourceRef="_bI_m17xuEeGCw9HgBpY34g" targetRef="_bI_m2rxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_nFRyjbxuEeGCw9HgBpY34g">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_nFRyjrxuEeGCw9HgBpY34g" name="Net Interest Income (Expense) Calculated"
+        sourceRef="_bI_m2rxuEeGCw9HgBpY34g" targetRef="_bI_mzLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_nFRyj7xuEeGCw9HgBpY34g">FULL NAME: Value Calculated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the mathematical determination of a monetary, financial amount.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has calculated a monthly loan repayment figure using loan amount, interest rate and term. The Financial Institution has calculated an amount which represents the total current commercial loan exposure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Calculate, Accumulate and sometimes Determine.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_nFRykLxuEeGCw9HgBpY34g" name="Income Statement Preparation Initiated"
+        sourceRef="_bI_mtrxuEeGCw9HgBpY34g" targetRef="_bI_m3bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_nFRykbxuEeGCw9HgBpY34g">FULL NAME: Expected Activity Initiated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected specific, but otherwise not categorized occurrence of interest to the business has commenced.&#xD;
+&#xD;
+EXAMPLES OF USE: A procedure to optimise foreign currency holdings has been set in motion at beginning of an important series of international trade talks.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_nFRykrxuEeGCw9HgBpY34g" name="Interest Income Retrieved"
+        sourceRef="_bI_m3bxuEeGCw9HgBpY34g" targetRef="_bI_m17xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_nFRyk7xuEeGCw9HgBpY34g">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_nFRylLxuEeGCw9HgBpY34g" name="Non Interest Expense Retrieved"
+        sourceRef="_bI_mprxuEeGCw9HgBpY34g" targetRef="_bI_m4LxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_nFRylbxuEeGCw9HgBpY34g">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_nFRylrxuEeGCw9HgBpY34g" name="Net Non Interest Income (Expense) Calculated"
+        sourceRef="_bI_m4LxuEeGCw9HgBpY34g" targetRef="_bI_mzLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_nFRyl7xuEeGCw9HgBpY34g">FULL NAME: Value Calculated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the mathematical determination of a monetary, financial amount.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has calculated a monthly loan repayment figure using loan amount, interest rate and term. The Financial Institution has calculated an amount which represents the total current commercial loan exposure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Calculate, Accumulate and sometimes Determine.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_nFRymLxuEeGCw9HgBpY34g" name="Loss Write Off Requirement Determined"
+        sourceRef="_bI_mrLxuEeGCw9HgBpY34g" targetRef="_bI_m47xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_nFRymbxuEeGCw9HgBpY34g">FULL NAME: Confirmation Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to endorse a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: Susan Brown's promotion to acting supervisor has been confirmed, and she will now retain the post permanently.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_nFRynLxuEeGCw9HgBpY34g" name="Regulatory Report Not Required"
+        sourceRef="_bI_msrxuEeGCw9HgBpY34g" targetRef="_bI_m5rxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_nFRyn7xuEeGCw9HgBpY34g" name="Date Reached" sourceRef="_bI_m57xuEeGCw9HgBpY34g"
+        targetRef="_bI_mubxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_nFa8YLxuEeGCw9HgBpY34g" name="Income Statement Review Scheduled"
+        sourceRef="_bI_m6LxuEeGCw9HgBpY34g" targetRef="_bI_mubxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_nFa8Y7xuEeGCw9HgBpY34g" name="Communication Completed"
+        sourceRef="_bI_ms7xuEeGCw9HgBpY34g" targetRef="_bI_m6bxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_nFa8ZLxuEeGCw9HgBpY34g" sourceRef="_bI_m47xuEeGCw9HgBpY34g"
+        targetRef="_bI_m6rxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_nFa8ZbxuEeGCw9HgBpY34g" sourceRef="_bI_murxuEeGCw9HgBpY34g"
+        targetRef="_bI_m67xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_nFa8ZrxuEeGCw9HgBpY34g" sourceRef="_bI_mw7xuEeGCw9HgBpY34g"
+        targetRef="_bI_m7LxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_nFa8Z7xuEeGCw9HgBpY34g" name="Loss Reserve Modification Required"
+        sourceRef="_bI_m6rxuEeGCw9HgBpY34g" targetRef="_bI_mwLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_nFa8aLxuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_nFa8abxuEeGCw9HgBpY34g" name="Loss Recorded" sourceRef="_bI_m7LxuEeGCw9HgBpY34g"
+        targetRef="_bI_mrLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_nFa8arxuEeGCw9HgBpY34g">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_nFa8a7xuEeGCw9HgBpY34g" name="Financial Statement Not Authorized"
+        sourceRef="_bI_m67xuEeGCw9HgBpY34g" targetRef="_bI_m0LxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_nFa8bLxuEeGCw9HgBpY34g">FULL NAME: Authorization Not Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to authorize a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: Authorization not provided for a given employees attendance at a training course.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_nFa8b7xuEeGCw9HgBpY34g" name="Loss Reserve Modification Not Required"
+        sourceRef="_bI_m6rxuEeGCw9HgBpY34g" targetRef="_bJJXoLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_nFa8cLxuEeGCw9HgBpY34g" name="Profit Recorded" sourceRef="_bI_m7LxuEeGCw9HgBpY34g"
+        targetRef="_bI_m0bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_nFa8cbxuEeGCw9HgBpY34g">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_nFa8dLxuEeGCw9HgBpY34g" name="Financial Statement Authorized"
+        sourceRef="_bI_m67xuEeGCw9HgBpY34g" targetRef="_bJJXobxuEeGCw9HgBpY34g"/>
+  </bpmn2:process>
+</bpmn2:definitions>

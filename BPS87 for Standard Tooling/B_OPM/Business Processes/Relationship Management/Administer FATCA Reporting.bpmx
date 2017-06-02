@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_GWk2MMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"
+    xmlns:_GXn_EMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"
+    xmlns:_LgMbYMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_LgMbYMT2EeGIlOhhn7SrtQ"
+    xmlns:_MzfPQ8T2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_MzfPQ8T2EeGIlOhhn7SrtQ"
+    xmlns:_hzTpEChgEeOjHu3a6otf0Q="http://www.ibm.com/xtools/bpmn/2.0/_hzTpEChgEeOjHu3a6otf0Q"
+    xmlns:_xvqYEyhgEeOjHu3a6otf0Q="http://www.ibm.com/xtools/bpmn/2.0/_xvqYEyhgEeOjHu3a6otf0Q"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_hzTpEChgEeOjHu3a6otf0Q" name="Administer FATCA Reporting"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_hzTpEChgEeOjHu3a6otf0Q"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_hzTpEyhgEeOjHu3a6otf0Q"
+      visible="true" type="Bpmn2" element="_hzTpEihgEeOjHu3a6otf0Q" name="Administer%20FATCA%20Reporting Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_zTHu6ihgEeOjHu3a6otf0Q" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_zyKbUihgEeOjHu3a6otf0Q" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Service%20Processes/Involved%20Party%20Management/IInvolvedPartyManagement/Retrieve%20Full%20Customer%20Details%20Service.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_MzfPQ8T2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_zyLCZihgEeOjHu3a6otf0Q" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_zyMQgChgEeOjHu3a6otf0Q" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Service%20Processes/Involved%20Party%20Management/IInvolvedPartyManagement/Retrieve%20FATCA%20Details%20Service.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_xvqYEyhgEeOjHu3a6otf0Q"/>
+  <bpmn2:import xmi:id="_zyOFsChgEeOjHu3a6otf0Q" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Service%20Processes/Communication%20Management/ICommunicationResponseProvision/Generate%20Communication%20Details%20Service.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_LgMbYMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:extension xmi:id="_hzTpEShgEeOjHu3a6otf0Q" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_hzYhkyhgEeOjHu3a6otf0Q" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_MrHDUSiMEeO1PvbDA98QvA" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_hzTpEihgEeOjHu3a6otf0Q" name="Administer FATCA Reporting">
+    <bpmn2:documentation id="_hzYhlChgEeOjHu3a6otf0Q">SHORT NAME: Admin FACTA Rprtng&#xD;
+&#xD;
+B LEVEL ROOT: Administer * Details&#xD;
+&#xD;
+DEFINITION: To be in direct charge of the FATCA reporting process for a Financial Institution.&#xD;
+&#xD;
+DESCRIPTION: All of the activities necessary for the financial institution to report periodically or upon request for FATCA compliance.&#xD;
+&#xD;
+FLOW DIAGRAM: WF Chart for Administer FATCA Reporting</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_hzYhkChgEeOjHu3a6otf0Q">
+      <tagging:tag xmi:id="_MqxFECiMEeO1PvbDA98QvA" id="_hzYhkShgEeOjHu3a6otf0Q">Relationship Management</tagging:tag>
+      <tagging:tag xmi:id="_MqxFESiMEeO1PvbDA98QvA" id="_hzYhkihgEeOjHu3a6otf0Q">ValueChain_RegulatoryCompliance_Implement</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_hzYhlShgEeOjHu3a6otf0Q">
+      <bpmn2:dataInput id="_0UJHBChgEeOjHu3a6otf0Q" name="FATCA Instruction" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_j4AEtyhgEeOjHu3a6otf0Q"/>
+      <bpmn2:dataOutput id="_0UJHBShgEeOjHu3a6otf0Q" name="Communication Details"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_0UJHBihgEeOjHu3a6otf0Q" name="FATCA Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_j4AEsyhgEeOjHu3a6otf0Q"/>
+      <bpmn2:inputSet id="_hzYhlihgEeOjHu3a6otf0Q">
+        <bpmn2:dataInputRefs>_0UJHBChgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_hzYhlyhgEeOjHu3a6otf0Q">
+        <bpmn2:dataOutputRefs>_0UJHBShgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_0UJHBihgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_zTHu6ShgEeOjHu3a6otf0Q" name="FATCA Point of Contact" partitionElementRef="_GXn_EMT2EeGIlOhhn7SrtQ:_j4nIsChgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_zTHu6yhgEeOjHu3a6otf0Q">An involved party appointed by the financial institution's FATCA Responsible Officer (the responsible officer can also be the point of contact). The point of contact may also include third party individuals that can be U.S. or local (e.g., service providers, affiliate employees, etc.).&#xD;
+&#xD;
+ Each point of contact may help complete the FATCA registration process, exceopt for signing of the reigistration form.</bpmn2:documentation>
+      <bpmn2:flowElementRef>_zyKbUChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_zyKbYyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_zyKbZShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_zyKbaShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_zyLCZyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_zyLCaShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_zyLCgihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_zyLpcyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_zyLpeShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_zyMQjShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_zyMQjyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_zyMQkyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_zyM3kShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_zyM3kyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_zyM3oShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_zyNeoShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_zyNepyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_zyOFwChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_zyOFwihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_zyOFyChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0JBcIyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0JBcJChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0LSF9yhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0LSF-ihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0LSGAChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0LSGAyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0LSGBihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0PFA4ShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0PFA4ihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0PFA4yhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0PFA5ChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0PFA5ShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0PFA5ihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0PFA6ShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0PFA6yhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0PFA7ShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0PFA7ihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0PFA7yhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0PFn4ChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0UIf9ShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0UJHAChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0UJHAShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0UJHAihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0UJHAyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_GC_4EEIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_GC_4E0IZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_GC_4FkIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_GC_4GUIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_GC_4HEIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_GC_4H0IZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_GC_4KUIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_GC_4LEIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_GDJpEEIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_GDJpE0IZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Hwq61kIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_INlgXEIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_zyKbUChgEeOjHu3a6otf0Q" name="Retrieve Full Customer Details"
+        isForCompensation="false" calledElement="_MzfPQ8T2EeGIlOhhn7SrtQ:_MzfPRcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_zyKbUShgEeOjHu3a6otf0Q">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_MrHDUCiMEeO1PvbDA98QvA">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_zyKbUyhgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_zyKbVihgEeOjHu3a6otf0Q" name="Customer Identifier" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_zyKbVyhgEeOjHu3a6otf0Q" name="Accessibility Profile"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW1sT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_zyKbWChgEeOjHu3a6otf0Q" name="Arrangements" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_zyKbWShgEeOjHu3a6otf0Q" name="Contact Preferences"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW2cT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_zyKbWihgEeOjHu3a6otf0Q" name="Customer" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHwMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_zyKbWyhgEeOjHu3a6otf0Q" name="Involved Party" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_zyKbXChgEeOjHu3a6otf0Q" name="Involved Party Relationship Details"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_G2K8Y8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_zyKbXShgEeOjHu3a6otf0Q" name="Related Involved Parties"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_zyKbVChgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_zyKbVihgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_zyKbVShgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_zyKbVyhgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_zyKbWChgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_zyKbWShgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_zyKbWihgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_zyKbWyhgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_zyKbXChgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_zyKbXShgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_zyKbayhgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_zyKbaShgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_zyKbVihgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_zyLCgyhgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_zyKbXChgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_zyLCgihgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_GC_4EUIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_zyKbVyhgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_GC_4EEIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_GC_4FEIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_zyKbWChgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_GC_4E0IZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_GC_4F0IZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_zyKbWShgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_GC_4FkIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_GC_4GkIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_zyKbWihgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_GC_4GUIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_GC_4HUIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_zyKbWyhgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_GC_4HEIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_GC_4IEIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_zyKbXShgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_GC_4H0IZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_zyLpcihgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_j4nIsChgEeOjHu3a6otf0Q</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_zyKbYyhgEeOjHu3a6otf0Q" name="Map to Retrieve Full Customer Details"
+        isForCompensation="false" calledElement="_hzTpEChgEeOjHu3a6otf0Q:_zyKbXihgEeOjHu3a6otf0Q">
+      <bpmn2:extensionElements xmi:id="_MrHDUiiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_zyKbZihgEeOjHu3a6otf0Q">
+        <bpmn2:dataOutput id="_zyKbaChgEeOjHu3a6otf0Q" name="Customer Identifier"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_zyLpcChgEeOjHu3a6otf0Q"/>
+        <bpmn2:outputSet id="_zyKbZyhgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_zyKbaChgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataOutputAssociation id="_zyKbaihgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_zyKbaChgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_zyKbaShgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_zyKbZChgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_j4nIsChgEeOjHu3a6otf0Q</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_zyKbZShgEeOjHu3a6otf0Q" sourceRef="_zyKbYyhgEeOjHu3a6otf0Q"
+        targetRef="_zyKbUChgEeOjHu3a6otf0Q"/>
+    <bpmn2:dataObject id="_zyKbaShgEeOjHu3a6otf0Q" name="Customer Identifier" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_zyLCZyhgEeOjHu3a6otf0Q" name="Map from Retrieve Full Customer Details"
+        isForCompensation="false" calledElement="_hzTpEChgEeOjHu3a6otf0Q:_zyKbbChgEeOjHu3a6otf0Q">
+      <bpmn2:extensionElements xmi:id="_MrHDUyiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_zyLCaihgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_zyLCbChgEeOjHu3a6otf0Q" name="Accessibility Profile"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW1sT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_zyLCbShgEeOjHu3a6otf0Q" name="Arrangements" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_zyLCbihgEeOjHu3a6otf0Q" name="Contact Preferences" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW2cT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_zyLCbyhgEeOjHu3a6otf0Q" name="Customer" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHwMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_zyLCcChgEeOjHu3a6otf0Q" name="Involved Party" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_zyLCcShgEeOjHu3a6otf0Q" name="Involved Party Relationship Details"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_G2K8Y8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_zyLCcihgEeOjHu3a6otf0Q" name="Related Involved Parties"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_0dnMEChgEeOjHu3a6otf0Q" name="Full Customer Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaH2MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_zyLCayhgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_zyLCbChgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_zyLCbShgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_zyLCbihgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_zyLCbyhgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_zyLCcChgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_zyLCcShgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_zyLCcihgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_zyLpcShgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_0dnMEChgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_zyLChChgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_zyLCgihgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_zyLCcShgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_GC_4EkIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_GC_4EEIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_zyLCbChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_GC_4FUIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_GC_4E0IZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_zyLCbShgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_GC_4GEIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_GC_4FkIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_zyLCbihgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_GC_4G0IZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_GC_4GUIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_zyLCbyhgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_GC_4HkIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_GC_4HEIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_zyLCcChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_GC_4IUIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_GC_4H0IZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_zyLCcihgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_0kFAeChgEeOjHu3a6otf0Q" name="Full Customer Details">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_0dnMEChgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_0UJHAihgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_0kFAeShgEeOjHu3a6otf0Q" name="Full Customer Details">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_0dnMEChgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_0UJHAyhgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_zyLCaChgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_j4nIsChgEeOjHu3a6otf0Q</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_zyLCaShgEeOjHu3a6otf0Q" sourceRef="_zyKbUChgEeOjHu3a6otf0Q"
+        targetRef="_zyLCZyhgEeOjHu3a6otf0Q"/>
+    <bpmn2:dataObject id="_zyLCgihgEeOjHu3a6otf0Q" name="Involved Party Relationship Details"
+        isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_G2K8Y8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_zyLpcyhgEeOjHu3a6otf0Q" name="Prepare FATCA Report" isForCompensation="false"
+        calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_yEuCFChgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_zyLpdChgEeOjHu3a6otf0Q">The paper document for FATCA reporting is Form 8966, and includes:&#xD;
+- Filer Information:&#xD;
+  Name, Address, GIIN, TIN, Intermediary Name, Address, GIIN, TIN&#xD;
+- Account Holder information:&#xD;
+  Name, Address, TIN, Entity Type&#xD;
+- U.S. Owners Information:&#xD;
+  Name, Address, TIN&#xD;
+- Financial Information:&#xD;
+  Account number, Currency Code, Balance, Interest, Gross Proceeds, Dividends&#xD;
+- Pooled Reporting Type Details:&#xD;
+  Pooled Reporting Type, # of accounts, Aggregate payment amount, Aggregate account balance, Currency Code</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_MrHDVCiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_zyLpdShgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_0dnMEihgEeOjHu3a6otf0Q" name="Document Item" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHw8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_0dnMEyhgEeOjHu3a6otf0Q" name="FATCA Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_j4AEsyhgEeOjHu3a6otf0Q"/>
+        <bpmn2:dataOutput id="_0dnMFChgEeOjHu3a6otf0Q" name="Communication Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_zyLpdihgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_0dnMEihgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_0dnMEyhgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_zyLpdyhgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_0dnMFChgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_0kFAeihgEeOjHu3a6otf0Q" name="Document Item">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_0UIf9ShgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_0dnMEihgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_0kFAeyhgEeOjHu3a6otf0Q" name="FATCA Details">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_0UJHAShgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_0dnMEyhgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_0kFAfChgEeOjHu3a6otf0Q" name="Communication Details">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_0dnMFChgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_0UJHAChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_zyLpeChgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_j4nIsChgEeOjHu3a6otf0Q</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_zyLpeShgEeOjHu3a6otf0Q" name="Retrieve FATCA Details"
+        isForCompensation="false" calledElement="_xvqYEyhgEeOjHu3a6otf0Q:_xvqYFShgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_GC_4IkIZEeSedtiJ0SK07w">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_MrHDVSiMEeO1PvbDA98QvA">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_zyMQgShgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_zyMQhChgEeOjHu3a6otf0Q" name="Financial Institution"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_GC_4I0IZEeSedtiJ0SK07w" name="GIIN Identifier" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_xvwetChgEeOjHu3a6otf0Q"/>
+        <bpmn2:dataOutput id="_GC_4JEIZEeSedtiJ0SK07w" name="FATCA Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZtCt8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_zyMQgihgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_zyMQhChgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_zyMQgyhgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_GC_4I0IZEeSedtiJ0SK07w</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_GC_4JEIZEeSedtiJ0SK07w</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_zyMQlShgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_zyMQkyhgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_zyMQhChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_GC_4KkIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_GC_4I0IZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_GC_4KUIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_GC_4LUIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_GC_4JEIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_GC_4LEIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_zyM3oChgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_j4nIsChgEeOjHu3a6otf0Q</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_zyMQjShgEeOjHu3a6otf0Q" name="Map to Retrieve FATCA Details"
+        isForCompensation="false" calledElement="_hzTpEChgEeOjHu3a6otf0Q:_zyMQhyhgEeOjHu3a6otf0Q">
+      <bpmn2:extensionElements xmi:id="_MrHDViiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_zyMQkChgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_0dnMFShgEeOjHu3a6otf0Q" name="FATCA Instruction" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_j4AEtyhgEeOjHu3a6otf0Q"/>
+        <bpmn2:dataOutput id="_zyMQkihgEeOjHu3a6otf0Q" name="Financial Institution"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_zyM3nihgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_0dnMFShgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_zyMQkShgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_zyMQkihgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_0kFAfShgEeOjHu3a6otf0Q" name="FATCA Instruction">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_0UJHBChgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_0dnMFShgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_zyMQlChgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_zyMQkihgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_zyMQkyhgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_zyMQjihgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_j4nIsChgEeOjHu3a6otf0Q</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_zyMQjyhgEeOjHu3a6otf0Q" sourceRef="_zyMQjShgEeOjHu3a6otf0Q"
+        targetRef="_zyLpeShgEeOjHu3a6otf0Q"/>
+    <bpmn2:dataObject id="_zyMQkyhgEeOjHu3a6otf0Q" name="Financial Institution" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_zyM3kShgEeOjHu3a6otf0Q" name="Map from Retrieve FATCA Details"
+        isForCompensation="false" calledElement="_hzTpEChgEeOjHu3a6otf0Q:_zyMQlihgEeOjHu3a6otf0Q">
+      <bpmn2:extensionElements xmi:id="_MrHDVyiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_zyM3lChgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_GC_4J0IZEeSedtiJ0SK07w" name="GIIN Identifier" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_xvwetChgEeOjHu3a6otf0Q"/>
+        <bpmn2:dataInput id="_GC_4KEIZEeSedtiJ0SK07w" name="FATCA Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZtCt8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_0dnzIChgEeOjHu3a6otf0Q" name="FATCA Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_j4AEsyhgEeOjHu3a6otf0Q"/>
+        <bpmn2:inputSet id="_zyM3lShgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_GC_4J0IZEeSedtiJ0SK07w</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_GC_4KEIZEeSedtiJ0SK07w</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_zyM3nyhgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_0dnzIChgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_GC_4K0IZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_GC_4KUIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_GC_4J0IZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_GC_4LkIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_GC_4LEIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_GC_4KEIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_0kFAfihgEeOjHu3a6otf0Q" name="FATCA Details">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_0dnzIChgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_0UJHAShgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_0kFAfyhgEeOjHu3a6otf0Q" name="FATCA Details">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_0dnzIChgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_0UJHBihgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_zyM3kihgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_j4nIsChgEeOjHu3a6otf0Q</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_zyM3kyhgEeOjHu3a6otf0Q" sourceRef="_zyLpeShgEeOjHu3a6otf0Q"
+        targetRef="_zyM3kShgEeOjHu3a6otf0Q"/>
+    <bpmn2:callActivity id="_zyM3oShgEeOjHu3a6otf0Q" name="Confirm Customer Status"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_xvMeAChgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_zyM3oihgEeOjHu3a6otf0Q">For FATCA reporting, verify that the customer's account status is 'Reportable Account'</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_MrHDWCiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_zyM3oyhgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_0dnzIShgEeOjHu3a6otf0Q" name="Full Customer Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaH2MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_zyM3pShgEeOjHu3a6otf0Q" name="Full Customer Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaH2MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_zyM3pihgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_0dnzIShgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_zyM3pChgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_zyM3pShgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_0kFAgChgEeOjHu3a6otf0Q" name="Full Customer Details">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_0UJHAihgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_0dnzIShgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_zyNeoChgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_j4nIsChgEeOjHu3a6otf0Q</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_zyNeoShgEeOjHu3a6otf0Q" name="Gather Customer Reporting Details"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_yEtbAChgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_zyNeoihgEeOjHu3a6otf0Q">For FATCA Reporting, details that must be gathered include:&#xD;
+&#xD;
+[from TD 9610: III.i]&#xD;
+&#xD;
+Customer Name&#xD;
+Customer Address&#xD;
+U.S. Tax Identification Number(TIN)&#xD;
+Account Number&#xD;
+Name and identifying number of the Reporting FATCA Partner FI&#xD;
+Account balance or value as at the end of year/reporting period&#xD;
+Custodial Accounts   total gross amount of interest, dividends, etc&#xD;
+Depository Account - total gross amount of interest paid</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_MrHqYCiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_zyNeoyhgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_0dnzIihgEeOjHu3a6otf0Q" name="Full Customer Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaH2MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_0dnzIyhgEeOjHu3a6otf0Q" name="Document Item" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHw8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_zyNepChgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_0dnzIihgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_zyNepShgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_0dnzIyhgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_0kFAgShgEeOjHu3a6otf0Q" name="Full Customer Details">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_0UJHAyhgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_0dnzIihgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_0kFAgihgEeOjHu3a6otf0Q" name="Document Item">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_0dnzIyhgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_0UIf9ShgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_zyNepihgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_j4nIsChgEeOjHu3a6otf0Q</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_zyNepyhgEeOjHu3a6otf0Q" name="Generate Communication Details"
+        isForCompensation="false" calledElement="_LgMbYMT2EeGIlOhhn7SrtQ:_LgMbYsT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_zyNeqChgEeOjHu3a6otf0Q">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_MrHqYSiMEeO1PvbDA98QvA">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_zyOFsShgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_zyOFtChgEeOjHu3a6otf0Q" name="Information Content" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Ggj4vMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_zyOFtShgEeOjHu3a6otf0Q" name="Channel" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWwcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_zyOFtihgEeOjHu3a6otf0Q" name="Commuication Targets"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_zyOFtyhgEeOjHu3a6otf0Q" name="Communication" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_zyOFsihgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_zyOFtChgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_zyOFtShgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_zyOFtihgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_zyOFsyhgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_zyOFtyhgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_zyOFyihgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_zyOFyChgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_zyOFtChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_GDJpEkIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_GDJpEEIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_zyOFtShgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_GDJpFUIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_GDJpE0IZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_zyOFtihgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_L1Sm40IZEeSedtiJ0SK07w" name="Communication Details">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_zyOFtyhgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_0UJHBShgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_zyOs0ShgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_j4nIsChgEeOjHu3a6otf0Q</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_zyOFwChgEeOjHu3a6otf0Q" name="Map to Generate Communication Details"
+        isForCompensation="false" calledElement="_hzTpEChgEeOjHu3a6otf0Q:_zyOFuChgEeOjHu3a6otf0Q">
+      <bpmn2:extensionElements xmi:id="_MrHqYiiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_zyOFwyhgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_0dnzJChgEeOjHu3a6otf0Q" name="Communication Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_zyOFxShgEeOjHu3a6otf0Q" name="Information Content"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Ggj4vMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_zyOFxihgEeOjHu3a6otf0Q" name="Channel" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWwcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_zyOFxyhgEeOjHu3a6otf0Q" name="Commuication Targets"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_zyOszyhgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_0dnzJChgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_zyOFxChgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_zyOFxShgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_zyOFxihgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_zyOFxyhgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_0kFAgyhgEeOjHu3a6otf0Q" name="Communication Details">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_0UJHAChgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_0dnzJChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_zyOFyShgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_zyOFxShgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_zyOFyChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_GDJpEUIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_zyOFxihgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_GDJpEEIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_GDJpFEIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_hzTpEChgEeOjHu3a6otf0Q:_zyOFxyhgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_hzTpEChgEeOjHu3a6otf0Q:_GDJpE0IZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_zyOFwShgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_j4nIsChgEeOjHu3a6otf0Q</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_zyOFwihgEeOjHu3a6otf0Q" sourceRef="_zyOFwChgEeOjHu3a6otf0Q"
+        targetRef="_zyNepyhgEeOjHu3a6otf0Q"/>
+    <bpmn2:dataObject id="_zyOFyChgEeOjHu3a6otf0Q" name="Information Content" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Ggj4vMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:exclusiveGateway id="_0JBcIyhgEeOjHu3a6otf0Q"/>
+    <bpmn2:parallelGateway id="_0JBcJChgEeOjHu3a6otf0Q"/>
+    <bpmn2:startEvent id="_0LSF9yhgEeOjHu3a6otf0Q" name="Start">
+      <bpmn2:timerEventDefinition id="_0LSF-ChgEeOjHu3a6otf0Q" name="Date Reached">
+        <bpmn2:documentation id="_0LSF-ShgEeOjHu3a6otf0Q">FULL NAME: Date Reached&#xD;
+&#xD;
+TRIGGER CATEGORY: Time Driven&#xD;
+&#xD;
+DEFINITION: A Time Trigger Type denoting that a specified date has been reached.&#xD;
+&#xD;
+EXAMPLES OF USE: On 25th June 1993, an insurance policy has matured and a payment to the customer is generated.</bpmn2:documentation>
+      </bpmn2:timerEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:startEvent id="_0LSF-ihgEeOjHu3a6otf0Q" name="Start:1">
+      <bpmn2:messageEventDefinition id="_0LSF-yhgEeOjHu3a6otf0Q" name="FATCA Reporting Instruction Received">
+        <bpmn2:documentation id="_0LSF_ChgEeOjHu3a6otf0Q">FULL NAME: Information Request Received&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request for information is received by Financial Institution.&#xD;
+&#xD;
+EXAMPLES OF USE:  Mr. Green has requested that details about the bank's different types of personal account products are sent to him.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="_0LSGAChgEeOjHu3a6otf0Q" name="End:1">
+      <bpmn2:messageEventDefinition id="_0LSGAShgEeOjHu3a6otf0Q" name="FATCA Reporting Not Required">
+        <bpmn2:documentation id="_0LSGAihgEeOjHu3a6otf0Q">FULL NAME: Selection Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A selection has been made from available alternatives.&#xD;
+&#xD;
+EXAMPLES OF USE: Mary Jones can be formally offered the post of Marketing Director as she has been selected from a short list of candidates.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="_0LSGAyhgEeOjHu3a6otf0Q" name="Start:2">
+      <bpmn2:messageEventDefinition id="_0LSGBChgEeOjHu3a6otf0Q" name="FATCA Reporting Scheduled">
+        <bpmn2:documentation id="_0LSGBShgEeOjHu3a6otf0Q">FULL NAME:  Event Scheduled&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION:  An expected occurrence of interest to the business has resulted in the planning of an event to occur at a specified time in the future.&#xD;
+&#xD;
+EXAMPLES OF USE:  A meeting has been scheduled as a result of a customer enquiry activity to discuss product requirements.  A loan repayment schedule has been created to establish of a series of repayment due dates.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:startEvent id="_0LSGBihgEeOjHu3a6otf0Q" name="Start:3"/>
+    <bpmn2:sequenceFlow id="_0PFA4ShgEeOjHu3a6otf0Q" sourceRef="_0JBcIyhgEeOjHu3a6otf0Q"
+        targetRef="_zyMQjShgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0PFA4ihgEeOjHu3a6otf0Q" sourceRef="_0JBcJChgEeOjHu3a6otf0Q"
+        targetRef="_0JBcIyhgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0PFA4yhgEeOjHu3a6otf0Q" name="Date Reached" sourceRef="_0LSF9yhgEeOjHu3a6otf0Q"
+        targetRef="_0JBcJChgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0PFA5ChgEeOjHu3a6otf0Q" name="FATCA Reporting Instruction Received"
+        sourceRef="_0LSF-ihgEeOjHu3a6otf0Q" targetRef="_0JBcIyhgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0PFA5ShgEeOjHu3a6otf0Q" name="FATCA Details Retrieved"
+        sourceRef="_zyM3kShgEeOjHu3a6otf0Q" targetRef="_zyKbYyhgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0PFA5ihgEeOjHu3a6otf0Q" name="FATCA Reporting Required"
+        sourceRef="_zyM3oShgEeOjHu3a6otf0Q" targetRef="_zyNeoShgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_0PFA5yhgEeOjHu3a6otf0Q">FULL NAME: Selection Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A selection has been made from available alternatives.&#xD;
+&#xD;
+EXAMPLES OF USE: Mary Jones can be formally offered the post of Marketing Director as she has been selected from a short list of candidates.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_0PFA6ShgEeOjHu3a6otf0Q" name="Full Customer Details Retrieved"
+        sourceRef="_zyLCZyhgEeOjHu3a6otf0Q" targetRef="_zyM3oShgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_0PFA6ihgEeOjHu3a6otf0Q">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_0PFA6yhgEeOjHu3a6otf0Q" name="Documentation Prepared"
+        sourceRef="_zyLpcyhgEeOjHu3a6otf0Q" targetRef="_zyOFwChgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_0PFA7ChgEeOjHu3a6otf0Q">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_0PFA7ShgEeOjHu3a6otf0Q" name="FATCA Reporting Details Gathered"
+        sourceRef="_zyNeoShgEeOjHu3a6otf0Q" targetRef="_zyLpcyhgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0PFA7ihgEeOjHu3a6otf0Q" name="FATCA Reporting Not Required"
+        sourceRef="_zyM3oShgEeOjHu3a6otf0Q" targetRef="_0LSGAChgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0PFA7yhgEeOjHu3a6otf0Q" name="FATCA Reporting Scheduled"
+        sourceRef="_0LSGAyhgEeOjHu3a6otf0Q" targetRef="_0JBcJChgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0PFn4ChgEeOjHu3a6otf0Q" name="Invoked By Business Process"
+        sourceRef="_0LSGBihgEeOjHu3a6otf0Q" targetRef="_zyMQjShgEeOjHu3a6otf0Q"/>
+    <bpmn2:dataObject id="_0UIf9ShgEeOjHu3a6otf0Q" name="Document Item" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHw8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_0UJHAChgEeOjHu3a6otf0Q" name="Communication Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_0UJHAShgEeOjHu3a6otf0Q" name="FATCA Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_j4AEsyhgEeOjHu3a6otf0Q"/>
+    <bpmn2:dataObject id="_0UJHAihgEeOjHu3a6otf0Q" name="Full Customer Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaH2MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_0UJHAyhgEeOjHu3a6otf0Q" name="Full Customer Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaH2MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_GC_4EEIZEeSedtiJ0SK07w" name="Accessibility Profile" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW1sT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_GC_4E0IZEeSedtiJ0SK07w" name="Arrangements" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_GC_4FkIZEeSedtiJ0SK07w" name="Contact Preferences" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW2cT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_GC_4GUIZEeSedtiJ0SK07w" name="Customer" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHwMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_GC_4HEIZEeSedtiJ0SK07w" name="Involved Party" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_GC_4H0IZEeSedtiJ0SK07w" name="Related Involved Parties"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_GC_4KUIZEeSedtiJ0SK07w" name="GIIN Identifier" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_xvwetChgEeOjHu3a6otf0Q"/>
+    <bpmn2:dataObject id="_GC_4LEIZEeSedtiJ0SK07w" name="FATCA Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZtCt8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_GDJpEEIZEeSedtiJ0SK07w" name="Channel" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWwcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_GDJpE0IZEeSedtiJ0SK07w" name="Commuication Targets" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:endEvent id="_Hwq61kIZEeSedtiJ0SK07w" name="End">
+      <bpmn2:messageEventDefinition id="_Hwq610IZEeSedtiJ0SK07w" name="Communication Completed">
+        <bpmn2:documentation id="_Hwq62EIZEeSedtiJ0SK07w">FULL NAME: Expected Activity Completed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected specific, but otherwise not categorized occurrence of interest to the business has ended.&#xD;
+&#xD;
+EXAMPLES OF USE: A plan to relocate headquarters staff has been set in motion on the completion of negotiations to buy a development site.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="_INlgXEIZEeSedtiJ0SK07w" name="Communication Completed"
+        sourceRef="_zyNepyhgEeOjHu3a6otf0Q" targetRef="_Hwq61kIZEeSedtiJ0SK07w"/>
+  </bpmn2:process>
+  <bpmn2:globalTask id="_zyKbXihgEeOjHu3a6otf0Q" name="Map to Retrieve Full Customer Details">
+    <bpmn2:ioSpecification id="_zyKbXyhgEeOjHu3a6otf0Q">
+      <bpmn2:dataOutput id="_zyKbYihgEeOjHu3a6otf0Q" name="Customer Identifier" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_zyKbYChgEeOjHu3a6otf0Q"/>
+      <bpmn2:outputSet id="_zyKbYShgEeOjHu3a6otf0Q">
+        <bpmn2:dataOutputRefs>_zyKbYihgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_zyKbbChgEeOjHu3a6otf0Q" name="Map from Retrieve Full Customer Details">
+    <bpmn2:ioSpecification id="_zyKbbShgEeOjHu3a6otf0Q">
+      <bpmn2:dataInput id="_zyKbcChgEeOjHu3a6otf0Q" name="Accessibility Profile" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW1sT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_zyKbcShgEeOjHu3a6otf0Q" name="Arrangements" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_zyLCYChgEeOjHu3a6otf0Q" name="Contact Preferences" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW2cT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_zyLCYShgEeOjHu3a6otf0Q" name="Customer" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHwMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_zyLCYihgEeOjHu3a6otf0Q" name="Involved Party" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_zyLCYyhgEeOjHu3a6otf0Q" name="Involved Party Relationship Details"
+          isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_G2K8Y8T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_zyLCZChgEeOjHu3a6otf0Q" name="Related Involved Parties"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_zyLCZShgEeOjHu3a6otf0Q" name="Full Customer Details"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaH2MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_zyKbbihgEeOjHu3a6otf0Q">
+        <bpmn2:dataInputRefs>_zyKbcChgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_zyKbcShgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_zyLCYChgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_zyLCYShgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_zyLCYihgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_zyLCYyhgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_zyLCZChgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_zyKbbyhgEeOjHu3a6otf0Q">
+        <bpmn2:dataOutputRefs>_zyLCZShgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_zyMQhyhgEeOjHu3a6otf0Q" name="Map to Retrieve FATCA Details">
+    <bpmn2:ioSpecification id="_zyMQiChgEeOjHu3a6otf0Q">
+      <bpmn2:dataInput id="_zyMQiyhgEeOjHu3a6otf0Q" name="FATCA Instruction" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_j4AEtyhgEeOjHu3a6otf0Q"/>
+      <bpmn2:dataOutput id="_zyMQjChgEeOjHu3a6otf0Q" name="Financial Institution"
+          isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_zyMQiShgEeOjHu3a6otf0Q">
+        <bpmn2:dataInputRefs>_zyMQiyhgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_zyMQiihgEeOjHu3a6otf0Q">
+        <bpmn2:dataOutputRefs>_zyMQjChgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_zyMQlihgEeOjHu3a6otf0Q" name="Map from Retrieve FATCA Details">
+    <bpmn2:ioSpecification id="_zyMQlyhgEeOjHu3a6otf0Q">
+      <bpmn2:dataInput id="_GC_4JUIZEeSedtiJ0SK07w" name="GIIN Identifier" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_xvwetChgEeOjHu3a6otf0Q"/>
+      <bpmn2:dataInput id="_GC_4JkIZEeSedtiJ0SK07w" name="FATCA Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZtCt8T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_zyM3kChgEeOjHu3a6otf0Q" name="FATCA Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_j4AEsyhgEeOjHu3a6otf0Q"/>
+      <bpmn2:inputSet id="_zyMQmChgEeOjHu3a6otf0Q">
+        <bpmn2:dataInputRefs>_GC_4JUIZEeSedtiJ0SK07w</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_GC_4JkIZEeSedtiJ0SK07w</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_zyMQmShgEeOjHu3a6otf0Q">
+        <bpmn2:dataOutputRefs>_zyM3kChgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_zyOFuChgEeOjHu3a6otf0Q" name="Map to Generate Communication Details">
+    <bpmn2:ioSpecification id="_zyOFuShgEeOjHu3a6otf0Q">
+      <bpmn2:dataInput id="_zyOFvChgEeOjHu3a6otf0Q" name="Communication Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_zyOFvShgEeOjHu3a6otf0Q" name="Information Content" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Ggj4vMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_zyOFvihgEeOjHu3a6otf0Q" name="Channel" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWwcT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_zyOFvyhgEeOjHu3a6otf0Q" name="Commuication Targets" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_zyOFuihgEeOjHu3a6otf0Q">
+        <bpmn2:dataInputRefs>_zyOFvChgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_zyOFuyhgEeOjHu3a6otf0Q">
+        <bpmn2:dataOutputRefs>_zyOFvShgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_zyOFvihgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_zyOFvyhgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+</bpmn2:definitions>

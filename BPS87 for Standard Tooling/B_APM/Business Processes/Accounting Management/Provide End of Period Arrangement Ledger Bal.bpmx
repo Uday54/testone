@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_UfkbkLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"
+    xmlns:_UhWkQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"
+    xmlns:_UvEQILxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UvEQILxuEeGCw9HgBpY34g"
+    xmlns:_UwtO67xuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UwtO67xuEeGCw9HgBpY34g"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_UwtO67xuEeGCw9HgBpY34g" name="Provide End of Period Arrangement Ledger Bal"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_UwtO67xuEeGCw9HgBpY34g"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_UwtO7rxuEeGCw9HgBpY34g"
+      visible="true" type="Bpmn2" element="_UwtO7bxuEeGCw9HgBpY34g" name="Provide End of Period Arrangement Ledger Bal Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_UxJ60rxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_UxJ64rxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_zJJ0AbxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="Retrieve%20Business%20Account%20Balance.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UvEQILxuEeGCw9HgBpY34g"/>
+  <bpmn2:extension xmi:id="_UwtO7LxuEeGCw9HgBpY34g" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_meRY0hwqEeOMUpRtwvEXUw" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_GC0_ofxiEeOPPNUUqxVo0g" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_UwtO7bxuEeGCw9HgBpY34g" name="Provide End of Period Arrangement Ledger Bal">
+    <bpmn2:documentation id="_UxJ60LxuEeGCw9HgBpY34g">SHORT NAME: Prvd End of Prd AR Ldgr Bal&#xD;
+&#xD;
+B LEVEL ROOT: Provide Arrangement&#xD;
+&#xD;
+DEFINITION: To supply an end of period arrangement ledger balance.&#xD;
+&#xD;
+DESCRIPTION: This workflow encompasses the activities necessary for the financial institution to provide an arrangement ledger balance on the customer's business account at the end, for example, of a day's transactions, to be used as the starting balance brought forward on the next business day.  &#xD;
+&#xD;
+This workflow includes retrieving the previously calculated business accounting unit balance (i.e. ledger balance), then calculating and recording the current balance.&#xD;
+&#xD;
+FLOW DIAGRAM: WF Chart for Provide End of Period Ledger Bal&#xD;
+&#xD;
+IBM Unique ID: CBPC2167</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_meRY0BwqEeOMUpRtwvEXUw">
+      <tagging:tag xmi:id="_GCu5APxiEeOPPNUUqxVo0g" id="_meRY0RwqEeOMUpRtwvEXUw">Accounting Management</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_UxJ637xuEeGCw9HgBpY34g">
+      <bpmn2:dataInput id="_UxJ65LxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+          itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+      <bpmn2:dataOutput id="_UxJ64bxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+          itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+      <bpmn2:dataOutput id="_UxJ66LxuEeGCw9HgBpY34g" name="Communication Details"
+          isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+      <bpmn2:inputSet id="_UxJ647xuEeGCw9HgBpY34g">
+        <bpmn2:dataInputRefs>_UxJ65LxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_UxJ64LxuEeGCw9HgBpY34g">
+        <bpmn2:dataOutputRefs>_UxJ64bxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_UxJ66LxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_UxJ60bxuEeGCw9HgBpY34g" name="Enterprise Process" partitionElementRef="_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_UxJ607xuEeGCw9HgBpY34g">The default role for all enterprise process activities not explicitly assigned to other roles.&#xD;
+&#xD;
+IBM Unique ID: CBPC03295</bpmn2:documentation>
+      <bpmn2:flowElementRef>_UxJ61LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_UxJ617xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_UxJ62rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_UxJ63bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_UxJ63rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_UxJ65bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_UxJ65rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_UxJ657xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eIVFkLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eIVFkrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eIoAg7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eI67dLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eI67d7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KgZt0RwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KgZt0hwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Kt9otxwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Kt9ouBwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Kt9ouRwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Kt9ouhwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Kt9ouxwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Kt9ovBwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_UxJ61LxuEeGCw9HgBpY34g" name="Calculate Business Account Balance"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_UwtO57xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_UxJ61rxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_GC0_oPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_eIVFk7xuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_eIoAibxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_eIVFlbxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_eIoAiLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_eIoAibxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_eIVFlLxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_eIVFlbxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_eIoAirxuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_UwtO67xuEeGCw9HgBpY34g:_eIoAg7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_UwtO67xuEeGCw9HgBpY34g:_eIoAibxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_eIVFlrxuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_UwtO67xuEeGCw9HgBpY34g:_eIVFlbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_UwtO67xuEeGCw9HgBpY34g:_eIVFkrxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_UxJ61bxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_UxJ617xuEeGCw9HgBpY34g" name="Record Business Account Balance"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_UwtO6bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_UxJ62bxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_GC0_ovxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_eIePhLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_eIePhrxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_eI67ebxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_eIePhbxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_eIePhrxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_eI67eLxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_eI67ebxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_eIePh7xuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_UwtO67xuEeGCw9HgBpY34g:_eIVFkrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_UwtO67xuEeGCw9HgBpY34g:_eIePhrxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_eI67erxuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_UwtO67xuEeGCw9HgBpY34g:_eI67ebxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_UwtO67xuEeGCw9HgBpY34g:_UxJ64bxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_UxJ62LxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_UxJ62rxuEeGCw9HgBpY34g" name="Retrieve Business Account Balance"
+        isForCompensation="false" calledElement="_UvEQILxuEeGCw9HgBpY34g:_UvEQIrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_UxJ63LxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_GC_XsPxiEeOPPNUUqxVo0g">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_eIoAhLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_eJEsc7xuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_eIoAhrxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_eJN2a7xuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_eJEscrxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_eJEsc7xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_eIoAhbxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_eIoAhrxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_eJN2a7xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_eJEsdLxuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_UwtO67xuEeGCw9HgBpY34g:_UxJ65LxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_UwtO67xuEeGCw9HgBpY34g:_eJEsc7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_eIoAh7xuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_UwtO67xuEeGCw9HgBpY34g:_eIoAhrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_UwtO67xuEeGCw9HgBpY34g:_eIoAg7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_eJN2bLxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_UwtO67xuEeGCw9HgBpY34g:_eJN2a7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_UwtO67xuEeGCw9HgBpY34g:_UxJ66LxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_UxJ627xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:endEvent id="_UxJ63bxuEeGCw9HgBpY34g" name="End">
+      <bpmn2:messageEventDefinition id="_eI67crxuEeGCw9HgBpY34g" name="Business Account Balance Recorded">
+        <bpmn2:documentation id="_eI67c7xuEeGCw9HgBpY34g">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="_UxJ63rxuEeGCw9HgBpY34g" name="Start">
+      <bpmn2:timerEventDefinition id="_eI67dbxuEeGCw9HgBpY34g" name="Settlement End of Period Reached">
+        <bpmn2:documentation id="_eI67drxuEeGCw9HgBpY34g">FULL NAME: Settlement End of Day Reached&#xD;
+&#xD;
+TRIGGER CATEGORY: Time Driven&#xD;
+&#xD;
+DEFINITION: A Time Trigger Type denoting that the daily cut-off time for transactions to be presented for processing that day has been reached.&#xD;
+&#xD;
+EXAMPLES OF USE: Any transactions received after 3pm will be held over until the next working day.</bpmn2:documentation>
+      </bpmn2:timerEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="_UxJ65bxuEeGCw9HgBpY34g" name="End:1">
+      <bpmn2:messageEventDefinition id="_eJN2YLxuEeGCw9HgBpY34g" name="Communication Completed">
+        <bpmn2:documentation id="_eJN2YbxuEeGCw9HgBpY34g">FULL NAME: Expected Activity Completed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected specific, but otherwise not categorized occurrence of interest to the business has ended.&#xD;
+&#xD;
+EXAMPLES OF USE: A plan to relocate headquarters staff has been set in motion on the completion of negotiations to buy a development site.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_UxJ65rxuEeGCw9HgBpY34g" name="End:2">
+      <bpmn2:messageEventDefinition id="_eJN2ZbxuEeGCw9HgBpY34g" name="Operational Risk Report Not Required">
+        <bpmn2:documentation id="_eJN2ZrxuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_UxJ657xuEeGCw9HgBpY34g" name="End:3">
+      <bpmn2:messageEventDefinition id="_eJN2aLxuEeGCw9HgBpY34g" name="Communication Required">
+        <bpmn2:documentation id="_eJN2abxuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="_eIVFkLxuEeGCw9HgBpY34g" name="Business Account Balance Calculated"
+        sourceRef="_UxJ61LxuEeGCw9HgBpY34g" targetRef="_UxJ617xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_eIVFkbxuEeGCw9HgBpY34g">FULL NAME: Value Calculated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the mathematical determination of a monetary, financial amount.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has calculated a monthly loan repayment figure using loan amount, interest rate and term. The Financial Institution has calculated an amount which represents the total current commercial loan exposure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Calculate, Accumulate and sometimes Determine.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_eIVFkrxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_eIoAg7xuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_eI67dLxuEeGCw9HgBpY34g" name="Business Account Balance Recorded"
+        sourceRef="_UxJ617xuEeGCw9HgBpY34g" targetRef="_UxJ63bxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_eI67d7xuEeGCw9HgBpY34g" name="Settlement End of Period Reached"
+        sourceRef="_UxJ63rxuEeGCw9HgBpY34g" targetRef="_UxJ62rxuEeGCw9HgBpY34g"/>
+    <bpmn2:exclusiveGateway id="_KgZt0RwsEeOMUpRtwvEXUw" name="ExclusiveGateway1"/>
+    <bpmn2:parallelGateway id="_KgZt0hwsEeOMUpRtwvEXUw" name="ParallelGateway1"/>
+    <bpmn2:sequenceFlow id="_Kt9otxwsEeOMUpRtwvEXUw" name="" sourceRef="_UxJ62rxuEeGCw9HgBpY34g"
+        targetRef="_KgZt0RwsEeOMUpRtwvEXUw"/>
+    <bpmn2:sequenceFlow id="_Kt9ouBwsEeOMUpRtwvEXUw" name="" sourceRef="_KgZt0RwsEeOMUpRtwvEXUw"
+        targetRef="_KgZt0hwsEeOMUpRtwvEXUw"/>
+    <bpmn2:sequenceFlow id="_Kt9ouRwsEeOMUpRtwvEXUw" name="Communication Required"
+        sourceRef="_KgZt0hwsEeOMUpRtwvEXUw" targetRef="_UxJ657xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_Kt9ouhwsEeOMUpRtwvEXUw" name="Operational Risk Report Not Required"
+        sourceRef="_KgZt0RwsEeOMUpRtwvEXUw" targetRef="_UxJ65rxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_Kt9ouxwsEeOMUpRtwvEXUw" name="Communication Completed"
+        sourceRef="_KgZt0RwsEeOMUpRtwvEXUw" targetRef="_UxJ65bxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_Kt9ovBwsEeOMUpRtwvEXUw" name="Adjusted Total Balance Calculated"
+        sourceRef="_KgZt0hwsEeOMUpRtwvEXUw" targetRef="_UxJ61LxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_Kt9ovRwsEeOMUpRtwvEXUw">FULL NAME: Value Calculated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the mathematical determination of a monetary, financial amount.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has calculated a monthly loan repayment figure using loan amount, interest rate and term. The Financial Institution has calculated an amount which represents the total current commercial loan exposure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Calculate, Accumulate and sometimes Determine.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+  </bpmn2:process>
+</bpmn2:definitions>

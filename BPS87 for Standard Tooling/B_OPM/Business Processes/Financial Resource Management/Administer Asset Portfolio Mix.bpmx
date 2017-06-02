@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_GWk2MMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"
+    xmlns:_GXn_EMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"
+    xmlns:_L8D4BMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_L8D4BMT2EeGIlOhhn7SrtQ"
+    xmlns:_L9ZUwcT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_L9ZUwcT2EeGIlOhhn7SrtQ"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_L8D4BMT2EeGIlOhhn7SrtQ" name="Administer Asset Portfolio Mix"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_L8D4BMT2EeGIlOhhn7SrtQ"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_L8D4B8T2EeGIlOhhn7SrtQ"
+      visible="true" type="Bpmn2" element="_L8D4BsT2EeGIlOhhn7SrtQ" name="Administer Asset Portfolio Mix Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_N1p3AsT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_OiMz7sT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="Allocate%20Asset%20Mix%20Funds.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_L9ZUwcT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_OiMz9MT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:extension xmi:id="_L8D4BcT2EeGIlOhhn7SrtQ" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_cZDm4yhgEeOjHu3a6otf0Q" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_KJ3OlCiMEeO1PvbDA98QvA" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_L8D4BsT2EeGIlOhhn7SrtQ" name="Administer Asset Portfolio Mix">
+    <bpmn2:documentation id="_L9ZUwMT2EeGIlOhhn7SrtQ">SHORT NAME: Admin Asset Prtfl Mix&#xD;
+&#xD;
+B LEVEL ROOT: Administer * Details&#xD;
+&#xD;
+DEFINITION: To be in direct charge of the mix of assets in a portfolio.&#xD;
+&#xD;
+DESCRIPTION: This workflow encompasses the activities necessary to administer the financial institution to manage the allocation of funds to portfolios of assets by class. It starts when a new product is launched (i.e. market offering approved), or when a modification is required in the asset portfolio mix or after there has been a modification of the liability funds mix. The workflow forecasts credit requirements in the new situation and then determines how the forecasted credit requirement will be funded. The liquidity requirement of the portfolio is then balanced to income, and funds are allocated to the portfolio to meet the requirement. Any changes that may be needed to the financial institution's policy are also signalled. &#xD;
+&#xD;
+FLOW DIAGRAM: WF Chart for Administer Asset Portfolio Mix</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_cZDm4ChgEeOjHu3a6otf0Q">
+      <tagging:tag xmi:id="_KJroYCiMEeO1PvbDA98QvA" id="_cZDm4ShgEeOjHu3a6otf0Q">Financial Resource Management</tagging:tag>
+      <tagging:tag xmi:id="_KJroYSiMEeO1PvbDA98QvA" id="_cZDm4ihgEeOjHu3a6otf0Q">ValueChain_AssetLiabilityManagement_Maintain</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:lane id="_N1p3AcT2EeGIlOhhn7SrtQ" name="Enterprise Process" partitionElementRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_zS6ThShgEeOjHu3a6otf0Q">The default role for all enterprise process activities not explicitly assigned to other roles.</bpmn2:documentation>
+      <bpmn2:flowElementRef>_OiMz7MT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OiMz9cT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OiMz98T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OiMz_sT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OiM0AsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OiM0BcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OiM0CMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OiM0C8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OiM0DsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OiM0EcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OiM0FMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PCPl48T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PE7GZsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJ_NIMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJ_NIsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJ_NJMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJ_NJsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJ_NKMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJ_NKsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJ_NLMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJ_NLcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJ_NLsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJ_NMMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJ_NMsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJ_NNMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0IgexShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0Ks3JihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0Ks3KShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0Ks3LChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0Ks3LyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0N7xUihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0N7xUyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0N7xVChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0N7xVShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0N7xVihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_OiMz7MT2EeGIlOhhn7SrtQ" name="Allocate Asset Mix Funds"
+        isForCompensation="false" calledElement="_L9ZUwcT2EeGIlOhhn7SrtQ:_L9ZUw8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OiMz7cT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KJ3OkyiMEeO1PvbDA98QvA">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OiMz-8T2EeGIlOhhn7SrtQ" name="InputOutputSpecification1">
+        <bpmn2:dataInput id="_OiMz_cT2EeGIlOhhn7SrtQ" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OiMz_MT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_OiMz_cT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_OiM0AMT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_L8D4BMT2EeGIlOhhn7SrtQ:_OiMz_sT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_L8D4BMT2EeGIlOhhn7SrtQ:_OiMz_cT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_OiM0AcT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OiMz9cT2EeGIlOhhn7SrtQ" name="Map to Allocate Asset Mix Funds"
+        isForCompensation="false" calledElement="_L8D4BMT2EeGIlOhhn7SrtQ:_OiMz78T2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_KJ3OlSiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OiMz-MT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutput id="_OiMz-sT2EeGIlOhhn7SrtQ" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_znk78ChgEeOjHu3a6otf0Q" name="InputSet1"/>
+        <bpmn2:outputSet id="_OiMz-cT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_OiMz-sT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataOutputAssociation id="_OiMz_8T2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_L8D4BMT2EeGIlOhhn7SrtQ:_OiMz-sT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_L8D4BMT2EeGIlOhhn7SrtQ:_OiMz_sT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OiMz9sT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_OiMz98T2EeGIlOhhn7SrtQ" sourceRef="_OiMz9cT2EeGIlOhhn7SrtQ"
+        targetRef="_OiMz7MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_OiMz_sT2EeGIlOhhn7SrtQ" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_OiM0AsT2EeGIlOhhn7SrtQ" name="Balance Liquidity With Income"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_HJYzVMT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OiM0A8T2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KJ3OliiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_OiM0BMT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OiM0BcT2EeGIlOhhn7SrtQ" name="Define Asset Mix Policy"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_HJYzVsT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OiM0BsT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KJ3OlyiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_OiM0B8T2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OiM0CMT2EeGIlOhhn7SrtQ" name="Determine Cash Requirement"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_HJYzWMT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OiM0CcT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KJ3OmCiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_OiM0CsT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OiM0C8T2EeGIlOhhn7SrtQ" name="Determine Finance Service Product Requirement"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_HJikMcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OiM0DMT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KJ3OmSiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_OiM0DcT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OiM0DsT2EeGIlOhhn7SrtQ" name="Determine Other Asset Class Requirement"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_HJikM8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OiM0D8T2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KJ3OmiiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_OiM0EMT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OiM0EcT2EeGIlOhhn7SrtQ" name="Determine Security Investment Requirement"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_HJikNcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OiM0EsT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KJ3OmyiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_OiM0E8T2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OiM0FMT2EeGIlOhhn7SrtQ" name="Forecast Credit Requirement"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_HJikN8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OiM0FcT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KJ3OnCiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_OiM0FsT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:endEvent id="_PCPl48T2EeGIlOhhn7SrtQ" name="End">
+      <bpmn2:messageEventDefinition id="_PCPl5MT2EeGIlOhhn7SrtQ" name="Asset Mix Funds Allocated">
+        <bpmn2:documentation id="_PCPl5cT2EeGIlOhhn7SrtQ">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:parallelGateway id="_PE7GZsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PJ_NIMT2EeGIlOhhn7SrtQ" name="Liquidity Balanced With Income"
+        sourceRef="_OiM0AsT2EeGIlOhhn7SrtQ" targetRef="_OiM0BcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PJ_NIcT2EeGIlOhhn7SrtQ">FULL NAME: Value Calculated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the mathematical determination of a monetary, financial amount.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has calculated a monthly loan repayment figure using loan amount, interest rate and term. The Financial Institution has calculated an amount which represents the total current commercial loan exposure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Calculate, Accumulate and sometimes Determine.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PJ_NIsT2EeGIlOhhn7SrtQ" name="Asset Mix Policy Defined"
+        sourceRef="_OiM0BcT2EeGIlOhhn7SrtQ" targetRef="_OiMz9cT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PJ_NI8T2EeGIlOhhn7SrtQ">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PJ_NJMT2EeGIlOhhn7SrtQ" name="Credit Requirement Forecasted"
+        sourceRef="_OiM0FMT2EeGIlOhhn7SrtQ" targetRef="_OiM0EcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PJ_NJcT2EeGIlOhhn7SrtQ">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PJ_NJsT2EeGIlOhhn7SrtQ" name="Credit Requirement Forecasted"
+        sourceRef="_OiM0FMT2EeGIlOhhn7SrtQ" targetRef="_OiM0C8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PJ_NJ8T2EeGIlOhhn7SrtQ">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PJ_NKMT2EeGIlOhhn7SrtQ" name="Credit Requirement Forecasted"
+        sourceRef="_OiM0FMT2EeGIlOhhn7SrtQ" targetRef="_OiM0DsT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PJ_NKcT2EeGIlOhhn7SrtQ">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PJ_NKsT2EeGIlOhhn7SrtQ" name="Credit Requirement Forecasted"
+        sourceRef="_OiM0FMT2EeGIlOhhn7SrtQ" targetRef="_OiM0CMT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PJ_NK8T2EeGIlOhhn7SrtQ">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PJ_NLMT2EeGIlOhhn7SrtQ" name="Asset Mix Funds Allocated"
+        sourceRef="_OiMz7MT2EeGIlOhhn7SrtQ" targetRef="_PCPl48T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PJ_NLcT2EeGIlOhhn7SrtQ" sourceRef="_PE7GZsT2EeGIlOhhn7SrtQ"
+        targetRef="_OiM0AsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PJ_NLsT2EeGIlOhhn7SrtQ" name="Other Asset Class Requirement Determined"
+        sourceRef="_OiM0DsT2EeGIlOhhn7SrtQ" targetRef="_PE7GZsT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PJ_NL8T2EeGIlOhhn7SrtQ">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PJ_NMMT2EeGIlOhhn7SrtQ" name="Cash Requirement Determined"
+        sourceRef="_OiM0CMT2EeGIlOhhn7SrtQ" targetRef="_PE7GZsT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PJ_NMcT2EeGIlOhhn7SrtQ">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PJ_NMsT2EeGIlOhhn7SrtQ" name="Security Investment Requirement Determined"
+        sourceRef="_OiM0EcT2EeGIlOhhn7SrtQ" targetRef="_PE7GZsT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PJ_NM8T2EeGIlOhhn7SrtQ">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PJ_NNMT2EeGIlOhhn7SrtQ" name="Finance Service Product Requirement Determined"
+        sourceRef="_OiM0C8T2EeGIlOhhn7SrtQ" targetRef="_PE7GZsT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PJ_NNcT2EeGIlOhhn7SrtQ">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:exclusiveGateway id="_0IgexShgEeOjHu3a6otf0Q" name="ExclusiveGateway1"/>
+    <bpmn2:startEvent id="_0Ks3JihgEeOjHu3a6otf0Q" name="Start:1">
+      <bpmn2:messageEventDefinition id="_0Ks3JyhgEeOjHu3a6otf0Q" name="Liability Mix Funds Allocated">
+        <bpmn2:documentation id="_0Ks3KChgEeOjHu3a6otf0Q">FULL NAME: Value Calculated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION:  An expected occurrence of interest to the business has resulted in the mathematical determination of a monetary, financial amount.&#xD;
+&#xD;
+EXAMPLES OF USE:  The Financial Institution has calculated a monthly loan repayment figure using loan amount, interest rate and term. The Financial Institution has calculated an amount which represents the total current commercial loan exposure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Calculate, Accumulate and  sometimes Determine.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:startEvent id="_0Ks3KShgEeOjHu3a6otf0Q" name="Start:2">
+      <bpmn2:messageEventDefinition id="_0Ks3KihgEeOjHu3a6otf0Q" name="Market Offering Approved">
+        <bpmn2:documentation id="_0Ks3KyhgEeOjHu3a6otf0Q">FULL NAME: Approval Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to approve a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: A personal loan can be offered to John Smith because his application has been approved by the Financial Institution.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:startEvent id="_0Ks3LChgEeOjHu3a6otf0Q" name="Start:3">
+      <bpmn2:messageEventDefinition id="_0Ks3LShgEeOjHu3a6otf0Q" name="Asset Portfolio Mix Modification Required">
+        <bpmn2:documentation id="_0Ks3LihgEeOjHu3a6otf0Q">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:startEvent id="_0Ks3LyhgEeOjHu3a6otf0Q" name="Start:4"/>
+    <bpmn2:sequenceFlow id="_0N7xUihgEeOjHu3a6otf0Q" sourceRef="_0IgexShgEeOjHu3a6otf0Q"
+        targetRef="_OiM0FMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_0N7xUyhgEeOjHu3a6otf0Q" name="Liability Mix Funds Allocated"
+        sourceRef="_0Ks3JihgEeOjHu3a6otf0Q" targetRef="_0IgexShgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0N7xVChgEeOjHu3a6otf0Q" name="Market Offering Approved"
+        sourceRef="_0Ks3KShgEeOjHu3a6otf0Q" targetRef="_0IgexShgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0N7xVShgEeOjHu3a6otf0Q" name="Asset Portfolio Mix Modification Required"
+        sourceRef="_0Ks3LChgEeOjHu3a6otf0Q" targetRef="_0IgexShgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0N7xVihgEeOjHu3a6otf0Q" name="Invoked By Business Process"
+        sourceRef="_0Ks3LyhgEeOjHu3a6otf0Q" targetRef="_OiM0FMT2EeGIlOhhn7SrtQ"/>
+  </bpmn2:process>
+  <bpmn2:globalTask id="_OiMz78T2EeGIlOhhn7SrtQ" name="Map to Allocate Asset Mix Funds">
+    <bpmn2:ioSpecification id="_OiMz8MT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataOutput id="_OiMz88T2EeGIlOhhn7SrtQ" name="Accounting Unit" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_OiMz8cT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:outputSet id="_OiMz8sT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_OiMz88T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+</bpmn2:definitions>

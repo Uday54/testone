@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_UfkbkLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"
+    xmlns:_UhWkQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"
+    xmlns:_UhqGQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UhqGQLxuEeGCw9HgBpY34g"
+    xmlns:_dtNP57xuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_dtNP57xuEeGCw9HgBpY34g"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_dtNP57xuEeGCw9HgBpY34g" name="Activate Supply Arrangement"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_dtNP57xuEeGCw9HgBpY34g"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_dtNP6rxuEeGCw9HgBpY34g"
+      visible="true" type="Bpmn2" element="_dtNP6bxuEeGCw9HgBpY34g" name="Activate Supply Arrangement Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_dtXA0rxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_dtgK2rxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_zQnHAbxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Maps.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UhqGQLxuEeGCw9HgBpY34g"/>
+  <bpmn2:extension xmi:id="_dtNP6LxuEeGCw9HgBpY34g" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_E_2PUhwsEeOMUpRtwvEXUw" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_Kv-rQfxiEeOPPNUUqxVo0g" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_dtNP6bxuEeGCw9HgBpY34g" name="Activate Supply Arrangement">
+    <bpmn2:documentation id="_dtXA0LxuEeGCw9HgBpY34g">SHORT NAME: Actvt Supply AR&#xD;
+&#xD;
+B LEVEL ROOT: Activate * Details&#xD;
+&#xD;
+DEFINITION: To make a supply arrangement active or capable of action or use&#xD;
+&#xD;
+DESCRIPTION: This workflow encompasses all the activities necessary for the financial institution to progress an offer for an arrangement which has been received from a supplier, to the point at which the arrangement is available for use.&#xD;
+&#xD;
+When the offer is received, its details are recorded. The offer details are then compared to the financial institution's original request, and if found to be satisfactory, the workflow proceeds to accept the offer and establish it. If the comparison is unfavorable, the offer may be rejected, and a communication sent to the supplier who made the offer.&#xD;
+&#xD;
+In addition, the workflow provides for the issuance of any resource items that may be needed and the provision of any access that may be required on foot of the arrangement.&#xD;
+&#xD;
+This workflow is the third of three which deal with the setting up of a supply arrangement between an external supplier and the financial institution.&#xD;
+&#xD;
+FLOW DIAGRAM: WF Chart for Activate Supply Arrangement&#xD;
+&#xD;
+IBM Unique ID: CBPC0021</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_E_2PUBwsEeOMUpRtwvEXUw">
+      <tagging:tag id="_E_2PURwsEeOMUpRtwvEXUw">Supply Chain Management</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_dtgK17xuEeGCw9HgBpY34g">
+      <bpmn2:dataInput id="_dtgK2bxuEeGCw9HgBpY34g" name="Arrangement Offer Document"
+          isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkVm0rxuEeGCw9HgBpY34g"/>
+      <bpmn2:dataOutput id="_dtgK3LxuEeGCw9HgBpY34g" name="Communication Details"
+          isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+      <bpmn2:inputSet id="_dtgK2LxuEeGCw9HgBpY34g">
+        <bpmn2:dataInputRefs>_dtgK2bxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_dtgK27xuEeGCw9HgBpY34g">
+        <bpmn2:dataOutputRefs>_dtgK3LxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_dtXA0bxuEeGCw9HgBpY34g" name="Enterprise Process" partitionElementRef="_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_dtXA07xuEeGCw9HgBpY34g">The default role for all enterprise process activities not explicitly assigned to other roles.&#xD;
+&#xD;
+IBM Unique ID: CBPC0596</bpmn2:documentation>
+      <bpmn2:flowElementRef>_dtXA1LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dtXA17xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dtXA2LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dtXA2bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dtXA3LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dtXA3bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dtgKwLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dtgKw7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dtgKxLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dtgKx7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dtgKyrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dtgKzbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dtgKzrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dtgKz7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dtgK0LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dtgK0bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dtgK1LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xV01MrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xV01M7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xV01NLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xV01NbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xV01N7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xV01OLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xV01OrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xV01PLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xV01PrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xV01QrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xV01RbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xV01SLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xV01S7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xV01TLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xV01TrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xV9_ILxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xV9_IrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xWHwILxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xW3XALxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xXdM4LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KoTFkxwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_MyJG8BwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_MyJG8RwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_MyJG8xwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ealDwEIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ealDw0IVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ealDxkIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ealDyUIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ealDzEIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_dtXA1LxuEeGCw9HgBpY34g" name="Accept Arrangement Offer"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_c2EzgLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_dtXA1rxuEeGCw9HgBpY34g">Accept the Arrangement Offer, having checked that it will meet the Financial Institution's requirement in a satisfactory manner and that the terms and conditions are the best available from any of the suppliers who responded to the original tender.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Kv-rQPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_xV9_J7xuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_xV9_KbxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_xWQ6ErxuEeGCw9HgBpY34g" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_xV9_KLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_xV9_KbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_xWQ6EbxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_xWQ6ErxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_xV9_KrxuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_dtNP57xuEeGCw9HgBpY34g:_xV9_IrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dtNP57xuEeGCw9HgBpY34g:_xV9_KbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_ealDwUIVEeSFpMLLUsMfuA" name="Arrangement Details">
+        <bpmn2:sourceRef>_dtNP57xuEeGCw9HgBpY34g:_xWQ6ErxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dtNP57xuEeGCw9HgBpY34g:_ealDwEIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_ealDx0IVEeSFpMLLUsMfuA" name="Arrangement Details">
+        <bpmn2:sourceRef>_dtNP57xuEeGCw9HgBpY34g:_xWQ6ErxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dtNP57xuEeGCw9HgBpY34g:_ealDxkIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_dtXA1bxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:exclusiveGateway id="_dtXA17xuEeGCw9HgBpY34g"/>
+    <bpmn2:parallelGateway id="_dtXA2LxuEeGCw9HgBpY34g"/>
+    <bpmn2:callActivity id="_dtXA2bxuEeGCw9HgBpY34g" name="Acquire Supply Arrangement Offer"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_c2EzgrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_dtXA27xuEeGCw9HgBpY34g">Take possession of any offers received from suppliers in response to the Financial Institution's request for a detailed and formal specification of the terms and conditions which would apply to a supply arrangement between the two parties.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Kv-rQvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_xWHwIbxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_xXKR8bxuEeGCw9HgBpY34g" name="Arrangement Offer Document"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkVm0rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_xWHwI7xuEeGCw9HgBpY34g" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_xW3XAbxuEeGCw9HgBpY34g" name="Arrangement Offer Document"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkVm0rxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_xXKR8LxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_xXKR8bxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_xWHwIrxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_xWHwI7xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_xW3XAbxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_xXKR8rxuEeGCw9HgBpY34g" name="Arrangement Offer Document">
+        <bpmn2:sourceRef>_dtNP57xuEeGCw9HgBpY34g:_dtgK2bxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dtNP57xuEeGCw9HgBpY34g:_xXKR8bxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_xWHwJLxuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_dtNP57xuEeGCw9HgBpY34g:_xWHwI7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dtNP57xuEeGCw9HgBpY34g:_xWHwILxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_xW3XArxuEeGCw9HgBpY34g" name="Arrangement Offer Document">
+        <bpmn2:sourceRef>_dtNP57xuEeGCw9HgBpY34g:_xW3XAbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dtNP57xuEeGCw9HgBpY34g:_xW3XALxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_dtXA2rxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:exclusiveGateway id="_dtXA3LxuEeGCw9HgBpY34g"/>
+    <bpmn2:callActivity id="_dtXA3bxuEeGCw9HgBpY34g" name="Activate Access" isForCompensation="false"
+        calledElement="_UhWkQLxuEeGCw9HgBpY34g:_c2EzhLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_dtXA37xuEeGCw9HgBpY34g">Activate both the Financial Institution's and the supplier's access to the new arrangement.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Kv-rQ_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_dtXA3rxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_dtgKwLxuEeGCw9HgBpY34g" name="Compare Offer Details with Offer Request"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_c2EzhrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_dtgKwrxuEeGCw9HgBpY34g">Compare the terms and conditions offered by the supplier to the original request made by the Financial Institution. Check for any variations to the original request or any risks that the supplier might not be able to deliver the requested goods or services in a satisfactory manner.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Kv-rRPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_xV9_I7xuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_xWarEbxuEeGCw9HgBpY34g" name="Arrangement Offer Document"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkVm0rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_xXm94LxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_xV9_JbxuEeGCw9HgBpY34g" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_xWarELxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_xWarEbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_xXm94LxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_xV9_JLxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_xV9_JbxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_xWarErxuEeGCw9HgBpY34g" name="Arrangement Offer Document">
+        <bpmn2:sourceRef>_dtNP57xuEeGCw9HgBpY34g:_dtgK2bxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dtNP57xuEeGCw9HgBpY34g:_xWarEbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_xXm94bxuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_dtNP57xuEeGCw9HgBpY34g:_xXdM4LxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dtNP57xuEeGCw9HgBpY34g:_xXm94LxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_xV9_JrxuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_dtNP57xuEeGCw9HgBpY34g:_xV9_JbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dtNP57xuEeGCw9HgBpY34g:_xV9_IrxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_ealDykIVEeSFpMLLUsMfuA" name="Arrangement Details">
+        <bpmn2:sourceRef>_dtNP57xuEeGCw9HgBpY34g:_xV9_JbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dtNP57xuEeGCw9HgBpY34g:_ealDyUIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_dtgKwbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:exclusiveGateway id="_dtgKw7xuEeGCw9HgBpY34g"/>
+    <bpmn2:callActivity id="_dtgKxLxuEeGCw9HgBpY34g" name="Establish Supply Arrangement"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_c2EziLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_dtgKxrxuEeGCw9HgBpY34g">Set up the supply arrangement by opening any accounts required and completing any necessary documentation.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Kv-rRfxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_xWQ6FLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_xWQ6FrxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_xWQ6FbxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_xWQ6FrxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_ealDwkIVEeSFpMLLUsMfuA" name="Arrangement Details">
+        <bpmn2:sourceRef>_dtNP57xuEeGCw9HgBpY34g:_ealDwEIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dtNP57xuEeGCw9HgBpY34g:_xWQ6FrxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_dtgKxbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_dtgKx7xuEeGCw9HgBpY34g" name="Generate Communication Details"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_a4E8UBwrEeOMUpRtwvEXUw">
+      <bpmn2:documentation id="_dtgKybxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Kv-rRvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_xWkcFbxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_xWkcF7xuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_TpRW0BwsEeOMUpRtwvEXUw" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_xXKR9LxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_xWkcFrxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_xWkcF7xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_TpRW0BwsEeOMUpRtwvEXUw</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_xXKR87xuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_xXKR9LxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_ealDxUIVEeSFpMLLUsMfuA" name="Communication Details">
+        <bpmn2:sourceRef>_dtNP57xuEeGCw9HgBpY34g:_ealDw0IVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dtNP57xuEeGCw9HgBpY34g:_xWkcF7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_ealDzkIVEeSFpMLLUsMfuA" name="Communication Details">
+        <bpmn2:sourceRef>_dtNP57xuEeGCw9HgBpY34g:_ealDzEIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dtNP57xuEeGCw9HgBpY34g:_xWkcF7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_xXKR9bxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_dtNP57xuEeGCw9HgBpY34g:_xXKR9LxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dtNP57xuEeGCw9HgBpY34g:_dtgK3LxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_dtgKyLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_dtgKyrxuEeGCw9HgBpY34g" name="Record Arrangement Offer Details"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_c2EzirxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_dtgKzLxuEeGCw9HgBpY34g">Record the detailed terms and conditions set out in the supplier's offer to provide goods or services.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Kv-rR_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_xWHwJbxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_xWHwJ7xuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_xXdM4rxuEeGCw9HgBpY34g" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_xWHwJrxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_xWHwJ7xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_xXdM4bxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_xXdM4rxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_xWHwKLxuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_dtNP57xuEeGCw9HgBpY34g:_xWHwILxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dtNP57xuEeGCw9HgBpY34g:_xWHwJ7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_xXdM47xuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_dtNP57xuEeGCw9HgBpY34g:_xXdM4rxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dtNP57xuEeGCw9HgBpY34g:_xXdM4LxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_dtgKy7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:endEvent id="_dtgKzbxuEeGCw9HgBpY34g" name="End">
+      <bpmn2:messageEventDefinition id="_xV01QLxuEeGCw9HgBpY34g" name="Access Activated">
+        <bpmn2:documentation id="_xV01QbxuEeGCw9HgBpY34g">FULL NAME: Status Changed&#xD;
+&#xD;
+TRIGGER CATEGORY: Condition Driven&#xD;
+&#xD;
+DEFINITION: A business condition is invoked when something identified as being of importance to the business has moved to a new value in its particular classification.&#xD;
+&#xD;
+EXAMPLES OF USE: A customer who gets married is automatically moved into a lower risk category for term loan repayment, whereas a customer who becomes unemployed is moved into a higher risk category.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="_dtgKzrxuEeGCw9HgBpY34g" name="Start">
+      <bpmn2:messageEventDefinition id="_xV01Q7xuEeGCw9HgBpY34g" name="Supply Arrangement Offer Received">
+        <bpmn2:documentation id="_xV01RLxuEeGCw9HgBpY34g">FULL NAME: Information Received&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: Some form of information has become known to the enterprise.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used where the precise nature of the information received is not yet known, or where multiple information types are concerned.&#xD;
+&#xD;
+For example, all new or changed information which has been received by the Financial Institution may be processed by the incoming mail department.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="_dtgKz7xuEeGCw9HgBpY34g" name="End:1">
+      <bpmn2:messageEventDefinition id="_xV01RrxuEeGCw9HgBpY34g" name="Supply Arrangement Established">
+        <bpmn2:documentation id="_xV01R7xuEeGCw9HgBpY34g">FULL NAME: Communication Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: Some form of substantive contact has been caused by the enterprise to be directed or transmitted to another place.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used to formally mark the sending of any type of communication to enable the date or time of that communication to be referenced in the future.&#xD;
+&#xD;
+It is often used to 'start a clock' against which subsequent activity can be measured. For example, the sending of a Loan Arrangement Offer marks the start the one month period for which that offer is valid.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_dtgK0LxuEeGCw9HgBpY34g" name="End:2">
+      <bpmn2:messageEventDefinition id="_xV01SbxuEeGCw9HgBpY34g" name="Communication Completed">
+        <bpmn2:documentation id="_xV01SrxuEeGCw9HgBpY34g">FULL NAME: Expected Activity Completed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected specific, but otherwise not categorized occurrence of interest to the business has ended.&#xD;
+&#xD;
+EXAMPLES OF USE: A plan to relocate headquarters staff has been set in motion on the completion of negotiations to buy a development site.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:callActivity id="_dtgK0bxuEeGCw9HgBpY34g" name="XMap AR Offer Document to Comm Dtls"
+        isForCompensation="false" calledElement="_UhqGQLxuEeGCw9HgBpY34g:_ZjqnobxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_dtgK07xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Kv-rSPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_xWkcEbxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_xXBIArxuEeGCw9HgBpY34g" name="Arrangement Offer Document"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkVm0rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_xWkcE7xuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_xXBIAbxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_xXBIArxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_xWkcErxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_xWkcE7xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_xXBIA7xuEeGCw9HgBpY34g" name="Arrangement Offer Document">
+        <bpmn2:sourceRef>_dtNP57xuEeGCw9HgBpY34g:_xW3XALxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dtNP57xuEeGCw9HgBpY34g:_xXBIArxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_ealDxEIVEeSFpMLLUsMfuA" name="Communication Details">
+        <bpmn2:sourceRef>_dtNP57xuEeGCw9HgBpY34g:_xWkcE7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dtNP57xuEeGCw9HgBpY34g:_ealDw0IVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_dtgK0rxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_dtgK1LxuEeGCw9HgBpY34g" name="XMap AR Details to Comm Details"
+        isForCompensation="false" calledElement="_UhqGQLxuEeGCw9HgBpY34g:_U_J6pbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_dtgK1rxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Kv-rSfxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_xXBIBLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_xXBIBrxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_xXwu4bxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_xXBIBbxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_xXBIBrxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_xXwu4LxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_xXwu4bxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_ealDyEIVEeSFpMLLUsMfuA" name="Arrangement Details">
+        <bpmn2:sourceRef>_dtNP57xuEeGCw9HgBpY34g:_ealDxkIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dtNP57xuEeGCw9HgBpY34g:_xXBIBrxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_ealDy0IVEeSFpMLLUsMfuA" name="Arrangement Details">
+        <bpmn2:sourceRef>_dtNP57xuEeGCw9HgBpY34g:_ealDyUIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dtNP57xuEeGCw9HgBpY34g:_xXBIBrxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_ealDzUIVEeSFpMLLUsMfuA" name="Communication Details">
+        <bpmn2:sourceRef>_dtNP57xuEeGCw9HgBpY34g:_xXwu4bxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dtNP57xuEeGCw9HgBpY34g:_ealDzEIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_dtgK1bxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_xV01MrxuEeGCw9HgBpY34g" sourceRef="_dtXA1LxuEeGCw9HgBpY34g"
+        targetRef="_dtXA17xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_xV01M7xuEeGCw9HgBpY34g" sourceRef="_dtXA17xuEeGCw9HgBpY34g"
+        targetRef="_dtXA2LxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_xV01NLxuEeGCw9HgBpY34g" sourceRef="_dtXA2bxuEeGCw9HgBpY34g"
+        targetRef="_dtXA3LxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_xV01NbxuEeGCw9HgBpY34g" name="Arrangement Offer Accepted"
+        sourceRef="_dtXA2LxuEeGCw9HgBpY34g" targetRef="_dtXA3bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_xV01NrxuEeGCw9HgBpY34g">FULL NAME: Acceptance Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to accept a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has accepted the obligation of paying a cheque when it certifies or endorses the cheque for negotiation. The payment of a Bill of Exchange is guaranteed when a Banker's Acceptance has been given or negotiated.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_xV01N7xuEeGCw9HgBpY34g" sourceRef="_dtgKwLxuEeGCw9HgBpY34g"
+        targetRef="_dtgKw7xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_xV01OLxuEeGCw9HgBpY34g" name="Arrangement Offer Details Compared"
+        sourceRef="_dtgKw7xuEeGCw9HgBpY34g" targetRef="_dtXA1LxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_xV01ObxuEeGCw9HgBpY34g">FULL NAME: Confirmation Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to endorse a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: Susan Brown's promotion to acting supervisor has been confirmed, and she will now retain the post permanently.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_xV01OrxuEeGCw9HgBpY34g" name="Arrangement Offer Accepted"
+        sourceRef="_dtXA2LxuEeGCw9HgBpY34g" targetRef="_dtgKxLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_xV01O7xuEeGCw9HgBpY34g">FULL NAME: Acceptance Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to accept a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has accepted the obligation of paying a cheque when it certifies or endorses the cheque for negotiation. The payment of a Bill of Exchange is guaranteed when a Banker's Acceptance has been given or negotiated.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_xV01PLxuEeGCw9HgBpY34g" name="Supply Arrangement Offer Acquired"
+        sourceRef="_dtXA3LxuEeGCw9HgBpY34g" targetRef="_dtgKyrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_xV01PbxuEeGCw9HgBpY34g">FULL NAME: Acceptance Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to accept a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has accepted the obligation of paying a cheque when it certifies or endorses the cheque for negotiation. The payment of a Bill of Exchange is guaranteed when a Banker's Acceptance has been given or negotiated.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_xV01PrxuEeGCw9HgBpY34g" name="Arrangement Offer Details Recorded"
+        sourceRef="_dtgKyrxuEeGCw9HgBpY34g" targetRef="_dtgKwLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_xV01P7xuEeGCw9HgBpY34g">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_xV01QrxuEeGCw9HgBpY34g" name="Access Activated" sourceRef="_dtXA3bxuEeGCw9HgBpY34g"
+        targetRef="_dtgKzbxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_xV01RbxuEeGCw9HgBpY34g" name="Supply Arrangement Offer Received"
+        sourceRef="_dtgKzrxuEeGCw9HgBpY34g" targetRef="_dtXA2bxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_xV01SLxuEeGCw9HgBpY34g" name="Supply Arrangement Established"
+        sourceRef="_dtgKxLxuEeGCw9HgBpY34g" targetRef="_dtgKz7xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_xV01S7xuEeGCw9HgBpY34g" name="Communication Completed"
+        sourceRef="_dtgKx7xuEeGCw9HgBpY34g" targetRef="_dtgK0LxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_xV01TLxuEeGCw9HgBpY34g" name="Communication Required"
+        sourceRef="_dtgK1LxuEeGCw9HgBpY34g" targetRef="_dtgKx7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_xV01TbxuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_xV01TrxuEeGCw9HgBpY34g" name="Communication Required"
+        sourceRef="_dtgK0bxuEeGCw9HgBpY34g" targetRef="_dtgKx7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_xV01T7xuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_xV9_ILxuEeGCw9HgBpY34g" name="Arrangement Offer Not Found"
+        sourceRef="_dtXA3LxuEeGCw9HgBpY34g" targetRef="_dtgK0bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_xV9_IbxuEeGCw9HgBpY34g">FULL NAME: Incident Occurred&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: A specific, but otherwise not categorized occurrence of interest to the business has happened.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling to denote that an activity or series of activities is incident driven.&#xD;
+&#xD;
+This Trigger Type is used where the precise nature of the incident is not yet known, or where multiple types of incident are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_xV9_IrxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_xWHwILxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_xW3XALxuEeGCw9HgBpY34g" name="Arrangement Offer Document"
+        isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkVm0rxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_xXdM4LxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+    <bpmn2:exclusiveGateway id="_KoTFkxwsEeOMUpRtwvEXUw" name="ExclusiveGateway1"/>
+    <bpmn2:sequenceFlow id="_MyJG8BwsEeOMUpRtwvEXUw" name="" sourceRef="_KoTFkxwsEeOMUpRtwvEXUw"
+        targetRef="_dtgK1LxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_MyJG8RwsEeOMUpRtwvEXUw" name="Arrangement Offer Rejected"
+        sourceRef="_dtXA17xuEeGCw9HgBpY34g" targetRef="_KoTFkxwsEeOMUpRtwvEXUw">
+      <bpmn2:documentation id="_MyJG8hwsEeOMUpRtwvEXUw">FULL NAME: Rejection Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to reject a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: A mortgage refusal will be sent to William Brown because his application has been rejected.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_MyJG8xwsEeOMUpRtwvEXUw" name="Arrangement Offer Details Not Matched"
+        sourceRef="_dtgKw7xuEeGCw9HgBpY34g" targetRef="_KoTFkxwsEeOMUpRtwvEXUw"/>
+    <bpmn2:dataObject id="_ealDwEIVEeSFpMLLUsMfuA" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_ealDw0IVEeSFpMLLUsMfuA" name="Communication Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_ealDxkIVEeSFpMLLUsMfuA" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_ealDyUIVEeSFpMLLUsMfuA" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_ealDzEIVEeSFpMLLUsMfuA" name="Communication Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+  </bpmn2:process>
+</bpmn2:definitions>

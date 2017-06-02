@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_GWk2MMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"
+    xmlns:_GXn_EMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"
+    xmlns:_IEslJMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_IEslJMT2EeGIlOhhn7SrtQ"
+    xmlns:_IH-io8T2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_IH-io8T2EeGIlOhhn7SrtQ"
+    xmlns:_LqxTsMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_LqxTsMT2EeGIlOhhn7SrtQ"
+    xmlns:_y3VKwChgEeOjHu3a6otf0Q="http://www.ibm.com/xtools/bpmn/2.0/_y3VKwChgEeOjHu3a6otf0Q"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_y3VKwChgEeOjHu3a6otf0Q" name="Review Corporate Action Announcement"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_y3VKwChgEeOjHu3a6otf0Q"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_y3VKwyhgEeOjHu3a6otf0Q"
+      visible="true" type="Bpmn2" element="_y3VKwihgEeOjHu3a6otf0Q" name="Review%20Corporate%20Action%20Announcement Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_zTQRzyhgEeOjHu3a6otf0Q" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_z8TOyihgEeOjHu3a6otf0Q" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_z8Uc4ihgEeOjHu3a6otf0Q" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Business%20Processes/Corporate%20Action%20Management/Request%20Corporate%20Action%20Details.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_LqxTsMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_z8VD8ihgEeOjHu3a6otf0Q" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Service%20Processes/Corporate%20Action%20Management/ICorporateActionAdministration/Retrieve%20Corporate%20Action%20Details%20Service.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_IEslJMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_z8VrEyhgEeOjHu3a6otf0Q" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Service%20Processes/Corporate%20Action%20Management/ICorporateActionAdministration/Schedule%20CA%20Announcement%20Review%20Service.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_IH-io8T2EeGIlOhhn7SrtQ"/>
+  <bpmn2:extension xmi:id="_y3VKwShgEeOjHu3a6otf0Q" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_y3aDQyhgEeOjHu3a6otf0Q" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_O57rUSiMEeO1PvbDA98QvA" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_y3VKwihgEeOjHu3a6otf0Q" name="Review Corporate Action Announcement">
+    <bpmn2:documentation id="_y3aDRChgEeOjHu3a6otf0Q">SHORT NAME: Rvw CA Anncmnt&#xD;
+&#xD;
+B LEVEL ROOT: Review * Details&#xD;
+&#xD;
+DEFINITION: To look at or re-examine a Corporate Action Announcement &#xD;
+&#xD;
+DESCRIPTION: This workflow encompasses the activities necessary for the financial institution to review announcements related to a Corporate Action. Announcements that are due (as determined from the Instrument schedule, for example, dividends) are identified. If the announcement hasn't been received a request is sent to the relevant Involved Party that should provide the information.&#xD;
+&#xD;
+If the Announcement has been received, then the task is rescheduled to ensure future announcements are received&#xD;
+&#xD;
+FLOW DIAGRAM: WF Chart for Review CA Announcement</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_y3aDQChgEeOjHu3a6otf0Q">
+      <tagging:tag id="_y3aDQShgEeOjHu3a6otf0Q">Corporate Action Management</tagging:tag>
+      <tagging:tag id="_y3aDQihgEeOjHu3a6otf0Q">ValueChain_CorporateActions_Announcement</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_y3aDRShgEeOjHu3a6otf0Q">
+      <bpmn2:dataInput id="_0ZAY4yhgEeOjHu3a6otf0Q" name="Corporate Action Identifier"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GaTfwMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_0ZAY5ChgEeOjHu3a6otf0Q" name="Communication Details"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_y3aDRihgEeOjHu3a6otf0Q">
+        <bpmn2:dataInputRefs>_0ZAY4yhgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_y3aDRyhgEeOjHu3a6otf0Q">
+        <bpmn2:dataOutputRefs>_0ZAY5ChgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_zTQRzihgEeOjHu3a6otf0Q" name="Enterprise Process" partitionElementRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_zTQR0ChgEeOjHu3a6otf0Q">The default role for all enterprise process activities not explicitly assigned to other roles.</bpmn2:documentation>
+      <bpmn2:flowElementRef>_z8SntihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z8TOwyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z8TOzShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z8TOzyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z8T10ihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z8T11ShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z8Uc4ChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z8VD8ChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z8VD_ihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z8VEAChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z8VEBChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z8VrBShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z8VrByhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z8VrCyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z8VrEShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z8WSGihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z8WSHChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z8WSIShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z8WSJChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0JOQfihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0JOQfyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0JOQgChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0JOQgShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0LsVoyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0LsVpihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0LsVqShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0P-_0ShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0P-_0ihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0P-_0yhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0P-_1ChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0P-_1ihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0P-_2ChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0P-_2ShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0P-_2yhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0P-_3ShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0P-_3yhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0P_m0ChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0P_m0ShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0P_m0ihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0ZAY4ChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0ZAY4ShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0ZAY4ihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_z8SntihgEeOjHu3a6otf0Q" name="Determine Corporate Action Due"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_uk5sQChgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_z8SntyhgEeOjHu3a6otf0Q">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_O57rUCiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_z8TOwChgEeOjHu3a6otf0Q">
+        <bpmn2:dataOutput id="_0fbJ8ihgEeOjHu3a6otf0Q" name="Corporate Action Identifier"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GaTfwMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:outputSet id="_z8TOwShgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_0fbJ8ihgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataOutputAssociation id="_0k3qoihgEeOjHu3a6otf0Q" name="Corporate Action Identifier">
+        <bpmn2:sourceRef>_y3VKwChgEeOjHu3a6otf0Q:_0fbJ8ihgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y3VKwChgEeOjHu3a6otf0Q:_0ZAY4ihgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_z8TOwihgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_z8TOwyhgEeOjHu3a6otf0Q" name="Identify Corporate Action Details Provider"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_uHNqtChgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_z8TOxChgEeOjHu3a6otf0Q">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_O57rUiiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_z8TO1ChgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_z8T10ChgEeOjHu3a6otf0Q" name="Corporate Action Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GaTfrsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_z8T10ShgEeOjHu3a6otf0Q" name="Corporate Action Identifier"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GaTfwMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_0fbJ9ChgEeOjHu3a6otf0Q" name="Involved Party Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_z8TO1ShgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_z8T10ChgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_z8T10ShgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_z8T12ShgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_0fbJ9ChgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_z8T11ChgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_y3VKwChgEeOjHu3a6otf0Q:_z8T10ihgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y3VKwChgEeOjHu3a6otf0Q:_z8T10ChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_z8T11yhgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_y3VKwChgEeOjHu3a6otf0Q:_z8T11ShgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y3VKwChgEeOjHu3a6otf0Q:_z8T10ShgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_0k3qpChgEeOjHu3a6otf0Q" name="Involved Party Details">
+        <bpmn2:sourceRef>_y3VKwChgEeOjHu3a6otf0Q:_0fbJ9ChgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y3VKwChgEeOjHu3a6otf0Q:_0ZAY4ChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_z8T12ihgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_z8TOzShgEeOjHu3a6otf0Q" name="Map to Identify Corporate Action Details Provider"
+        isForCompensation="false" calledElement="_y3VKwChgEeOjHu3a6otf0Q:_z8TOxShgEeOjHu3a6otf0Q">
+      <bpmn2:extensionElements xmi:id="_O58SYCiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_z8TO0ChgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_0fbJ8yhgEeOjHu3a6otf0Q" name="Corporate Action Identifier"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GaTfwMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_z8TO0ihgEeOjHu3a6otf0Q" name="Corporate Action Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GaTfrsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_z8TO0yhgEeOjHu3a6otf0Q" name="Corporate Action Identifier"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GaTfwMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_z8T12ChgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_0fbJ8yhgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_z8TO0ShgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_z8TO0ihgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_z8TO0yhgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_0k3qoyhgEeOjHu3a6otf0Q" name="Corporate Action Identifier">
+        <bpmn2:sourceRef>_y3VKwChgEeOjHu3a6otf0Q:_0ZAY4yhgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y3VKwChgEeOjHu3a6otf0Q:_0fbJ8yhgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_z8T10yhgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_y3VKwChgEeOjHu3a6otf0Q:_z8TO0ihgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y3VKwChgEeOjHu3a6otf0Q:_z8T10ihgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_z8T11ihgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_y3VKwChgEeOjHu3a6otf0Q:_z8TO0yhgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y3VKwChgEeOjHu3a6otf0Q:_z8T11ShgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_z8TOzihgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_z8TOzyhgEeOjHu3a6otf0Q" sourceRef="_z8TOzShgEeOjHu3a6otf0Q"
+        targetRef="_z8TOwyhgEeOjHu3a6otf0Q"/>
+    <bpmn2:dataObject id="_z8T10ihgEeOjHu3a6otf0Q" name="Corporate Action Details"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GaTfrsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_z8T11ShgEeOjHu3a6otf0Q" name="Corporate Action Identifier"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GaTfwMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_z8Uc4ChgEeOjHu3a6otf0Q" name="Request Corporate Action Details"
+        isForCompensation="false" calledElement="_LqxTsMT2EeGIlOhhn7SrtQ:_LqxTssT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_z8Uc4ShgEeOjHu3a6otf0Q">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_O58SYSiMEeO1PvbDA98QvA">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_z8Uc4yhgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_0fbJ9ShgEeOjHu3a6otf0Q" name="Involved Party Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_0fbJ9ihgEeOjHu3a6otf0Q" name="Communication Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_z8Uc5ChgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_0fbJ9ShgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_z8Uc5ShgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_0fbJ9ihgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_0k3qpShgEeOjHu3a6otf0Q" name="Involved Party Details">
+        <bpmn2:sourceRef>_y3VKwChgEeOjHu3a6otf0Q:_0ZAY4ChgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y3VKwChgEeOjHu3a6otf0Q:_0fbJ9ShgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_0k3qpihgEeOjHu3a6otf0Q" name="Communication Details">
+        <bpmn2:sourceRef>_y3VKwChgEeOjHu3a6otf0Q:_0fbJ9ihgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y3VKwChgEeOjHu3a6otf0Q:_0ZAY5ChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_z8Uc5ihgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_z8VD8ChgEeOjHu3a6otf0Q" name="Retrieve Corporate Action Details"
+        isForCompensation="false" calledElement="_IEslJMT2EeGIlOhhn7SrtQ:_IEslJsT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_z8VD8ShgEeOjHu3a6otf0Q">If the Corporate Action details were retrieved, then we can drop out and a future review will be scheduled (for example, for the next announcement due date).</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_O58SYiiMEeO1PvbDA98QvA">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_z8VD8yhgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_z8VD9ihgEeOjHu3a6otf0Q" name="Corporate Action Identifier"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_z8VD9yhgEeOjHu3a6otf0Q" name="Corporate Action Details"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_ICwrTMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_z8VD9ChgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_z8VD9ihgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_z8VD9ShgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_z8VD9yhgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_z8VEBihgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_y3VKwChgEeOjHu3a6otf0Q:_z8VEBChgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y3VKwChgEeOjHu3a6otf0Q:_z8VD9ihgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_z8VrDChgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_y3VKwChgEeOjHu3a6otf0Q:_z8VD9yhgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y3VKwChgEeOjHu3a6otf0Q:_z8VrCyhgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_z8VrEChgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_z8VD_ihgEeOjHu3a6otf0Q" name="Map to Retrieve Corporate Action Details"
+        isForCompensation="false" calledElement="_y3VKwChgEeOjHu3a6otf0Q:_z8VD-ChgEeOjHu3a6otf0Q">
+      <bpmn2:extensionElements xmi:id="_O58SYyiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_z8VEAShgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_0fbxAChgEeOjHu3a6otf0Q" name="Corporate Action Identifier"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GaTfwMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_z8VEAyhgEeOjHu3a6otf0Q" name="Corporate Action Identifier"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_z8VrDihgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_0fbxAChgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_z8VEAihgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_z8VEAyhgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_0k3qpyhgEeOjHu3a6otf0Q" name="Corporate Action Identifier">
+        <bpmn2:sourceRef>_y3VKwChgEeOjHu3a6otf0Q:_0ZAY4ihgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y3VKwChgEeOjHu3a6otf0Q:_0fbxAChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_z8VEBShgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_y3VKwChgEeOjHu3a6otf0Q:_z8VEAyhgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y3VKwChgEeOjHu3a6otf0Q:_z8VEBChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_z8VD_yhgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_z8VEAChgEeOjHu3a6otf0Q" sourceRef="_z8VD_ihgEeOjHu3a6otf0Q"
+        targetRef="_z8VD8ChgEeOjHu3a6otf0Q"/>
+    <bpmn2:dataObject id="_z8VEBChgEeOjHu3a6otf0Q" name="Corporate Action Identifier"
+        isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_z8VrBShgEeOjHu3a6otf0Q" name="Map from Retrieve Corporate Action Details"
+        isForCompensation="false" calledElement="_y3VKwChgEeOjHu3a6otf0Q:_z8VEByhgEeOjHu3a6otf0Q">
+      <bpmn2:extensionElements xmi:id="_O58SZCiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_z8VrCChgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_z8VrCihgEeOjHu3a6otf0Q" name="Corporate Action Details"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_ICwrTMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_0fbxAShgEeOjHu3a6otf0Q" name="Corporate Action Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GaTfrsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_z8VrCShgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_z8VrCihgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_z8VrDyhgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_0fbxAShgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_z8VrDShgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_y3VKwChgEeOjHu3a6otf0Q:_z8VrCyhgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y3VKwChgEeOjHu3a6otf0Q:_z8VrCihgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_0k3qqChgEeOjHu3a6otf0Q" name="Corporate Action Details">
+        <bpmn2:sourceRef>_y3VKwChgEeOjHu3a6otf0Q:_0fbxAShgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y3VKwChgEeOjHu3a6otf0Q:_0ZAY4ShgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_z8VrBihgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_z8VrByhgEeOjHu3a6otf0Q" sourceRef="_z8VD8ChgEeOjHu3a6otf0Q"
+        targetRef="_z8VrBShgEeOjHu3a6otf0Q"/>
+    <bpmn2:dataObject id="_z8VrCyhgEeOjHu3a6otf0Q" name="Corporate Action Details"
+        isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_ICwrTMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_z8VrEShgEeOjHu3a6otf0Q" name="Schedule CA Announcement Review"
+        isForCompensation="false" calledElement="_IH-io8T2EeGIlOhhn7SrtQ:_IH-ipcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_z8VrEihgEeOjHu3a6otf0Q">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_O59ggCiMEeO1PvbDA98QvA">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_z8VrFChgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_z8WSEShgEeOjHu3a6otf0Q" name="Corporate Action Details"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_ICwrTMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_z8WSEihgEeOjHu3a6otf0Q" name="Schedule Details" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GhTfpcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_z8VrFShgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_z8WSEShgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_z8WSEihgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_z8WSEChgEeOjHu3a6otf0Q"/>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_z8WSIyhgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_y3VKwChgEeOjHu3a6otf0Q:_z8WSIShgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y3VKwChgEeOjHu3a6otf0Q:_z8WSEShgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_z8WSJihgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_y3VKwChgEeOjHu3a6otf0Q:_z8WSJChgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y3VKwChgEeOjHu3a6otf0Q:_z8WSEihgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_z8WSKChgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_z8WSGihgEeOjHu3a6otf0Q" name="Map to Schedule CA Announcement Review"
+        isForCompensation="false" calledElement="_y3VKwChgEeOjHu3a6otf0Q:_z8WSEyhgEeOjHu3a6otf0Q">
+      <bpmn2:extensionElements xmi:id="_O59ggSiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_z8WSHShgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_0fbxAyhgEeOjHu3a6otf0Q" name="Corporate Action Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GaTfrsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_z8WSHyhgEeOjHu3a6otf0Q" name="Corporate Action Details"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_ICwrTMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_z8WSIChgEeOjHu3a6otf0Q" name="Schedule Details" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GhTfpcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_z8WSJyhgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_0fbxAyhgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_z8WSHihgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_z8WSHyhgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_z8WSIChgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_0k3qqShgEeOjHu3a6otf0Q" name="Corporate Action Details">
+        <bpmn2:sourceRef>_y3VKwChgEeOjHu3a6otf0Q:_0ZAY4ShgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y3VKwChgEeOjHu3a6otf0Q:_0fbxAyhgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_z8WSIihgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_y3VKwChgEeOjHu3a6otf0Q:_z8WSHyhgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y3VKwChgEeOjHu3a6otf0Q:_z8WSIShgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_z8WSJShgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_y3VKwChgEeOjHu3a6otf0Q:_z8WSIChgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y3VKwChgEeOjHu3a6otf0Q:_z8WSJChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_z8WSGyhgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_z8WSHChgEeOjHu3a6otf0Q" sourceRef="_z8WSGihgEeOjHu3a6otf0Q"
+        targetRef="_z8VrEShgEeOjHu3a6otf0Q"/>
+    <bpmn2:dataObject id="_z8WSIShgEeOjHu3a6otf0Q" name="Corporate Action Details"
+        isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_ICwrTMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_z8WSJChgEeOjHu3a6otf0Q" name="Schedule Details" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GhTfpcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:exclusiveGateway id="_0JOQfihgEeOjHu3a6otf0Q"/>
+    <bpmn2:exclusiveGateway id="_0JOQfyhgEeOjHu3a6otf0Q"/>
+    <bpmn2:exclusiveGateway id="_0JOQgChgEeOjHu3a6otf0Q"/>
+    <bpmn2:exclusiveGateway id="_0JOQgShgEeOjHu3a6otf0Q"/>
+    <bpmn2:endEvent id="_0LsVoyhgEeOjHu3a6otf0Q" name="End">
+      <bpmn2:messageEventDefinition id="_0LsVpChgEeOjHu3a6otf0Q" name="Corporate Action Announcement Review Scheduled">
+        <bpmn2:documentation id="_0LsVpShgEeOjHu3a6otf0Q">FULL NAME: Event Scheduled&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the planning of an event to occur at a specified time in the future.&#xD;
+&#xD;
+EXAMPLES OF USE: A meeting has been scheduled as a result of a customer enquiry activity to discuss product requirements. A loan repayment schedule has been created to establish of a series of repayment due dates.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="_0LsVpihgEeOjHu3a6otf0Q" name="Start">
+      <bpmn2:timerEventDefinition id="_0LsVpyhgEeOjHu3a6otf0Q" name="Date Reached">
+        <bpmn2:documentation id="_0LsVqChgEeOjHu3a6otf0Q">FULL NAME: Date Reached&#xD;
+&#xD;
+TRIGGER CATEGORY: Time Driven&#xD;
+&#xD;
+DEFINITION: A Time Trigger Type denoting that a specified date has been reached.&#xD;
+&#xD;
+EXAMPLES OF USE: On 25th June 1993, an insurance policy has matured and a payment to the customer is generated.</bpmn2:documentation>
+      </bpmn2:timerEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:startEvent id="_0LsVqShgEeOjHu3a6otf0Q" name="Start:1">
+      <bpmn2:messageEventDefinition id="_0LsVqihgEeOjHu3a6otf0Q" name="Corporate Action Announcement Review Scheduled">
+        <bpmn2:documentation id="_0LsVqyhgEeOjHu3a6otf0Q">FULL NAME:  Event Scheduled&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION:  An expected occurrence of interest to the business has resulted in the planning of an event to occur at a specified time in the future.&#xD;
+&#xD;
+EXAMPLES OF USE:  A meeting has been scheduled as a result of a customer enquiry activity to discuss product requirements.  A loan repayment schedule has been created to establish of a series of repayment due dates.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="_0P-_0ShgEeOjHu3a6otf0Q" sourceRef="_z8SntihgEeOjHu3a6otf0Q"
+        targetRef="_0JOQfihgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0P-_0ihgEeOjHu3a6otf0Q" sourceRef="_z8VrBShgEeOjHu3a6otf0Q"
+        targetRef="_0JOQfyhgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0P-_0yhgEeOjHu3a6otf0Q" sourceRef="_0JOQgChgEeOjHu3a6otf0Q"
+        targetRef="_z8WSGihgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0P-_1ChgEeOjHu3a6otf0Q" name="Corporate Action Provider Identified"
+        sourceRef="_z8TOwyhgEeOjHu3a6otf0Q" targetRef="_z8Uc4ChgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_0P-_1ShgEeOjHu3a6otf0Q">FULL NAME: Identification Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A decision has been made to regard a person or thing as being a specific instance, based on available evidence.&#xD;
+&#xD;
+EXAMPLES OF USE: A customer has been identified after comparing their signature with a specimen on file.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_0P-_1ihgEeOjHu3a6otf0Q" name="Corporate Action Details Requested"
+        sourceRef="_z8Uc4ChgEeOjHu3a6otf0Q" targetRef="_0JOQgChgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_0P-_1yhgEeOjHu3a6otf0Q">FULL NAME: Communication Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: Some form of substantive contact has been caused by the enterprise to be directed or transmitted to another place.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used to formally mark the sending of any type of communication to enable the date or time of that communication to be referenced in the future.&#xD;
+&#xD;
+It is often used to 'start a clock' against which subsequent activity can be measured. For example, the sending of a Loan Arrangement Offer marks the start the one month period for which that offer is valid.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_0P-_2ChgEeOjHu3a6otf0Q" name="Corporate Action Announcement Review Scheduled"
+        sourceRef="_z8VrEShgEeOjHu3a6otf0Q" targetRef="_0LsVoyhgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0P-_2ShgEeOjHu3a6otf0Q" name="Corporate Action Details Not Retrieved"
+        sourceRef="_0JOQfyhgEeOjHu3a6otf0Q" targetRef="_z8TOzShgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_0P-_2ihgEeOjHu3a6otf0Q">FULL NAME: Information Not Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has not resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has not retrieved information on deposit products and has been unable to made it available for use by a clerk following a customer enquiry. &#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_0P-_2yhgEeOjHu3a6otf0Q" name="Corporate Action Not Scheduled"
+        sourceRef="_0JOQfihgEeOjHu3a6otf0Q" targetRef="_0JOQgChgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_0P-_3ChgEeOjHu3a6otf0Q">FULL NAME: Event Scheduled&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the planning of an event to occur at a specified time in the future.&#xD;
+&#xD;
+EXAMPLES OF USE: A meeting has been scheduled as a result of a customer enquiry activity to discuss product requirements. A loan repayment schedule has been created to establish of a series of repayment due dates.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_0P-_3ShgEeOjHu3a6otf0Q" name="Corporate Action Scheduled"
+        sourceRef="_0JOQfihgEeOjHu3a6otf0Q" targetRef="_z8VD_ihgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_0P-_3ihgEeOjHu3a6otf0Q">FULL NAME: Event Scheduled&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the planning of an event to occur at a specified time in the future.&#xD;
+&#xD;
+EXAMPLES OF USE: A meeting has been scheduled as a result of a customer enquiry activity to discuss product requirements. A loan repayment schedule has been created to establish of a series of repayment due dates.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_0P-_3yhgEeOjHu3a6otf0Q" name="Corporate Action Details Retrieved"
+        sourceRef="_0JOQfyhgEeOjHu3a6otf0Q" targetRef="_0JOQgChgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_0P-_4ChgEeOjHu3a6otf0Q">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_0P_m0ChgEeOjHu3a6otf0Q" sourceRef="_0JOQgShgEeOjHu3a6otf0Q"
+        targetRef="_z8SntihgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0P_m0ShgEeOjHu3a6otf0Q" name="Date Reached" sourceRef="_0LsVpihgEeOjHu3a6otf0Q"
+        targetRef="_0JOQgShgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0P_m0ihgEeOjHu3a6otf0Q" name="Corporate Action Announcement Review Scheduled"
+        sourceRef="_0LsVqShgEeOjHu3a6otf0Q" targetRef="_0JOQgShgEeOjHu3a6otf0Q"/>
+    <bpmn2:dataObject id="_0ZAY4ChgEeOjHu3a6otf0Q" name="Involved Party Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_0ZAY4ShgEeOjHu3a6otf0Q" name="Corporate Action Details"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GaTfrsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_0ZAY4ihgEeOjHu3a6otf0Q" name="Corporate Action Identifier"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GaTfwMT2EeGIlOhhn7SrtQ"/>
+  </bpmn2:process>
+  <bpmn2:globalTask id="_z8TOxShgEeOjHu3a6otf0Q" name="Map to Identify Corporate Action Details Provider">
+    <bpmn2:ioSpecification id="_z8TOxihgEeOjHu3a6otf0Q">
+      <bpmn2:dataInput id="_z8TOyShgEeOjHu3a6otf0Q" name="Corporate Action Identifier"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GaTfwMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_z8TOyyhgEeOjHu3a6otf0Q" name="Corporate Action Details"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GaTfrsT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_z8TOzChgEeOjHu3a6otf0Q" name="Corporate Action Identifier"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GaTfwMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_z8TOxyhgEeOjHu3a6otf0Q">
+        <bpmn2:dataInputRefs>_z8TOyShgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_z8TOyChgEeOjHu3a6otf0Q">
+        <bpmn2:dataOutputRefs>_z8TOyyhgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_z8TOzChgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_z8VD-ChgEeOjHu3a6otf0Q" name="Map to Retrieve Corporate Action Details">
+    <bpmn2:ioSpecification id="_z8VD-ShgEeOjHu3a6otf0Q">
+      <bpmn2:dataInput id="_z8VD_ChgEeOjHu3a6otf0Q" name="Corporate Action Identifier"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GaTfwMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_z8VD_ShgEeOjHu3a6otf0Q" name="Corporate Action Identifier"
+          isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_z8VD-ihgEeOjHu3a6otf0Q">
+        <bpmn2:dataInputRefs>_z8VD_ChgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_z8VD-yhgEeOjHu3a6otf0Q">
+        <bpmn2:dataOutputRefs>_z8VD_ShgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_z8VEByhgEeOjHu3a6otf0Q" name="Map from Retrieve Corporate Action Details">
+    <bpmn2:ioSpecification id="_z8VrAChgEeOjHu3a6otf0Q">
+      <bpmn2:dataInput id="_z8VrAyhgEeOjHu3a6otf0Q" name="Corporate Action Details"
+          isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_ICwrTMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_z8VrBChgEeOjHu3a6otf0Q" name="Corporate Action Details"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GaTfrsT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_z8VrAShgEeOjHu3a6otf0Q">
+        <bpmn2:dataInputRefs>_z8VrAyhgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_z8VrAihgEeOjHu3a6otf0Q">
+        <bpmn2:dataOutputRefs>_z8VrBChgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_z8WSEyhgEeOjHu3a6otf0Q" name="Map to Schedule CA Announcement Review">
+    <bpmn2:ioSpecification id="_z8WSFChgEeOjHu3a6otf0Q">
+      <bpmn2:dataInput id="_z8WSFyhgEeOjHu3a6otf0Q" name="Corporate Action Details"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GaTfrsT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_z8WSGChgEeOjHu3a6otf0Q" name="Corporate Action Details"
+          isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_ICwrTMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_z8WSGShgEeOjHu3a6otf0Q" name="Schedule Details" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GhTfpcT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_z8WSFShgEeOjHu3a6otf0Q">
+        <bpmn2:dataInputRefs>_z8WSFyhgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_z8WSFihgEeOjHu3a6otf0Q">
+        <bpmn2:dataOutputRefs>_z8WSGChgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_z8WSGShgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+</bpmn2:definitions>

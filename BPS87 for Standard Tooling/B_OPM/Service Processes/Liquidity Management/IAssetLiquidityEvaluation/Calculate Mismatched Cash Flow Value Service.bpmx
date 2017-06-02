@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_GWk2MMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"
+    xmlns:_GXn_EMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"
+    xmlns:_HKSLUsT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_HKSLUsT2EeGIlOhhn7SrtQ"
+    xmlns:_tmocgl8tEeGYvOQYZS-meA="http://www.ibm.com/uml2/Rational/_tmocgl8tEeGYvOQYZS-meA"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_HKSLUsT2EeGIlOhhn7SrtQ" name="Calculate Mismatched Cash Flow Value Service"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_HKSLUsT2EeGIlOhhn7SrtQ"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_HKSLVcT2EeGIlOhhn7SrtQ"
+      visible="true" type="Bpmn2" element="_HKSLVMT2EeGIlOhhn7SrtQ" name="Calculate Mismatched Cash Flow Value Service Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_HKlGAcT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_HKlGDMT2EeGIlOhhn7SrtQ" importType="http://www.eclipse.org/uml2/3.0.0/UML"
+      location="../../../../B_SDM.emx" namespace="http://www.ibm.com/uml2/Rational/_tmocgl8tEeGYvOQYZS-meA"/>
+  <bpmn2:import xmi:id="_HKlGIcT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:extension xmi:id="_HKSLU8T2EeGIlOhhn7SrtQ" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_pLBdgihgEeOjHu3a6otf0Q" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_J5B9QyiMEeO1PvbDA98QvA" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_HKSLVMT2EeGIlOhhn7SrtQ" name="Calculate Mismatched Cash Flow Value Service">
+    <bpmn2:ioSpecification id="_HKlGGcT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_HKlGHMT2EeGIlOhhn7SrtQ" name="End Date" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GhTfoMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_HKlGHcT2EeGIlOhhn7SrtQ" name="Inpayment" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj4xMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_HKlGHsT2EeGIlOhhn7SrtQ" name="Outpayment" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2zsMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_HKlGH8T2EeGIlOhhn7SrtQ" name="Start Date" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GhTfoMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_HKlGIMT2EeGIlOhhn7SrtQ" name="Cash Flow Mismatch Value"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_HKlGGsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_HKlGHMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_HKlGHcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_HKlGHsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_HKlGH8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_HKlGG8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_HKlGIMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_HKlGAsT2EeGIlOhhn7SrtQ" name="Service" partitionElementRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GX66AMT2EeGIlOhhn7SrtQ">
+      <bpmn2:flowElementRef>_HKlGA8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HKlGBMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HKlGBsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HKlGCMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HKlGD8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HKlGEcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HKlGEsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HKlGE8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HKlGFMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HKlGQcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HKlGQsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:startEvent id="_HKlGA8T2EeGIlOhhn7SrtQ" name="Start"/>
+    <bpmn2:endEvent id="_HKlGBMT2EeGIlOhhn7SrtQ" name="End"/>
+    <bpmn2:callActivity id="_HKlGBsT2EeGIlOhhn7SrtQ" name="pre-calculateMismatchedCashFlowValue"
+        isForCompensation="false" calledElement="_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGBcT2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_J5B9QiiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_HKlGKsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_HKlGLcT2EeGIlOhhn7SrtQ" name="End Date" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GhTfoMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_HKlGLsT2EeGIlOhhn7SrtQ" name="Inpayment" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj4xMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_HKlGL8T2EeGIlOhhn7SrtQ" name="Outpayment" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2zsMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_HKlGMMT2EeGIlOhhn7SrtQ" name="Start Date" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GhTfoMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_HKlGMcT2EeGIlOhhn7SrtQ" name="Calculate Mismatched Cash Flow Value Request"
+            isCollection="false" itemSubjectRef="_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGFcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_HKlGK8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_HKlGLcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_HKlGLsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_HKlGL8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_HKlGMMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_HKlGLMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_HKlGMcT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_HKlGQ8T2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGHMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGLcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_HKlGRMT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGHcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGLsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_HKlGRcT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGHsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGL8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_HKlGRsT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGH8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGMMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_HKlGR8T2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGMcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGQcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_HKlGB8T2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GX66AMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:serviceTask id="_HKlGCMT2EeGIlOhhn7SrtQ" name="calculateMismatchedCashFlowValue"
+        isForCompensation="false" implementation="WebService">
+      <bpmn2:documentation id="_HKlGCcT2EeGIlOhhn7SrtQ">This command calculates the shortfall or surplus in short term cash flow, having reviewed the maturity dates of imminent &lt;Inpayment>s and &lt;Outpayment>s to determine mis-matched maturities.</bpmn2:documentation>
+      <bpmn2:ioSpecification id="_HKlGMsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_HKlGNcT2EeGIlOhhn7SrtQ" name="Calculate Mismatched Cash Flow Value Request"
+            isCollection="false" itemSubjectRef="_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGFcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_HKlGNsT2EeGIlOhhn7SrtQ" name="Calculate Mismatched Cash Flow Value Response"
+            isCollection="false" itemSubjectRef="_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGF8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_HKlGM8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_HKlGNcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_HKlGNMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_HKlGNsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_HKlGSMT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGQcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGNcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_HKlGScT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGNsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGQsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_HKlGDcT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GX66AMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:serviceTask>
+    <bpmn2:callActivity id="_HKlGD8T2EeGIlOhhn7SrtQ" name="post-calculateMismatchedCashFlowValue"
+        isForCompensation="false" calledElement="_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGDsT2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_J5B9RCiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_HKlGPMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_HKlGP8T2EeGIlOhhn7SrtQ" name="Calculate Mismatched Cash Flow Value Response"
+            isCollection="false" itemSubjectRef="_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGF8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_HKlGQMT2EeGIlOhhn7SrtQ" name="Cash Flow Mismatch Value"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_HKlGPcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_HKlGP8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_HKlGPsT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_HKlGQMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_HKlGSsT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGQsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGP8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_HKlGS8T2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGQMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGIMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_HKlGEMT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GX66AMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_HKlGEcT2EeGIlOhhn7SrtQ" sourceRef="_HKlGA8T2EeGIlOhhn7SrtQ"
+        targetRef="_HKlGBsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_HKlGEsT2EeGIlOhhn7SrtQ" sourceRef="_HKlGBsT2EeGIlOhhn7SrtQ"
+        targetRef="_HKlGCMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_HKlGE8T2EeGIlOhhn7SrtQ" sourceRef="_HKlGCMT2EeGIlOhhn7SrtQ"
+        targetRef="_HKlGD8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_HKlGFMT2EeGIlOhhn7SrtQ" sourceRef="_HKlGD8T2EeGIlOhhn7SrtQ"
+        targetRef="_HKlGBMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_HKlGQcT2EeGIlOhhn7SrtQ" name="Calculate Mismatched Cash Flow Value Request"
+        isCollection="false" itemSubjectRef="_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGFcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_HKlGQsT2EeGIlOhhn7SrtQ" name="Calculate Mismatched Cash Flow Value Response"
+        isCollection="false" itemSubjectRef="_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGF8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:resourceRole id="_HKlGAMT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+      <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GX66AMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+    </bpmn2:resourceRole>
+  </bpmn2:process>
+  <bpmn2:globalTask id="_HKlGBcT2EeGIlOhhn7SrtQ" name="pre-calculateMismatchedCashFlowValue">
+    <bpmn2:ioSpecification id="_HKlGIsT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_HKlGJcT2EeGIlOhhn7SrtQ" name="End Date" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GhTfoMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_HKlGJsT2EeGIlOhhn7SrtQ" name="Inpayment" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj4xMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_HKlGJ8T2EeGIlOhhn7SrtQ" name="Outpayment" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2zsMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_HKlGKMT2EeGIlOhhn7SrtQ" name="Start Date" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GhTfoMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_HKlGKcT2EeGIlOhhn7SrtQ" name="Calculate Mismatched Cash Flow Value Request"
+          isCollection="false" itemSubjectRef="_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGFcT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_HKlGI8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_HKlGJcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_HKlGJsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_HKlGJ8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_HKlGKMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_HKlGJMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_HKlGKcT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_HKlGDsT2EeGIlOhhn7SrtQ" name="post-calculateMismatchedCashFlowValue">
+    <bpmn2:ioSpecification id="_HKlGN8T2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_HKlGOsT2EeGIlOhhn7SrtQ" name="Calculate Mismatched Cash Flow Value Response"
+          isCollection="false" itemSubjectRef="_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGF8T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_HKlGO8T2EeGIlOhhn7SrtQ" name="Cash Flow Mismatch Value"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_HKlGOMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_HKlGOsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_HKlGOcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_HKlGO8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:itemDefinition id="_HKlGFcT2EeGIlOhhn7SrtQ" name="Calculate Mismatched Cash Flow Value Request"
+      isCollection="false" structureRef="_tmocgl8tEeGYvOQYZS-meA:_XoKuwbxvEeGCw9HgBpY34g">
+    <bpmn2:documentation id="_HKlGFsT2EeGIlOhhn7SrtQ">IDM Mapping: : B_SDM::com::ibm::ima::bps::Services::Service Interfaces::Liquidity Management::Service Parameters::IAssetLiquidityEvaluation::calculateMismatchedCashFlowValueRequest</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_pLBdgChgEeOjHu3a6otf0Q">
+      <tagging:tag id="_pLBdgShgEeOjHu3a6otf0Q">Calculate Mismatched Cash Flow Value Request</tagging:tag>
+    </bpmn2:extensionElements>
+  </bpmn2:itemDefinition>
+  <bpmn2:itemDefinition id="_HKlGF8T2EeGIlOhhn7SrtQ" name="Calculate Mismatched Cash Flow Value Response"
+      isCollection="false" structureRef="_tmocgl8tEeGYvOQYZS-meA:_XoKuxrxvEeGCw9HgBpY34g">
+    <bpmn2:documentation id="_HKlGGMT2EeGIlOhhn7SrtQ">IDM Mapping: : B_SDM::com::ibm::ima::bps::Services::Service Interfaces::Liquidity Management::Service Parameters::IAssetLiquidityEvaluation::calculateMismatchedCashFlowValueResponse</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_pLBdgyhgEeOjHu3a6otf0Q">
+      <tagging:tag id="_pLBdhChgEeOjHu3a6otf0Q">Calculate Mismatched Cash Flow Value Response</tagging:tag>
+    </bpmn2:extensionElements>
+  </bpmn2:itemDefinition>
+  <bpmn2:relationship id="_HKlGCsT2EeGIlOhhn7SrtQ" name="calculateMismatchedCashFlowValue"
+      direction="none" type="ExternalDomainOperation">
+    <bpmn2:documentation id="_HKlGC8T2EeGIlOhhn7SrtQ">This command calculates the shortfall or surplus in short term cash flow, having reviewed the maturity dates of imminent &lt;Inpayment>s and &lt;Outpayment>s to determine mis-matched maturities.</bpmn2:documentation>
+    <bpmn2:source>_HKSLUsT2EeGIlOhhn7SrtQ:_HKlGCMT2EeGIlOhhn7SrtQ</bpmn2:source>
+    <bpmn2:target>_tmocgl8tEeGYvOQYZS-meA:_XoA91bxvEeGCw9HgBpY34g</bpmn2:target>
+  </bpmn2:relationship>
+</bpmn2:definitions>

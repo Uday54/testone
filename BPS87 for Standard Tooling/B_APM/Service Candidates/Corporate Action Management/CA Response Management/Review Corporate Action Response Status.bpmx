@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_UfkbkLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"
+    xmlns:_UhWkQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"
+    xmlns:_UhqGQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UhqGQLxuEeGCw9HgBpY34g"
+    xmlns:_d1__frxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_d1__frxuEeGCw9HgBpY34g"
+    xmlns:_eDtEQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_eDtEQLxuEeGCw9HgBpY34g"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_eDtEQLxuEeGCw9HgBpY34g" name="Review Corporate Action Response Status"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_eDtEQLxuEeGCw9HgBpY34g"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_eDtEQ7xuEeGCw9HgBpY34g"
+      visible="true" type="Bpmn2" element="_eDtEQrxuEeGCw9HgBpY34g" name="Review Corporate Action Response Status Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_eD21QrxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_eD21ZbxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_zRDLzbxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Business%20Processes/Corporate%20Action%20Management/Generate%20Declined%20CA%20Communication.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_d1__frxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_zRDLzrxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Maps.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UhqGQLxuEeGCw9HgBpY34g"/>
+  <bpmn2:extension xmi:id="_eDtEQbxuEeGCw9HgBpY34g" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_KGn74xwsEeOMUpRtwvEXUw" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_LlYCMfxiEeOPPNUUqxVo0g" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_eDtEQrxuEeGCw9HgBpY34g" name="Review Corporate Action Response Status">
+    <bpmn2:documentation id="_eD21QLxuEeGCw9HgBpY34g">SHORT NAME: Rvw CA Rspns Status&#xD;
+&#xD;
+B LEVEL ROOT: Review * Details&#xD;
+&#xD;
+DEFINITION: To look at or re-examine the status of a Corporate Action Response.&#xD;
+&#xD;
+DESCRIPTION: This workflow encompasses the activities necessary for the financial institution to review the response to communications regarding corporate actions. These could be in response to Corporate Action Announcements, Election Instruction Notifications, Claims, etc &#xD;
+&#xD;
+For example:&#xD;
+Corporate Action Election Instructions will be sent to custodians or transfer agents. The recipients should respond that they have received the election and either accepted or rejected it. This workflow monitors these responses to ensure the recipients have processed these communications successfully. &#xD;
+&#xD;
+Corporate Action Election Instructions (MT565) are sent by the financial institution to the Custodian or Transfer Agent indicating how the account owner wishes to proceed with a corporate action event. Instructions include investment decisions regarding the exercise of rights issues, the election of stock or cash when the option is available, and decisions on the conversion or tendering of securities.&#xD;
+&#xD;
+The custodian or transfer agent will respond with an acceptance or rejection message. This workflow will process those messages. This would be a MT567, Corporate Action Status and Processing Advice message. This message is sent by an account servicer (account servicing institution) to an account owner or its designated agent. The account servicer may be a local agent (sub-custodian) acting on behalf of their global custodian customer, or a custodian acting on behalf of an investment management institution or a broker/dealer. This message is used to advise the status, or a change in status, of a corporate action-related transaction previously instructed by, or executed on behalf of, the account owner. This will include the acknowledgement/rejection of a corporate action instruction or the acknowledgement/rejection of a request to cancel an outstanding instruction. It may also be used to provide a reason as to why a corporate action event has not been completed by the announced payment dates.&#xD;
+&#xD;
+&#xD;
+&#xD;
+Similarly, a Corporate Action Announcement will be sent to interested parties, including position holders, research departments, etc. This workflow monitors responses sent to these communications to ensure the recipients have processed these communications successfully. &#xD;
+&#xD;
+FLOW DIAGRAM: WF Chart for Review CA Response Status&#xD;
+&#xD;
+IBM Unique ID: CBP09143</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_KGn74BwsEeOMUpRtwvEXUw">
+      <tagging:tag id="_KGn74RwsEeOMUpRtwvEXUw">Corporate Action Management</tagging:tag>
+      <tagging:tag id="_KGn74hwsEeOMUpRtwvEXUw">ValueChain_CorporateActions_Election</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_eD21YrxuEeGCw9HgBpY34g">
+      <bpmn2:dataInput id="_eD21ZLxuEeGCw9HgBpY34g" name="Communication Details" isCollection="false"
+          itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+      <bpmn2:dataOutput id="_eD21a7xuEeGCw9HgBpY34g" name="Communication Details"
+          isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+      <bpmn2:inputSet id="_eD21Y7xuEeGCw9HgBpY34g">
+        <bpmn2:dataInputRefs>_eD21ZLxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_eD21arxuEeGCw9HgBpY34g">
+        <bpmn2:dataOutputRefs>_eD21a7xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_eD21QbxuEeGCw9HgBpY34g" name="Enterprise Process" partitionElementRef="_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_eD21Q7xuEeGCw9HgBpY34g">The default role for all enterprise process activities not explicitly assigned to other roles.&#xD;
+&#xD;
+IBM Unique ID: CBP06236</bpmn2:documentation>
+      <bpmn2:flowElementRef>_eD21RLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eD21R7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eD21SrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eD21TbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eD21ULxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eD21U7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eD21VrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eD21WbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eD21XLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eD21XbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eD21XrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eD21X7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eD21YLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eD21YbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eD21ZrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eD21abxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_y9Yo4LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_y9Yo4bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_y9Yo4rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_y9Yo5rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_y9Yo57xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_y9Yo67xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_y9Yo7LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_y9Yo7rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_y9Yo8rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_y9Yo87xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_y9Yo9bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_y9Yo-bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_y9YpAbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_y9rj1bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_y9rj1rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_y9rj2LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_y_BnoLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_eD21RLxuEeGCw9HgBpY34g" name="Record CA Communication Confirmation Status"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_eEAmQ7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_eD21RrxuEeGCw9HgBpY34g">For example, the custodian or transfer agent confirms to the financial institution that they have received the CA election and have either accpeted or rejected it.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_LlYCMPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_y-k7sLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_y-k7srxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_y-k7sbxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_y-k7srxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_y-k7s7xuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_eDtEQLxuEeGCw9HgBpY34g:_eD21ZLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_eDtEQLxuEeGCw9HgBpY34g:_y-k7srxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_eD21RbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_eD21R7xuEeGCw9HgBpY34g" name="Record CA Response Communication"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_eEAmRbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_eD21SbxuEeGCw9HgBpY34g">Record the communication received in response to a previously sent communication.  For example, the custodian will send a response to the Election Instruction sent by the financial institution.  This response will indicate if the election was sucessfully processed by the custodian.  The status of that communication needs to be recorded.&#xD;
+&#xD;
+The message received could be a MT567 Corporate Action Status and Processing Advice.  This message is sent by an account servicer (account servicing institution) to an account owner or its designated agent. The account servicer may be a local agent (sub-custodian) acting on behalf of their global custodian customer, or a custodian acting on behalf of an investment management institution or a broker/dealer.&#xD;
+&#xD;
+This message is used to advise the status, or a change in status, of a corporate action-related transaction previously instructed by, or executed on behalf of, the account owner. This will include the acknowledgement/rejection of a corporate action instruction or the acknowledgement/rejection of a request to cancel an outstanding instruction. It may also be used to provide a reason as to why a corporate action event has not been completed by the announced payment dates.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_LlYCMvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_y9Yo-rxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_y9Yo_LxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_y9Yo-7xuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_y9Yo_LxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_y9Yo_bxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_eDtEQLxuEeGCw9HgBpY34g:_eD21ZLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_eDtEQLxuEeGCw9HgBpY34g:_y9Yo_LxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_eD21SLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_eD21SrxuEeGCw9HgBpY34g" name="Request Corporate Action Election Rework"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_eEAmR7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_eD21TLxuEeGCw9HgBpY34g">Request rework since the Custodian or Transfer Agent couldn't process the election that was sent</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_LlYCM_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_eD21S7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_eD21TbxuEeGCw9HgBpY34g" name="Request Corporate Action Entitlement Rework"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_eEAmSbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_eD21T7xuEeGCw9HgBpY34g">Request rework since the Customer or Trader couldn't process the Corporate Action Announcement that was sent</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_LlYCNPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_eD21TrxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_eD21ULxuEeGCw9HgBpY34g" name="Generate Declined CA Communication"
+        isForCompensation="false" calledElement="_d1__frxuEeGCw9HgBpY34g:_d1__gLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_eD21UrxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_LlYpQPxiEeOPPNUUqxVo0g">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_y9-ew7xuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_y9-exbxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_y_UilrxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_y9-exLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_y9-exbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_y_UilbxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_y_UilrxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_y9-exrxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_eDtEQLxuEeGCw9HgBpY34g:_eD21ZLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_eDtEQLxuEeGCw9HgBpY34g:_y9-exbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_y_Uil7xuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_eDtEQLxuEeGCw9HgBpY34g:_y_UilrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_eDtEQLxuEeGCw9HgBpY34g:_eD21a7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_eD21UbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_eD21U7xuEeGCw9HgBpY34g" name="Retrieve Corporate Action Communication"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_eEAmS7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_eD21VbxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_LlYpQfxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_y9YpArxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_y_UikbxuEeGCw9HgBpY34g" name="Corporate Action Identifier"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UrySurxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_y9YpBLxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_y_UikLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_y_UikbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_y9YpA7xuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_y9YpBLxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_y_UikrxuEeGCw9HgBpY34g" name="Corporate Action Identifier">
+        <bpmn2:sourceRef>_eDtEQLxuEeGCw9HgBpY34g:_y_BnoLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_eDtEQLxuEeGCw9HgBpY34g:_y_UikbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_y9YpBbxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_eDtEQLxuEeGCw9HgBpY34g:_y9YpBLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_eDtEQLxuEeGCw9HgBpY34g:_y9YpAbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_eD21VLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_eD21VrxuEeGCw9HgBpY34g" name="Compare Corporate Action Response Comm"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_eD21bLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_eD21WLxuEeGCw9HgBpY34g">Ensure that the response to the election matches the election sent by the financial institution</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_LlYpQvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_y9YpCbxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_y9YpC7xuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_y9YpCrxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_y9YpC7xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_y9YpDLxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_eDtEQLxuEeGCw9HgBpY34g:_y9YpAbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_eDtEQLxuEeGCw9HgBpY34g:_y9YpC7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_y-uss7xuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_eDtEQLxuEeGCw9HgBpY34g:_eD21ZLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_eDtEQLxuEeGCw9HgBpY34g:_y9YpC7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_eD21V7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_eD21WbxuEeGCw9HgBpY34g" name="Decide CA Response Follow Up Requirement"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_eEAmQbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_eD21W7xuEeGCw9HgBpY34g">Depending on the type of communication there can be different reprocessing requirements.  &#xD;
+&#xD;
+If the custodian wasn't able to process the Corporate Action Election message sent by the financial institution then the election must be reworked.&#xD;
+&#xD;
+Similarily, if the announcement wasn't understood by the recipient that it must be reworked.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_LlYpQ_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_y9rj2rxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_y9rj3LxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_y9rj27xuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_y9rj3LxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_y9rj3bxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_eDtEQLxuEeGCw9HgBpY34g:_eD21ZLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_eDtEQLxuEeGCw9HgBpY34g:_y9rj3LxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_eD21WrxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:exclusiveGateway id="_eD21XLxuEeGCw9HgBpY34g"/>
+    <bpmn2:exclusiveGateway id="_eD21XbxuEeGCw9HgBpY34g"/>
+    <bpmn2:endEvent id="_eD21XrxuEeGCw9HgBpY34g" name="End">
+      <bpmn2:messageEventDefinition id="_y9Yo5LxuEeGCw9HgBpY34g" name="Corporate Action Entitlement Rework Requested">
+        <bpmn2:documentation id="_y9Yo5bxuEeGCw9HgBpY34g">FULL NAME: Request Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request has been caused by the enterprise to be directed or transmitted to another place. &#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has asked for or demanded additional collateral to be provided as security on a loan.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="_eD21X7xuEeGCw9HgBpY34g" name="Start">
+      <bpmn2:messageEventDefinition id="_y9Yo6bxuEeGCw9HgBpY34g" name="Communication Response Received">
+        <bpmn2:documentation id="_y9Yo6rxuEeGCw9HgBpY34g">FULL NAME: Communication Received&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication driven&#xD;
+&#xD;
+DEFINITION: Some form of substantive contact has become known to the enterprise.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during early stages or at high levels of modelling to denote that a particular activity or set of activities is enabled by the receipt of some type of communication.&#xD;
+&#xD;
+This Trigger Type is used when the specific nature of the communication is, as yet, unknown, or where multiple types of communication are concerned.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="_eD21YLxuEeGCw9HgBpY34g" name="End:1">
+      <bpmn2:messageEventDefinition id="_y9Yo8LxuEeGCw9HgBpY34g" name="Corporate Action Election Rework Requested">
+        <bpmn2:documentation id="_y9Yo8bxuEeGCw9HgBpY34g">FULL NAME: Request Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request has been caused by the enterprise to be directed or transmitted to another place. &#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has asked for or demanded additional collateral to be provided as security on a loan.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_eD21YbxuEeGCw9HgBpY34g" name="End:2">
+      <bpmn2:messageEventDefinition id="_y9Yo97xuEeGCw9HgBpY34g" name="Corporate Action Response Follow Up Not Rqrd">
+        <bpmn2:documentation id="_y9Yo-LxuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:callActivity id="_eD21ZrxuEeGCw9HgBpY34g" name="XMap CA Communication to CA Id"
+        isForCompensation="false" calledElement="_UhqGQLxuEeGCw9HgBpY34g:_d2l1a7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_eD21aLxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_LlZQUPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_y-SAwLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_y-SAwrxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_y_BnorxuEeGCw9HgBpY34g" name="Corporate Action Identifier"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UrySurxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_y-SAwbxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_y-SAwrxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_y_BnobxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_y_BnorxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_y-SAw7xuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_eDtEQLxuEeGCw9HgBpY34g:_eD21ZLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_eDtEQLxuEeGCw9HgBpY34g:_y-SAwrxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_y_Bno7xuEeGCw9HgBpY34g" name="Corporate Action Identifier">
+        <bpmn2:sourceRef>_eDtEQLxuEeGCw9HgBpY34g:_y_BnorxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_eDtEQLxuEeGCw9HgBpY34g:_y_BnoLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_eD21Z7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:endEvent id="_eD21abxuEeGCw9HgBpY34g" name="End:3">
+      <bpmn2:messageEventDefinition id="_y9rj07xuEeGCw9HgBpY34g" name="Communication Completed">
+        <bpmn2:documentation id="_y9rj1LxuEeGCw9HgBpY34g">FULL NAME: Expected Activity Completed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected specific, but otherwise not categorized occurrence of interest to the business has ended.&#xD;
+&#xD;
+EXAMPLES OF USE: A plan to relocate headquarters staff has been set in motion on the completion of negotiations to buy a development site.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="_y9Yo4LxuEeGCw9HgBpY34g" sourceRef="_eD21VrxuEeGCw9HgBpY34g"
+        targetRef="_eD21XLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_y9Yo4bxuEeGCw9HgBpY34g" sourceRef="_eD21WbxuEeGCw9HgBpY34g"
+        targetRef="_eD21XbxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_y9Yo4rxuEeGCw9HgBpY34g" name="Corporate Action Communication Match Not Found"
+        sourceRef="_eD21XLxuEeGCw9HgBpY34g" targetRef="_eD21ULxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_y9Yo47xuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_y9Yo5rxuEeGCw9HgBpY34g" name="Corporate Action Entitlement Rework Requested"
+        sourceRef="_eD21TbxuEeGCw9HgBpY34g" targetRef="_eD21XrxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_y9Yo57xuEeGCw9HgBpY34g" name="Communication Details Recorded"
+        sourceRef="_eD21RLxuEeGCw9HgBpY34g" targetRef="_eD21WbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_y9Yo6LxuEeGCw9HgBpY34g">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_y9Yo67xuEeGCw9HgBpY34g" name="Communication Response Received"
+        sourceRef="_eD21X7xuEeGCw9HgBpY34g" targetRef="_eD21R7xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_y9Yo7LxuEeGCw9HgBpY34g" name="Corporate Action Election Rework Required"
+        sourceRef="_eD21XbxuEeGCw9HgBpY34g" targetRef="_eD21SrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_y9Yo7bxuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_y9Yo7rxuEeGCw9HgBpY34g" name="Corporate Action Entitlement Rework Required"
+        sourceRef="_eD21XbxuEeGCw9HgBpY34g" targetRef="_eD21TbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_y9Yo77xuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_y9Yo8rxuEeGCw9HgBpY34g" name="Corporate Action Election Rework Requested"
+        sourceRef="_eD21SrxuEeGCw9HgBpY34g" targetRef="_eD21YLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_y9Yo87xuEeGCw9HgBpY34g" name="Corporate Action Communication Match Found"
+        sourceRef="_eD21XLxuEeGCw9HgBpY34g" targetRef="_eD21RLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_y9Yo9LxuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_y9Yo9bxuEeGCw9HgBpY34g" name="Corporate Action Communication Retrieved"
+        sourceRef="_eD21U7xuEeGCw9HgBpY34g" targetRef="_eD21VrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_y9Yo9rxuEeGCw9HgBpY34g">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution retrieves information on deposit products and makes it available for use by a clerk following a customer enquiry. The Financial Institution completes the specification of a new foreign exchange service, and the details are made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_y9Yo-bxuEeGCw9HgBpY34g" name="Corporate Action Response Follow Up Not Rqrd"
+        sourceRef="_eD21XbxuEeGCw9HgBpY34g" targetRef="_eD21YbxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_y9YpAbxuEeGCw9HgBpY34g" name="Communication Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_y9rj1bxuEeGCw9HgBpY34g" name="Communication Completed"
+        sourceRef="_eD21ULxuEeGCw9HgBpY34g" targetRef="_eD21abxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_y9rj1rxuEeGCw9HgBpY34g" name="Data Mapped" sourceRef="_eD21ZrxuEeGCw9HgBpY34g"
+        targetRef="_eD21U7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_y9rj17xuEeGCw9HgBpY34g">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_y9rj2LxuEeGCw9HgBpY34g" name="Communication Details Recorded"
+        sourceRef="_eD21R7xuEeGCw9HgBpY34g" targetRef="_eD21ZrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_y9rj2bxuEeGCw9HgBpY34g">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_y_BnoLxuEeGCw9HgBpY34g" name="Corporate Action Identifier"
+        isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UrySurxuEeGCw9HgBpY34g"/>
+  </bpmn2:process>
+</bpmn2:definitions>

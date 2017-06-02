@@ -1,0 +1,936 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_U-HYwLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_U-HYwLxuEeGCw9HgBpY34g"
+    xmlns:_UfkbkLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"
+    xmlns:_UhWkQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"
+    xmlns:_UhqGQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UhqGQLxuEeGCw9HgBpY34g"
+    xmlns:_c9-LTrxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_c9-LTrxuEeGCw9HgBpY34g"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_c9-LTrxuEeGCw9HgBpY34g" name="Provide Interest Netting" expressionLanguage="http://www.w3.org/1999/XPath"
+    targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_c9-LTrxuEeGCw9HgBpY34g" typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_c9-LUbxuEeGCw9HgBpY34g"
+      visible="true" type="Bpmn2" element="_c9-LULxuEeGCw9HgBpY34g" name="Provide Interest Netting Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_c-a3MrxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_c-kBKLxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_zQAqDbxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="Calculate%20Arrangement%20Accrued%20Interest.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_U-HYwLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_zQAqDrxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Maps.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UhqGQLxuEeGCw9HgBpY34g"/>
+  <bpmn2:extension xmi:id="_c9-LT7xuEeGCw9HgBpY34g" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_7aznsxwrEeOMUpRtwvEXUw" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_KPE9ofxiEeOPPNUUqxVo0g" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_c9-LULxuEeGCw9HgBpY34g" name="Provide Interest Netting">
+    <bpmn2:documentation id="_c-a3MLxuEeGCw9HgBpY34g">SHORT NAME: Prvd Intrst Netting&#xD;
+&#xD;
+B LEVEL ROOT: Provide * Details&#xD;
+&#xD;
+DEFINITION: To supply an interest netting figure.&#xD;
+&#xD;
+DESCRIPTION: This workflow encompasses the activities necessary for the financial institution to net the interest applicable on a variable rate product, in response to regulatory requirements or internal procedures. It includes identifying calculating, recording and administering arrangement information.&#xD;
+&#xD;
+FLOW DIAGRAM: WF Chart for Provide Interest Netting&#xD;
+&#xD;
+IBM Unique ID: CBPC2173</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_7aznsBwrEeOMUpRtwvEXUw">
+      <tagging:tag id="_7aznsRwrEeOMUpRtwvEXUw">Product Monitoring</tagging:tag>
+      <tagging:tag id="_7aznshwrEeOMUpRtwvEXUw">ValueChain_CardProductsAdministration_Servicing</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_c-kBJbxuEeGCw9HgBpY34g">
+      <bpmn2:dataInput id="_c-kBJ7xuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+          itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+      <bpmn2:dataOutput id="_c-kBObxuEeGCw9HgBpY34g" name="Communication Details"
+          isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+      <bpmn2:inputSet id="_c-kBJrxuEeGCw9HgBpY34g">
+        <bpmn2:dataInputRefs>_c-kBJ7xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_c-kBOLxuEeGCw9HgBpY34g">
+        <bpmn2:dataOutputRefs>_c-kBObxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_c-a3MbxuEeGCw9HgBpY34g" name="Enterprise Process" partitionElementRef="_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_c-a3M7xuEeGCw9HgBpY34g">The default role for all enterprise process activities not explicitly assigned to other roles.&#xD;
+&#xD;
+IBM Unique ID: CBPC03301</bpmn2:documentation>
+      <bpmn2:flowElementRef>_c-a3NLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c-a3N7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c-a3OrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c-a3PbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c-a3QLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c-a3Q7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c-a3RrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c-a3SbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c-a3TLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c-a3T7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c-a3UrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c-kBILxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c-kBI7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c-kBJLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c-kBKbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c-kBLLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c-kBLbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c-kBLrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c-kBL7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c-kBMLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c-kBMbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c-kBMrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c-kBM7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c-kBNLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_c-kBNbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ubGwg7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ubaSgLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ub2-cLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ub2-crxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ucJ5YLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ucc0ULxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ucc0UrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ucc0VLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ucmlU7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ucmlbbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_udMbMbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_udMbPLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_udMbRbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_udMbSLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_udWMMLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_udWMMbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_udWMMrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_udWMM7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_udWMNbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_udWMN7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_udWMObxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_udWMO7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_udWMPbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_udWMQLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_udy4ILxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_udy4IrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_udy4I7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_udy4JrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_udy4J7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_udy4K7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_udy4LrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_udy4L7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_udy4MLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_udy4MrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_udy4NLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_udy4NrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_udy4OLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eVg9qEIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eVg9q0IVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eVg9rkIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eVg9sUIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eVg9tEIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eVg9t0IVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eVg9ukIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eVqukEIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_c-a3NLxuEeGCw9HgBpY34g" name="Identify Accrual Qualified Arrangement"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_U_J6n7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_c-a3NrxuEeGCw9HgBpY34g">If the arrangement does qualify for interest accrual, then it will be calculated and recorded.  If not, then the accrual requester will be notified.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KPE9oPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_uaqrtrxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_udMbSrxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_TdgLsRwsEeOMUpRtwvEXUw" name="Transaction Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UqJT67xuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_uaqruLxuEeGCw9HgBpY34g" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_Tdp8sBwsEeOMUpRtwvEXUw" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_udMbSbxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_udMbSrxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_TdgLsRwsEeOMUpRtwvEXUw</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_uaqrt7xuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_uaqruLxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_Tdp8sBwsEeOMUpRtwvEXUw</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_udMbS7xuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_c-kBJ7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_udMbSrxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_eVg9qUIVEeSFpMLLUsMfuA" name="Arrangement Details">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_uaqruLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_eVg9qEIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_eVg9r0IVEeSFpMLLUsMfuA" name="Arrangement Details">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_uaqruLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_eVg9rkIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_eVg9u0IVEeSFpMLLUsMfuA" name="Arrangement Details">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_uaqruLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_eVg9ukIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_eVqukUIVEeSFpMLLUsMfuA" name="Arrangement Details">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_uaqruLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_eVqukEIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_c-a3NbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_c-a3N7xuEeGCw9HgBpY34g" name="Identify Subsidiary Arrangement"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_c9-LSrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_c-a3ObxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KPE9ovxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_uaz1kLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_uaz1krxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_ubGwhbxuEeGCw9HgBpY34g" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_uaz1kbxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_uaz1krxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ubGwhLxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_ubGwhbxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_eVg9qkIVEeSFpMLLUsMfuA" name="Arrangement Details">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_eVg9qEIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_uaz1krxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_ubGwhrxuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_ubGwhbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_ubGwg7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_eVg9uEIVEeSFpMLLUsMfuA" name="Arrangement Details">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_ubGwhbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_eVg9t0IVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_c-a3OLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_c-a3OrxuEeGCw9HgBpY34g" name="Record Arrangement Accrued Interest"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_U_J6obxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_c-a3PLxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KPE9o_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_uaz1mLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_ubtNcbxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_ud8CELxuEeGCw9HgBpY34g" name="Arrangement Identifier"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkVm0LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_uaz1mrxuEeGCw9HgBpY34g" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_ubtNcLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_ubtNcbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_ud8CELxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_uaz1mbxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_uaz1mrxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_ubtNcrxuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_ubaSgLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_ubtNcbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_ud8CEbxuEeGCw9HgBpY34g" name="Arrangement Identifier">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_udy4OLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_ud8CELxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_eVg9rEIVEeSFpMLLUsMfuA" name="Arrangement Details">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_uaz1mrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_eVg9q0IVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_c-a3O7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_c-a3PbxuEeGCw9HgBpY34g" name="Record Pool Accrued Interest"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_c9-LTLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_c-a3P7xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KPE9pPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ucmlWbxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_ucmlW7xuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_ucmlYrxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_ucmlWrxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_ucmlW7xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ucmlYbxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_ucmlYrxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_ucmlXLxuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_ucmlU7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_ucmlW7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_eVg9skIVEeSFpMLLUsMfuA" name="Accounting Unit">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_ucmlYrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_eVg9sUIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_c-a3PrxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_c-a3QLxuEeGCw9HgBpY34g" name="Accumulate Subsidiary AR Accrued Interest"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_c9-LQLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_c-a3QrxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KPFksPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_uaz1nrxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_uaz1oLxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_ucmlb7xuEeGCw9HgBpY34g" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_uc5gRbxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_uaz1n7xuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_uaz1oLxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ucmlbrxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_ucmlb7xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_uc5gRbxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_eVg9rUIVEeSFpMLLUsMfuA" name="Arrangement Details">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_eVg9q0IVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_uaz1oLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_eVg9uUIVEeSFpMLLUsMfuA" name="Arrangement Details">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_eVg9t0IVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_uaz1oLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_ucmlcLxuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_ucmlb7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_ucmlbbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_eVg9tUIVEeSFpMLLUsMfuA" name="Accounting Unit">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_uc5gRbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_eVg9tEIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_c-a3QbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_c-a3Q7xuEeGCw9HgBpY34g" name="Administer Interest Accrual"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_oEo5sBwqEeOMUpRtwvEXUw">
+      <bpmn2:documentation id="_c-a3RbxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KPFksfxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ub2-erxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_ub2-fLxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_ucJ5ZLxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_ub2-e7xuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_ub2-fLxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_ucJ5ZLxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_ub2-fbxuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_ub2-crxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_ub2-fLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_ucJ5ZbxuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_ucJ5YLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_ucJ5ZLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_c-a3RLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_c-a3RrxuEeGCw9HgBpY34g" name="Generate Communication Details"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_a4E8UBwrEeOMUpRtwvEXUw">
+      <bpmn2:documentation id="_c-a3SLxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KPFksvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_udfWILxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_udfWIrxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_Tdp8sRwsEeOMUpRtwvEXUw" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_ud8CE7xuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_udfWIbxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_udfWIrxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_Tdp8sRwsEeOMUpRtwvEXUw</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ud8CErxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_ud8CE7xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_udfWI7xuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_udWMQLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_udfWIrxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_ud8CFLxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_ud8CE7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_c-kBObxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_c-a3R7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_c-a3SbxuEeGCw9HgBpY34g" name="Calculate Aggregate Balance"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_c9-LQrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_c-a3S7xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KPFks_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ubGwibxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_ubGwi7xuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_ucc0VrxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_ubGwirxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_ubGwi7xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ucc0VbxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_ucc0VrxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_ubGwjLxuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_ubGwg7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_ubGwi7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_ucc0V7xuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_ucc0VrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_ucc0VLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_c-a3SrxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_c-a3TLxuEeGCw9HgBpY34g" name="Calculate Arrangement Accrued Interest"
+        isForCompensation="false" calledElement="_U-HYwLxuEeGCw9HgBpY34g:_U-HYwrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_c-a3TrxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KPGy0PxiEeOPPNUUqxVo0g">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ubGwkLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_ubGwkrxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_ubaSgrxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_ubGwkbxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_ubGwkrxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ubaSgbxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_ubaSgrxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_eVg9sEIVEeSFpMLLUsMfuA" name="Arrangement Details">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_eVg9rkIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_ubGwkrxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_ubaSg7xuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_ubaSgrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_ubaSgLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_c-a3TbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_c-a3T7xuEeGCw9HgBpY34g" name="Calculate Interest Payment"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_c9-LRLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_c-a3UbxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KPGy0fxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ub2-c7xuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_udMbOLxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_udMbQLxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_ub2-dbxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_ucJ5YbxuEeGCw9HgBpY34g" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_udMbN7xuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_udMbOLxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_udMbQLxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ub2-dLxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_ub2-dbxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_ucJ5YbxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_udMbObxuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_udMbMbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_udMbOLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_udMbQbxuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_udMbPLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_udMbQLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_ub2-drxuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_ub2-dbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_ub2-crxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_ucJ5YrxuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_ucJ5YbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_ucJ5YLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_c-a3ULxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_c-a3UrxuEeGCw9HgBpY34g" name="Calculate Pool Accrued Interest"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_c9-LRrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_c-a3VLxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KPGy0vxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ucc0WrxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_ucc0XLxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_ucmlVbxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_ucc0W7xuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_ucc0XLxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ucmlVLxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_ucmlVbxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_ucc0XbxuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_ucc0VLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_ucc0XLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_ucmlVrxuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_ucmlVbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_ucmlU7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_c-a3U7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_c-kBILxuEeGCw9HgBpY34g" name="Compare Subsidiary AR Interest"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_c9-LSLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_c-kBIrxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KPGy0_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ucmlZrxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_ucmlaLxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_uc5gQrxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_udMbM7xuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_udMbPbxuEeGCw9HgBpY34g" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_ucmlZ7xuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_ucmlaLxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_uc5gQrxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_udMbMrxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_udMbM7xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_udMbPbxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_uc5gQ7xuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_ucmlbbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_uc5gQrxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_eVg9s0IVEeSFpMLLUsMfuA" name="Accounting Unit">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_eVg9sUIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_ucmlaLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_eVg9tkIVEeSFpMLLUsMfuA" name="Accounting Unit">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_eVg9tEIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_ucmlaLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_udMbNLxuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_udMbM7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_udMbMbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_udMbPrxuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_udMbPbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_udMbPLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_c-kBIbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:endEvent id="_c-kBI7xuEeGCw9HgBpY34g" name="End">
+      <bpmn2:messageEventDefinition id="_udMbQ7xuEeGCw9HgBpY34g" name="Communication Completed">
+        <bpmn2:documentation id="_udMbRLxuEeGCw9HgBpY34g">FULL NAME: Expected Activity Completed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected specific, but otherwise not categorized occurrence of interest to the business has ended.&#xD;
+&#xD;
+EXAMPLES OF USE: A plan to relocate headquarters staff has been set in motion on the completion of negotiations to buy a development site.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="_c-kBJLxuEeGCw9HgBpY34g" name="Start">
+      <bpmn2:messageEventDefinition id="_udMbRrxuEeGCw9HgBpY34g" name="Arrangement Interest Modification Approved">
+        <bpmn2:documentation id="_udMbR7xuEeGCw9HgBpY34g">FULL NAME: Approval Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to approve a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: A personal loan can be offered to John Smith because his application has been approved by the Financial Institution.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:callActivity id="_c-kBKbxuEeGCw9HgBpY34g" name="XMap AR Details to Comm Details"
+        isForCompensation="false" calledElement="_UhqGQLxuEeGCw9HgBpY34g:_U_J6pbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_c-kBK7xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KPGy1PxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_udWMQbxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_udpHIbxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_udWMQ7xuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_udpHILxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_udpHIbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_udWMQrxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_udWMQ7xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_eVg9vEIVEeSFpMLLUsMfuA" name="Arrangement Details">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_eVg9ukIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_udpHIbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_udWMRLxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_udWMQ7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_udWMQLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_c-kBKrxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:exclusiveGateway id="_c-kBLLxuEeGCw9HgBpY34g"/>
+    <bpmn2:exclusiveGateway id="_c-kBLbxuEeGCw9HgBpY34g"/>
+    <bpmn2:exclusiveGateway id="_c-kBLrxuEeGCw9HgBpY34g"/>
+    <bpmn2:exclusiveGateway id="_c-kBL7xuEeGCw9HgBpY34g"/>
+    <bpmn2:exclusiveGateway id="_c-kBMLxuEeGCw9HgBpY34g"/>
+    <bpmn2:endEvent id="_c-kBMbxuEeGCw9HgBpY34g" name="End:1">
+      <bpmn2:messageEventDefinition id="_udy4JLxuEeGCw9HgBpY34g" name="Applied Interest Details Provided">
+        <bpmn2:documentation id="_udy4JbxuEeGCw9HgBpY34g">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_c-kBMrxuEeGCw9HgBpY34g" name="End:2">
+      <bpmn2:messageEventDefinition id="_udy4KbxuEeGCw9HgBpY34g" name="Interest Payment Request Generated">
+        <bpmn2:documentation id="_udy4KrxuEeGCw9HgBpY34g">FULL NAME: Communication Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: Some form of substantive contact has been caused by the enterprise to be directed or transmitted to another place.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used to formally mark the sending of any type of communication to enable the date or time of that communication to be referenced in the future.&#xD;
+&#xD;
+It is often used to 'start a clock' against which subsequent activity can be measured. For example, the sending of a Loan Arrangement Offer marks the start the one month period for which that offer is valid.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_c-kBM7xuEeGCw9HgBpY34g" name="End:3">
+      <bpmn2:messageEventDefinition id="_udy4LLxuEeGCw9HgBpY34g" name="Interest Accrual Details Provided">
+        <bpmn2:documentation id="_udy4LbxuEeGCw9HgBpY34g">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_c-kBNLxuEeGCw9HgBpY34g" name="End:4">
+      <bpmn2:messageEventDefinition id="_MomwgxwsEeOMUpRtwvEXUw" name="Product Interest Accrual Scheduled">
+        <bpmn2:documentation id="_MomwhBwsEeOMUpRtwvEXUw">FULL NAME: Event Scheduled&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the planning of an event to occur at a specified time in the future.&#xD;
+&#xD;
+EXAMPLES OF USE: A meeting has been scheduled as a result of a customer enquiry activity to discuss product requirements. A loan repayment schedule has been created to establish of a series of repayment due dates.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:callActivity id="_c-kBNbxuEeGCw9HgBpY34g" name="XMap AR Details to AR Identifier"
+        isForCompensation="false" calledElement="_UhqGQLxuEeGCw9HgBpY34g:_aX0ocrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_c-kBN7xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KPGy1fxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_udy4ObxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_uePkEbxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_udy4O7xuEeGCw9HgBpY34g" name="Arrangement Identifier"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkVm0LxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_uePkELxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_uePkEbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_udy4OrxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_udy4O7xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_eVqukkIVEeSFpMLLUsMfuA" name="Arrangement Details">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_eVqukEIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_uePkEbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_udy4PLxuEeGCw9HgBpY34g" name="Arrangement Identifier">
+        <bpmn2:sourceRef>_c9-LTrxuEeGCw9HgBpY34g:_udy4O7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_c9-LTrxuEeGCw9HgBpY34g:_udy4OLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_c-kBNrxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:dataObject id="_ubGwg7xuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_ubaSgLxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_ub2-cLxuEeGCw9HgBpY34g" name="Interest Payment Calculated"
+        sourceRef="_c-a3T7xuEeGCw9HgBpY34g" targetRef="_c-a3Q7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ub2-cbxuEeGCw9HgBpY34g">FULL NAME: Value Calculated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the mathematical determination of a monetary, financial amount.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has calculated a monthly loan repayment figure using loan amount, interest rate and term. The Financial Institution has calculated an amount which represents the total current commercial loan exposure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Calculate, Accumulate and sometimes Determine.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_ub2-crxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_ucJ5YLxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_ucc0ULxuEeGCw9HgBpY34g" name="Aggregate Balance Calculated"
+        sourceRef="_c-a3SbxuEeGCw9HgBpY34g" targetRef="_c-a3UrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ucc0UbxuEeGCw9HgBpY34g">FULL NAME: Value Calculated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the mathematical determination of a monetary, financial amount.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has calculated a monthly loan repayment figure using loan amount, interest rate and term. The Financial Institution has calculated an amount which represents the total current commercial loan exposure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Calculate, Accumulate and sometimes Determine.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_ucc0UrxuEeGCw9HgBpY34g" name="Pool Accrued Interest Calculated"
+        sourceRef="_c-a3UrxuEeGCw9HgBpY34g" targetRef="_c-a3PbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ucc0U7xuEeGCw9HgBpY34g">FULL NAME: Value Calculated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the mathematical determination of a monetary, financial amount.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has calculated a monthly loan repayment figure using loan amount, interest rate and term. The Financial Institution has calculated an amount which represents the total current commercial loan exposure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Calculate, Accumulate and sometimes Determine.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_ucc0VLxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_ucmlU7xuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_ucmlbbxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_udMbMbxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_udMbPLxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_udMbRbxuEeGCw9HgBpY34g" name="Communication Completed"
+        sourceRef="_c-a3RrxuEeGCw9HgBpY34g" targetRef="_c-kBI7xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_udMbSLxuEeGCw9HgBpY34g" name="Arrangement Interest Modification Approved"
+        sourceRef="_c-kBJLxuEeGCw9HgBpY34g" targetRef="_c-a3NLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_udWMMLxuEeGCw9HgBpY34g" sourceRef="_c-kBLLxuEeGCw9HgBpY34g"
+        targetRef="_c-a3QLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_udWMMbxuEeGCw9HgBpY34g" sourceRef="_c-a3NLxuEeGCw9HgBpY34g"
+        targetRef="_c-kBLbxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_udWMMrxuEeGCw9HgBpY34g" sourceRef="_c-a3N7xuEeGCw9HgBpY34g"
+        targetRef="_c-kBLrxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_udWMM7xuEeGCw9HgBpY34g" name="Subsidiary Arrangement Identified"
+        sourceRef="_c-kBLrxuEeGCw9HgBpY34g" targetRef="_c-a3SbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_udWMNLxuEeGCw9HgBpY34g">FULL NAME: Identification Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A decision has been made to regard a person or thing as being a specific instance, based on available evidence.&#xD;
+&#xD;
+EXAMPLES OF USE: A customer has been identified after comparing their signature with a specimen on file.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_udWMNbxuEeGCw9HgBpY34g" name="Accrual Qualified Interest Pool AR Identified"
+        sourceRef="_c-kBLbxuEeGCw9HgBpY34g" targetRef="_c-a3N7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_udWMNrxuEeGCw9HgBpY34g">FULL NAME: Identification Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A decision has been made to regard a person or thing as being a specific instance, based on available evidence.&#xD;
+&#xD;
+EXAMPLES OF USE: A customer has been identified after comparing their signature with a specimen on file.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_udWMN7xuEeGCw9HgBpY34g" name="Subsidiary Arrangement Not Identified"
+        sourceRef="_c-kBLrxuEeGCw9HgBpY34g" targetRef="_c-kBLLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_udWMOLxuEeGCw9HgBpY34g">FULL NAME: Identification Not Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A decision has been made to not regard a person or thing as being a specific instance, based on available evidence.&#xD;
+&#xD;
+EXAMPLES OF USE: A customer identification has not been made after comparing the signature with a specimen on file.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_udWMObxuEeGCw9HgBpY34g" name="Arrangement Accrued Interest Recorded"
+        sourceRef="_c-a3OrxuEeGCw9HgBpY34g" targetRef="_c-kBLLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_udWMOrxuEeGCw9HgBpY34g">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_udWMO7xuEeGCw9HgBpY34g" name="Accrual Qualified Arrangement Not Identified"
+        sourceRef="_c-kBLbxuEeGCw9HgBpY34g" targetRef="_c-kBKbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_udWMPLxuEeGCw9HgBpY34g">FULL NAME: Identification Not Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A decision has been made to not regard a person or thing as being a specific instance, based on available evidence.&#xD;
+&#xD;
+EXAMPLES OF USE: A customer identification has not been made after comparing the signature with a specimen on file.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_udWMPbxuEeGCw9HgBpY34g" name="Accrual Qualified Arrangement Identified"
+        sourceRef="_c-kBLbxuEeGCw9HgBpY34g" targetRef="_c-a3TLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_udWMPrxuEeGCw9HgBpY34g">FULL NAME: Identification Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A decision has been made to regard a person or thing as being a specific instance, based on available evidence.&#xD;
+&#xD;
+EXAMPLES OF USE: A customer has been identified after comparing their signature with a specimen on file.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_udWMQLxuEeGCw9HgBpY34g" name="Communication Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_udy4ILxuEeGCw9HgBpY34g" name="Subsidiary AR Interest Compared"
+        sourceRef="_c-kBILxuEeGCw9HgBpY34g" targetRef="_c-a3T7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_udy4IbxuEeGCw9HgBpY34g">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_udy4IrxuEeGCw9HgBpY34g" sourceRef="_c-a3Q7xuEeGCw9HgBpY34g"
+        targetRef="_c-kBL7xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_udy4I7xuEeGCw9HgBpY34g" sourceRef="_c-kBMLxuEeGCw9HgBpY34g"
+        targetRef="_c-kBILxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_udy4JrxuEeGCw9HgBpY34g" name="Applied Interest Details Provided"
+        sourceRef="_c-kBL7xuEeGCw9HgBpY34g" targetRef="_c-kBMbxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_udy4J7xuEeGCw9HgBpY34g" name="Pool Accrued Interest Recorded"
+        sourceRef="_c-a3PbxuEeGCw9HgBpY34g" targetRef="_c-kBMLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_udy4KLxuEeGCw9HgBpY34g">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_udy4K7xuEeGCw9HgBpY34g" name="Interest Payment Request Generated"
+        sourceRef="_c-kBL7xuEeGCw9HgBpY34g" targetRef="_c-kBMrxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_udy4LrxuEeGCw9HgBpY34g" name="Interest Accrual Details Provided"
+        sourceRef="_c-kBL7xuEeGCw9HgBpY34g" targetRef="_c-kBM7xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_udy4L7xuEeGCw9HgBpY34g" name="Product Interest Accrual Scheduled"
+        sourceRef="_c-kBL7xuEeGCw9HgBpY34g" targetRef="_c-kBNLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_udy4MLxuEeGCw9HgBpY34g" name="Subsidiary AR Accrued Interest Accumulated"
+        sourceRef="_c-a3QLxuEeGCw9HgBpY34g" targetRef="_c-kBMLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_udy4MbxuEeGCw9HgBpY34g">FULL NAME: Value Calculated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the mathematical determination of a monetary, financial amount.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has calculated a monthly loan repayment figure using loan amount, interest rate and term. The Financial Institution has calculated an amount which represents the total current commercial loan exposure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Calculate, Accumulate and sometimes Determine.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_udy4MrxuEeGCw9HgBpY34g" name="Communication Required"
+        sourceRef="_c-kBKbxuEeGCw9HgBpY34g" targetRef="_c-a3RrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_udy4M7xuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_udy4NLxuEeGCw9HgBpY34g" name="Data Mapped" sourceRef="_c-kBNbxuEeGCw9HgBpY34g"
+        targetRef="_c-a3OrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_udy4NbxuEeGCw9HgBpY34g">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_udy4NrxuEeGCw9HgBpY34g" name="Arrangement Accrued Interest Calculated"
+        sourceRef="_c-a3TLxuEeGCw9HgBpY34g" targetRef="_c-kBNbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_udy4N7xuEeGCw9HgBpY34g">FULL NAME: Value Calculated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the mathematical determination of a monetary, financial amount.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has calculated a monthly loan repayment figure using loan amount, interest rate and term. The Financial Institution has calculated an amount which represents the total current commercial loan exposure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Calculate, Accumulate and sometimes Determine.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_udy4OLxuEeGCw9HgBpY34g" name="Arrangement Identifier" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkVm0LxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_eVg9qEIVEeSFpMLLUsMfuA" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_eVg9q0IVEeSFpMLLUsMfuA" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_eVg9rkIVEeSFpMLLUsMfuA" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_eVg9sUIVEeSFpMLLUsMfuA" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_eVg9tEIVEeSFpMLLUsMfuA" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_eVg9t0IVEeSFpMLLUsMfuA" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_eVg9ukIVEeSFpMLLUsMfuA" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_eVqukEIVEeSFpMLLUsMfuA" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+  </bpmn2:process>
+</bpmn2:definitions>

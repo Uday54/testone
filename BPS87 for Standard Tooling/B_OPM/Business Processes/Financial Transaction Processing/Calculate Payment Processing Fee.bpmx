@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_GWk2MMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"
+    xmlns:_GXn_EMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"
+    xmlns:_MWlRD8T2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_MWlRD8T2EeGIlOhhn7SrtQ"
+    xmlns:_m9XTIChgEeOjHu3a6otf0Q="http://www.ibm.com/xtools/bpmn/2.0/_m9XTIChgEeOjHu3a6otf0Q"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_MWlRD8T2EeGIlOhhn7SrtQ" name="Calculate Payment Processing Fee"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_MWlRD8T2EeGIlOhhn7SrtQ"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_MWlREsT2EeGIlOhhn7SrtQ"
+      visible="true" type="Bpmn2" element="_MWlREcT2EeGIlOhhn7SrtQ" name="Calculate Payment Processing Fee Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_N1p3cMT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_OrvLDMT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_ztvOUChgEeOjHu3a6otf0Q" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Service%20Processes/Arrangement/IProductArrangementServicing/Calculate%20Fee%20Service.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_m9XTIChgEeOjHu3a6otf0Q"/>
+  <bpmn2:extension xmi:id="_MWlREMT2EeGIlOhhn7SrtQ" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_e_ig8ihgEeOjHu3a6otf0Q" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_L9dTISiMEeO1PvbDA98QvA" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_MWlREcT2EeGIlOhhn7SrtQ" name="Calculate Payment Processing Fee">
+    <bpmn2:documentation id="_MWuawMT2EeGIlOhhn7SrtQ">SHORT NAME: Calc Pymnt Fee&#xD;
+&#xD;
+B LEVEL ROOT: Calculate * Value&#xD;
+&#xD;
+DEFINITION: To determine the fees using mathematical procedures.&#xD;
+&#xD;
+DESCRIPTION: Calculate the fees due for a payment. Fees may vary depending on the payment processing system used.&#xD;
+&#xD;
+FLOW DIAGRAM: AS Chart for Calculate Payment Fees</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_e_ig8ChgEeOjHu3a6otf0Q">
+      <tagging:tag xmi:id="_L9ZowCiMEeO1PvbDA98QvA" id="_e_ig8ShgEeOjHu3a6otf0Q">Financial Transaction Processing</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_MWuawcT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_PcLI9MT2EeGIlOhhn7SrtQ" name="Transaction Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2z2sT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_ISf1gEIZEeSedtiJ0SK07w" name="Accounting Unit" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_MWuawsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_PcLI9MT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_MWuaw8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_ISf1gEIZEeSedtiJ0SK07w</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_N1p3b8T2EeGIlOhhn7SrtQ" name="Enterprise Process" partitionElementRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_zTAaIihgEeOjHu3a6otf0Q">The default role for all enterprise process activities not explicitly assigned to other roles.</bpmn2:documentation>
+      <bpmn2:flowElementRef>_Fa6kYEIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Fa6kaUIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Fa6kbEIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Fa6kcEIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Fa6kc0IZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Fa6kdkIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Fa6ke0IZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Fa6kfkIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HvoZBEIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HvoZB0IZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ILywkEIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ILywkUIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_Fa6kYEIZEeSedtiJ0SK07w" name="Calculate Fee" isForCompensation="false"
+        calledElement="_m9XTIChgEeOjHu3a6otf0Q:_m9XTIihgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_Fa6kYUIZEeSedtiJ0SK07w">For Credit Cards arrangements' payments methods, in order to adhere to US Credit Card Act of 2009 the Section 102 of the Act must be complied with.&#xD;
+Financial Institution as the credit card issuer can not charge customers additional fees to pay their bills by mail, electronic transfer or other methods that are allowed, except for expedited service.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Fa6kYkIZEeSedtiJ0SK07w">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_Fa6kY0IZEeSedtiJ0SK07w">
+        <bpmn2:dataInput id="_Fa6kZkIZEeSedtiJ0SK07w" name="Arrangement" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GbM3lMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_Fa6kZ0IZEeSedtiJ0SK07w" name="Fee" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_IMAG3MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_Fa6kaEIZEeSedtiJ0SK07w" name="Adjustments" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_IDNXSMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_Fa6kZEIZEeSedtiJ0SK07w">
+          <bpmn2:dataInputRefs>_Fa6kZkIZEeSedtiJ0SK07w</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_Fa6kZUIZEeSedtiJ0SK07w">
+          <bpmn2:dataOutputRefs>_Fa6kZ0IZEeSedtiJ0SK07w</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_Fa6kaEIZEeSedtiJ0SK07w</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_Fa6kckIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_MWlRD8T2EeGIlOhhn7SrtQ:_Fa6kcEIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MWlRD8T2EeGIlOhhn7SrtQ:_Fa6kZkIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_Fa6kfEIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_MWlRD8T2EeGIlOhhn7SrtQ:_Fa6kZ0IZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MWlRD8T2EeGIlOhhn7SrtQ:_Fa6ke0IZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_Fa6kf0IZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_MWlRD8T2EeGIlOhhn7SrtQ:_Fa6kaEIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MWlRD8T2EeGIlOhhn7SrtQ:_Fa6kfkIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_Fa6kg0IZEeSedtiJ0SK07w" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_Fa6kaUIZEeSedtiJ0SK07w" name="Map to Calculate Fee" isForCompensation="false"
+        calledElement="_MWlRD8T2EeGIlOhhn7SrtQ:_OrvLB8T2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_Fa6kakIZEeSedtiJ0SK07w">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_Fa6kbUIZEeSedtiJ0SK07w">
+        <bpmn2:dataInput id="_JoL2EEIZEeSedtiJ0SK07w" name="Transaction Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2z2sT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_Fa6kb0IZEeSedtiJ0SK07w" name="Arrangement" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GbM3lMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_Fa6kgUIZEeSedtiJ0SK07w">
+          <bpmn2:dataInputRefs>_JoL2EEIZEeSedtiJ0SK07w</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_Fa6kbkIZEeSedtiJ0SK07w">
+          <bpmn2:dataOutputRefs>_Fa6kb0IZEeSedtiJ0SK07w</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_L0jAK0IZEeSedtiJ0SK07w" name="Transaction Details">
+        <bpmn2:sourceRef>_MWlRD8T2EeGIlOhhn7SrtQ:_PcLI9MT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MWlRD8T2EeGIlOhhn7SrtQ:_JoL2EEIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_Fa6kcUIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_MWlRD8T2EeGIlOhhn7SrtQ:_Fa6kb0IZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MWlRD8T2EeGIlOhhn7SrtQ:_Fa6kcEIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_Fa6ka0IZEeSedtiJ0SK07w" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_Fa6kbEIZEeSedtiJ0SK07w" sourceRef="_Fa6kaUIZEeSedtiJ0SK07w"
+        targetRef="_Fa6kYEIZEeSedtiJ0SK07w"/>
+    <bpmn2:dataObject id="_Fa6kcEIZEeSedtiJ0SK07w" name="Arrangement" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GbM3lMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_Fa6kc0IZEeSedtiJ0SK07w" name="Map from Calculate Fee"
+        isForCompensation="false" calledElement="_MWlRD8T2EeGIlOhhn7SrtQ:_ztv1ZihgEeOjHu3a6otf0Q">
+      <bpmn2:extensionElements xmi:id="_Fa6kdEIZEeSedtiJ0SK07w">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_Fa6kd0IZEeSedtiJ0SK07w">
+        <bpmn2:dataInput id="_Fa6keUIZEeSedtiJ0SK07w" name="Fee" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_IMAG3MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_Fa6kekIZEeSedtiJ0SK07w" name="Adjustments" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_IDNXSMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_JoL2EUIZEeSedtiJ0SK07w" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_Fa6keEIZEeSedtiJ0SK07w">
+          <bpmn2:dataInputRefs>_Fa6keUIZEeSedtiJ0SK07w</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_Fa6kekIZEeSedtiJ0SK07w</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_Fa6kgkIZEeSedtiJ0SK07w">
+          <bpmn2:dataOutputRefs>_JoL2EUIZEeSedtiJ0SK07w</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_Fa6kfUIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_MWlRD8T2EeGIlOhhn7SrtQ:_Fa6ke0IZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MWlRD8T2EeGIlOhhn7SrtQ:_Fa6keUIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_Fa6kgEIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_MWlRD8T2EeGIlOhhn7SrtQ:_Fa6kfkIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MWlRD8T2EeGIlOhhn7SrtQ:_Fa6kekIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_L0jALEIZEeSedtiJ0SK07w" name="Accounting Unit">
+        <bpmn2:sourceRef>_MWlRD8T2EeGIlOhhn7SrtQ:_JoL2EUIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MWlRD8T2EeGIlOhhn7SrtQ:_ISf1gEIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_Fa6kdUIZEeSedtiJ0SK07w" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_Fa6kdkIZEeSedtiJ0SK07w" sourceRef="_Fa6kYEIZEeSedtiJ0SK07w"
+        targetRef="_Fa6kc0IZEeSedtiJ0SK07w"/>
+    <bpmn2:dataObject id="_Fa6ke0IZEeSedtiJ0SK07w" name="Fee" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_IMAG3MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_Fa6kfkIZEeSedtiJ0SK07w" name="Adjustments" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_IDNXSMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:startEvent id="_HvoZBEIZEeSedtiJ0SK07w" name="Start:1">
+      <bpmn2:messageEventDefinition id="_HvoZBUIZEeSedtiJ0SK07w" name="Payment Processing System Identified">
+        <bpmn2:documentation id="_HvoZBkIZEeSedtiJ0SK07w">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="_HvoZB0IZEeSedtiJ0SK07w" name="End:1">
+      <bpmn2:messageEventDefinition id="_HvoZCEIZEeSedtiJ0SK07w" name="Fee Calculated">
+        <bpmn2:documentation id="_HvoZCUIZEeSedtiJ0SK07w">FULL NAME: Value Calculated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the mathematical determination of a monetary, financial amount.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has calculated a monthly loan repayment figure using loan amount, interest rate and term. The Financial Institution has calculated an amount which represents the total current commercial loan exposure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Calculate, Accumulate and sometimes Determine.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="_ILywkEIZEeSedtiJ0SK07w" name="Payment Processing System Identified"
+        sourceRef="_HvoZBEIZEeSedtiJ0SK07w" targetRef="_Fa6kaUIZEeSedtiJ0SK07w"/>
+    <bpmn2:sequenceFlow id="_ILywkUIZEeSedtiJ0SK07w" name="Fee Calculated" sourceRef="_Fa6kc0IZEeSedtiJ0SK07w"
+        targetRef="_HvoZB0IZEeSedtiJ0SK07w"/>
+  </bpmn2:process>
+  <bpmn2:globalTask id="_OrvLB8T2EeGIlOhhn7SrtQ" name="Map to Calculate Fee">
+    <bpmn2:ioSpecification id="_OrvLCMT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_OrvLC8T2EeGIlOhhn7SrtQ" name="Transaction Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2z2sT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_ztv1YShgEeOjHu3a6otf0Q" name="Arrangement" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GbM3lMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_OrvLCcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_OrvLC8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_OrvLCsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_ztv1YShgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_ztv1ZihgEeOjHu3a6otf0Q" name="Map from Calculate Fee">
+    <bpmn2:ioSpecification id="_ztv1ZyhgEeOjHu3a6otf0Q">
+      <bpmn2:dataInput id="_ztv1aihgEeOjHu3a6otf0Q" name="Fee" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_IMAG3MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_ztv1ayhgEeOjHu3a6otf0Q" name="Adjustments" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_IDNXSMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_ztv1bChgEeOjHu3a6otf0Q" name="Accounting Unit" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_ztv1aChgEeOjHu3a6otf0Q">
+        <bpmn2:dataInputRefs>_ztv1aihgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_ztv1ayhgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_ztv1aShgEeOjHu3a6otf0Q">
+        <bpmn2:dataOutputRefs>_ztv1bChgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+</bpmn2:definitions>

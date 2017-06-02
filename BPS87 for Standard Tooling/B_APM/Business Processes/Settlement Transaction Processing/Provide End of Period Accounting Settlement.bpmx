@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_UfkbkLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"
+    xmlns:_UhWkQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"
+    xmlns:_aXq3fbxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_aXq3fbxuEeGCw9HgBpY34g"
+    xmlns:_dswj67xuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_dswj67xuEeGCw9HgBpY34g"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_dswj67xuEeGCw9HgBpY34g" name="Provide End of Period Accounting Settlement"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_dswj67xuEeGCw9HgBpY34g"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_dswj7rxuEeGCw9HgBpY34g"
+      visible="true" type="Bpmn2" element="_dswj7bxuEeGCw9HgBpY34g" name="Provide End of Period Accounting Settlement Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_ds6U4rxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_xTlZg7xuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_OUCXgBwsEeOMUpRtwvEXUw" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../Arrangement%20Negotiation/Send%20Risk%20Report.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_aXq3fbxuEeGCw9HgBpY34g"/>
+  <bpmn2:extension xmi:id="_dswj7LxuEeGCw9HgBpY34g" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_ExPLkhwsEeOMUpRtwvEXUw" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_KuuuEfxiEeOPPNUUqxVo0g" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_dswj7bxuEeGCw9HgBpY34g" name="Provide End of Period Accounting Settlement">
+    <bpmn2:documentation id="_ds6U4LxuEeGCw9HgBpY34g">SHORT NAME: Prvd End of Period Acctg Stlmnt&#xD;
+&#xD;
+B LEVEL ROOT: Provide Communication&#xD;
+&#xD;
+DEFINITION: To put an end of period accounting settlement at the disposal of someone or something, or to supply an end of period accounting settlement.&#xD;
+&#xD;
+DESCRIPTION: This workflow encompasses the activities necessary for the financial institution to provide end of period settlement. It includes calculating the total value of fees and interest for the previous financial period and applying the necessary control accounting entries to illustrate the income generated and expenses incurred by the financial institution. Agio income and expenses are calculated and the closing accounting unit balances for the old financial period recorded. The workflow ends with recording the opening accounting unit balances for the new financial period and generating any necessary financial reports.&#xD;
+&#xD;
+FLOW DIAGRAM: WF Chart for Provide End of Period Acctg Stlmnt&#xD;
+&#xD;
+IBM Unique ID: CBPC2169</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_ExPLkBwsEeOMUpRtwvEXUw">
+      <tagging:tag id="_ExPLkRwsEeOMUpRtwvEXUw">Settlement Transaction Processing</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_MxsbLRwsEeOMUpRtwvEXUw" name="InputOutputSpecification1">
+      <bpmn2:dataOutput id="_MxsbLxwsEeOMUpRtwvEXUw" name="Communication Details"
+          isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+      <bpmn2:outputSet id="_MxsbLhwsEeOMUpRtwvEXUw" name="OutputSet1">
+        <bpmn2:dataOutputRefs>_MxsbLxwsEeOMUpRtwvEXUw</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_ds6U4bxuEeGCw9HgBpY34g" name="Enterprise Process" partitionElementRef="_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ds6U47xuEeGCw9HgBpY34g">The default role for all enterprise process activities not explicitly assigned to other roles.&#xD;
+&#xD;
+IBM Unique ID: CBPC03298</bpmn2:documentation>
+      <bpmn2:flowElementRef>_ds6U5LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ds6U57xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ds6U6rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ds6U7bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ds6U8LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ds6U87xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ds6U9rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ds6U-bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ds6U_LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ds6U_7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dtDe0bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dtDe0rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dtDe1LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xTlZgLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xTvKirxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xT4Uc7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xT4UdbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xUCFerxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xUCFfLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xUL2crxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xUL2dLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xUVAYLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xUVAYrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xUVAb7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xUVAcLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xUVAcrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xUexbrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xUoiabxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xUoib7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_xUoicLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ExPLkxwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KtqtyxwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Mx1k8hwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Mx1k8xwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Mx1k-RwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eab51kIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eab52UIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eab53EIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eab530IVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eab54kIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eab55UIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_ds6U5LxuEeGCw9HgBpY34g" name="Calculate Total Fee" isForCompensation="false"
+        calledElement="_UhWkQLxuEeGCw9HgBpY34g:_dsmzB7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ds6U5rxuEeGCw9HgBpY34g">Calculate the total fee value by adding the accrued fee total to the year end fee value.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KuuuEPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_xT4Uf7xuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_xT4UgbxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_xUL2drxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_xT4UgLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_xT4UgbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_xUL2dbxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_xUL2drxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_eab53kIVEeSFpMLLUsMfuA" name="Accounting Unit">
+        <bpmn2:sourceRef>_dswj67xuEeGCw9HgBpY34g:_eab53EIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dswj67xuEeGCw9HgBpY34g:_xT4UgbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_xUL2d7xuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_dswj67xuEeGCw9HgBpY34g:_xUL2drxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dswj67xuEeGCw9HgBpY34g:_xUL2dLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_ds6U5bxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_ds6U57xuEeGCw9HgBpY34g" name="Calculate Total Interest"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_dswj4bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ds6U6bxuEeGCw9HgBpY34g">Add the interest accrued total to the year end interest value.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KuuuEvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_xUCFc7xuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_xUCFdbxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_xUVAZLxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_xUCFdLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_xUCFdbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_xUVAY7xuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_xUVAZLxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_eab54UIVEeSFpMLLUsMfuA" name="Accounting Unit">
+        <bpmn2:sourceRef>_dswj67xuEeGCw9HgBpY34g:_eab530IVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dswj67xuEeGCw9HgBpY34g:_xUCFdbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_xUVAZbxuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_dswj67xuEeGCw9HgBpY34g:_xUVAZLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dswj67xuEeGCw9HgBpY34g:_xUVAYrxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_ds6U6LxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_ds6U6rxuEeGCw9HgBpY34g" name="Generate Financial Report"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_dswj47xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ds6U7LxuEeGCw9HgBpY34g">Generate financial reports for the previous financial year.  This activity may be performed by an external accounting system.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KuuuE_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_xTvKg7xuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_xTvKhbxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_Mx1k-xwsEeOMUpRtwvEXUw" name="Risk Report" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UsYvo7xuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_xTvKhLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_xTvKhbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_Mx1k-hwsEeOMUpRtwvEXUw" name="OutputSet1">
+          <bpmn2:dataOutputRefs>_Mx1k-xwsEeOMUpRtwvEXUw</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_eab52EIVEeSFpMLLUsMfuA" name="Accounting Unit">
+        <bpmn2:sourceRef>_dswj67xuEeGCw9HgBpY34g:_eab51kIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dswj67xuEeGCw9HgBpY34g:_xTvKhbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_Mx1k_BwsEeOMUpRtwvEXUw" name="Risk Report">
+        <bpmn2:sourceRef>_dswj67xuEeGCw9HgBpY34g:_Mx1k-xwsEeOMUpRtwvEXUw</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dswj67xuEeGCw9HgBpY34g:_Mx1k-RwsEeOMUpRtwvEXUw</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_ds6U67xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_ds6U7bxuEeGCw9HgBpY34g" name="Record Closing Control Accounting Unit Balance"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_dswj5bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ds6U77xuEeGCw9HgBpY34g">Record the closing control accounting unit balances for the previous financial year, covering both internal and external accounting systems, for the purposes of reporting, accounting and reconciliation.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KuuuFPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_xTlZhLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_xUCFhbxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_xTlZhrxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_xUCFhLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_xUCFhbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_xTlZhbxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_xTlZhrxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_xUCFhrxuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_dswj67xuEeGCw9HgBpY34g:_xUCFfLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dswj67xuEeGCw9HgBpY34g:_xUCFhbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_eab510IVEeSFpMLLUsMfuA" name="Accounting Unit">
+        <bpmn2:sourceRef>_dswj67xuEeGCw9HgBpY34g:_xTlZhrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dswj67xuEeGCw9HgBpY34g:_eab51kIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_eab52kIVEeSFpMLLUsMfuA" name="Accounting Unit">
+        <bpmn2:sourceRef>_dswj67xuEeGCw9HgBpY34g:_xTlZhrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dswj67xuEeGCw9HgBpY34g:_eab52UIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_ds6U7rxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_ds6U8LxuEeGCw9HgBpY34g" name="Record Opening Control Accounting Unit Balance"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_dswj57xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ds6U8rxuEeGCw9HgBpY34g">Reset the accounting unit balances for the current financial year, covering both internal and external accounting systems, for the purposes of reporting, accounting and reconciliation.  The Financial Institution may also wish to change their Accounting Base Currency at this time.  New control accounts for the new accounting base currency are created with the effective date equal to day one of the new Fiscal year.  The control accounts for the previous financial year continue to be held in the accounting base currency effective for that year.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KuuuFfxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_xTvKjLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_xTvKjrxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_xTvKjbxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_xTvKjrxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_eab520IVEeSFpMLLUsMfuA" name="Accounting Unit">
+        <bpmn2:sourceRef>_dswj67xuEeGCw9HgBpY34g:_eab52UIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dswj67xuEeGCw9HgBpY34g:_xTvKjrxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_ds6U8bxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_ds6U87xuEeGCw9HgBpY34g" name="Retrieve Accrual Details"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_dswj6bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ds6U9bxuEeGCw9HgBpY34g">Details include accruals for fees and interest receivable.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KuuuFvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_xT4UeLxuEeGCw9HgBpY34g">
+        <bpmn2:dataOutput id="_xT4UerxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:outputSet id="_xT4UebxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_xT4UerxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataOutputAssociation id="_eab53UIVEeSFpMLLUsMfuA" name="Accounting Unit">
+        <bpmn2:sourceRef>_dswj67xuEeGCw9HgBpY34g:_xT4UerxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dswj67xuEeGCw9HgBpY34g:_eab53EIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_eab54EIVEeSFpMLLUsMfuA" name="Accounting Unit">
+        <bpmn2:sourceRef>_dswj67xuEeGCw9HgBpY34g:_xT4UerxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dswj67xuEeGCw9HgBpY34g:_eab530IVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_ds6U9LxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_ds6U9rxuEeGCw9HgBpY34g" name="Apply Agio Control Accounting Entry"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_dsmy_7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ds6U-LxuEeGCw9HgBpY34g">Apply the calculated agio amount to the appropriate control accounts.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KuuuF_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_xUCFfbxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_xUoiY7xuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_xUCFf7xuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_xUoiYrxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_xUoiY7xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_xUCFfrxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_xUCFf7xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_xUoiZLxuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_dswj67xuEeGCw9HgBpY34g:_xUexbrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dswj67xuEeGCw9HgBpY34g:_xUoiY7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_xUCFgLxuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_dswj67xuEeGCw9HgBpY34g:_xUCFf7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dswj67xuEeGCw9HgBpY34g:_xUCFfLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_ds6U97xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_ds6U-bxuEeGCw9HgBpY34g" name="Apply Fee Control Accounting Entry"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_dsmzAbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ds6U-7xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KuuuGPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_xUL2erxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_xUL2fLxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_xUexarxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_xUL2e7xuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_xUL2fLxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_xUexabxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_xUexarxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_xUL2fbxuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_dswj67xuEeGCw9HgBpY34g:_xUL2dLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dswj67xuEeGCw9HgBpY34g:_xUL2fLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_eab55kIVEeSFpMLLUsMfuA" name="Accounting Unit">
+        <bpmn2:sourceRef>_dswj67xuEeGCw9HgBpY34g:_xUexarxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dswj67xuEeGCw9HgBpY34g:_eab55UIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_ds6U-rxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_ds6U_LxuEeGCw9HgBpY34g" name="Apply Interest Control Accounting Entry"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_dsmzA7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ds6U_rxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KuuuGfxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_xUVAaLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_xUVAarxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_xUVAdrxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_xUVAabxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_xUVAarxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_xUVAdbxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_xUVAdrxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_xUVAa7xuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_dswj67xuEeGCw9HgBpY34g:_xUVAYrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dswj67xuEeGCw9HgBpY34g:_xUVAarxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_eab540IVEeSFpMLLUsMfuA" name="Accounting Unit">
+        <bpmn2:sourceRef>_dswj67xuEeGCw9HgBpY34g:_xUVAdrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dswj67xuEeGCw9HgBpY34g:_eab54kIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_ds6U_bxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_ds6U_7xuEeGCw9HgBpY34g" name="Calculate Agio" isForCompensation="false"
+        calledElement="_UhWkQLxuEeGCw9HgBpY34g:_dsmzBbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_dtDe0LxuEeGCw9HgBpY34g">Calculate the total gain or loss from foreign exchange transactions, on balances held in a currency other than the Financial Institution's Accounting Base Currency, during the previous financial year.  Agio is only calculated for active arrangements.  Fixed conversion rates between the Euro and EMU currencies will result in accounts of these currencies not producing agio.  Rounding differences will need to be accounted for.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KuuuGvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_xUexYrxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_xUexZLxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_xUexcLxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_xUexY7xuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_xUexZLxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_xUexb7xuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_xUexcLxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_eab55EIVEeSFpMLLUsMfuA" name="Accounting Unit">
+        <bpmn2:sourceRef>_dswj67xuEeGCw9HgBpY34g:_eab54kIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dswj67xuEeGCw9HgBpY34g:_xUexZLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_eab550IVEeSFpMLLUsMfuA" name="Accounting Unit">
+        <bpmn2:sourceRef>_dswj67xuEeGCw9HgBpY34g:_eab55UIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dswj67xuEeGCw9HgBpY34g:_xUexZLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_xUexcbxuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_dswj67xuEeGCw9HgBpY34g:_xUexcLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dswj67xuEeGCw9HgBpY34g:_xUexbrxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_ds6VALxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:parallelGateway id="_dtDe0bxuEeGCw9HgBpY34g"/>
+    <bpmn2:startEvent id="_dtDe0rxuEeGCw9HgBpY34g" name="Start">
+      <bpmn2:timerEventDefinition id="_xUoiZ7xuEeGCw9HgBpY34g" name="End of Year Plus Specified Period Reached">
+        <bpmn2:documentation id="_xUoiaLxuEeGCw9HgBpY34g">FULL NAME: End of Year Reached&#xD;
+&#xD;
+TRIGGER CATEGORY: Time Driven&#xD;
+&#xD;
+DEFINITION: A Time Trigger Type denoting that the end of a year (however that has been formally defined) has been reached.&#xD;
+&#xD;
+EXAMPLES OF USE: At the end of each year (last working day reached), awards are presented to long serving employees of the bank.</bpmn2:documentation>
+      </bpmn2:timerEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="_dtDe1LxuEeGCw9HgBpY34g" name="End:1">
+      <bpmn2:messageEventDefinition id="_xUoibbxuEeGCw9HgBpY34g" name="Opening Control Accounting Unit Bal Recorded">
+        <bpmn2:documentation id="_xUoibrxuEeGCw9HgBpY34g">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="_xTlZgLxuEeGCw9HgBpY34g" name="Closing Control Accounting Unit Bal Recorded"
+        sourceRef="_ds6U7bxuEeGCw9HgBpY34g" targetRef="_ds6U6rxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_xTlZgbxuEeGCw9HgBpY34g">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_xTvKirxuEeGCw9HgBpY34g" name="Closing Control Accounting Unit Bal Recorded"
+        sourceRef="_ds6U7bxuEeGCw9HgBpY34g" targetRef="_ds6U8LxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_xTvKi7xuEeGCw9HgBpY34g">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_xT4Uc7xuEeGCw9HgBpY34g" name="Accrual Details Retrieved"
+        sourceRef="_ds6U87xuEeGCw9HgBpY34g" targetRef="_ds6U57xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_xT4UdLxuEeGCw9HgBpY34g">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_xT4UdbxuEeGCw9HgBpY34g" name="Accrual Details Retrieved"
+        sourceRef="_ds6U87xuEeGCw9HgBpY34g" targetRef="_ds6U5LxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_xT4UdrxuEeGCw9HgBpY34g">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_xUCFerxuEeGCw9HgBpY34g" name="Agio Control Accounting Entry Applied"
+        sourceRef="_ds6U9rxuEeGCw9HgBpY34g" targetRef="_ds6U7bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_xUCFe7xuEeGCw9HgBpY34g">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_xUCFfLxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_xUL2crxuEeGCw9HgBpY34g" name="Total Fees Calculated"
+        sourceRef="_ds6U5LxuEeGCw9HgBpY34g" targetRef="_ds6U-bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_xUL2c7xuEeGCw9HgBpY34g">FULL NAME: Value Calculated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the mathematical determination of a monetary, financial amount.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has calculated a monthly loan repayment figure using loan amount, interest rate and term. The Financial Institution has calculated an amount which represents the total current commercial loan exposure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Calculate, Accumulate and sometimes Determine.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_xUL2dLxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_xUVAYLxuEeGCw9HgBpY34g" name="Total Interest Calculated"
+        sourceRef="_ds6U57xuEeGCw9HgBpY34g" targetRef="_ds6U_LxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_xUVAYbxuEeGCw9HgBpY34g">FULL NAME: Value Calculated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the mathematical determination of a monetary, financial amount.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has calculated a monthly loan repayment figure using loan amount, interest rate and term. The Financial Institution has calculated an amount which represents the total current commercial loan exposure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Calculate, Accumulate and sometimes Determine.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_xUVAYrxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_xUVAb7xuEeGCw9HgBpY34g" sourceRef="_dtDe0bxuEeGCw9HgBpY34g"
+        targetRef="_ds6U_7xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_xUVAcLxuEeGCw9HgBpY34g" name="Interest Control Accounting Entry Applied"
+        sourceRef="_ds6U_LxuEeGCw9HgBpY34g" targetRef="_dtDe0bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_xUVAcbxuEeGCw9HgBpY34g">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_xUVAcrxuEeGCw9HgBpY34g" name="Agio Calculated" sourceRef="_ds6U_7xuEeGCw9HgBpY34g"
+        targetRef="_ds6U9rxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_xUVAc7xuEeGCw9HgBpY34g">FULL NAME: Value Calculated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the mathematical determination of a monetary, financial amount.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has calculated a monthly loan repayment figure using loan amount, interest rate and term. The Financial Institution has calculated an amount which represents the total current commercial loan exposure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Calculate, Accumulate and sometimes Determine.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_xUexbrxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_xUoiabxuEeGCw9HgBpY34g" name="End of Year Plus Specified Period Reached"
+        sourceRef="_dtDe0rxuEeGCw9HgBpY34g" targetRef="_ds6U87xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_xUoib7xuEeGCw9HgBpY34g" name="Opening Control Accounting Unit Bal Recorded"
+        sourceRef="_ds6U8LxuEeGCw9HgBpY34g" targetRef="_dtDe1LxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_xUoicLxuEeGCw9HgBpY34g" name="Fee Control Accounting Entry Applied"
+        sourceRef="_ds6U-bxuEeGCw9HgBpY34g" targetRef="_dtDe0bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_xUoicbxuEeGCw9HgBpY34g">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:callActivity id="_ExPLkxwsEeOMUpRtwvEXUw" name="Send Risk Report" isForCompensation="false"
+        calledElement="_aXq3fbxuEeGCw9HgBpY34g:_aXq3f7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ExPLlBwsEeOMUpRtwvEXUw">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KuvVIPxiEeOPPNUUqxVo0g">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_Mx1k9RwsEeOMUpRtwvEXUw" name="InputOutputSpecification1">
+        <bpmn2:dataInput id="_Mx_V8RwsEeOMUpRtwvEXUw" name="Risk Report" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UsYvo7xuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_Mx1k9xwsEeOMUpRtwvEXUw" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_Mx_V8BwsEeOMUpRtwvEXUw" name="InputSet1">
+          <bpmn2:dataInputRefs>_Mx_V8RwsEeOMUpRtwvEXUw</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_Mx1k9hwsEeOMUpRtwvEXUw" name="OutputSet1">
+          <bpmn2:dataOutputRefs>_Mx1k9xwsEeOMUpRtwvEXUw</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_Mx_V8hwsEeOMUpRtwvEXUw" name="Risk Report">
+        <bpmn2:sourceRef>_dswj67xuEeGCw9HgBpY34g:_Mx1k-RwsEeOMUpRtwvEXUw</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dswj67xuEeGCw9HgBpY34g:_Mx_V8RwsEeOMUpRtwvEXUw</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_Mx1k-BwsEeOMUpRtwvEXUw" name="Communication Details">
+        <bpmn2:sourceRef>_dswj67xuEeGCw9HgBpY34g:_Mx1k9xwsEeOMUpRtwvEXUw</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dswj67xuEeGCw9HgBpY34g:_MxsbLxwsEeOMUpRtwvEXUw</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_ExPLlRwsEeOMUpRtwvEXUw" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:endEvent id="_KtqtyxwsEeOMUpRtwvEXUw" name="End:2">
+      <bpmn2:messageEventDefinition id="_Mx1k8BwsEeOMUpRtwvEXUw" name="Communication Completed">
+        <bpmn2:documentation id="_Mx1k8RwsEeOMUpRtwvEXUw">FULL NAME: Expected Activity Completed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected specific, but otherwise not categorized occurrence of interest to the business has ended.&#xD;
+&#xD;
+EXAMPLES OF USE: A plan to relocate headquarters staff has been set in motion on the completion of negotiations to buy a development site.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="_Mx1k8hwsEeOMUpRtwvEXUw" name="Communication Completed"
+        sourceRef="_ExPLkxwsEeOMUpRtwvEXUw" targetRef="_KtqtyxwsEeOMUpRtwvEXUw"/>
+    <bpmn2:sequenceFlow id="_Mx1k8xwsEeOMUpRtwvEXUw" name="Financial Report Generated"
+        sourceRef="_ds6U6rxuEeGCw9HgBpY34g" targetRef="_ExPLkxwsEeOMUpRtwvEXUw">
+      <bpmn2:documentation id="_Mx1k9BwsEeOMUpRtwvEXUw">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_Mx1k-RwsEeOMUpRtwvEXUw" name="Risk Report" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UsYvo7xuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_eab51kIVEeSFpMLLUsMfuA" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_eab52UIVEeSFpMLLUsMfuA" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_eab53EIVEeSFpMLLUsMfuA" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_eab530IVEeSFpMLLUsMfuA" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_eab54kIVEeSFpMLLUsMfuA" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_eab55UIVEeSFpMLLUsMfuA" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+  </bpmn2:process>
+</bpmn2:definitions>

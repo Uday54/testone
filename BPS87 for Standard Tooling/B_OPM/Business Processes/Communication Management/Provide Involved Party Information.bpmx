@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_GWk2MMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"
+    xmlns:_GXn_EMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"
+    xmlns:_HuC_r8T2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_HuC_r8T2EeGIlOhhn7SrtQ"
+    xmlns:_MzVeRMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_MzVeRMT2EeGIlOhhn7SrtQ"
+    xmlns:_MzyKNMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_MzyKNMT2EeGIlOhhn7SrtQ"
+    xmlns:_sKPAoChgEeOjHu3a6otf0Q="http://www.ibm.com/xtools/bpmn/2.0/_sKPAoChgEeOjHu3a6otf0Q"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_MzVeRMT2EeGIlOhhn7SrtQ" name="Provide Involved Party Information"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_MzVeRMT2EeGIlOhhn7SrtQ"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_MzVeR8T2EeGIlOhhn7SrtQ"
+      visible="true" type="Bpmn2" element="_MzVeRsT2EeGIlOhhn7SrtQ" name="Provide Involved Party Information Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_N1p35MT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_O0O_fcT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Service%20Processes/Involved%20Party%20Management/IInvolvedPartyManagement/Retrieve%20Credential%20Details%20Service.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_HuC_r8T2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_O0O_g8T2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_O0YwIsT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Service%20Processes/Involved%20Party%20Management/IInvolvedPartyManagement/Retrieve%20Involved%20Party%20Details%20Service.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_MzyKNMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_zkd9kChgEeOjHu3a6otf0Q" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Service%20Processes/Involved%20Party/IInvolvedPartyObjectManager/Retrieve%20IP%20Relationship%20Details%20Service.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_sKPAoChgEeOjHu3a6otf0Q"/>
+  <bpmn2:extension xmi:id="_MzVeRcT2EeGIlOhhn7SrtQ" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_ai-PAyhgEeOjHu3a6otf0Q" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_KWO2oSiMEeO1PvbDA98QvA" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_MzVeRsT2EeGIlOhhn7SrtQ" name="Provide Involved Party Information">
+    <bpmn2:documentation id="_MzfPQMT2EeGIlOhhn7SrtQ">SHORT NAME: Prvd IP Info&#xD;
+&#xD;
+B LEVEL ROOT: Provide * Details&#xD;
+&#xD;
+DEFINITION: To put involved party information at the disposal of someone, or to supply involved party information.&#xD;
+&#xD;
+DESCRIPTION: This workflow encompasses the activities necessary for the financial institution to provide activities necessary to access and distribute information about involved parties to authorized recipients. It includes the provision of involved party information internally to those with authorized rights of access, or declining requests for involved party information from those with no rights of access authorized. It also includes the provision of Involved Party Information to external parties if their access is in compliance with control conditions, especially those enforcing data protection laws.&#xD;
+&#xD;
+FLOW DIAGRAM: WF Chart for Provide Involved Party Information</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_ai-PAChgEeOjHu3a6otf0Q">
+      <tagging:tag xmi:id="_KV_mECiMEeO1PvbDA98QvA" id="_ai-PAShgEeOjHu3a6otf0Q">Communication Management</tagging:tag>
+      <tagging:tag xmi:id="_KV_mESiMEeO1PvbDA98QvA" id="_ai-PAihgEeOjHu3a6otf0Q">ValueChain_SalesRelationshipManagement_Service</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_MzfPQcT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_PdglgcT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj41sT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_MzfPQsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_PdglgcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_N1p348T2EeGIlOhhn7SrtQ" name="Customer Representative" partitionElementRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_zS2pIihgEeOjHu3a6otf0Q">An employee of the financial institution who acts as a liason between the FI and the customer.</bpmn2:documentation>
+      <bpmn2:flowElementRef>_O0O_dsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_O0O_e8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_O0O_hcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_O0O_h8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_O0O_jsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_O0O_mMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_O0O_msT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_O0YwAsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_O0YwC8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_O0YwIMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_O0YwKcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_O0YwK8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_O0YwMsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_O0YwVcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_O0YwXsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_O0YwYMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PC1cV8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PC1cWsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PFE36MT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PMXyjcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PMXyj8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PMXyksT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PMXylsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PdD5kcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PdglgMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_zkd9mChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_zkekoChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_zkekpChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0IbmQChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0IbmQShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0KWR0ihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0KWR1ShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0Nu9BShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0Nu9BihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0Nu9CChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0Nu9CihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0Nu9CyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0Nu9DChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0Nu9DShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_EuqibEIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_EuzsUEIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_IH69M0IZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KLpIcEIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KLpIcUIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_O0O_dsT2EeGIlOhhn7SrtQ" name="Provide Involved Party Details"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_Ht5OgcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_O0O_d8T2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KWO2oCiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_O0O_eMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PvGEwMT2EeGIlOhhn7SrtQ" name="Involved Party Relationship Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj43MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_PvGEwcT2EeGIlOhhn7SrtQ" name="Credential Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW3MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_PvGEwsT2EeGIlOhhn7SrtQ" name="Involved Party Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_O0O_ecT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PvGEwMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_PvGEwcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_PvGEwsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_P3SYFcT2EeGIlOhhn7SrtQ" name="Involved Party Relationship Details">
+        <bpmn2:sourceRef>_MzVeRMT2EeGIlOhhn7SrtQ:_PdD5kcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MzVeRMT2EeGIlOhhn7SrtQ:_PvGEwMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_P3SYFsT2EeGIlOhhn7SrtQ" name="Credential Details">
+        <bpmn2:sourceRef>_MzVeRMT2EeGIlOhhn7SrtQ:_PdglgMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MzVeRMT2EeGIlOhhn7SrtQ:_PvGEwcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_LjaM3EIZEeSedtiJ0SK07w" name="Involved Party Details">
+        <bpmn2:sourceRef>_MzVeRMT2EeGIlOhhn7SrtQ:_KLpIcUIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MzVeRMT2EeGIlOhhn7SrtQ:_PvGEwsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_O0O_esT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_O0O_e8T2EeGIlOhhn7SrtQ" name="Retrieve Credential Details"
+        isForCompensation="false" calledElement="_HuC_r8T2EeGIlOhhn7SrtQ:_HuC_scT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_O0O_fMT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KWZOsyiMEeO1PvbDA98QvA">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_O0O_i8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_O0O_jcT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_O0YwAMT2EeGIlOhhn7SrtQ" name="Credential Details" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_HuMwjcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_O0YwAcT2EeGIlOhhn7SrtQ" name="Supporting Documents"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHw8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_O0O_jMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_O0O_jcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_O0O_n8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_O0YwAMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_O0YwAcT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_O0O_kMT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_MzVeRMT2EeGIlOhhn7SrtQ:_O0O_jsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MzVeRMT2EeGIlOhhn7SrtQ:_O0O_jcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_O0YwA8T2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_MzVeRMT2EeGIlOhhn7SrtQ:_O0YwAMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MzVeRMT2EeGIlOhhn7SrtQ:_O0YwAsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_EuqibUIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_MzVeRMT2EeGIlOhhn7SrtQ:_O0YwAcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MzVeRMT2EeGIlOhhn7SrtQ:_EuqibEIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_O0YwCsT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_O0O_hcT2EeGIlOhhn7SrtQ" name="Map to Retrieve Credential Details"
+        isForCompensation="false" calledElement="_MzVeRMT2EeGIlOhhn7SrtQ:_O0O_fsT2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_KWZOtCiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_O0O_iMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PvGEw8T2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj41sT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_O0O_isT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_O0YwCMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PvGEw8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_O0O_icT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_O0O_isT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_P3SYGMT2EeGIlOhhn7SrtQ" name="Involved Party Identifier">
+        <bpmn2:sourceRef>_MzVeRMT2EeGIlOhhn7SrtQ:_PdglgcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MzVeRMT2EeGIlOhhn7SrtQ:_PvGEw8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_O0O_j8T2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_MzVeRMT2EeGIlOhhn7SrtQ:_O0O_isT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MzVeRMT2EeGIlOhhn7SrtQ:_O0O_jsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_O0O_hsT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_O0O_h8T2EeGIlOhhn7SrtQ" sourceRef="_O0O_hcT2EeGIlOhhn7SrtQ"
+        targetRef="_O0O_e8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_O0O_jsT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+        isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_O0O_mMT2EeGIlOhhn7SrtQ" name="Map from Retrieve Credential Details"
+        isForCompensation="false" calledElement="_MzVeRMT2EeGIlOhhn7SrtQ:_O0O_kcT2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_KWZOtSiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_O0O_m8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_O0O_ncT2EeGIlOhhn7SrtQ" name="Credential Details" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_HuMwjcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_O0O_nsT2EeGIlOhhn7SrtQ" name="Supporting Documents"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHw8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PvGExMT2EeGIlOhhn7SrtQ" name="Credential Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW3MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_O0O_nMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_O0O_ncT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_O0O_nsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_O0YwCcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PvGExMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_O0YwBMT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_MzVeRMT2EeGIlOhhn7SrtQ:_O0YwAsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MzVeRMT2EeGIlOhhn7SrtQ:_O0O_ncT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_EuqibkIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_MzVeRMT2EeGIlOhhn7SrtQ:_EuqibEIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MzVeRMT2EeGIlOhhn7SrtQ:_O0O_nsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_P3SYGcT2EeGIlOhhn7SrtQ" name="Credential Details">
+        <bpmn2:sourceRef>_MzVeRMT2EeGIlOhhn7SrtQ:_PvGExMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MzVeRMT2EeGIlOhhn7SrtQ:_PdglgMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_O0O_mcT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_O0O_msT2EeGIlOhhn7SrtQ" sourceRef="_O0O_e8T2EeGIlOhhn7SrtQ"
+        targetRef="_O0O_mMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_O0YwAsT2EeGIlOhhn7SrtQ" name="Credential Details" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_HuMwjcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_O0YwC8T2EeGIlOhhn7SrtQ" name="Determine Additional IP Information Required"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_HwlWYMT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_O0YwDMT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KWZOtiiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_O0YwGMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PvGExcT2EeGIlOhhn7SrtQ" name="Involved Party Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_O0YwGsT2EeGIlOhhn7SrtQ" name="Involved Party Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_O0YwHsT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PvGExcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_O0YwGcT2EeGIlOhhn7SrtQ" name="OutputSet1">
+          <bpmn2:dataOutputRefs>_O0YwGsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_LjaM3UIZEeSedtiJ0SK07w" name="Involved Party Details">
+        <bpmn2:sourceRef>_MzVeRMT2EeGIlOhhn7SrtQ:_KLpIcEIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MzVeRMT2EeGIlOhhn7SrtQ:_PvGExcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_O0YwH8T2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_O0YwIMT2EeGIlOhhn7SrtQ" name="Retrieve Involved Party Details"
+        isForCompensation="false" calledElement="_MzyKNMT2EeGIlOhhn7SrtQ:_MzyKNsT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_O0YwIcT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KWZOtyiMEeO1PvbDA98QvA">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_O0YwL8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_O0YwMcT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_O0YwRsT2EeGIlOhhn7SrtQ" name="Involved Party" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_O0YwR8T2EeGIlOhhn7SrtQ" name="Accessibility Profile"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW1sT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_O0YwSMT2EeGIlOhhn7SrtQ" name="Contact Preferences"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW2cT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_O0YwMMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_O0YwMcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_O0YwRcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_O0YwRsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_O0YwR8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_O0YwSMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_O0YwNMT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_MzVeRMT2EeGIlOhhn7SrtQ:_O0YwMsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MzVeRMT2EeGIlOhhn7SrtQ:_O0YwMcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_LjaM3kIZEeSedtiJ0SK07w" name="Involved Party Details">
+        <bpmn2:sourceRef>_MzVeRMT2EeGIlOhhn7SrtQ:_O0YwRsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MzVeRMT2EeGIlOhhn7SrtQ:_KLpIcEIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_Ljj9oEIZEeSedtiJ0SK07w" name="Involved Party Details">
+        <bpmn2:sourceRef>_MzVeRMT2EeGIlOhhn7SrtQ:_O0YwRsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MzVeRMT2EeGIlOhhn7SrtQ:_KLpIcUIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_O0YwVMT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_O0YwKcT2EeGIlOhhn7SrtQ" name="Map to Retrieve Involved Party Details"
+        isForCompensation="false" calledElement="_MzVeRMT2EeGIlOhhn7SrtQ:_O0YwI8T2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_KWZOuCiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_O0YwLMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PvGExsT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj41sT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_O0YwLsT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_O0YwUsT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PvGExsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_O0YwLcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_O0YwLsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_P3SYG8T2EeGIlOhhn7SrtQ" name="Involved Party Identifier">
+        <bpmn2:sourceRef>_MzVeRMT2EeGIlOhhn7SrtQ:_PdglgcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MzVeRMT2EeGIlOhhn7SrtQ:_PvGExsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_O0YwM8T2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_MzVeRMT2EeGIlOhhn7SrtQ:_O0YwLsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MzVeRMT2EeGIlOhhn7SrtQ:_O0YwMsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_O0YwKsT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_O0YwK8T2EeGIlOhhn7SrtQ" sourceRef="_O0YwKcT2EeGIlOhhn7SrtQ"
+        targetRef="_O0YwIMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_O0YwMsT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+        isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_O0YwVcT2EeGIlOhhn7SrtQ" name="Retrieve IP Relationship Details"
+        isForCompensation="false" calledElement="_sKPAoChgEeOjHu3a6otf0Q:_sKPAoihgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_O0YwVsT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KWZOuiiMEeO1PvbDA98QvA">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_O0YwZcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PvGEyMT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_zkd9kShgEeOjHu3a6otf0Q" name="Related Involved Parties"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_O0Ywb8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PvGEyMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_O0YwZsT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_zkd9kShgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_zkekpihgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_MzVeRMT2EeGIlOhhn7SrtQ:_zkekpChgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MzVeRMT2EeGIlOhhn7SrtQ:_PvGEyMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_EuzsUUIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_MzVeRMT2EeGIlOhhn7SrtQ:_zkd9kShgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MzVeRMT2EeGIlOhhn7SrtQ:_EuzsUEIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_O0YwccT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_O0YwXsT2EeGIlOhhn7SrtQ" name="Map from Retrieve IP Relationship Details"
+        isForCompensation="false" calledElement="_MzVeRMT2EeGIlOhhn7SrtQ:_O0YwV8T2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_KWZOuyiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_O0YwYcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_zkekqChgEeOjHu3a6otf0Q" name="Related Involved Parties"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PvGEycT2EeGIlOhhn7SrtQ" name="Involved Party Relationship Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj43MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_O0YwYsT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_zkekqChgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_O0YwcMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PvGEycT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_EuzsUkIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_MzVeRMT2EeGIlOhhn7SrtQ:_EuzsUEIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MzVeRMT2EeGIlOhhn7SrtQ:_zkekqChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_P3SYHsT2EeGIlOhhn7SrtQ" name="Involved Party Relationship Details">
+        <bpmn2:sourceRef>_MzVeRMT2EeGIlOhhn7SrtQ:_PvGEycT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MzVeRMT2EeGIlOhhn7SrtQ:_PdD5kcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_O0YwX8T2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_O0YwYMT2EeGIlOhhn7SrtQ" sourceRef="_O0YwVcT2EeGIlOhhn7SrtQ"
+        targetRef="_O0YwXsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:endEvent id="_PC1cV8T2EeGIlOhhn7SrtQ" name="End">
+      <bpmn2:messageEventDefinition id="_PC1cWMT2EeGIlOhhn7SrtQ" name="Involved Party Details Provided">
+        <bpmn2:documentation id="_PC1cWcT2EeGIlOhhn7SrtQ">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="_PC1cWsT2EeGIlOhhn7SrtQ" name="Start">
+      <bpmn2:messageEventDefinition id="_0KWR0ChgEeOjHu3a6otf0Q" name="Involved Party Information Requested">
+        <bpmn2:documentation id="_0KWR0ShgEeOjHu3a6otf0Q">FULL NAME: Request Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request has been caused by the enterprise to be directed or transmitted to another place. &#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has asked for or demanded additional collateral to be provided as security on a loan.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:parallelGateway id="_PFE36MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PMXyjcT2EeGIlOhhn7SrtQ" sourceRef="_PFE36MT2EeGIlOhhn7SrtQ"
+        targetRef="_O0O_dsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PMXyj8T2EeGIlOhhn7SrtQ" name="Involved Party Details Provided"
+        sourceRef="_O0O_dsT2EeGIlOhhn7SrtQ" targetRef="_PC1cV8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PMXyksT2EeGIlOhhn7SrtQ" name="Involved Party Relationship Details Retrieved"
+        sourceRef="_O0YwXsT2EeGIlOhhn7SrtQ" targetRef="_PFE36MT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PMXyk8T2EeGIlOhhn7SrtQ">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PMXylsT2EeGIlOhhn7SrtQ" name="Credential Details Retrieved"
+        sourceRef="_O0O_mMT2EeGIlOhhn7SrtQ" targetRef="_PFE36MT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PMXyl8T2EeGIlOhhn7SrtQ">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_PdD5kcT2EeGIlOhhn7SrtQ" name="Involved Party Relationship Details"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj43MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_PdglgMT2EeGIlOhhn7SrtQ" name="Credential Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW3MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_zkd9mChgEeOjHu3a6otf0Q" name="Map to Retrieve IP Relationship Details"
+        isForCompensation="false" calledElement="_MzVeRMT2EeGIlOhhn7SrtQ:_zkd9kihgEeOjHu3a6otf0Q">
+      <bpmn2:extensionElements xmi:id="_KWZOvCiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_zkekoShgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_0cPTEChgEeOjHu3a6otf0Q" name="Involved Party Identifier"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj41sT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_zkekoyhgEeOjHu3a6otf0Q" name="Involved Party Identifier"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_zkekrChgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_0cPTEChgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_zkekoihgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_zkekoyhgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_0jOr4ihgEeOjHu3a6otf0Q" name="Involved Party Identifier">
+        <bpmn2:sourceRef>_MzVeRMT2EeGIlOhhn7SrtQ:_PdglgcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MzVeRMT2EeGIlOhhn7SrtQ:_0cPTEChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_zkekpShgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_MzVeRMT2EeGIlOhhn7SrtQ:_zkekoyhgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MzVeRMT2EeGIlOhhn7SrtQ:_zkekpChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_zkd9mShgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_zkekoChgEeOjHu3a6otf0Q" sourceRef="_zkd9mChgEeOjHu3a6otf0Q"
+        targetRef="_O0YwVcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_zkekpChgEeOjHu3a6otf0Q" name="Involved Party Identifier"
+        isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:parallelGateway id="_0IbmQChgEeOjHu3a6otf0Q"/>
+    <bpmn2:exclusiveGateway id="_0IbmQShgEeOjHu3a6otf0Q" name="ExclusiveGateway1"/>
+    <bpmn2:startEvent id="_0KWR0ihgEeOjHu3a6otf0Q" name="Start:1">
+      <bpmn2:messageEventDefinition id="_0KWR0yhgEeOjHu3a6otf0Q" name="Involved Party Information Request Received">
+        <bpmn2:documentation id="_0KWR1ChgEeOjHu3a6otf0Q">FULL NAME: Information Request Received&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request for information is received by Financial Institution.&#xD;
+&#xD;
+EXAMPLES OF USE:  Mr. Green has requested that details about the bank's different types of personal account products are sent to him.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:startEvent id="_0KWR1ShgEeOjHu3a6otf0Q" name="Start:2"/>
+    <bpmn2:sequenceFlow id="_0Nu9BShgEeOjHu3a6otf0Q" sourceRef="_O0YwC8T2EeGIlOhhn7SrtQ"
+        targetRef="_0IbmQChgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0Nu9BihgEeOjHu3a6otf0Q" name="Credential Details Required"
+        sourceRef="_0IbmQChgEeOjHu3a6otf0Q" targetRef="_O0O_hcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_0Nu9ByhgEeOjHu3a6otf0Q">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_0Nu9CChgEeOjHu3a6otf0Q" name="Relationship Information Required"
+        sourceRef="_0IbmQChgEeOjHu3a6otf0Q" targetRef="_zkd9mChgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_0Nu9CShgEeOjHu3a6otf0Q">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_0Nu9CihgEeOjHu3a6otf0Q" name="Involved Party Information Requested"
+        sourceRef="_PC1cWsT2EeGIlOhhn7SrtQ" targetRef="_0IbmQShgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0Nu9CyhgEeOjHu3a6otf0Q" sourceRef="_0IbmQShgEeOjHu3a6otf0Q"
+        targetRef="_O0YwKcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_0Nu9DChgEeOjHu3a6otf0Q" name="Involved Party Information Request Received"
+        sourceRef="_0KWR0ihgEeOjHu3a6otf0Q" targetRef="_0IbmQShgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0Nu9DShgEeOjHu3a6otf0Q" name="Invoked By Business Process"
+        sourceRef="_0KWR1ShgEeOjHu3a6otf0Q" targetRef="_O0YwKcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_EuqibEIZEeSedtiJ0SK07w" name="Supporting Documents" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHw8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_EuzsUEIZEeSedtiJ0SK07w" name="Related Involved Parties"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_IH69M0IZEeSedtiJ0SK07w" name="Involved Party Details Retrieved"
+        sourceRef="_O0YwIMT2EeGIlOhhn7SrtQ" targetRef="_O0YwC8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_IH69NEIZEeSedtiJ0SK07w">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_KLpIcEIZEeSedtiJ0SK07w" name="Involved Party Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_KLpIcUIZEeSedtiJ0SK07w" name="Involved Party Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+  </bpmn2:process>
+  <bpmn2:globalTask id="_O0O_fsT2EeGIlOhhn7SrtQ" name="Map to Retrieve Credential Details">
+    <bpmn2:ioSpecification id="_O0O_f8T2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_O0O_gsT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj41sT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_O0O_hMT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+          isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_O0O_gMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_O0O_gsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_O0O_gcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_O0O_hMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_O0O_kcT2EeGIlOhhn7SrtQ" name="Map from Retrieve Credential Details">
+    <bpmn2:ioSpecification id="_O0O_ksT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_O0O_lcT2EeGIlOhhn7SrtQ" name="Credential Details" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_HuMwjcT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_O0O_lsT2EeGIlOhhn7SrtQ" name="Supporting Documents" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHw8T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_O0O_l8T2EeGIlOhhn7SrtQ" name="Credential Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW3MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_O0O_k8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_O0O_lcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_O0O_lsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_O0O_lMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_O0O_l8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_O0YwI8T2EeGIlOhhn7SrtQ" name="Map to Retrieve Involved Party Details">
+    <bpmn2:ioSpecification id="_O0YwJMT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_O0YwJ8T2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj41sT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_O0YwKMT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+          isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_O0YwJcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_O0YwJ8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_O0YwJsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_O0YwKMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_O0YwV8T2EeGIlOhhn7SrtQ" name="Map from Retrieve IP Relationship Details">
+    <bpmn2:ioSpecification id="_O0YwWMT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_zkekpyhgEeOjHu3a6otf0Q" name="Related Involved Parties"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_O0YwXcT2EeGIlOhhn7SrtQ" name="Involved Party Relationship Details"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj43MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_O0YwWcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_zkekpyhgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_O0YwWsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_O0YwXcT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_zkd9kihgEeOjHu3a6otf0Q" name="Map to Retrieve IP Relationship Details">
+    <bpmn2:ioSpecification id="_zkd9kyhgEeOjHu3a6otf0Q">
+      <bpmn2:dataInput id="_zkd9lihgEeOjHu3a6otf0Q" name="Involved Party Identifier"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj41sT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_zkd9lyhgEeOjHu3a6otf0Q" name="Involved Party Identifier"
+          isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_zkd9lChgEeOjHu3a6otf0Q">
+        <bpmn2:dataInputRefs>_zkd9lihgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_zkd9lShgEeOjHu3a6otf0Q">
+        <bpmn2:dataOutputRefs>_zkd9lyhgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+</bpmn2:definitions>

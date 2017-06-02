@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_UfkbkLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"
+    xmlns:_UhWkQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"
+    xmlns:_UhqGQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UhqGQLxuEeGCw9HgBpY34g"
+    xmlns:_axJucrxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_axJucrxuEeGCw9HgBpY34g"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_axJucrxuEeGCw9HgBpY34g" name="Notify Depository" expressionLanguage="http://www.w3.org/1999/XPath"
+    targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_axJucrxuEeGCw9HgBpY34g" typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_axJudbxuEeGCw9HgBpY34g"
+      visible="true" type="Bpmn2" element="_axJudLxuEeGCw9HgBpY34g" name="Notify Depository Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_axcpUrxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_axcpWrxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_zNx1VLxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Maps.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UhqGQLxuEeGCw9HgBpY34g"/>
+  <bpmn2:extension xmi:id="_axJuc7xuEeGCw9HgBpY34g" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_cNwV0hwrEeOMUpRtwvEXUw" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_JH4sEfxiEeOPPNUUqxVo0g" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_axJudLxuEeGCw9HgBpY34g" name="Notify Depository">
+    <bpmn2:documentation id="_axcpULxuEeGCw9HgBpY34g">SHORT NAME: Ntfy Dpstry&#xD;
+&#xD;
+B LEVEL ROOT: Notify Organization&#xD;
+&#xD;
+DEFINITION: To give notice to a Depository; to tell a Depository about a settlement.&#xD;
+&#xD;
+DESCRIPTION: Notify the Depository organization about the value of the inpayment expected in settlement of a financial market offering transaction. This activity will help to manage daylight overdrafts of counterparties when an inpayment is expected. The value of the settlement requiring an inpayment from the Counterparty may have changed because it has been accumulated gross, calculated net, or marked to market on futures, and therefore needs to be communicated to the depository to assure correct settlement amount is received. This notification will be used to reconcile the inpayment amount when received.&#xD;
+&#xD;
+FLOW DIAGRAM: AS Chart for Notify Depository&#xD;
+&#xD;
+IBM Unique ID: CBPC04658</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_cNwV0BwrEeOMUpRtwvEXUw">
+      <tagging:tag id="_cNwV0RwrEeOMUpRtwvEXUw">Financial Market Offering Management</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_axcpV7xuEeGCw9HgBpY34g">
+      <bpmn2:dataInput id="_axcpYLxuEeGCw9HgBpY34g" name="FMO Transaction Details"
+          isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlLxuEeGCw9HgBpY34g"/>
+      <bpmn2:dataOutput id="_axcpWbxuEeGCw9HgBpY34g" name="Communication Details"
+          isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+      <bpmn2:inputSet id="_axcpX7xuEeGCw9HgBpY34g">
+        <bpmn2:dataInputRefs>_axcpYLxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_axcpWLxuEeGCw9HgBpY34g">
+        <bpmn2:dataOutputRefs>_axcpWbxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_axcpUbxuEeGCw9HgBpY34g" name="Enterprise Process" partitionElementRef="_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_axcpU7xuEeGCw9HgBpY34g">The default role for all enterprise process activities not explicitly assigned to other roles.&#xD;
+&#xD;
+IBM Unique ID: CBPC05595</bpmn2:documentation>
+      <bpmn2:flowElementRef>_axcpVLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_axcpW7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_axcpXrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_axcpYbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_lfDbgLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_lfDbgbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_lfzCYLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_lfzCZLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_TtcswBwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_TtcswRwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_axcpVLxuEeGCw9HgBpY34g" name="Generate Communication Details"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_a4E8UBwrEeOMUpRtwvEXUw">
+      <bpmn2:documentation id="_axcpVrxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JH4sEPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_lewglbxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_lfWWcbxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_Q_G2oxwsEeOMUpRtwvEXUw" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_lewgl7xuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_lfWWcLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_lfWWcbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_Q_G2oxwsEeOMUpRtwvEXUw</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_lewglrxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_lewgl7xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_lfWWcrxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_axJucrxuEeGCw9HgBpY34g:_lfDbgbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_axJucrxuEeGCw9HgBpY34g:_lfWWcbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_lewgmLxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_axJucrxuEeGCw9HgBpY34g:_lewgl7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_axJucrxuEeGCw9HgBpY34g:_axcpWbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_axcpVbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_axcpW7xuEeGCw9HgBpY34g" name="XMap FMO Trans Details to Comm Details"
+        isForCompensation="false" calledElement="_UhqGQLxuEeGCw9HgBpY34g:_a165oLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_axcpXbxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JH4sEvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_lfDbgrxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_lfp4cbxuEeGCw9HgBpY34g" name="FMO Transaction Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_lfDbhLxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_lfp4cLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_lfp4cbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_lfDbg7xuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_lfDbhLxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_lfp4crxuEeGCw9HgBpY34g" name="FMO Transaction Details">
+        <bpmn2:sourceRef>_axJucrxuEeGCw9HgBpY34g:_axcpYLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_axJucrxuEeGCw9HgBpY34g:_lfp4cbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_lfDbhbxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_axJucrxuEeGCw9HgBpY34g:_lfDbhLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_axJucrxuEeGCw9HgBpY34g:_lfDbgbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_axcpXLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:startEvent id="_axcpXrxuEeGCw9HgBpY34g" name="Start">
+      <bpmn2:messageEventDefinition id="_L-IQIRwsEeOMUpRtwvEXUw" name="Depository Asset Transfer Scheduled">
+        <bpmn2:documentation id="_L-IQIhwsEeOMUpRtwvEXUw">FULL NAME:  Event Scheduled&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION:  An expected occurrence of interest to the business has resulted in the planning of an event to occur at a specified time in the future.&#xD;
+&#xD;
+EXAMPLES OF USE:  A meeting has been scheduled as a result of a customer enquiry activity to discuss product requirements.  A loan repayment schedule has been created to establish of a series of repayment due dates.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="_axcpYbxuEeGCw9HgBpY34g" name="End">
+      <bpmn2:messageEventDefinition id="_lfzCYrxuEeGCw9HgBpY34g" name="Communication Completed">
+        <bpmn2:documentation id="_lfzCY7xuEeGCw9HgBpY34g">FULL NAME: Expected Activity Completed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected specific, but otherwise not categorized occurrence of interest to the business has ended.&#xD;
+&#xD;
+EXAMPLES OF USE: A plan to relocate headquarters staff has been set in motion on the completion of negotiations to buy a development site.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="_lfDbgLxuEeGCw9HgBpY34g" name="Depository Asset Transfer Scheduled"
+        sourceRef="_axcpXrxuEeGCw9HgBpY34g" targetRef="_axcpW7xuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_lfDbgbxuEeGCw9HgBpY34g" name="Communication Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_lfzCYLxuEeGCw9HgBpY34g" name="Communication Required"
+        sourceRef="_axcpW7xuEeGCw9HgBpY34g" targetRef="_axcpVLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_lfzCYbxuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_lfzCZLxuEeGCw9HgBpY34g" name="Communication Completed"
+        sourceRef="_axcpVLxuEeGCw9HgBpY34g" targetRef="_axcpYbxuEeGCw9HgBpY34g"/>
+    <bpmn2:startEvent id="_TtcswBwsEeOMUpRtwvEXUw" name="Start:1"/>
+    <bpmn2:sequenceFlow id="_TtcswRwsEeOMUpRtwvEXUw" name="Invoked By Business Process"
+        sourceRef="_TtcswBwsEeOMUpRtwvEXUw" targetRef="_axcpW7xuEeGCw9HgBpY34g"/>
+  </bpmn2:process>
+</bpmn2:definitions>

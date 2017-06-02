@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_GXn_EMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"
+    xmlns:_HeGfFcT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_HeGfFcT2EeGIlOhhn7SrtQ"
+    xmlns:_tmocgl8tEeGYvOQYZS-meA="http://www.ibm.com/uml2/Rational/_tmocgl8tEeGYvOQYZS-meA"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_HeGfFcT2EeGIlOhhn7SrtQ" name="Calculate Net Dividend Service"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_HeGfFcT2EeGIlOhhn7SrtQ"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_HeGfGMT2EeGIlOhhn7SrtQ"
+      visible="true" type="Bpmn2" element="_HeGfF8T2EeGIlOhhn7SrtQ" name="Calculate Net Dividend Service Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_HeGfGsT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_HeGfJcT2EeGIlOhhn7SrtQ" importType="http://www.eclipse.org/uml2/3.0.0/UML"
+      location="../../../../B_SDM.emx" namespace="http://www.ibm.com/uml2/Rational/_tmocgl8tEeGYvOQYZS-meA"/>
+  <bpmn2:extension xmi:id="_HeGfFsT2EeGIlOhhn7SrtQ" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_p_86YihgEeOjHu3a6otf0Q" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_LCQPIiiMEeO1PvbDA98QvA" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_HeGfF8T2EeGIlOhhn7SrtQ" name="Calculate Net Dividend Service">
+    <bpmn2:ioSpecification id="_HeGfMsT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_HeGfNcT2EeGIlOhhn7SrtQ" name="Withholding Tax Amount"
+          isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GjsFPcT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_HeGfNsT2EeGIlOhhn7SrtQ" name="Holder Residency Income Tax Amount"
+          isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GjsFPcT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_HeGfN8T2EeGIlOhhn7SrtQ" name="Gross Dividend Income Amount"
+          isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GjsFPcT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_HeGfOMT2EeGIlOhhn7SrtQ" name="Net Dividend Income Amount"
+          isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GjsFPcT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_HeGfM8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_HeGfNcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_HeGfNsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_HeGfN8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_HeGfNMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_HeGfOMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_HeGfG8T2EeGIlOhhn7SrtQ" name="Service" partitionElementRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GX66AMT2EeGIlOhhn7SrtQ">
+      <bpmn2:flowElementRef>_HeGfHMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HeGfHcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HeGfH8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HeGfIcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HeGfKMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HeGfKsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HeGfK8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HeGfLMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HeGfLcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HeQP8MT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HeQP8cT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:startEvent id="_HeGfHMT2EeGIlOhhn7SrtQ" name="Start"/>
+    <bpmn2:endEvent id="_HeGfHcT2EeGIlOhhn7SrtQ" name="End"/>
+    <bpmn2:callActivity id="_HeGfH8T2EeGIlOhhn7SrtQ" name="pre-calculateNetDividendAmount"
+        isForCompensation="false" calledElement="_HeGfFcT2EeGIlOhhn7SrtQ:_HeGfHsT2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_LCQPISiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_HeGfQMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_HeGfQ8T2EeGIlOhhn7SrtQ" name="Withholding Tax Amount"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GjsFPcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_HeGfRMT2EeGIlOhhn7SrtQ" name="Holder Residency Income Tax Amount"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GjsFPcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_HeGfRcT2EeGIlOhhn7SrtQ" name="Gross Dividend Income Amount"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GjsFPcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_HeGfRsT2EeGIlOhhn7SrtQ" name="Calculate Net Dividend Amount Request"
+            isCollection="false" itemSubjectRef="_HeGfFcT2EeGIlOhhn7SrtQ:_HeGfLsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_HeGfQcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_HeGfQ8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_HeGfRMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_HeGfRcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_HeGfQsT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_HeGfRsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_HeQP8sT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HeGfFcT2EeGIlOhhn7SrtQ:_HeGfNcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HeGfFcT2EeGIlOhhn7SrtQ:_HeGfQ8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_HeQP88T2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HeGfFcT2EeGIlOhhn7SrtQ:_HeGfNsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HeGfFcT2EeGIlOhhn7SrtQ:_HeGfRMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_HeQP9MT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HeGfFcT2EeGIlOhhn7SrtQ:_HeGfN8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HeGfFcT2EeGIlOhhn7SrtQ:_HeGfRcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_HeQP9cT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HeGfFcT2EeGIlOhhn7SrtQ:_HeGfRsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HeGfFcT2EeGIlOhhn7SrtQ:_HeQP8MT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_HeGfIMT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GX66AMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:serviceTask id="_HeGfIcT2EeGIlOhhn7SrtQ" name="calculateNetDividendAmount"
+        isForCompensation="false" implementation="WebService">
+      <bpmn2:documentation id="_HeGfIsT2EeGIlOhhn7SrtQ">This command supports the activities required to calculate the net dividend for custodian customer account holder. The net amount will vary per customer based on the amount of the residency income taxes that was due on an income.</bpmn2:documentation>
+      <bpmn2:ioSpecification id="_HeGfR8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_HeGfSsT2EeGIlOhhn7SrtQ" name="Calculate Net Dividend Amount Request"
+            isCollection="false" itemSubjectRef="_HeGfFcT2EeGIlOhhn7SrtQ:_HeGfLsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_HeGfS8T2EeGIlOhhn7SrtQ" name="Calculate Net Dividend Amount Response"
+            isCollection="false" itemSubjectRef="_HeGfFcT2EeGIlOhhn7SrtQ:_HeGfMMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_HeGfSMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_HeGfSsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_HeGfScT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_HeGfS8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_HeQP9sT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HeGfFcT2EeGIlOhhn7SrtQ:_HeQP8MT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HeGfFcT2EeGIlOhhn7SrtQ:_HeGfSsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_HeQP98T2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HeGfFcT2EeGIlOhhn7SrtQ:_HeGfS8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HeGfFcT2EeGIlOhhn7SrtQ:_HeQP8cT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_HeGfJsT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GX66AMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:serviceTask>
+    <bpmn2:callActivity id="_HeGfKMT2EeGIlOhhn7SrtQ" name="post-calculateNetDividendAmount"
+        isForCompensation="false" calledElement="_HeGfFcT2EeGIlOhhn7SrtQ:_HeGfJ8T2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_LCQPIyiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_HeGfUcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_HeGfVMT2EeGIlOhhn7SrtQ" name="Calculate Net Dividend Amount Response"
+            isCollection="false" itemSubjectRef="_HeGfFcT2EeGIlOhhn7SrtQ:_HeGfMMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_HeGfVcT2EeGIlOhhn7SrtQ" name="Net Dividend Income Amount"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GjsFPcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_HeGfUsT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_HeGfVMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_HeGfU8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_HeGfVcT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_HeQP-MT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HeGfFcT2EeGIlOhhn7SrtQ:_HeQP8cT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HeGfFcT2EeGIlOhhn7SrtQ:_HeGfVMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_HeQP-cT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HeGfFcT2EeGIlOhhn7SrtQ:_HeGfVcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HeGfFcT2EeGIlOhhn7SrtQ:_HeGfOMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_HeGfKcT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GX66AMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_HeGfKsT2EeGIlOhhn7SrtQ" sourceRef="_HeGfHMT2EeGIlOhhn7SrtQ"
+        targetRef="_HeGfH8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_HeGfK8T2EeGIlOhhn7SrtQ" sourceRef="_HeGfH8T2EeGIlOhhn7SrtQ"
+        targetRef="_HeGfIcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_HeGfLMT2EeGIlOhhn7SrtQ" sourceRef="_HeGfIcT2EeGIlOhhn7SrtQ"
+        targetRef="_HeGfKMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_HeGfLcT2EeGIlOhhn7SrtQ" sourceRef="_HeGfKMT2EeGIlOhhn7SrtQ"
+        targetRef="_HeGfHcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_HeQP8MT2EeGIlOhhn7SrtQ" name="Calculate Net Dividend Amount Request"
+        isCollection="false" itemSubjectRef="_HeGfFcT2EeGIlOhhn7SrtQ:_HeGfLsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_HeQP8cT2EeGIlOhhn7SrtQ" name="Calculate Net Dividend Amount Response"
+        isCollection="false" itemSubjectRef="_HeGfFcT2EeGIlOhhn7SrtQ:_HeGfMMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:resourceRole id="_HeGfGcT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+      <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GX66AMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+    </bpmn2:resourceRole>
+  </bpmn2:process>
+  <bpmn2:globalTask id="_HeGfHsT2EeGIlOhhn7SrtQ" name="pre-calculateNetDividendAmount">
+    <bpmn2:ioSpecification id="_HeGfOcT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_HeGfPMT2EeGIlOhhn7SrtQ" name="Withholding Tax Amount"
+          isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GjsFPcT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_HeGfPcT2EeGIlOhhn7SrtQ" name="Holder Residency Income Tax Amount"
+          isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GjsFPcT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_HeGfPsT2EeGIlOhhn7SrtQ" name="Gross Dividend Income Amount"
+          isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GjsFPcT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_HeGfP8T2EeGIlOhhn7SrtQ" name="Calculate Net Dividend Amount Request"
+          isCollection="false" itemSubjectRef="_HeGfFcT2EeGIlOhhn7SrtQ:_HeGfLsT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_HeGfOsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_HeGfPMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_HeGfPcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_HeGfPsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_HeGfO8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_HeGfP8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_HeGfJ8T2EeGIlOhhn7SrtQ" name="post-calculateNetDividendAmount">
+    <bpmn2:ioSpecification id="_HeGfTMT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_HeGfT8T2EeGIlOhhn7SrtQ" name="Calculate Net Dividend Amount Response"
+          isCollection="false" itemSubjectRef="_HeGfFcT2EeGIlOhhn7SrtQ:_HeGfMMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_HeGfUMT2EeGIlOhhn7SrtQ" name="Net Dividend Income Amount"
+          isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GjsFPcT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_HeGfTcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_HeGfT8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_HeGfTsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_HeGfUMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:itemDefinition id="_HeGfLsT2EeGIlOhhn7SrtQ" name="Calculate Net Dividend Amount Request"
+      isCollection="false" structureRef="_tmocgl8tEeGYvOQYZS-meA:_Y_CbHLxvEeGCw9HgBpY34g">
+    <bpmn2:documentation id="_HeGfL8T2EeGIlOhhn7SrtQ">IDM Mapping: : B_SDM::com::ibm::ima::bps::Services::Service Interfaces::Corporate Action Management::Service Parameters::ICABenefitManagement::calculateNetDividendAmountRequest</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_p_86YChgEeOjHu3a6otf0Q">
+      <tagging:tag id="_p_86YShgEeOjHu3a6otf0Q">Calculate Net Dividend Amount Request</tagging:tag>
+    </bpmn2:extensionElements>
+  </bpmn2:itemDefinition>
+  <bpmn2:itemDefinition id="_HeGfMMT2EeGIlOhhn7SrtQ" name="Calculate Net Dividend Amount Response"
+      isCollection="false" structureRef="_tmocgl8tEeGYvOQYZS-meA:_Y_MMFLxvEeGCw9HgBpY34g">
+    <bpmn2:documentation id="_HeGfMcT2EeGIlOhhn7SrtQ">IDM Mapping: : B_SDM::com::ibm::ima::bps::Services::Service Interfaces::Corporate Action Management::Service Parameters::ICABenefitManagement::calculateNetDividendAmountResponse</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_p_86YyhgEeOjHu3a6otf0Q">
+      <tagging:tag id="_p_86ZChgEeOjHu3a6otf0Q">Calculate Net Dividend Amount Response</tagging:tag>
+    </bpmn2:extensionElements>
+  </bpmn2:itemDefinition>
+  <bpmn2:relationship id="_HeGfI8T2EeGIlOhhn7SrtQ" name="calculateNetDividendAmount"
+      direction="none" type="ExternalDomainOperation">
+    <bpmn2:documentation id="_HeGfJMT2EeGIlOhhn7SrtQ">This command supports the activities required to calculate the net dividend for custodian customer account holder. The net amount will vary per customer based on the amount of the residency income taxes that was due on an income.</bpmn2:documentation>
+    <bpmn2:source>_HeGfFcT2EeGIlOhhn7SrtQ:_HeGfIcT2EeGIlOhhn7SrtQ</bpmn2:source>
+    <bpmn2:target>_tmocgl8tEeGYvOQYZS-meA:_Y_CbGbxvEeGCw9HgBpY34g</bpmn2:target>
+  </bpmn2:relationship>
+</bpmn2:definitions>

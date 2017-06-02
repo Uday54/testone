@@ -1,0 +1,1166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_UfkbkLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"
+    xmlns:_UhWkQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"
+    xmlns:_cm354LxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_cm354LxuEeGCw9HgBpY34g"
+    xmlns:_cnBq77xuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_cnBq77xuEeGCw9HgBpY34g"
+    xmlns:_cnUl0LxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_cnUl0LxuEeGCw9HgBpY34g"
+    xmlns:_cnxRzbxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_cnxRzbxuEeGCw9HgBpY34g"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_cnxRzbxuEeGCw9HgBpY34g" name="Deliver Training Program" expressionLanguage="http://www.w3.org/1999/XPath"
+    targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_cnxRzbxuEeGCw9HgBpY34g" typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_cnxR0LxuEeGCw9HgBpY34g"
+      visible="true" type="Bpmn2" element="_cnxRz7xuEeGCw9HgBpY34g" name="Deliver Training Program Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_cn6bs7xuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_coN9trxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_zPtvDbxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="Notify%20SME.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_cm354LxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_zPtvDrxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="Notify%20Training%20Program%20Attendees.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_cnBq77xuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_zPtvD7xuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="Notify%20Training%20Program%20Trainer.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_cnUl0LxuEeGCw9HgBpY34g"/>
+  <bpmn2:extension xmi:id="_cnxRzrxuEeGCw9HgBpY34g" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_0zeHUhwrEeOMUpRtwvEXUw" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_Jyvm8fxiEeOPPNUUqxVo0g" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_cnxRz7xuEeGCw9HgBpY34g" name="Deliver Training Program">
+    <bpmn2:documentation id="_cn6bsLxuEeGCw9HgBpY34g">SHORT NAME: Dlvr Trnng Prgrm&#xD;
+&#xD;
+B LEVEL ROOT: Deliver * Document&#xD;
+&#xD;
+DEFINITION: To present a Training Document to an audience.&#xD;
+&#xD;
+DESCRPITION: This workflow encompasses the activities necessary to provide and facilitate formal education, training and skills development both 'on-the-job' and beyond the normal workplace for the Financial Institution's employees, teams and related involved parties for the purpose of developing professional, personal and job specific skill sets.&#xD;
+&#xD;
+Starts with:&#xD;
+Employee training needs identified AND Training program developed AND Training scheduled AND Date reached&#xD;
+&#xD;
+Ends with:&#xD;
+(Employee Development Initiated AND Development Performance Monitoring Scheduled) OR Identified Training Delivered&#xD;
+&#xD;
+Includes:&#xD;
+- Training course provision.&#xD;
+- Course location selection.&#xD;
+- Course delivery.&#xD;
+- Individual attendee selection, notification and attendance.&#xD;
+&#xD;
+FLOW DIAGRAM: WF Chart for Deliver Training Program&#xD;
+&#xD;
+IBM Unique ID: CBPC1420</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_0zeHUBwrEeOMUpRtwvEXUw">
+      <tagging:tag id="_0zeHURwrEeOMUpRtwvEXUw">Human Resource Management</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_coN9s7xuEeGCw9HgBpY34g">
+      <bpmn2:dataOutput id="_coN9tbxuEeGCw9HgBpY34g" name="Communication Details"
+          isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+      <bpmn2:outputSet id="_coN9tLxuEeGCw9HgBpY34g">
+        <bpmn2:dataOutputRefs>_coN9tbxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_cn6bsrxuEeGCw9HgBpY34g" name="Training Representative" partitionElementRef="_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_cn6btLxuEeGCw9HgBpY34g">Creates a Training Program / Material&#xD;
+&#xD;
+IBM Unique ID: CBP09417</bpmn2:documentation>
+      <bpmn2:flowElementRef>_coEMsrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coEMtbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coEMuLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coEMu7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coEMvrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coEMwbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coEMxLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coEMx7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coEMyrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coEM0LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coEM07xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coEM2bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coEM3LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coEM4rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coEM5bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coEM67xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coEM7rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coEM9LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coEM97xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coEM-rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coEM_bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coENALxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coENA7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coENBrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coENCbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coENDLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coEND7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coENErxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coENE7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coENFLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coENFbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coENFrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coENGbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coENGrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coENG7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coENHLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coENHbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coENHrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coENILxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coENIbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coENIrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coENI7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9T4YLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9T4YbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9T4YrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9T4Y7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9T4ZLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9T4Z7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9T4aLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9T4abxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9T4arxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9T4a7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9T4bLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9T4bbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCULxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCVbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCV7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCWbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCW7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCXbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCX7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCYbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCZbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCZrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCarxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCbbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCbrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCcLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCcrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCdLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCeLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCerxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCfLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCfrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCgLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCgrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dChrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCh7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCibxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCjrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCkLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCkrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dClLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dClrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCmLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCmrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9mzU7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9mzVbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9mzV7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9mzXrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9mzYLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9mzYrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9mzZLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9mzZrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9mzaLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:lane id="_cn6btrxuEeGCw9HgBpY34g" name="Trainer" partitionElementRef="_UhWkQLxuEeGCw9HgBpY34g:_cn6btbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_cn6bt7xuEeGCw9HgBpY34g">Presents a training program to training attendees&#xD;
+&#xD;
+IBM Unique ID: CBP09415</bpmn2:documentation>
+      <bpmn2:flowElementRef>_coEMzbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coEM1rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coENH7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCVLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9mzXLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:lane id="_coEMsLxuEeGCw9HgBpY34g" name="Training Manager" partitionElementRef="_UhWkQLxuEeGCw9HgBpY34g:_cn6buLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coEMsbxuEeGCw9HgBpY34g">Manages activities required to develop, conduct and evaluate staff education and training programmes&#xD;
+&#xD;
+IBM Unique ID: CBP09416</bpmn2:documentation>
+      <bpmn2:flowElementRef>_coEM37xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coEM6LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coEM8bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coENF7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coENGLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coN9sLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coN9sbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_coN9srxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9T4ZbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9T4ZrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCdrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9dCjbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9mzUrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9mzW7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_r9mzarxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_coEMsrxuEeGCw9HgBpY34g" name="Schedule Training Program Refreshments"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cnxRybxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coEMtLxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Jyvm8PxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coEMs7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coEMtbxuEeGCw9HgBpY34g" name="Prepare Training Program Materials"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cnngybxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coEMt7xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Jyvm8vxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coEMtrxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coEMuLxuEeGCw9HgBpY34g" name="Verify Training Program Schedules"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cnxRy7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coEMurxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Jyvm8_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coEMubxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coEMu7xuEeGCw9HgBpY34g" name="Register Training Program Attendee"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cnngzbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coEMvbxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Jyvm9PxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coEMvLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coEMvrxuEeGCw9HgBpY34g" name="Identify Trainee Accommodation Availability"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cndv27xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coEMwLxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Jyvm9fxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coEMv7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coEMwbxuEeGCw9HgBpY34g" name="Request Additional Training Program"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cnngz7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coEMw7xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Jyvm9vxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coEMwrxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coEMxLxuEeGCw9HgBpY34g" name="Identify Trainer Availability"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cndv3bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coEMxrxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Jyvm9_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coEMxbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coEMx7xuEeGCw9HgBpY34g" name="Review Training Program Budget"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cnng07xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coEMybxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Jyvm-PxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coEMyLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coEMyrxuEeGCw9HgBpY34g" name="Identify Training App Systems Availability"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cndv37xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coEMzLxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Jyvm-fxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coEMy7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coEMzbxuEeGCw9HgBpY34g" name="Gather Attendee Feedback"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cndv2bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coEMz7xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Jyvm-vxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coEMzrxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6btbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coEM0LxuEeGCw9HgBpY34g" name="Review Training Program Details"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cnng1bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coEM0rxuEeGCw9HgBpY34g">If the input trigger is Training Program Budget Exceeded then the details are of the Trianing Program are going to have to be reviewed and a Change Request made.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Jyvm-_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coEM0bxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coEM07xuEeGCw9HgBpY34g" name="Identify Training Facility Availability"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cnngwbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coEM1bxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Jyvm_PxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coEM1LxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coEM1rxuEeGCw9HgBpY34g" name="Provide Training Program Session"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cnngy7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coEM2LxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Jyvm_fxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coEM17xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6btbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coEM2bxuEeGCw9HgBpY34g" name="Schedule SME" isForCompensation="false"
+        calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cnng2bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coEM27xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Jyvm_vxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coEM2rxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coEM3LxuEeGCw9HgBpY34g" name="Identify Training Program Tech Support"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cnngw7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coEM3rxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Jyvm__xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coEM3bxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coEM37xuEeGCw9HgBpY34g" name="Approve Additional Training Program Request"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cndv0bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coEM4bxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JyvnAPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coEM4LxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6buLxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coEM4rxuEeGCw9HgBpY34g" name="Schedule Trainee Accommodation"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cnng27xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coEM5LxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JyvnAfxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coEM47xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coEM5bxuEeGCw9HgBpY34g" name="Identify Training Room Layout"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cnngxbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coEM57xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JyvnAvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coEM5rxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coEM6LxuEeGCw9HgBpY34g" name="Review Additional Training Program Request"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cnng0bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coEM6rxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JywOAPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coEM6bxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6buLxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coEM67xuEeGCw9HgBpY34g" name="Schedule Trainee Transport"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cnxRwbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coEM7bxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JywOAfxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coEM7LxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coEM7rxuEeGCw9HgBpY34g" name="Notify SME" isForCompensation="false"
+        calledElement="_cm354LxuEeGCw9HgBpY34g:_cm354rxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coEM8LxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Jy3iwPxiEeOPPNUUqxVo0g">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_r9mzbLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_Rs2tcRwsEeOMUpRtwvEXUw" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_r9mzbrxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_Rs2tcBwsEeOMUpRtwvEXUw" name="InputSet1">
+          <bpmn2:dataInputRefs>_Rs2tcRwsEeOMUpRtwvEXUw</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_r9mzbbxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_r9mzbrxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataOutputAssociation id="_r9mzb7xuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_cnxRzbxuEeGCw9HgBpY34g:_r9mzbrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_cnxRzbxuEeGCw9HgBpY34g:_coN9tbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_coEM77xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coEM8bxuEeGCw9HgBpY34g" name="Review Training Program Details Change Request"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cnng17xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coEM87xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Jy4J0PxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coEM8rxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6buLxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coEM9LxuEeGCw9HgBpY34g" name="Schedule Trainer" isForCompensation="false"
+        calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cnxRw7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coEM9rxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Jy4J0fxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coEM9bxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coEM97xuEeGCw9HgBpY34g" name="Notify Training Program Attendees"
+        isForCompensation="false" calledElement="_cnBq77xuEeGCw9HgBpY34g:_cnBq8bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coEM-bxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Jy_ekPxiEeOPPNUUqxVo0g">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_r-WaMLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_Rs2tcxwsEeOMUpRtwvEXUw" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_r-WaMrxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_Rs2tchwsEeOMUpRtwvEXUw" name="InputSet1">
+          <bpmn2:dataInputRefs>_Rs2tcxwsEeOMUpRtwvEXUw</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_r-WaMbxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_r-WaMrxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataOutputAssociation id="_r-WaM7xuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_cnxRzbxuEeGCw9HgBpY34g:_r-WaMrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_cnxRzbxuEeGCw9HgBpY34g:_coN9tbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_coEM-LxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coEM-rxuEeGCw9HgBpY34g" name="Announce Training Program Availability"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cndvz7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coEM_LxuEeGCw9HgBpY34g">The start condition is any combination of triggers.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Jy_ekfxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coEM-7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coEM_bxuEeGCw9HgBpY34g" name="Schedule Training Application Systems"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cnxRxbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coEM_7xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Jy_ekvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coEM_rxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coENALxuEeGCw9HgBpY34g" name="Notify Training Program Trainer"
+        isForCompensation="false" calledElement="_cnUl0LxuEeGCw9HgBpY34g:_cnUl0rxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coENArxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JzHaYPxiEeOPPNUUqxVo0g">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_r95uQLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_Rs2tdRwsEeOMUpRtwvEXUw" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_r95uQrxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_Rs2tdBwsEeOMUpRtwvEXUw" name="InputSet1">
+          <bpmn2:dataInputRefs>_Rs2tdRwsEeOMUpRtwvEXUw</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_r95uQbxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_r95uQrxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataOutputAssociation id="_r-DfQLxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_cnxRzbxuEeGCw9HgBpY34g:_r95uQrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_cnxRzbxuEeGCw9HgBpY34g:_coN9tbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_coENAbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coENA7xuEeGCw9HgBpY34g" name="Determine Training Program Delivery"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cndv07xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coENBbxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JzHaYfxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coENBLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coENBrxuEeGCw9HgBpY34g" name="Prepare Training Facility"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cnngx7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coENCLxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JzHaYvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coENB7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coENCbxuEeGCw9HgBpY34g" name="Determine Training Program Schedule"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cndv1bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coENC7xuEeGCw9HgBpY34g">The start condition is any combination of triggers.&#xD;
+The end condition is any combination of triggers.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JzHaY_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coENCrxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coENDLxuEeGCw9HgBpY34g" name="Determine Training Program Schedule Details"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cndv17xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coENDrxuEeGCw9HgBpY34g">The end condition logic is any combination of triggers.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JzHaZPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coENDbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_coEND7xuEeGCw9HgBpY34g" name="Schedule Training Facility"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_cnxRx7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_coENEbxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JzHaZfxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_coENELxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_cn6bsbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:exclusiveGateway id="_coENErxuEeGCw9HgBpY34g"/>
+    <bpmn2:exclusiveGateway id="_coENE7xuEeGCw9HgBpY34g"/>
+    <bpmn2:exclusiveGateway id="_coENFLxuEeGCw9HgBpY34g"/>
+    <bpmn2:parallelGateway id="_coENFbxuEeGCw9HgBpY34g"/>
+    <bpmn2:exclusiveGateway id="_coENFrxuEeGCw9HgBpY34g"/>
+    <bpmn2:exclusiveGateway id="_coENF7xuEeGCw9HgBpY34g"/>
+    <bpmn2:exclusiveGateway id="_coENGLxuEeGCw9HgBpY34g"/>
+    <bpmn2:parallelGateway id="_coENGbxuEeGCw9HgBpY34g"/>
+    <bpmn2:parallelGateway id="_coENGrxuEeGCw9HgBpY34g"/>
+    <bpmn2:parallelGateway id="_coENG7xuEeGCw9HgBpY34g"/>
+    <bpmn2:parallelGateway id="_coENHLxuEeGCw9HgBpY34g"/>
+    <bpmn2:parallelGateway id="_coENHbxuEeGCw9HgBpY34g"/>
+    <bpmn2:parallelGateway id="_coENHrxuEeGCw9HgBpY34g"/>
+    <bpmn2:endEvent id="_coENH7xuEeGCw9HgBpY34g" name="End">
+      <bpmn2:messageEventDefinition id="_r9dCUrxuEeGCw9HgBpY34g" name="Attendee Feedback Gathered">
+        <bpmn2:documentation id="_r9dCU7xuEeGCw9HgBpY34g">FULL NAME: Incident Occurred&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: A specific, but otherwise not categorized occurrence of interest to the business has happened.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling to denote that an activity or series of activities is incident driven.&#xD;
+&#xD;
+This Trigger Type is used where the precise nature of the incident is not yet known, or where multiple types of incident are concerned.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="_coENILxuEeGCw9HgBpY34g" name="Start">
+      <bpmn2:messageEventDefinition id="_r9dCY7xuEeGCw9HgBpY34g" name="Additional Training Program Request Approved">
+        <bpmn2:documentation id="_r9dCZLxuEeGCw9HgBpY34g">FULL NAME: Approval Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to approve a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: A personal loan can be offered to John Smith because his application has been approved by the Financial Institution.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:startEvent id="_coENIbxuEeGCw9HgBpY34g" name="Start:1">
+      <bpmn2:messageEventDefinition id="_r9dCaLxuEeGCw9HgBpY34g" name="Training Program Material Approved">
+        <bpmn2:documentation id="_r9dCabxuEeGCw9HgBpY34g">FULL NAME: Approval Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to approve a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: A personal loan can be offered to John Smith because his application has been approved by the Financial Institution.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="_coENIrxuEeGCw9HgBpY34g" name="End:1">
+      <bpmn2:messageEventDefinition id="_r9dCa7xuEeGCw9HgBpY34g" name="Training Program Budget Exceeded">
+        <bpmn2:documentation id="_r9dCbLxuEeGCw9HgBpY34g">FULL NAME: Limit Reached&#xD;
+&#xD;
+TRIGGER CATEGORY: Condition Driven&#xD;
+&#xD;
+DEFINITION: A condition is invoked when a pre-defined level has been reached.&#xD;
+&#xD;
+EXAMPLES OF USE: Procedures for dealing with penalty conditions associated with product arrangements are defined in outline before the precise nature of the limits are known.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="_coENI7xuEeGCw9HgBpY34g" name="Start:2">
+      <bpmn2:messageEventDefinition id="_r9dChLxuEeGCw9HgBpY34g" name="Training Program Compliance Approved">
+        <bpmn2:documentation id="_r9dChbxuEeGCw9HgBpY34g">FULL NAME: Approval Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to approve a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: A personal loan can be offered to John Smith because his application has been approved by the Financial Institution.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="_coN9sLxuEeGCw9HgBpY34g" name="End:2">
+      <bpmn2:messageEventDefinition id="_r9dCi7xuEeGCw9HgBpY34g" name="Additional Training Prgrm Request Not Approved">
+        <bpmn2:documentation id="_r9dCjLxuEeGCw9HgBpY34g">FULL NAME: Rejection Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to reject a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: A mortgage refusal will be sent to William Brown because his application has been rejected.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_coN9sbxuEeGCw9HgBpY34g" name="End:3">
+      <bpmn2:messageEventDefinition id="_r9mzULxuEeGCw9HgBpY34g" name="Additional Training Program Request Approved">
+        <bpmn2:documentation id="_r9mzUbxuEeGCw9HgBpY34g">FULL NAME: Approval Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to approve a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: A personal loan can be offered to John Smith because his application has been approved by the Financial Institution.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_coN9srxuEeGCw9HgBpY34g" name="End:4">
+      <bpmn2:messageEventDefinition id="_r9mzWbxuEeGCw9HgBpY34g" name="Training Program Details Change Declined">
+        <bpmn2:documentation id="_r9mzWrxuEeGCw9HgBpY34g">FULL NAME: Rejection Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to reject a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: A mortgage refusal will be sent to William Brown because his application has been rejected.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="_r9T4YLxuEeGCw9HgBpY34g" sourceRef="_coEMu7xuEeGCw9HgBpY34g"
+        targetRef="_coENErxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_r9T4YbxuEeGCw9HgBpY34g" sourceRef="_coENE7xuEeGCw9HgBpY34g"
+        targetRef="_coEMx7xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_r9T4YrxuEeGCw9HgBpY34g" sourceRef="_coEMx7xuEeGCw9HgBpY34g"
+        targetRef="_coENFLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_r9T4Y7xuEeGCw9HgBpY34g" sourceRef="_coENFbxuEeGCw9HgBpY34g"
+        targetRef="_coEM0LxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_r9T4ZLxuEeGCw9HgBpY34g" sourceRef="_coEM0LxuEeGCw9HgBpY34g"
+        targetRef="_coENFrxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_r9T4ZbxuEeGCw9HgBpY34g" sourceRef="_coEM37xuEeGCw9HgBpY34g"
+        targetRef="_coENF7xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_r9T4ZrxuEeGCw9HgBpY34g" sourceRef="_coEM8bxuEeGCw9HgBpY34g"
+        targetRef="_coENGLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_r9T4Z7xuEeGCw9HgBpY34g" sourceRef="_coENGbxuEeGCw9HgBpY34g"
+        targetRef="_coEM-rxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_r9T4aLxuEeGCw9HgBpY34g" sourceRef="_coENA7xuEeGCw9HgBpY34g"
+        targetRef="_coENGrxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_r9T4abxuEeGCw9HgBpY34g" sourceRef="_coENG7xuEeGCw9HgBpY34g"
+        targetRef="_coENBrxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_r9T4arxuEeGCw9HgBpY34g" sourceRef="_coENHLxuEeGCw9HgBpY34g"
+        targetRef="_coENCbxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_r9T4a7xuEeGCw9HgBpY34g" sourceRef="_coENCbxuEeGCw9HgBpY34g"
+        targetRef="_coENHbxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_r9T4bLxuEeGCw9HgBpY34g" sourceRef="_coENDLxuEeGCw9HgBpY34g"
+        targetRef="_coENHrxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_r9T4bbxuEeGCw9HgBpY34g" name="Training Program Trainer Notification Required"
+        sourceRef="_coENGrxuEeGCw9HgBpY34g" targetRef="_coENALxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9T4brxuEeGCw9HgBpY34g">FULL NAME: Request Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request has been caused by the enterprise to be directed or transmitted to another place. &#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has asked for or demanded additional collateral to be provided as security on a loan.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dCULxuEeGCw9HgBpY34g" name="Trainee Transport Scheduled"
+        sourceRef="_coEM67xuEeGCw9HgBpY34g" targetRef="_coENGbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCUbxuEeGCw9HgBpY34g">FULL NAME: Incident Occurred&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: A specific, but otherwise not categorized occurrence of interest to the business has happened.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling to denote that an activity or series of activities is incident driven.&#xD;
+&#xD;
+This Trigger Type is used where the precise nature of the incident is not yet known, or where multiple types of incident are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dCVLxuEeGCw9HgBpY34g" name="Attendee Feedback Gathered"
+        sourceRef="_coEMzbxuEeGCw9HgBpY34g" targetRef="_coENH7xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_r9dCVbxuEeGCw9HgBpY34g" name="Training Program Materials Prepared"
+        sourceRef="_coEMtbxuEeGCw9HgBpY34g" targetRef="_coENG7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCVrxuEeGCw9HgBpY34g">FULL NAME: Incident Occurred&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: A specific, but otherwise not categorized occurrence of interest to the business has happened.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling to denote that an activity or series of activities is incident driven.&#xD;
+&#xD;
+This Trigger Type is used where the precise nature of the incident is not yet known, or where multiple types of incident are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dCV7xuEeGCw9HgBpY34g" name="Training Program Materials Required"
+        sourceRef="_coENGrxuEeGCw9HgBpY34g" targetRef="_coEMtbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCWLxuEeGCw9HgBpY34g">FULL NAME: Request Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request has been caused by the enterprise to be directed or transmitted to another place. &#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has asked for or demanded additional collateral to be provided as security on a loan.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dCWbxuEeGCw9HgBpY34g" name="Training App System Scheduled"
+        sourceRef="_coEM_bxuEeGCw9HgBpY34g" targetRef="_coEM3LxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCWrxuEeGCw9HgBpY34g">FULL NAME: Incident Occurred&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: A specific, but otherwise not categorized occurrence of interest to the business has happened.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling to denote that an activity or series of activities is incident driven.&#xD;
+&#xD;
+This Trigger Type is used where the precise nature of the incident is not yet known, or where multiple types of incident are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dCW7xuEeGCw9HgBpY34g" name="Additional Training Program Requested"
+        sourceRef="_coEMwbxuEeGCw9HgBpY34g" targetRef="_coEM6LxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCXLxuEeGCw9HgBpY34g">FULL NAME: Request Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request has been caused by the enterprise to be directed or transmitted to another place. &#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has asked for or demanded additional collateral to be provided as security on a loan.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dCXbxuEeGCw9HgBpY34g" name="Training Room Layout Identifed"
+        sourceRef="_coEM5bxuEeGCw9HgBpY34g" targetRef="_coEMsrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCXrxuEeGCw9HgBpY34g">FULL NAME: Incident Occurred&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: A specific, but otherwise not categorized occurrence of interest to the business has happened.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling to denote that an activity or series of activities is incident driven.&#xD;
+&#xD;
+This Trigger Type is used where the precise nature of the incident is not yet known, or where multiple types of incident are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dCX7xuEeGCw9HgBpY34g" name="Training Facility Schedule Required"
+        sourceRef="_coENHbxuEeGCw9HgBpY34g" targetRef="_coEND7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCYLxuEeGCw9HgBpY34g">FULL NAME: Request Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request has been caused by the enterprise to be directed or transmitted to another place. &#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has asked for or demanded additional collateral to be provided as security on a loan.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dCYbxuEeGCw9HgBpY34g" name="Training Program Facility Required"
+        sourceRef="_coENHrxuEeGCw9HgBpY34g" targetRef="_coEM07xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCYrxuEeGCw9HgBpY34g">FULL NAME: Request Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request has been caused by the enterprise to be directed or transmitted to another place. &#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has asked for or demanded additional collateral to be provided as security on a loan.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dCZbxuEeGCw9HgBpY34g" name="Additional Training Program Request Approved"
+        sourceRef="_coENILxuEeGCw9HgBpY34g" targetRef="_coENFbxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_r9dCZrxuEeGCw9HgBpY34g" name="Training Program Trainer Required"
+        sourceRef="_coENHrxuEeGCw9HgBpY34g" targetRef="_coEMxLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCZ7xuEeGCw9HgBpY34g">FULL NAME: Request Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request has been caused by the enterprise to be directed or transmitted to another place. &#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has asked for or demanded additional collateral to be provided as security on a loan.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dCarxuEeGCw9HgBpY34g" name="Training Program Material Approved"
+        sourceRef="_coENIbxuEeGCw9HgBpY34g" targetRef="_coENFbxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_r9dCbbxuEeGCw9HgBpY34g" name="Training Program Budget Exceeded"
+        sourceRef="_coENFLxuEeGCw9HgBpY34g" targetRef="_coENIrxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_r9dCbrxuEeGCw9HgBpY34g" name="Training Program Attendee Notification Required"
+        sourceRef="_coENGrxuEeGCw9HgBpY34g" targetRef="_coEM97xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCb7xuEeGCw9HgBpY34g">FULL NAME: Request Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request has been caused by the enterprise to be directed or transmitted to another place. &#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has asked for or demanded additional collateral to be provided as security on a loan.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dCcLxuEeGCw9HgBpY34g" name="Trainer Scheduled" sourceRef="_coEM9LxuEeGCw9HgBpY34g"
+        targetRef="_coEM2bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCcbxuEeGCw9HgBpY34g">FULL NAME: Incident Occurred&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: A specific, but otherwise not categorized occurrence of interest to the business has happened.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling to denote that an activity or series of activities is incident driven.&#xD;
+&#xD;
+This Trigger Type is used where the precise nature of the incident is not yet known, or where multiple types of incident are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dCcrxuEeGCw9HgBpY34g" name="Training Program Announced"
+        sourceRef="_coEM-rxuEeGCw9HgBpY34g" targetRef="_coEMu7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCc7xuEeGCw9HgBpY34g">FULL NAME: Announcement Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a public announcement has been caused by the enterprise to be directed or transmitted to another place.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has sent an announcement of a new product being launched to a newspaper for publication, or has announced the details of product features in a special promotion over the Internet.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dCdLxuEeGCw9HgBpY34g" name="Training Facility Availability Established"
+        sourceRef="_coEM07xuEeGCw9HgBpY34g" targetRef="_coENHLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCdbxuEeGCw9HgBpY34g">FULL NAME: Incident Occurred&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: A specific, but otherwise not categorized occurrence of interest to the business has happened.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling to denote that an activity or series of activities is incident driven.&#xD;
+&#xD;
+This Trigger Type is used where the precise nature of the incident is not yet known, or where multiple types of incident are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dCdrxuEeGCw9HgBpY34g" name="Training Program Details Change Approved"
+        sourceRef="_coENGLxuEeGCw9HgBpY34g" targetRef="_coENE7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCd7xuEeGCw9HgBpY34g">FULL NAME: Approval Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to approve a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: A personal loan can be offered to John Smith because his application has been approved by the Financial Institution.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dCeLxuEeGCw9HgBpY34g" name="Training Program Registration Overflow"
+        sourceRef="_coENErxuEeGCw9HgBpY34g" targetRef="_coEMwbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCebxuEeGCw9HgBpY34g">FULL NAME: Limit Reached&#xD;
+&#xD;
+TRIGGER CATEGORY: Condition Driven&#xD;
+&#xD;
+DEFINITION: A condition is invoked when a pre-defined level has been reached.&#xD;
+&#xD;
+EXAMPLES OF USE: Procedures for dealing with penalty conditions associated with product arrangements are defined in outline before the precise nature of the limits are known.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dCerxuEeGCw9HgBpY34g" name="Trainee Accommodation Scheduled"
+        sourceRef="_coEM4rxuEeGCw9HgBpY34g" targetRef="_coEM67xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCe7xuEeGCw9HgBpY34g">FULL NAME: Incident Occurred&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: A specific, but otherwise not categorized occurrence of interest to the business has happened.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling to denote that an activity or series of activities is incident driven.&#xD;
+&#xD;
+This Trigger Type is used where the precise nature of the incident is not yet known, or where multiple types of incident are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dCfLxuEeGCw9HgBpY34g" name="Training Program Tech Support Identified"
+        sourceRef="_coEM3LxuEeGCw9HgBpY34g" targetRef="_coENGbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCfbxuEeGCw9HgBpY34g">FULL NAME: Incident Occurred&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: A specific, but otherwise not categorized occurrence of interest to the business has happened.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling to denote that an activity or series of activities is incident driven.&#xD;
+&#xD;
+This Trigger Type is used where the precise nature of the incident is not yet known, or where multiple types of incident are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dCfrxuEeGCw9HgBpY34g" name="Training Program Details Change Request"
+        sourceRef="_coENFrxuEeGCw9HgBpY34g" targetRef="_coEM8bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCf7xuEeGCw9HgBpY34g">FULL NAME: Request Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request has been caused by the enterprise to be directed or transmitted to another place. &#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has asked for or demanded additional collateral to be provided as security on a loan.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dCgLxuEeGCw9HgBpY34g" name="Training Facility Scheduled"
+        sourceRef="_coEND7xuEeGCw9HgBpY34g" targetRef="_coEM5bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCgbxuEeGCw9HgBpY34g">FULL NAME: Incident Occurred&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: A specific, but otherwise not categorized occurrence of interest to the business has happened.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling to denote that an activity or series of activities is incident driven.&#xD;
+&#xD;
+This Trigger Type is used where the precise nature of the incident is not yet known, or where multiple types of incident are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dCgrxuEeGCw9HgBpY34g" name="Training Program SME Scheduled"
+        sourceRef="_coEM2bxuEeGCw9HgBpY34g" targetRef="_coENGbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCg7xuEeGCw9HgBpY34g">FULL NAME: Incident Occurred&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: A specific, but otherwise not categorized occurrence of interest to the business has happened.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling to denote that an activity or series of activities is incident driven.&#xD;
+&#xD;
+This Trigger Type is used where the precise nature of the incident is not yet known, or where multiple types of incident are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dChrxuEeGCw9HgBpY34g" name="Training Program Compliance Approved"
+        sourceRef="_coENI7xuEeGCw9HgBpY34g" targetRef="_coENFbxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_r9dCh7xuEeGCw9HgBpY34g" name="Training Program Details Verified"
+        sourceRef="_coENFrxuEeGCw9HgBpY34g" targetRef="_coENE7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCiLxuEeGCw9HgBpY34g">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dCibxuEeGCw9HgBpY34g" name="Training Program Trainer Notified"
+        sourceRef="_coENALxuEeGCw9HgBpY34g" targetRef="_coENG7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCirxuEeGCw9HgBpY34g">FULL NAME: Announcement Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a public announcement has been caused by the enterprise to be directed or transmitted to another place.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has sent an announcement of a new product being launched to a newspaper for publication, or has announced the details of product features in a special promotion over the Internet.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dCjbxuEeGCw9HgBpY34g" name="Additional Training Prgrm Request Not Approved"
+        sourceRef="_coENF7xuEeGCw9HgBpY34g" targetRef="_coN9sLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_r9dCjrxuEeGCw9HgBpY34g" name="Training Facility Prepared"
+        sourceRef="_coENBrxuEeGCw9HgBpY34g" targetRef="_coEM1rxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCj7xuEeGCw9HgBpY34g">FULL NAME: Incident Occurred&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: A specific, but otherwise not categorized occurrence of interest to the business has happened.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling to denote that an activity or series of activities is incident driven.&#xD;
+&#xD;
+This Trigger Type is used where the precise nature of the incident is not yet known, or where multiple types of incident are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dCkLxuEeGCw9HgBpY34g" name="Training Program Application Systems Rqrd"
+        sourceRef="_coENHrxuEeGCw9HgBpY34g" targetRef="_coEMyrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCkbxuEeGCw9HgBpY34g">FULL NAME: Request Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request has been caused by the enterprise to be directed or transmitted to another place. &#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has asked for or demanded additional collateral to be provided as security on a loan.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dCkrxuEeGCw9HgBpY34g" name="Training Program Accommodation Rqrd"
+        sourceRef="_coENHrxuEeGCw9HgBpY34g" targetRef="_coEMvrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCk7xuEeGCw9HgBpY34g">FULL NAME: Request Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request has been caused by the enterprise to be directed or transmitted to another place. &#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has asked for or demanded additional collateral to be provided as security on a loan.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dClLxuEeGCw9HgBpY34g" name="SME Notified" sourceRef="_coEM7rxuEeGCw9HgBpY34g"
+        targetRef="_coENG7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dClbxuEeGCw9HgBpY34g">FULL NAME: Announcement Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a public announcement has been caused by the enterprise to be directed or transmitted to another place.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has sent an announcement of a new product being launched to a newspaper for publication, or has announced the details of product features in a special promotion over the Internet.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dClrxuEeGCw9HgBpY34g" name="Training App Systems Schedule Required"
+        sourceRef="_coENHbxuEeGCw9HgBpY34g" targetRef="_coEM_bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCl7xuEeGCw9HgBpY34g">FULL NAME: Request Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request has been caused by the enterprise to be directed or transmitted to another place. &#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has asked for or demanded additional collateral to be provided as security on a loan.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dCmLxuEeGCw9HgBpY34g" name="Training Program Budget Not Exceeded"
+        sourceRef="_coENFLxuEeGCw9HgBpY34g" targetRef="_coENDLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCmbxuEeGCw9HgBpY34g">FULL NAME: Condition Not Invoked&#xD;
+&#xD;
+TRIGGER CATEGORY: Condition Driven&#xD;
+&#xD;
+DEFINITION: Something has occurred which causes a pre-defined business rule or condition not to come into operation.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling to denote that a particular activity or set of activities is not invoked by a condition.&#xD;
+&#xD;
+This Trigger Type is used when the precise nature of the condition is not yet known, or where multiple condition types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9dCmrxuEeGCw9HgBpY34g" name="Training Program Trainer Availability Estblshed"
+        sourceRef="_coEMxLxuEeGCw9HgBpY34g" targetRef="_coENHLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9dCm7xuEeGCw9HgBpY34g">FULL NAME: Incident Occurred&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: A specific, but otherwise not categorized occurrence of interest to the business has happened.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling to denote that an activity or series of activities is incident driven.&#xD;
+&#xD;
+This Trigger Type is used where the precise nature of the incident is not yet known, or where multiple types of incident are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9mzUrxuEeGCw9HgBpY34g" name="Additional Training Program Request Approved"
+        sourceRef="_coENF7xuEeGCw9HgBpY34g" targetRef="_coN9sbxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_r9mzU7xuEeGCw9HgBpY34g" name="Training App Syst Availability Established"
+        sourceRef="_coEMyrxuEeGCw9HgBpY34g" targetRef="_coENHLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9mzVLxuEeGCw9HgBpY34g">FULL NAME: Incident Occurred&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: A specific, but otherwise not categorized occurrence of interest to the business has happened.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling to denote that an activity or series of activities is incident driven.&#xD;
+&#xD;
+This Trigger Type is used where the precise nature of the incident is not yet known, or where multiple types of incident are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9mzVbxuEeGCw9HgBpY34g" name="Training Program Accomm Availability Estblshd"
+        sourceRef="_coEMvrxuEeGCw9HgBpY34g" targetRef="_coENHLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9mzVrxuEeGCw9HgBpY34g">FULL NAME: Incident Occurred&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: A specific, but otherwise not categorized occurrence of interest to the business has happened.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling to denote that an activity or series of activities is incident driven.&#xD;
+&#xD;
+This Trigger Type is used where the precise nature of the incident is not yet known, or where multiple types of incident are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9mzV7xuEeGCw9HgBpY34g" name="Training Program Schedules Verified"
+        sourceRef="_coEMuLxuEeGCw9HgBpY34g" targetRef="_coENA7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9mzWLxuEeGCw9HgBpY34g">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9mzW7xuEeGCw9HgBpY34g" name="Training Program Details Change Declined"
+        sourceRef="_coENGLxuEeGCw9HgBpY34g" targetRef="_coN9srxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_r9mzXLxuEeGCw9HgBpY34g" name="Training Program Delivered"
+        sourceRef="_coEM1rxuEeGCw9HgBpY34g" targetRef="_coEMzbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9mzXbxuEeGCw9HgBpY34g">FULL NAME: Incident Occurred&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: A specific, but otherwise not categorized occurrence of interest to the business has happened.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling to denote that an activity or series of activities is incident driven.&#xD;
+&#xD;
+This Trigger Type is used where the precise nature of the incident is not yet known, or where multiple types of incident are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9mzXrxuEeGCw9HgBpY34g" name="Training Program Registrations Complete"
+        sourceRef="_coENErxuEeGCw9HgBpY34g" targetRef="_coEMuLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9mzX7xuEeGCw9HgBpY34g">FULL NAME: Incident Occurred&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: A specific, but otherwise not categorized occurrence of interest to the business has happened.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling to denote that an activity or series of activities is incident driven.&#xD;
+&#xD;
+This Trigger Type is used where the precise nature of the incident is not yet known, or where multiple types of incident are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9mzYLxuEeGCw9HgBpY34g" name="Training Program Refreshments Scheduled"
+        sourceRef="_coEMsrxuEeGCw9HgBpY34g" targetRef="_coENGbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9mzYbxuEeGCw9HgBpY34g">FULL NAME: Incident Occurred&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: A specific, but otherwise not categorized occurrence of interest to the business has happened.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling to denote that an activity or series of activities is incident driven.&#xD;
+&#xD;
+This Trigger Type is used where the precise nature of the incident is not yet known, or where multiple types of incident are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9mzYrxuEeGCw9HgBpY34g" name="Training Program SME Notification Rqrd"
+        sourceRef="_coENGrxuEeGCw9HgBpY34g" targetRef="_coEM7rxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9mzY7xuEeGCw9HgBpY34g">FULL NAME: Request Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request has been caused by the enterprise to be directed or transmitted to another place. &#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has asked for or demanded additional collateral to be provided as security on a loan.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9mzZLxuEeGCw9HgBpY34g" name="Trainee Accommodation Schedule Required"
+        sourceRef="_coENHbxuEeGCw9HgBpY34g" targetRef="_coEM4rxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9mzZbxuEeGCw9HgBpY34g">FULL NAME: Request Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request has been caused by the enterprise to be directed or transmitted to another place. &#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has asked for or demanded additional collateral to be provided as security on a loan.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9mzZrxuEeGCw9HgBpY34g" name="Training Program Attendees Notified"
+        sourceRef="_coEM97xuEeGCw9HgBpY34g" targetRef="_coENG7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9mzZ7xuEeGCw9HgBpY34g">FULL NAME: Announcement Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a public announcement has been caused by the enterprise to be directed or transmitted to another place.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has sent an announcement of a new product being launched to a newspaper for publication, or has announced the details of product features in a special promotion over the Internet.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9mzaLxuEeGCw9HgBpY34g" name="Trainer Schedule Required"
+        sourceRef="_coENHbxuEeGCw9HgBpY34g" targetRef="_coEM9LxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9mzabxuEeGCw9HgBpY34g">FULL NAME: Request Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request has been caused by the enterprise to be directed or transmitted to another place. &#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has asked for or demanded additional collateral to be provided as security on a loan.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_r9mzarxuEeGCw9HgBpY34g" name="Additional Training Program Request Reviewed"
+        sourceRef="_coEM6LxuEeGCw9HgBpY34g" targetRef="_coEM37xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_r9mza7xuEeGCw9HgBpY34g">FULL NAME: Incident Occurred&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: A specific, but otherwise not categorized occurrence of interest to the business has happened.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling to denote that an activity or series of activities is incident driven.&#xD;
+&#xD;
+This Trigger Type is used where the precise nature of the incident is not yet known, or where multiple types of incident are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+  </bpmn2:process>
+</bpmn2:definitions>

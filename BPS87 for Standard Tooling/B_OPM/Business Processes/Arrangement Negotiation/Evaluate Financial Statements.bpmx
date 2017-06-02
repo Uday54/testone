@@ -1,0 +1,1082 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_G4jiB8T2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_G4jiB8T2EeGIlOhhn7SrtQ"
+    xmlns:_GWk2MMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"
+    xmlns:_GXn_EMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"
+    xmlns:_GXxJAMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GXxJAMT2EeGIlOhhn7SrtQ"
+    xmlns:_HcKli8T2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_HcKli8T2EeGIlOhhn7SrtQ"
+    xmlns:_KrSztMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_KrSztMT2EeGIlOhhn7SrtQ"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_KrSztMT2EeGIlOhhn7SrtQ" name="Evaluate Financial Statements"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_KrSztMT2EeGIlOhhn7SrtQ"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_KrSzt8T2EeGIlOhhn7SrtQ"
+      visible="true" type="Bpmn2" element="_KrSztsT2EeGIlOhhn7SrtQ" name="Evaluate Financial Statements Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_N1gGXMT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_OOiRAcT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Service%20Processes/Involved%20Party%20Evaluation/ICurrentFinancialEvaluation/Retrieve%20Financial%20Information%20Details%20Service.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_G4jiB8T2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_OOiRB8T2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_OOiRVcT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Service%20Processes/Involved%20Party%20Evaluation/ICurrentFinancialEvaluation/Record%20Net%20Income%20Service.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_HcKli8T2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_OOiRecT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Maps.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GXxJAMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:extension xmi:id="_KrSztcT2EeGIlOhhn7SrtQ" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_WkgOUihgEeOjHu3a6otf0Q" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_H1vP0SiMEeO1PvbDA98QvA" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_KrSztsT2EeGIlOhhn7SrtQ" name="Evaluate Financial Statements">
+    <bpmn2:documentation id="_Krb9oMT2EeGIlOhhn7SrtQ">SHORT NAME: Evlt Fncl Stmnts&#xD;
+&#xD;
+B LEVEL ROOT: Evaluate Policy&#xD;
+&#xD;
+DEFINITION: To judge or assess the worth or value of the financial statements supplied on behalf of the customer, to appraise the financial statements supplied by the customer.&#xD;
+&#xD;
+DESCRIPTION: This activity string encompasses activities to evaluate the financial statements of the customer to determine their financial health. The financial statements supplied should relate to the most current financial period and have been audited. Examples of what should be analyzed are the following:&#xD;
+&#xD;
+- Inventory&#xD;
+- Accounts Receivable&#xD;
+- Cash&#xD;
+- Total Assets&#xD;
+- Long term Debt&#xD;
+- Short term Debt&#xD;
+- Sales previous year&#xD;
+- Sales&#xD;
+- Depreciation&#xD;
+- Turnover&#xD;
+- Net turnover pre tax&#xD;
+- Net turnover after tax &#xD;
+&#xD;
+FLOW DIAGRAM: AS Chart for Evaluate Financial Statements</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_WkgOUChgEeOjHu3a6otf0Q">
+      <tagging:tag xmi:id="_H1JZ8CiMEeO1PvbDA98QvA" id="_WkgOUShgEeOjHu3a6otf0Q">Arrangement Negotiation</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_Krb9ocT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_PZfBPsT2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_PZfBP8T2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_Krb9osT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_PZfBPsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_Krb9o8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_PZfBP8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_N1gGW8T2EeGIlOhhn7SrtQ" name="Customer Representative" partitionElementRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_zSv7cyhgEeOjHu3a6otf0Q">An employee of the financial institution who acts as a liason between the FI and the customer.</bpmn2:documentation>
+      <bpmn2:flowElementRef>_OOiQ88T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOiQ-cT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOiQ_8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOiRCcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOiRC8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOiREsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOiRHMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOiRHsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOiRJsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOiRKcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOiRL8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOiRNcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOiRO8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOiRQcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOiRR8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOiRTcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOiRU8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOiRX8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOiRYcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOiRbMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOiRb8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOiRcsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOiRd8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOiRfsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOiRhMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PBpI78T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PBpI8MT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PDu0OsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PDu0O8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PDu0PMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PDu0PcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PIWN2cT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PIWN2sT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PIWN28T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PIWN3cT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PIWN38T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PIWN4cT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PIWN48T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PIWN5cT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PIWN5sT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PIWN6MT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PIWN6sT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PIWN7sT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PIWN78T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PIWN8MT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PIWN8cT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PIWN88T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PIWN9cT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PIWN98T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PIWN-cT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PIWN-8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PIWN_cT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PIWN_8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PIWOAcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PZfBPMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0KCIyihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0M_9MihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_H0ZkQ0IZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KDTEy0IZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KDTEzEIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KDTEzUIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KDTEzkIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KDTEz0IZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KDTE0EIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KDc1wEIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KDc1wUIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KDc1wkIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KDc1w0IZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KDc1xEIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KDc1xUIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KDc1xkIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KDc1x0IZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KDc1yEIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KDc1yUIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KDc1ykIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_OOiQ88T2EeGIlOhhn7SrtQ" name="Evaluate Cashflow Details"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_G4jh88T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OOiQ9MT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_H1vP0CiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OOiQ9cT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PmJkJcT2EeGIlOhhn7SrtQ" name="Financial Information Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PmJkJsT2EeGIlOhhn7SrtQ" name="Financial Information Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OOiQ9sT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PmJkJcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OOiQ98T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PmJkJsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_LZbxekIZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDc1x0IZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkJcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_LZbxe0IZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkJsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDTEz0IZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OOiQ-MT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OOiQ-cT2EeGIlOhhn7SrtQ" name="Evaluate Business Plan Details"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_G4jh7sT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OOiQ-sT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_H1vP0iiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OOiQ-8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PmJkJ8T2EeGIlOhhn7SrtQ" name="Financial Information Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PmJkKMT2EeGIlOhhn7SrtQ" name="Financial Information Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OOiQ_MT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PmJkJ8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OOiQ_cT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PmJkKMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_LZbxfEIZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDc1w0IZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkJ8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_LZbxfUIZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkKMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDc1wkIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OOiQ_sT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OOiQ_8T2EeGIlOhhn7SrtQ" name="Retrieve Financial Information Details"
+        isForCompensation="false" calledElement="_G4jiB8T2EeGIlOhhn7SrtQ:_G4jiCcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OOiRAMT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_H1vP0yiMEeO1PvbDA98QvA">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OOiRD8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_OOiREcT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_OOiRJMT2EeGIlOhhn7SrtQ" name="Personal Financial Statement"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GwqKPMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_OOiRJcT2EeGIlOhhn7SrtQ" name="Balance Sheet" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GwqKP8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OOiREMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_OOiREcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OOiRI8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_OOiRJMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_OOiRJcT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_OOiRFMT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_OOiREsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_OOiREcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_OOiRJ8T2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_OOiRJMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_OOiRJsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_OOiRKsT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_OOiRJcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_OOiRKcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OOiRLsT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OOiRCcT2EeGIlOhhn7SrtQ" name="Map to Retrieve Financial Information Details"
+        isForCompensation="false" calledElement="_KrSztMT2EeGIlOhhn7SrtQ:_OOiRAsT2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_H1vP1CiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OOiRDMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PmJkKcT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj41sT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_OOiRDsT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OOiRLMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PmJkKcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OOiRDcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_OOiRDsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_P0dGicT2EeGIlOhhn7SrtQ" name="Involved Party Identifier">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_PZfBPMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkKcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_OOiRE8T2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_OOiRDsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_OOiREsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OOiRCsT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_OOiRC8T2EeGIlOhhn7SrtQ" sourceRef="_OOiRCcT2EeGIlOhhn7SrtQ"
+        targetRef="_OOiQ_8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_OOiREsT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+        isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_OOiRHMT2EeGIlOhhn7SrtQ" name="Map from Retrieve Financial Information Details"
+        isForCompensation="false" calledElement="_KrSztMT2EeGIlOhhn7SrtQ:_OOiRFcT2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_H1vP1SiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OOiRH8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_OOiRIcT2EeGIlOhhn7SrtQ" name="Personal Financial Statement"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GwqKPMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_OOiRIsT2EeGIlOhhn7SrtQ" name="Balance Sheet" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GwqKP8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PmJkKsT2EeGIlOhhn7SrtQ" name="Financial Information Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OOiRIMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_OOiRIcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_OOiRIsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OOiRLcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PmJkKsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_OOiRKMT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_OOiRJsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_OOiRIcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_OOiRK8T2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_OOiRKcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_OOiRIsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_LZbxfkIZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkKsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDTEzkIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OOiRHcT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_OOiRHsT2EeGIlOhhn7SrtQ" sourceRef="_OOiQ_8T2EeGIlOhhn7SrtQ"
+        targetRef="_OOiRHMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_OOiRJsT2EeGIlOhhn7SrtQ" name="Personal Financial Statement"
+        isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GwqKPMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_OOiRKcT2EeGIlOhhn7SrtQ" name="Balance Sheet" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GwqKP8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_OOiRL8T2EeGIlOhhn7SrtQ" name="Evaluate Operating Statement Details"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_G4jh-MT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OOiRMMT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_H1vP1iiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OOiRMcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PmJkK8T2EeGIlOhhn7SrtQ" name="Financial Information Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PmJkLMT2EeGIlOhhn7SrtQ" name="Financial Information Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OOiRMsT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PmJkK8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OOiRM8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PmJkLMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_LZbxf0IZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDc1xkIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkK8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_LZbxgEIZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkLMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDTE0EIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OOiRNMT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OOiRNcT2EeGIlOhhn7SrtQ" name="Determine Financial Evaluation Requirement"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_G4ZxL8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OOiRNsT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_H1vP1yiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OOiRN8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PmJkLcT2EeGIlOhhn7SrtQ" name="Financial Information Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PmJkLsT2EeGIlOhhn7SrtQ" name="Financial Information Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OOiROMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PmJkLcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OOiROcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PmJkLsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_LZbxgUIZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDTEzkIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkLcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_LZbxgkIZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDc1yUIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkLcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_LZbxg0IZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkLsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDTEzUIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_LZbxhEIZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkLsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDc1wEIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_LZbxhUIZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkLsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDc1wUIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_LZbxhkIZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkLsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDc1w0IZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_LZbxh0IZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkLsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDc1xkIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_LZbxiEIZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkLsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDc1x0IZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OOiROsT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OOiRO8T2EeGIlOhhn7SrtQ" name="Gather Customer Financial Details"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_HwugRcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OOiRPMT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_H1vP2CiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OOiRPcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PmJkL8T2EeGIlOhhn7SrtQ" name="Customer Identifier" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GaJuocT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PmJkMMT2EeGIlOhhn7SrtQ" name="Financial Information Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OOiRPsT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PmJkL8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OOiRP8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PmJkMMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_LZbxiUIZEeSedtiJ0SK07w" name="Customer Identifier">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDc1ykIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkL8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_LZbxikIZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkMMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDTEy0IZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_LZbxi0IZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkMMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDc1yUIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OOiRQMT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OOiRQcT2EeGIlOhhn7SrtQ" name="Review Financial Information Analysis Details"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_G4jiAsT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OOiRQsT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_H1vP2SiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OOiRQ8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PmJkMcT2EeGIlOhhn7SrtQ" name="Financial Information Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PmJkMsT2EeGIlOhhn7SrtQ" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OOiRRMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PmJkMcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OOiRRcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PmJkMsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_LZbxjEIZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDTEzEIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkMcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_LZbxjUIZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDTEz0IZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkMcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_LZbxjkIZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDTE0EIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkMcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_LZbxj0IZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDc1wkIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkMcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_LZbxkEIZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDc1xEIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkMcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_LZbxkUIZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDc1xUIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkMcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_P0dGk8T2EeGIlOhhn7SrtQ" name="Arrangement Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkMsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_PZfBP8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OOiRRsT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OOiRR8T2EeGIlOhhn7SrtQ" name="Evaluate Budget Details"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_G4jh6cT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OOiRSMT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_H1vP2iiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OOiRScT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PmJkM8T2EeGIlOhhn7SrtQ" name="Financial Information Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PmJkNMT2EeGIlOhhn7SrtQ" name="Financial Information Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OOiRSsT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PmJkM8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OOiRS8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PmJkNMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_LZbxkkIZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDc1wEIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkM8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_LZbxk0IZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkNMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDTEzEIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OOiRTMT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OOiRTcT2EeGIlOhhn7SrtQ" name="Evaluate Balance Sheet Details"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_G4jh5MT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OOiRTsT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_H1vP2yiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OOiRT8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PmJkNcT2EeGIlOhhn7SrtQ" name="Financial Information Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PmJkNsT2EeGIlOhhn7SrtQ" name="Financial Information Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OOiRUMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PmJkNcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OOiRUcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PmJkNsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_LZbxlEIZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDTEzUIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkNcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_LZbxlUIZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkNsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDc1xEIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OOiRUsT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OOiRU8T2EeGIlOhhn7SrtQ" name="Record Financial Information Details"
+        isForCompensation="false" calledElement="_HcKli8T2EeGIlOhhn7SrtQ:_HcKljcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OOiRVMT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_H1vP3CiMEeO1PvbDA98QvA">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OOiRZ8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_OOiRacT2EeGIlOhhn7SrtQ" name="Financial Position" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GwqKPMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_OOiRasT2EeGIlOhhn7SrtQ" name="Balance Sheet" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GwqKP8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_OOiRa8T2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OOiRaMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_OOiRacT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_OOiRasT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_OOiRa8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_zcCaUChgEeOjHu3a6otf0Q"/>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_OOiRbsT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_OOiRbMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_OOiRacT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_OOiRccT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_OOiRb8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_OOiRasT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_OOiRdMT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_OOiRcsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_OOiRa8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_OOiRdsT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OOiRX8T2EeGIlOhhn7SrtQ" name="Map to Record Financial Information Details"
+        isForCompensation="false" calledElement="_KrSztMT2EeGIlOhhn7SrtQ:_OOiRVsT2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_H1vP3SiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OOiRYsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PmJkN8T2EeGIlOhhn7SrtQ" name="Financial Information Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_PmJkOMT2EeGIlOhhn7SrtQ" name="Customer Identifier" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GaJuocT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_OOiRZMT2EeGIlOhhn7SrtQ" name="Financial Position" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GwqKPMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_OOiRZcT2EeGIlOhhn7SrtQ" name="Balance Sheet" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GwqKP8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_OOiRZsT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OOiRdcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PmJkN8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_PmJkOMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OOiRY8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_OOiRZMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_OOiRZcT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_OOiRZsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_LZbxlkIZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDTEy0IZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkN8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_LZbxl0IZEeSedtiJ0SK07w" name="Customer Identifier">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDc1yEIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkOMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_OOiRbcT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_OOiRZMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_OOiRbMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_OOiRcMT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_OOiRZcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_OOiRb8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_OOiRc8T2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_OOiRZsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_OOiRcsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OOiRYMT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_OOiRYcT2EeGIlOhhn7SrtQ" sourceRef="_OOiRX8T2EeGIlOhhn7SrtQ"
+        targetRef="_OOiRU8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_OOiRbMT2EeGIlOhhn7SrtQ" name="Financial Position" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GwqKPMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_OOiRb8T2EeGIlOhhn7SrtQ" name="Balance Sheet" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GwqKP8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_OOiRcsT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+        isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_OOiRd8T2EeGIlOhhn7SrtQ" name="XMap AR Details to IP Identifier"
+        isForCompensation="false" calledElement="_GXxJAMT2EeGIlOhhn7SrtQ:_IJwrTcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OOiReMT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_H1vP3iiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OOiResT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PmJkOcT2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PmJkOsT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj41sT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OOiRe8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PmJkOcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OOiRfMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PmJkOsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_P0dGmsT2EeGIlOhhn7SrtQ" name="Arrangement Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_PZfBPsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkOcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_P0dGm8T2EeGIlOhhn7SrtQ" name="Involved Party Identifier">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkOsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_PZfBPMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OOiRfcT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OOiRfsT2EeGIlOhhn7SrtQ" name="Evaluate Return on Investment Details"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_G4jh_cT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OOiRf8T2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_H1vP3yiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OOiRgMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PmJkO8T2EeGIlOhhn7SrtQ" name="Financial Information Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PmJkPMT2EeGIlOhhn7SrtQ" name="Financial Information Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OOiRgcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PmJkO8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OOiRgsT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PmJkPMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_LZbxmEIZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDc1wUIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkO8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_LZbxmUIZEeSedtiJ0SK07w" name="Financial Information Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkPMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDc1xUIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OOiRg8T2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OOiRhMT2EeGIlOhhn7SrtQ" name="XMap AR Details to Cust Identifier"
+        isForCompensation="false" calledElement="_GXxJAMT2EeGIlOhhn7SrtQ:_IJnhjsT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OOiRhcT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_H1vP4CiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OOiRhsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PmJkPcT2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PmJkPsT2EeGIlOhhn7SrtQ" name="Customer Identifier"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GaJuocT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OOiRh8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PmJkPcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OOiRiMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PmJkPsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_P0dGnsT2EeGIlOhhn7SrtQ" name="Arrangement Details">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_PZfBPsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkPcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_LZbxmkIZEeSedtiJ0SK07w" name="Customer Identifier">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkPsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDc1yEIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_LZbxm0IZEeSedtiJ0SK07w" name="Customer Identifier">
+        <bpmn2:sourceRef>_KrSztMT2EeGIlOhhn7SrtQ:_PmJkPsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KrSztMT2EeGIlOhhn7SrtQ:_KDc1ykIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OOiRicT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:startEvent id="_PBpI78T2EeGIlOhhn7SrtQ" name="Start">
+      <bpmn2:messageEventDefinition id="_0KCIyChgEeOjHu3a6otf0Q" name="Financial Requirement Analysis Required">
+        <bpmn2:documentation id="_0KCIyShgEeOjHu3a6otf0Q">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="_PBpI8MT2EeGIlOhhn7SrtQ" name="End">
+      <bpmn2:messageEventDefinition id="_PBpI8cT2EeGIlOhhn7SrtQ" name="Financial Information Reviewed">
+        <bpmn2:documentation id="_PBpI8sT2EeGIlOhhn7SrtQ">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:exclusiveGateway id="_PDu0OsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:parallelGateway id="_PDu0O8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:exclusiveGateway id="_PDu0PMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:parallelGateway id="_PDu0PcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PIWN2cT2EeGIlOhhn7SrtQ" sourceRef="_PDu0OsT2EeGIlOhhn7SrtQ"
+        targetRef="_OOiRNcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PIWN2sT2EeGIlOhhn7SrtQ" sourceRef="_OOiRNcT2EeGIlOhhn7SrtQ"
+        targetRef="_PDu0O8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PIWN28T2EeGIlOhhn7SrtQ" name="Budget Evaluation Required"
+        sourceRef="_PDu0O8T2EeGIlOhhn7SrtQ" targetRef="_OOiRR8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PIWN3MT2EeGIlOhhn7SrtQ">FULL NAME: Information Request Received&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request for information is received by Financial Institution.&#xD;
+&#xD;
+EXAMPLES OF USE: Mr. Green has requested that details about the bank's different types of personal account products are sent to him.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PIWN3cT2EeGIlOhhn7SrtQ" name="Cashflow Evaluation Required"
+        sourceRef="_PDu0O8T2EeGIlOhhn7SrtQ" targetRef="_OOiQ88T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PIWN3sT2EeGIlOhhn7SrtQ">FULL NAME: Information Request Received&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request for information is received by Financial Institution.&#xD;
+&#xD;
+EXAMPLES OF USE: Mr. Green has requested that details about the bank's different types of personal account products are sent to him.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PIWN38T2EeGIlOhhn7SrtQ" name="Data Mapped" sourceRef="_OOiRd8T2EeGIlOhhn7SrtQ"
+        targetRef="_OOiRCcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PIWN4MT2EeGIlOhhn7SrtQ">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PIWN4cT2EeGIlOhhn7SrtQ" name="Return on Investment Evaluation Required"
+        sourceRef="_PDu0O8T2EeGIlOhhn7SrtQ" targetRef="_OOiRfsT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PIWN4sT2EeGIlOhhn7SrtQ">FULL NAME: Information Request Received&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request for information is received by Financial Institution.&#xD;
+&#xD;
+EXAMPLES OF USE: Mr. Green has requested that details about the bank's different types of personal account products are sent to him.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PIWN48T2EeGIlOhhn7SrtQ" name="Balance Sheet Evaluation Required"
+        sourceRef="_PDu0O8T2EeGIlOhhn7SrtQ" targetRef="_OOiRTcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PIWN5MT2EeGIlOhhn7SrtQ">FULL NAME: Information Request Received&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request for information is received by Financial Institution.&#xD;
+&#xD;
+EXAMPLES OF USE: Mr. Green has requested that details about the bank's different types of personal account products are sent to him.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PIWN5cT2EeGIlOhhn7SrtQ" name="Financial Requirement Analysis Required"
+        sourceRef="_PBpI78T2EeGIlOhhn7SrtQ" targetRef="_OOiRd8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PIWN5sT2EeGIlOhhn7SrtQ" name="Financial Information Details Recorded"
+        sourceRef="_OOiRU8T2EeGIlOhhn7SrtQ" targetRef="_PDu0OsT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PIWN58T2EeGIlOhhn7SrtQ">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PIWN6MT2EeGIlOhhn7SrtQ" name="Operating Statement Evaluation Required"
+        sourceRef="_PDu0O8T2EeGIlOhhn7SrtQ" targetRef="_OOiRL8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PIWN6cT2EeGIlOhhn7SrtQ">FULL NAME: Information Request Received&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request for information is received by Financial Institution.&#xD;
+&#xD;
+EXAMPLES OF USE: Mr. Green has requested that details about the bank's different types of personal account products are sent to him.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PIWN6sT2EeGIlOhhn7SrtQ" name="Business Plan Evaluation Required"
+        sourceRef="_PDu0O8T2EeGIlOhhn7SrtQ" targetRef="_OOiQ-cT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PIWN68T2EeGIlOhhn7SrtQ">FULL NAME: Information Request Received&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request for information is received by Financial Institution.&#xD;
+&#xD;
+EXAMPLES OF USE: Mr. Green has requested that details about the bank's different types of personal account products are sent to him.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PIWN7sT2EeGIlOhhn7SrtQ" name="Financial Information Reviewed"
+        sourceRef="_OOiRQcT2EeGIlOhhn7SrtQ" targetRef="_PBpI8MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PIWN78T2EeGIlOhhn7SrtQ" sourceRef="_OOiRHMT2EeGIlOhhn7SrtQ"
+        targetRef="_PDu0PMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PIWN8MT2EeGIlOhhn7SrtQ" sourceRef="_PDu0PcT2EeGIlOhhn7SrtQ"
+        targetRef="_OOiRQcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PIWN8cT2EeGIlOhhn7SrtQ" name="Financial Information Details Retrieved"
+        sourceRef="_PDu0PMT2EeGIlOhhn7SrtQ" targetRef="_PDu0OsT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PIWN8sT2EeGIlOhhn7SrtQ">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PIWN88T2EeGIlOhhn7SrtQ" name="Balance Sheet Details Evaluated"
+        sourceRef="_OOiRTcT2EeGIlOhhn7SrtQ" targetRef="_PDu0PcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PIWN9MT2EeGIlOhhn7SrtQ">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PIWN9cT2EeGIlOhhn7SrtQ" name="Operating Statement Details Evaluated"
+        sourceRef="_OOiRL8T2EeGIlOhhn7SrtQ" targetRef="_PDu0PcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PIWN9sT2EeGIlOhhn7SrtQ">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PIWN98T2EeGIlOhhn7SrtQ" name="Business Plan Details Evaluated"
+        sourceRef="_OOiQ-cT2EeGIlOhhn7SrtQ" targetRef="_PDu0PcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PIWN-MT2EeGIlOhhn7SrtQ">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PIWN-cT2EeGIlOhhn7SrtQ" name="Cashflow Details Evaluated"
+        sourceRef="_OOiQ88T2EeGIlOhhn7SrtQ" targetRef="_PDu0PcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PIWN-sT2EeGIlOhhn7SrtQ">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PIWN-8T2EeGIlOhhn7SrtQ" name="Return on Investment Details Evaluated"
+        sourceRef="_OOiRfsT2EeGIlOhhn7SrtQ" targetRef="_PDu0PcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PIWN_MT2EeGIlOhhn7SrtQ">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PIWN_cT2EeGIlOhhn7SrtQ" name="Budget Details Evaluated"
+        sourceRef="_OOiRR8T2EeGIlOhhn7SrtQ" targetRef="_PDu0PcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PIWN_sT2EeGIlOhhn7SrtQ">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PIWN_8T2EeGIlOhhn7SrtQ" name="Data Mapped" sourceRef="_OOiRhMT2EeGIlOhhn7SrtQ"
+        targetRef="_OOiRO8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PIWOAMT2EeGIlOhhn7SrtQ">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PIWOAcT2EeGIlOhhn7SrtQ" name="Financial Information Not Retrieved"
+        sourceRef="_PDu0PMT2EeGIlOhhn7SrtQ" targetRef="_OOiRhMT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PIWOAsT2EeGIlOhhn7SrtQ">FULL NAME: Information Not Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has not resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has not retrieved information on deposit products and has been unable to made it available for use by a clerk following a customer enquiry. &#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_PZfBPMT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj41sT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:startEvent id="_0KCIyihgEeOjHu3a6otf0Q" name="Start:1"/>
+    <bpmn2:sequenceFlow id="_0M_9MihgEeOjHu3a6otf0Q" name="Invoked By Business Process"
+        sourceRef="_0KCIyihgEeOjHu3a6otf0Q" targetRef="_OOiRd8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_H0ZkQ0IZEeSedtiJ0SK07w" name="Customer Financial Details Gathered"
+        sourceRef="_OOiRO8T2EeGIlOhhn7SrtQ" targetRef="_OOiRX8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_H0ZkREIZEeSedtiJ0SK07w">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_KDTEy0IZEeSedtiJ0SK07w" name="Financial Information Details"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_KDTEzEIZEeSedtiJ0SK07w" name="Financial Information Details"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_KDTEzUIZEeSedtiJ0SK07w" name="Financial Information Details"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_KDTEzkIZEeSedtiJ0SK07w" name="Financial Information Details"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_KDTEz0IZEeSedtiJ0SK07w" name="Financial Information Details"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_KDTE0EIZEeSedtiJ0SK07w" name="Financial Information Details"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_KDc1wEIZEeSedtiJ0SK07w" name="Financial Information Details"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_KDc1wUIZEeSedtiJ0SK07w" name="Financial Information Details"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_KDc1wkIZEeSedtiJ0SK07w" name="Financial Information Details"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_KDc1w0IZEeSedtiJ0SK07w" name="Financial Information Details"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_KDc1xEIZEeSedtiJ0SK07w" name="Financial Information Details"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_KDc1xUIZEeSedtiJ0SK07w" name="Financial Information Details"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_KDc1xkIZEeSedtiJ0SK07w" name="Financial Information Details"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_KDc1x0IZEeSedtiJ0SK07w" name="Financial Information Details"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_KDc1yEIZEeSedtiJ0SK07w" name="Customer Identifier" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GaJuocT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_KDc1yUIZEeSedtiJ0SK07w" name="Financial Information Details"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_KDc1ykIZEeSedtiJ0SK07w" name="Customer Identifier" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GaJuocT2EeGIlOhhn7SrtQ"/>
+  </bpmn2:process>
+  <bpmn2:globalTask id="_OOiRAsT2EeGIlOhhn7SrtQ" name="Map to Retrieve Financial Information Details">
+    <bpmn2:ioSpecification id="_OOiRA8T2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_OOiRBsT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj41sT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_OOiRCMT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+          isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_OOiRBMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_OOiRBsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_OOiRBcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_OOiRCMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_OOiRFcT2EeGIlOhhn7SrtQ" name="Map from Retrieve Financial Information Details">
+    <bpmn2:ioSpecification id="_OOiRFsT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_OOiRGcT2EeGIlOhhn7SrtQ" name="Personal Financial Statement"
+          isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GwqKPMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_OOiRGsT2EeGIlOhhn7SrtQ" name="Balance Sheet" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GwqKP8T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_OOiRG8T2EeGIlOhhn7SrtQ" name="Financial Information Details"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_OOiRF8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_OOiRGcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_OOiRGsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_OOiRGMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_OOiRG8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_OOiRVsT2EeGIlOhhn7SrtQ" name="Map to Record Financial Information Details">
+    <bpmn2:ioSpecification id="_OOiRV8T2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_OOiRWsT2EeGIlOhhn7SrtQ" name="Financial Information Details"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHycT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_OOiRW8T2EeGIlOhhn7SrtQ" name="Customer Identifier" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GaJuocT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_OOiRXMT2EeGIlOhhn7SrtQ" name="Financial Position" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GwqKPMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_OOiRXcT2EeGIlOhhn7SrtQ" name="Balance Sheet" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GwqKP8T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_OOiRXsT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+          isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_OOiRWMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_OOiRWsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_OOiRW8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_OOiRWcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_OOiRXMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_OOiRXcT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_OOiRXsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+</bpmn2:definitions>

@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_UfkbkLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"
+    xmlns:_UhWkQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"
+    xmlns:_UhqGQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UhqGQLxuEeGCw9HgBpY34g"
+    xmlns:_VN6IRLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_VN6IRLxuEeGCw9HgBpY34g"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_VN6IRLxuEeGCw9HgBpY34g" name="Administer Accounts Receivable Invoice Issuance"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_VN6IRLxuEeGCw9HgBpY34g"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_VN6IR7xuEeGCw9HgBpY34g"
+      visible="true" type="Bpmn2" element="_VN6IRrxuEeGCw9HgBpY34g" name="Administer Accounts Receivable Invoice Issuance Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_VOglMrxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_VOglWbxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_zJTlKrxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Maps.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UhqGQLxuEeGCw9HgBpY34g"/>
+  <bpmn2:extension xmi:id="_VN6IRbxuEeGCw9HgBpY34g" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_q-dmgxwqEeOMUpRtwvEXUw" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_GTbncfxiEeOPPNUUqxVo0g" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_VN6IRrxuEeGCw9HgBpY34g" name="Administer Accounts Receivable Invoice Issuance">
+    <bpmn2:documentation id="_VOglMLxuEeGCw9HgBpY34g">SHORT NAME: Admin Acct Rcvbl Invoc Iss&#xD;
+&#xD;
+B LEVEL ROOT: Administer * Details&#xD;
+&#xD;
+DEFINITION: To be in direct charge of the issuance of an invoice or to steward the issuance of an invoice to an involved party or a system within the financial institution.&#xD;
+&#xD;
+DESCRIPTION: This workflow encompasses activities necessary for the financial institution to administer a request for an invoice issuance on behalf of a customer. This instruction can be received electronically or in file format.&#xD;
+&#xD;
+The initial step is to verify the authority of involved parties to transact this service and then accept the account receivable instruction. If the instruction is accepted and a high value payment has not been identified, record the invoice details. Retrieve the customer invoice profile and identify all services they have been subscriber to by that Customer. Determine the invoice delivery requirement and do one of the following:&#xD;
+&#xD;
+1. Identify an invoice processing system&#xD;
+2. Identify an invoice print vendor&#xD;
+3. Identify a Customer trading partner.&#xD;
+&#xD;
+The invoice can then be issued and all relevant outgoing and issued and administered.&#xD;
+&#xD;
+Where an invoice instruction has been accepted and a high value payment has been identified, this payment needs to be analyzed and where necessary an evaluation for operational risk needs to occur to determine any exposures the financial institution is being exposed to.&#xD;
+&#xD;
+FLOW DIAGRAM: WF Chart for Admin Acct Receivable Invoice Issu&#xD;
+&#xD;
+IBM Unique ID: CBP04908</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_q-dmgBwqEeOMUpRtwvEXUw">
+      <tagging:tag xmi:id="_GTGQQPxiEeOPPNUUqxVo0g" id="_q-dmgRwqEeOMUpRtwvEXUw">Arrangement Administration</tagging:tag>
+      <tagging:tag xmi:id="_GTGQQfxiEeOPPNUUqxVo0g" id="_q-dmghwqEeOMUpRtwvEXUw">ValueChain_RegulatoryCompliance_Implement</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_VOglVrxuEeGCw9HgBpY34g">
+      <bpmn2:dataInput id="_VOglW7xuEeGCw9HgBpY34g" name="Invoice Instruction" isCollection="false"
+          itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00krxuEeGCw9HgBpY34g"/>
+      <bpmn2:dataOutput id="_VOglWLxuEeGCw9HgBpY34g" name="Communication Details"
+          isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+      <bpmn2:inputSet id="_VOglWrxuEeGCw9HgBpY34g">
+        <bpmn2:dataInputRefs>_VOglW7xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_VOglV7xuEeGCw9HgBpY34g">
+        <bpmn2:dataOutputRefs>_VOglWLxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_VOglMbxuEeGCw9HgBpY34g" name="Enterprise Process" partitionElementRef="_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_VOglM7xuEeGCw9HgBpY34g">The default role for all enterprise process activities not explicitly assigned to other roles.&#xD;
+&#xD;
+IBM Unique ID: CBP05136</bpmn2:documentation>
+      <bpmn2:flowElementRef>_VOglNLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VOglN7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VOglOrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VOglO7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VOglPrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VOglQbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VOglRLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VOglR7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VOglSrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VOglTbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VOglULxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VOglU7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VOglVLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VOglVbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VOglXLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VOglXbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VOglXrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VOglYbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VOglYrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VOglY7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_VOglZLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_efH097xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_efH0-LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_efkg4rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_efuR47xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_efuR5LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ef3b0rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ef3b1bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_egBM0bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_egBM0rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_egBM07xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_egBM1bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_egBM17xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_egBM2bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_egBM27xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_egBM3bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_egwzsLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_egwzsbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_egwzs7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_egwztbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_egwzt7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ehDuobxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ehDuorxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ehDupLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ehDuqLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ehDuq7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_b1nzuEIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_b1nzu0IVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_b1nzvkIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_b1xksUIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_b1xktEIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_b1xkt0IVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_b1xkukIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_b1xkvUIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_b1xkwEIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_b1xkw0IVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_b1xkxkIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_b1xkyUIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_VOglNLxuEeGCw9HgBpY34g" name="Accept Invoice Issuance Instruction"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_qslMUBwqEeOMUpRtwvEXUw">
+      <bpmn2:documentation id="_VOglNrxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_GTbncPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_efkg5bxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_efuR7LxuEeGCw9HgBpY34g" name="Invoice Profile" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00lLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_egnpwLxuEeGCw9HgBpY34g" name="Invoice Instruction" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00krxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_efkg57xuEeGCw9HgBpY34g" name="Invoice Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00kLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_efuR67xuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_efuR7LxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_egnpwLxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_efkg5rxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_efkg57xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_egnpwbxuEeGCw9HgBpY34g" name="Invoice Instruction">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_VOglW7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_egnpwLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_b1xkv0IVEeSFpMLLUsMfuA" name="Invoice Profile">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_b1xkvUIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_efuR7LxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_b1xku0IVEeSFpMLLUsMfuA" name="Invoice Details">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_efkg57xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_b1xkukIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_b1xkxEIVEeSFpMLLUsMfuA" name="Invoice Details">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_efkg57xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_b1xkw0IVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_b1xkykIVEeSFpMLLUsMfuA" name="Invoice Details">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_efkg57xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_b1xkyUIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_VOglNbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_VOglN7xuEeGCw9HgBpY34g" name="Determine Communication Requirement"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_VOglZbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_VOglObxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_GTcOgPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_egBM3rxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_egwzwLxuEeGCw9HgBpY34g" name="Communication Profile Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIorxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_egBM4LxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_egwzv7xuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_egwzwLxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_egBM37xuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_egBM4LxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_egwzwbxuEeGCw9HgBpY34g" name="Communication Profile Details">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_egwzt7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_egwzwLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_egBM4bxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_egBM4LxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_egBM3bxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_VOglOLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:exclusiveGateway id="_VOglOrxuEeGCw9HgBpY34g"/>
+    <bpmn2:callActivity id="_VOglO7xuEeGCw9HgBpY34g" name="Determine Invoice Delivery Requirement"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_VNnNc7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_VOglPbxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_GTcOgfxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_efH0-7xuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_ehNforxuEeGCw9HgBpY34g" name="Invoice Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00kLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_efH0_bxuEeGCw9HgBpY34g" name="Invoice Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00kLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_ehNfobxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_ehNforxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_efH0_LxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_efH0_bxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_b1xky0IVEeSFpMLLUsMfuA" name="Invoice Details">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_b1xkyUIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_ehNforxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_b1nzuUIVEeSFpMLLUsMfuA" name="Invoice Details">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_efH0_bxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_b1nzuEIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_b1nzvEIVEeSFpMLLUsMfuA" name="Invoice Details">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_efH0_bxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_b1nzu0IVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_b1nzv0IVEeSFpMLLUsMfuA" name="Invoice Details">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_efH0_bxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_b1nzvkIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_VOglPLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_VOglPrxuEeGCw9HgBpY34g" name="Generate Communication Details"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_a4E8UBwrEeOMUpRtwvEXUw">
+      <bpmn2:documentation id="_VOglQLxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_GTcOgvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ef3b1rxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_egBM5rxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_OlU70BwsEeOMUpRtwvEXUw" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_ef3b2LxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_egBM5bxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_egBM5rxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_OlU70BwsEeOMUpRtwvEXUw</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ef3b17xuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_ef3b2LxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_egBM57xuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_egBM3bxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_egBM5rxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_ef3b2bxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_ef3b2LxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_VOglWLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_VOglP7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_VOglQbxuEeGCw9HgBpY34g" name="Identify Customer Trading Partner"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_VNnNdbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_VOglQ7xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_GTcOg_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_efH1ArxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_efH1BLxuEeGCw9HgBpY34g" name="Invoice Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00kLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_efbW87xuEeGCw9HgBpY34g" name="Invoice Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00kLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_efH1A7xuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_efH1BLxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_efbW8rxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_efbW87xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_b1nzukIVEeSFpMLLUsMfuA" name="Invoice Details">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_b1nzuEIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_efH1BLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_b1xkuEIVEeSFpMLLUsMfuA" name="Invoice Details">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_efbW87xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_b1xkt0IVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_VOglQrxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_VOglRLxuEeGCw9HgBpY34g" name="Identify Invoice Print Vendor"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_VNnNd7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_VOglRrxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_GTcOhPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_efH1CbxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_efH1C7xuEeGCw9HgBpY34g" name="Invoice Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00kLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_efRmCLxuEeGCw9HgBpY34g" name="Invoice Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00kLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_efH1CrxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_efH1C7xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_efRmB7xuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_efRmCLxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_b1nzvUIVEeSFpMLLUsMfuA" name="Invoice Details">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_b1nzu0IVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_efH1C7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_b1xktUIVEeSFpMLLUsMfuA" name="Invoice Details">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_efRmCLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_b1xktEIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_VOglRbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_VOglR7xuEeGCw9HgBpY34g" name="Identify Invoice Processing System"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_VNnNebxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_VOglSbxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_GTcOhfxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_efRl87xuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_efRl9bxuEeGCw9HgBpY34g" name="Invoice Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00kLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_efRl_LxuEeGCw9HgBpY34g" name="Invoice Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00kLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_efRl9LxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_efRl9bxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_efRl-7xuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_efRl_LxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_b1xksEIVEeSFpMLLUsMfuA" name="Invoice Details">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_b1nzvkIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_efRl9bxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_b1xkskIVEeSFpMLLUsMfuA" name="Invoice Details">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_efRl_LxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_b1xksUIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_VOglSLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_VOglSrxuEeGCw9HgBpY34g" name="Issue Invoice" isForCompensation="false"
+        calledElement="_UhWkQLxuEeGCw9HgBpY34g:_VN6IQLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_VOglTLxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_GTcOhvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_efRmALxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_efRmArxuEeGCw9HgBpY34g" name="Invoice Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00kLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_ehDurLxuEeGCw9HgBpY34g" name="Invoice Profile" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00lLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_eg6ktLxuEeGCw9HgBpY34g" name="Invoice Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00kLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_efRmAbxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_efRmArxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_ehDurLxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_eg6ks7xuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_eg6ktLxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_b1xks0IVEeSFpMLLUsMfuA" name="Invoice Details">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_b1xksUIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_efRmArxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_b1xktkIVEeSFpMLLUsMfuA" name="Invoice Details">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_b1xktEIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_efRmArxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_b1xkuUIVEeSFpMLLUsMfuA" name="Invoice Details">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_b1xkt0IVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_efRmArxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_b1xkyEIVEeSFpMLLUsMfuA" name="Invoice Profile">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_b1xkxkIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_ehDurLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_b1xkwUIVEeSFpMLLUsMfuA" name="Invoice Details">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_eg6ktLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_b1xkwEIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_VOglS7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_VOglTbxuEeGCw9HgBpY34g" name="Record Invoice Details"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_VN6IQrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_VOglT7xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_GTcOh_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_efkg6bxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_efkg67xuEeGCw9HgBpY34g" name="Invoice Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00kLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_efkg6rxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_efkg67xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_b1xkvEIVEeSFpMLLUsMfuA" name="Invoice Details">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_b1xkukIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_efkg67xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_VOglTrxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_VOglULxuEeGCw9HgBpY34g" name="Retrieve Invoice Profile"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_VNnNcbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_VOglUrxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_GTcOiPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_efuR57xuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_ef3b27xuEeGCw9HgBpY34g" name="Invoice Instruction" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00krxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_efuR6bxuEeGCw9HgBpY34g" name="Invoice Profile" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00lLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_ef3b2rxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_ef3b27xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_efuR6LxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_efuR6bxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_egBM0LxuEeGCw9HgBpY34g" name="Invoice Instruction">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_VOglW7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_ef3b27xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_b1xkvkIVEeSFpMLLUsMfuA" name="Invoice Profile">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_efuR6bxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_b1xkvUIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_b1xkx0IVEeSFpMLLUsMfuA" name="Invoice Profile">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_efuR6bxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_b1xkxkIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_VOglUbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:exclusiveGateway id="_VOglU7xuEeGCw9HgBpY34g"/>
+    <bpmn2:endEvent id="_VOglVLxuEeGCw9HgBpY34g" name="End">
+      <bpmn2:messageEventDefinition id="_ef3b0LxuEeGCw9HgBpY34g" name="Communication Not Required">
+        <bpmn2:documentation id="_ef3b0bxuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_VOglVbxuEeGCw9HgBpY34g" name="End:1">
+      <bpmn2:messageEventDefinition id="_ef3b07xuEeGCw9HgBpY34g" name="Invoice Profile Not Retrieved">
+        <bpmn2:documentation id="_ef3b1LxuEeGCw9HgBpY34g">FULL NAME: Acceptance Not Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to not accept a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has not accepted the obligation of paying a cheque when it has refused to certify or endorse the cheque for negotiation. The payment of a Bill of Exchange has not been guaranteed when a Banker's Acceptance is not given.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:parallelGateway id="_VOglXLxuEeGCw9HgBpY34g"/>
+    <bpmn2:parallelGateway id="_VOglXbxuEeGCw9HgBpY34g"/>
+    <bpmn2:callActivity id="_VOglXrxuEeGCw9HgBpY34g" name="XMap Invoice Details to Comm Prfl Dtls"
+        isForCompensation="false" calledElement="_UhqGQLxuEeGCw9HgBpY34g:_VOglZ7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_VOglYLxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_GTcOifxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_egwzuLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_eg6kubxuEeGCw9HgBpY34g" name="Invoice Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00kLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_egwzurxuEeGCw9HgBpY34g" name="Communication Profile Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIorxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_eg6kuLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_eg6kubxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_egwzubxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_egwzurxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_b1xkwkIVEeSFpMLLUsMfuA" name="Invoice Details">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_b1xkwEIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_eg6kubxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_b1xkxUIVEeSFpMLLUsMfuA" name="Invoice Details">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_b1xkw0IVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_eg6kubxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_egwzu7xuEeGCw9HgBpY34g" name="Communication Profile Details">
+        <bpmn2:sourceRef>_VN6IRLxuEeGCw9HgBpY34g:_egwzurxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_VN6IRLxuEeGCw9HgBpY34g:_egwzt7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_VOglX7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:exclusiveGateway id="_VOglYbxuEeGCw9HgBpY34g"/>
+    <bpmn2:exclusiveGateway id="_VOglYrxuEeGCw9HgBpY34g"/>
+    <bpmn2:startEvent id="_VOglY7xuEeGCw9HgBpY34g" name="Start">
+      <bpmn2:messageEventDefinition id="_ehDuprxuEeGCw9HgBpY34g" name="Invoice Instruction Received">
+        <bpmn2:documentation id="_ehDup7xuEeGCw9HgBpY34g">FULL NAME: Invoice Received&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: An outpayment request in the form of an invoice for goods or services supplied has been received by the Financial Institution.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has received an invoice from its principal office equipment supplier.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="_VOglZLxuEeGCw9HgBpY34g" name="End:2">
+      <bpmn2:messageEventDefinition id="_ehDuqbxuEeGCw9HgBpY34g" name="Communication Completed">
+        <bpmn2:documentation id="_ehDuqrxuEeGCw9HgBpY34g">FULL NAME: Expected Activity Completed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected specific, but otherwise not categorized occurrence of interest to the business has ended.&#xD;
+&#xD;
+EXAMPLES OF USE: A plan to relocate headquarters staff has been set in motion on the completion of negotiations to buy a development site.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="_efH097xuEeGCw9HgBpY34g" sourceRef="_VOglN7xuEeGCw9HgBpY34g"
+        targetRef="_VOglOrxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_efH0-LxuEeGCw9HgBpY34g" name="Communication Required"
+        sourceRef="_VOglOrxuEeGCw9HgBpY34g" targetRef="_VOglPrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_efH0-bxuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_efkg4rxuEeGCw9HgBpY34g" name="Invoice Details Recorded"
+        sourceRef="_VOglTbxuEeGCw9HgBpY34g" targetRef="_VOglO7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_efkg47xuEeGCw9HgBpY34g">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_efuR47xuEeGCw9HgBpY34g" sourceRef="_VOglULxuEeGCw9HgBpY34g"
+        targetRef="_VOglU7xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_efuR5LxuEeGCw9HgBpY34g" name="Invoice Profile Retrieved"
+        sourceRef="_VOglU7xuEeGCw9HgBpY34g" targetRef="_VOglNLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_efuR5bxuEeGCw9HgBpY34g">FULL NAME: Information Received&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: Some form of information has become known to the enterprise.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used where the precise nature of the information received is not yet known, or where multiple information types are concerned.&#xD;
+&#xD;
+For example, all new or changed information which has been received by the Financial Institution may be processed by the incoming mail department.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_ef3b0rxuEeGCw9HgBpY34g" name="Communication Not Required"
+        sourceRef="_VOglOrxuEeGCw9HgBpY34g" targetRef="_VOglVLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_ef3b1bxuEeGCw9HgBpY34g" name="Invoice Profile Not Retrieved"
+        sourceRef="_VOglU7xuEeGCw9HgBpY34g" targetRef="_VOglVbxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_egBM0bxuEeGCw9HgBpY34g" sourceRef="_VOglXLxuEeGCw9HgBpY34g"
+        targetRef="_VOglSrxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_egBM0rxuEeGCw9HgBpY34g" sourceRef="_VOglO7xuEeGCw9HgBpY34g"
+        targetRef="_VOglXbxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_egBM07xuEeGCw9HgBpY34g" name="Invoice Processing System Identified"
+        sourceRef="_VOglR7xuEeGCw9HgBpY34g" targetRef="_VOglXLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_egBM1LxuEeGCw9HgBpY34g">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_egBM1bxuEeGCw9HgBpY34g" name="Invoice Print Vendor Identified"
+        sourceRef="_VOglRLxuEeGCw9HgBpY34g" targetRef="_VOglXLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_egBM1rxuEeGCw9HgBpY34g">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_egBM17xuEeGCw9HgBpY34g" name="Print Vendor Identification Required"
+        sourceRef="_VOglXbxuEeGCw9HgBpY34g" targetRef="_VOglRLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_egBM2LxuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_egBM2bxuEeGCw9HgBpY34g" name="Customer Trading Partner Identified"
+        sourceRef="_VOglQbxuEeGCw9HgBpY34g" targetRef="_VOglXLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_egBM2rxuEeGCw9HgBpY34g">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_egBM27xuEeGCw9HgBpY34g" name="Processing System Identification Required"
+        sourceRef="_VOglXbxuEeGCw9HgBpY34g" targetRef="_VOglR7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_egBM3LxuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_egBM3bxuEeGCw9HgBpY34g" name="Communication Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_egwzsLxuEeGCw9HgBpY34g" sourceRef="_VOglYbxuEeGCw9HgBpY34g"
+        targetRef="_VOglXrxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_egwzsbxuEeGCw9HgBpY34g" name="Customer Trading Partner Identification Rqrd"
+        sourceRef="_VOglXbxuEeGCw9HgBpY34g" targetRef="_VOglQbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_egwzsrxuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_egwzs7xuEeGCw9HgBpY34g" name="Invoice Issued" sourceRef="_VOglSrxuEeGCw9HgBpY34g"
+        targetRef="_VOglYbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_egwztLxuEeGCw9HgBpY34g">FULL NAME: Communication Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: Some form of substantive contact has been caused by the enterprise to be directed or transmitted to another place.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used to formally mark the sending of any type of communication to enable the date or time of that communication to be referenced in the future.&#xD;
+&#xD;
+It is often used to 'start a clock' against which subsequent activity can be measured. For example, the sending of a Loan Arrangement Offer marks the start the one month period for which that offer is valid.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_egwztbxuEeGCw9HgBpY34g" name="Data Mapped" sourceRef="_VOglXrxuEeGCw9HgBpY34g"
+        targetRef="_VOglN7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_egwztrxuEeGCw9HgBpY34g">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_egwzt7xuEeGCw9HgBpY34g" name="Communication Profile Details"
+        isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIorxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_ehDuobxuEeGCw9HgBpY34g" sourceRef="_VOglNLxuEeGCw9HgBpY34g"
+        targetRef="_VOglYrxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_ehDuorxuEeGCw9HgBpY34g" name="Invoice Verified" sourceRef="_VOglYrxuEeGCw9HgBpY34g"
+        targetRef="_VOglTbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ehDuo7xuEeGCw9HgBpY34g">FULL NAME: Acceptance Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to accept a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has accepted the obligation of paying a cheque when it certifies or endorses the cheque for negotiation. The payment of a Bill of Exchange is guaranteed when a Banker's Acceptance has been given or negotiated.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_ehDupLxuEeGCw9HgBpY34g" name="Invoice Not Verified" sourceRef="_VOglYrxuEeGCw9HgBpY34g"
+        targetRef="_VOglYbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ehDupbxuEeGCw9HgBpY34g">FULL NAME: Acceptance Not Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to not accept a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has not accepted the obligation of paying a cheque when it has refused to certify or endorse the cheque for negotiation. The payment of a Bill of Exchange has not been guaranteed when a Banker's Acceptance is not given.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_ehDuqLxuEeGCw9HgBpY34g" name="Invoice Instruction Received"
+        sourceRef="_VOglY7xuEeGCw9HgBpY34g" targetRef="_VOglULxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_ehDuq7xuEeGCw9HgBpY34g" name="Communication Completed"
+        sourceRef="_VOglPrxuEeGCw9HgBpY34g" targetRef="_VOglZLxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_b1nzuEIVEeSFpMLLUsMfuA" name="Invoice Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00kLxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_b1nzu0IVEeSFpMLLUsMfuA" name="Invoice Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00kLxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_b1nzvkIVEeSFpMLLUsMfuA" name="Invoice Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00kLxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_b1xksUIVEeSFpMLLUsMfuA" name="Invoice Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00kLxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_b1xktEIVEeSFpMLLUsMfuA" name="Invoice Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00kLxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_b1xkt0IVEeSFpMLLUsMfuA" name="Invoice Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00kLxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_b1xkukIVEeSFpMLLUsMfuA" name="Invoice Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00kLxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_b1xkvUIVEeSFpMLLUsMfuA" name="Invoice Profile" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00lLxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_b1xkwEIVEeSFpMLLUsMfuA" name="Invoice Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00kLxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_b1xkw0IVEeSFpMLLUsMfuA" name="Invoice Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00kLxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_b1xkxkIVEeSFpMLLUsMfuA" name="Invoice Profile" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00lLxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_b1xkyUIVEeSFpMLLUsMfuA" name="Invoice Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00kLxuEeGCw9HgBpY34g"/>
+  </bpmn2:process>
+</bpmn2:definitions>

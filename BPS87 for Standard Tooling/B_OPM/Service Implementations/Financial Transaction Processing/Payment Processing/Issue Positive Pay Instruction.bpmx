@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_GWk2MMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"
+    xmlns:_GXn_EMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"
+    xmlns:_Iua3k8T2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_Iua3k8T2EeGIlOhhn7SrtQ"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_Iua3k8T2EeGIlOhhn7SrtQ" name="Issue Positive Pay Instruction"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_Iua3k8T2EeGIlOhhn7SrtQ"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_Iua3lsT2EeGIlOhhn7SrtQ"
+      visible="true" type="Bpmn2" element="_Iua3lcT2EeGIlOhhn7SrtQ" name="Issue Positive Pay Instruction Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_N1WVScT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_PW9RmMT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:extension xmi:id="_Iua3lMT2EeGIlOhhn7SrtQ" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_zKCEUyhgEeOjHu3a6otf0Q" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_Ph4cISiMEeO1PvbDA98QvA" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_Iua3lcT2EeGIlOhhn7SrtQ" name="Issue Positive Pay Instruction">
+    <bpmn2:documentation id="_IukoUMT2EeGIlOhhn7SrtQ">SHORT NAME: Issue Pstv Pay Instrctn&#xD;
+&#xD;
+B LEVEL ROOT: Issue * Details&#xD;
+&#xD;
+DEFINITION: To send out or give out a positive pay instruction.&#xD;
+&#xD;
+DESCRIPTION: This activity string encompasses activities necessary for the financial institution to issue a positive pay instruction as requested. This includes identifying the payment processing system. Depending on whether the instruction is 'STOPPED', 'VOID' or 'ISSUED', different processing systems may be required. &#xD;
+&#xD;
+The payment instruction needs to be generated and routed to relevant payment system, example DDA.&#xD;
+&#xD;
+FLOW DIAGRAM: UC: Issue Positive Pay Instruction</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_zKCEUChgEeOjHu3a6otf0Q">
+      <tagging:tag id="_zKCEUShgEeOjHu3a6otf0Q">Financial Transaction Processing</tagging:tag>
+      <tagging:tag id="_zKCEUihgEeOjHu3a6otf0Q">ValueChain_CashManagement_RouteProcess</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_IukoUcT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_PW9RmcT2EeGIlOhhn7SrtQ" name="Check Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWxMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_PW9RmsT2EeGIlOhhn7SrtQ" name="Check Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWxMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_IukoUsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_PW9RmcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_IukoU8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_PW9RmsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_N1WVSMT2EeGIlOhhn7SrtQ" name="Enterprise Process" partitionElementRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_zTWYYyhgEeOjHu3a6otf0Q">The default role for all enterprise process activities not explicitly assigned to other roles.</bpmn2:documentation>
+      <bpmn2:flowElementRef>_N63HYMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_N63HZsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PBDTKsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PBDTLcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PF9oPsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PF9oQMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PF9oQcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PW9Rl8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HydqlEIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_IQHQEUIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_N63HYMT2EeGIlOhhn7SrtQ" name="Generate Positive Pay Instruction"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_GkldC8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_N63HYcT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Ph4cICiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_N63HYsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PgyjCcT2EeGIlOhhn7SrtQ" name="Check Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWxMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PgyjCsT2EeGIlOhhn7SrtQ" name="Check Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWxMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_N63HY8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PgyjCcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_N63HZMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PgyjCsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_Py94scT2EeGIlOhhn7SrtQ" name="Check Details">
+        <bpmn2:sourceRef>_Iua3k8T2EeGIlOhhn7SrtQ:_PW9Rl8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_Iua3k8T2EeGIlOhhn7SrtQ:_PgyjCcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_Py94ssT2EeGIlOhhn7SrtQ" name="Check Details">
+        <bpmn2:sourceRef>_Iua3k8T2EeGIlOhhn7SrtQ:_PgyjCsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_Iua3k8T2EeGIlOhhn7SrtQ:_PW9RmsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_N63HZcT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_N63HZsT2EeGIlOhhn7SrtQ" name="Identify Check Processing System"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_GkldEMT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_N63HZ8T2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Ph4cIiiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_N63HaMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PgyjC8T2EeGIlOhhn7SrtQ" name="Check Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWxMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PgyjDMT2EeGIlOhhn7SrtQ" name="Check Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWxMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_N63HacT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PgyjC8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_N63HasT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PgyjDMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_Py94s8T2EeGIlOhhn7SrtQ" name="Check Details">
+        <bpmn2:sourceRef>_Iua3k8T2EeGIlOhhn7SrtQ:_PW9RmcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_Iua3k8T2EeGIlOhhn7SrtQ:_PgyjC8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_Py94tMT2EeGIlOhhn7SrtQ" name="Check Details">
+        <bpmn2:sourceRef>_Iua3k8T2EeGIlOhhn7SrtQ:_PgyjDMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_Iua3k8T2EeGIlOhhn7SrtQ:_PW9Rl8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_N63Ha8T2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:endEvent id="_PBDTKsT2EeGIlOhhn7SrtQ" name="End">
+      <bpmn2:messageEventDefinition id="_PBDTK8T2EeGIlOhhn7SrtQ" name="Communication Details Provided">
+        <bpmn2:documentation id="_PBDTLMT2EeGIlOhhn7SrtQ">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="_PBDTLcT2EeGIlOhhn7SrtQ" name="Start">
+      <bpmn2:messageEventDefinition id="_0MJoqChgEeOjHu3a6otf0Q" name="Check Status Recorded">
+        <bpmn2:documentation id="_0MJoqShgEeOjHu3a6otf0Q">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="_PF9oPsT2EeGIlOhhn7SrtQ" name="Check Processing System Identification Made"
+        sourceRef="_N63HZsT2EeGIlOhhn7SrtQ" targetRef="_N63HYMT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PF9oP8T2EeGIlOhhn7SrtQ">FULL NAME: Identification Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A decision has been made to regard a person or thing as being a specific instance, based on available evidence.&#xD;
+&#xD;
+EXAMPLES OF USE: A customer has been identified after comparing their signature with a specimen on file.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PF9oQMT2EeGIlOhhn7SrtQ" name="Communication Details Provided"
+        sourceRef="_N63HYMT2EeGIlOhhn7SrtQ" targetRef="_PBDTKsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PF9oQcT2EeGIlOhhn7SrtQ" name="Check Status Recorded"
+        sourceRef="_PBDTLcT2EeGIlOhhn7SrtQ" targetRef="_N63HZsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_PW9Rl8T2EeGIlOhhn7SrtQ" name="Check Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWxMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:startEvent id="_HydqlEIZEeSedtiJ0SK07w" name="Start:1"/>
+    <bpmn2:sequenceFlow id="_IQHQEUIZEeSedtiJ0SK07w" name="Invoked By Business Process"
+        sourceRef="_HydqlEIZEeSedtiJ0SK07w" targetRef="_N63HZsT2EeGIlOhhn7SrtQ"/>
+  </bpmn2:process>
+</bpmn2:definitions>

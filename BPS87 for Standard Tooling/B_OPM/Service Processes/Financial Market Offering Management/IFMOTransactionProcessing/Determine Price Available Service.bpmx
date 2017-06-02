@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_GWk2MMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"
+    xmlns:_GXn_EMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"
+    xmlns:_HEK8Q8T2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_HEK8Q8T2EeGIlOhhn7SrtQ"
+    xmlns:_tmocgl8tEeGYvOQYZS-meA="http://www.ibm.com/uml2/Rational/_tmocgl8tEeGYvOQYZS-meA"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_HEK8Q8T2EeGIlOhhn7SrtQ" name="Determine Price Available Service"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_HEK8Q8T2EeGIlOhhn7SrtQ"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_HEK8RsT2EeGIlOhhn7SrtQ"
+      visible="true" type="Bpmn2" element="_HEK8RcT2EeGIlOhhn7SrtQ" name="Determine Price Available Service Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_HEUtAcT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_HEUtDMT2EeGIlOhhn7SrtQ" importType="http://www.eclipse.org/uml2/3.0.0/UML"
+      location="../../../../B_SDM.emx" namespace="http://www.ibm.com/uml2/Rational/_tmocgl8tEeGYvOQYZS-meA"/>
+  <bpmn2:import xmi:id="_HEUtH8T2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:extension xmi:id="_HEK8RMT2EeGIlOhhn7SrtQ" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_oWXtcihgEeOjHu3a6otf0Q" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_NtnCISiMEeO1PvbDA98QvA" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_HEK8RcT2EeGIlOhhn7SrtQ" name="Determine Price Available Service">
+    <bpmn2:extensionElements xmi:id="_oWXtcChgEeOjHu3a6otf0Q">
+      <tagging:tag id="_oWXtcShgEeOjHu3a6otf0Q">ValueChain_BestExecutionMiFID_BestExecution</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_HEUtGcT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_HEUtHMT2EeGIlOhhn7SrtQ" name="Financial Market Offering Instruction"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_HEUtHcT2EeGIlOhhn7SrtQ" name="Potential Execution Venues"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_HEUtHsT2EeGIlOhhn7SrtQ" name="Potential Venue Prices"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_HEUtGsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_HEUtHMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_HEUtHcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_HEUtG8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_HEUtHsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_HEUtAsT2EeGIlOhhn7SrtQ" name="Service" partitionElementRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GX66AMT2EeGIlOhhn7SrtQ">
+      <bpmn2:flowElementRef>_HEUtA8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HEUtBMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HEUtBsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HEUtCMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HEUtD8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HEUtEcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HEUtEsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HEUtE8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HEUtFMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HEUtO8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HEUtPMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:startEvent id="_HEUtA8T2EeGIlOhhn7SrtQ" name="Start"/>
+    <bpmn2:endEvent id="_HEUtBMT2EeGIlOhhn7SrtQ" name="End"/>
+    <bpmn2:callActivity id="_HEUtBsT2EeGIlOhhn7SrtQ" name="pre-determinePriceAvailable"
+        isForCompensation="false" calledElement="_HEK8Q8T2EeGIlOhhn7SrtQ:_HEUtBcT2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_NtnCICiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_HEUtJsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_HEUtKcT2EeGIlOhhn7SrtQ" name="Financial Market Offering Instruction"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_HEUtKsT2EeGIlOhhn7SrtQ" name="Potential Execution Venues"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_HEUtK8T2EeGIlOhhn7SrtQ" name="Determine Price Available Request"
+            isCollection="false" itemSubjectRef="_HEK8Q8T2EeGIlOhhn7SrtQ:_HEUtFcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_HEUtJ8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_HEUtKcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_HEUtKsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_HEUtKMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_HEUtK8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_HEUtPcT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HEK8Q8T2EeGIlOhhn7SrtQ:_HEUtHMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HEK8Q8T2EeGIlOhhn7SrtQ:_HEUtKcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_HEUtPsT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HEK8Q8T2EeGIlOhhn7SrtQ:_HEUtHcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HEK8Q8T2EeGIlOhhn7SrtQ:_HEUtKsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_HEUtP8T2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HEK8Q8T2EeGIlOhhn7SrtQ:_HEUtK8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HEK8Q8T2EeGIlOhhn7SrtQ:_HEUtO8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_HEUtB8T2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GX66AMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:serviceTask id="_HEUtCMT2EeGIlOhhn7SrtQ" name="determinePriceAvailable"
+        isForCompensation="false" implementation="WebService">
+      <bpmn2:documentation id="_HEUtCcT2EeGIlOhhn7SrtQ">This command determines the various prices and sizes offered by the execution venue(s) price.</bpmn2:documentation>
+      <bpmn2:ioSpecification id="_HEUtLMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_HEUtL8T2EeGIlOhhn7SrtQ" name="Determine Price Available Request"
+            isCollection="false" itemSubjectRef="_HEK8Q8T2EeGIlOhhn7SrtQ:_HEUtFcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_HEUtMMT2EeGIlOhhn7SrtQ" name="Determine Price Available Response"
+            isCollection="false" itemSubjectRef="_HEK8Q8T2EeGIlOhhn7SrtQ:_HEUtF8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_HEUtLcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_HEUtL8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_HEUtLsT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_HEUtMMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_HEUtQMT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HEK8Q8T2EeGIlOhhn7SrtQ:_HEUtO8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HEK8Q8T2EeGIlOhhn7SrtQ:_HEUtL8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_HEUtQcT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HEK8Q8T2EeGIlOhhn7SrtQ:_HEUtMMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HEK8Q8T2EeGIlOhhn7SrtQ:_HEUtPMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_HEUtDcT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GX66AMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:serviceTask>
+    <bpmn2:callActivity id="_HEUtD8T2EeGIlOhhn7SrtQ" name="post-determinePriceAvailable"
+        isForCompensation="false" calledElement="_HEK8Q8T2EeGIlOhhn7SrtQ:_HEUtDsT2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_NtnCIiiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_HEUtNsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_HEUtOcT2EeGIlOhhn7SrtQ" name="Determine Price Available Response"
+            isCollection="false" itemSubjectRef="_HEK8Q8T2EeGIlOhhn7SrtQ:_HEUtF8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_HEUtOsT2EeGIlOhhn7SrtQ" name="Potential Venue Prices"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_HEUtN8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_HEUtOcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_HEUtOMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_HEUtOsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_HEUtQsT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HEK8Q8T2EeGIlOhhn7SrtQ:_HEUtPMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HEK8Q8T2EeGIlOhhn7SrtQ:_HEUtOcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_HEUtQ8T2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HEK8Q8T2EeGIlOhhn7SrtQ:_HEUtOsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HEK8Q8T2EeGIlOhhn7SrtQ:_HEUtHsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_HEUtEMT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GX66AMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_HEUtEcT2EeGIlOhhn7SrtQ" sourceRef="_HEUtA8T2EeGIlOhhn7SrtQ"
+        targetRef="_HEUtBsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_HEUtEsT2EeGIlOhhn7SrtQ" sourceRef="_HEUtBsT2EeGIlOhhn7SrtQ"
+        targetRef="_HEUtCMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_HEUtE8T2EeGIlOhhn7SrtQ" sourceRef="_HEUtCMT2EeGIlOhhn7SrtQ"
+        targetRef="_HEUtD8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_HEUtFMT2EeGIlOhhn7SrtQ" sourceRef="_HEUtD8T2EeGIlOhhn7SrtQ"
+        targetRef="_HEUtBMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_HEUtO8T2EeGIlOhhn7SrtQ" name="Determine Price Available Request"
+        isCollection="false" itemSubjectRef="_HEK8Q8T2EeGIlOhhn7SrtQ:_HEUtFcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_HEUtPMT2EeGIlOhhn7SrtQ" name="Determine Price Available Response"
+        isCollection="false" itemSubjectRef="_HEK8Q8T2EeGIlOhhn7SrtQ:_HEUtF8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:resourceRole id="_HEUtAMT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+      <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GX66AMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+    </bpmn2:resourceRole>
+  </bpmn2:process>
+  <bpmn2:globalTask id="_HEUtBcT2EeGIlOhhn7SrtQ" name="pre-determinePriceAvailable">
+    <bpmn2:ioSpecification id="_HEUtIMT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_HEUtI8T2EeGIlOhhn7SrtQ" name="Financial Market Offering Instruction"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_HEUtJMT2EeGIlOhhn7SrtQ" name="Potential Execution Venues"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_HEUtJcT2EeGIlOhhn7SrtQ" name="Determine Price Available Request"
+          isCollection="false" itemSubjectRef="_HEK8Q8T2EeGIlOhhn7SrtQ:_HEUtFcT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_HEUtIcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_HEUtI8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_HEUtJMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_HEUtIsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_HEUtJcT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_HEUtDsT2EeGIlOhhn7SrtQ" name="post-determinePriceAvailable">
+    <bpmn2:ioSpecification id="_HEUtMcT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_HEUtNMT2EeGIlOhhn7SrtQ" name="Determine Price Available Response"
+          isCollection="false" itemSubjectRef="_HEK8Q8T2EeGIlOhhn7SrtQ:_HEUtF8T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_HEUtNcT2EeGIlOhhn7SrtQ" name="Potential Venue Prices"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_HEUtMsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_HEUtNMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_HEUtM8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_HEUtNcT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:itemDefinition id="_HEUtFcT2EeGIlOhhn7SrtQ" name="Determine Price Available Request"
+      isCollection="false" structureRef="_tmocgl8tEeGYvOQYZS-meA:_X8R9qLxvEeGCw9HgBpY34g">
+    <bpmn2:documentation id="_HEUtFsT2EeGIlOhhn7SrtQ">IDM Mapping: : B_SDM::com::ibm::ima::bps::Services::Service Interfaces::Financial Market Offering Management::Service Parameters::IFMOTransactionProcessing::determinePriceAvailableRequest</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_oWYUgChgEeOjHu3a6otf0Q">
+      <tagging:tag id="_oWYUgShgEeOjHu3a6otf0Q">Determine Price Available Request</tagging:tag>
+    </bpmn2:extensionElements>
+  </bpmn2:itemDefinition>
+  <bpmn2:itemDefinition id="_HEUtF8T2EeGIlOhhn7SrtQ" name="Determine Price Available Response"
+      isCollection="false" structureRef="_tmocgl8tEeGYvOQYZS-meA:_X8bulLxvEeGCw9HgBpY34g">
+    <bpmn2:documentation id="_HEUtGMT2EeGIlOhhn7SrtQ">IDM Mapping: : B_SDM::com::ibm::ima::bps::Services::Service Interfaces::Financial Market Offering Management::Service Parameters::IFMOTransactionProcessing::determinePriceAvailableResponse</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_oWYUgihgEeOjHu3a6otf0Q">
+      <tagging:tag id="_oWYUgyhgEeOjHu3a6otf0Q">Determine Price Available Response</tagging:tag>
+    </bpmn2:extensionElements>
+  </bpmn2:itemDefinition>
+  <bpmn2:relationship id="_HEUtCsT2EeGIlOhhn7SrtQ" name="determinePriceAvailable"
+      direction="none" type="ExternalDomainOperation">
+    <bpmn2:documentation id="_HEUtC8T2EeGIlOhhn7SrtQ">This command determines the various prices and sizes offered by the execution venue(s) price.</bpmn2:documentation>
+    <bpmn2:source>_HEK8Q8T2EeGIlOhhn7SrtQ:_HEUtCMT2EeGIlOhhn7SrtQ</bpmn2:source>
+    <bpmn2:target>_tmocgl8tEeGYvOQYZS-meA:_X8R9pbxvEeGCw9HgBpY34g</bpmn2:target>
+  </bpmn2:relationship>
+</bpmn2:definitions>

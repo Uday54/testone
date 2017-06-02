@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_UfkbkLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"
+    xmlns:_UhWkQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"
+    xmlns:_UhqGQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UhqGQLxuEeGCw9HgBpY34g"
+    xmlns:_ZT34ELxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_ZT34ELxuEeGCw9HgBpY34g"
+    xmlns:_aW7QlrxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_aW7QlrxuEeGCw9HgBpY34g"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_ZT34ELxuEeGCw9HgBpY34g" name="Generate Customer Suspicious Activity Report"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_ZT34ELxuEeGCw9HgBpY34g"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_ZT34E7xuEeGCw9HgBpY34g"
+      visible="true" type="Bpmn2" element="_ZT34ErxuEeGCw9HgBpY34g" name="Generate Customer Suspicious Activity Report Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_ZUBpErxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_ZUBpKLxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_zKDL5rxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Involved%20Party%20Information%20Maintenance/Involved%20Party%20Management/Retrieve%20Communication%20Profile%20Details.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_aW7QlrxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_zKDL57xuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Maps.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UhqGQLxuEeGCw9HgBpY34g"/>
+  <bpmn2:extension xmi:id="_ZT34EbxuEeGCw9HgBpY34g" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_1sNiohwqEeOMUpRtwvEXUw" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_Mq6G4fxiEeOPPNUUqxVo0g" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_ZT34ErxuEeGCw9HgBpY34g" name="Generate Customer Suspicious Activity Report">
+    <bpmn2:documentation id="_ZUBpELxuEeGCw9HgBpY34g">SHORT NAME: Gnrte Cust SAR&#xD;
+&#xD;
+B LEVEL ROOT: Generate Communication&#xD;
+&#xD;
+DEFINITION: To produce a suspicious activity report (SAR) based on the Customer Details&#xD;
+&#xD;
+DESCRIPTION: Generate a SAR in order to notify the relevant authorities of a suspicious customer.&#xD;
+&#xD;
+FLOW DIAGRAM: AS Chart for Gnrte Cust SAR&#xD;
+&#xD;
+IBM Unique ID: CBP09124</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_1sNioBwqEeOMUpRtwvEXUw">
+      <tagging:tag id="_1sNioRwqEeOMUpRtwvEXUw">Risk Management</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_ZUBpJbxuEeGCw9HgBpY34g">
+      <bpmn2:dataInput id="_ZUBpKrxuEeGCw9HgBpY34g" name="Customer Details" isCollection="false"
+          itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIqrxuEeGCw9HgBpY34g"/>
+      <bpmn2:dataOutput id="_ZUBpJ7xuEeGCw9HgBpY34g" name="Suspicious Activity Report"
+          isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UrySqLxuEeGCw9HgBpY34g"/>
+      <bpmn2:inputSet id="_ZUBpKbxuEeGCw9HgBpY34g">
+        <bpmn2:dataInputRefs>_ZUBpKrxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_ZUBpJrxuEeGCw9HgBpY34g">
+        <bpmn2:dataOutputRefs>_ZUBpJ7xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_ZUBpEbxuEeGCw9HgBpY34g" name="Enterprise Process" partitionElementRef="_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ZUBpE7xuEeGCw9HgBpY34g">The default role for all enterprise process activities not explicitly assigned to other roles.&#xD;
+&#xD;
+IBM Unique ID: CBP06197</bpmn2:documentation>
+      <bpmn2:flowElementRef>_ZUBpFLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ZUBpF7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ZUBpGrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ZUBpHbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ZUBpILxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ZUBpI7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ZUBpJLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_fvvIQbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_fvvIQ7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_fvvIRbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_fv45R7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_fwCqRbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_fwCqSLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_fwCqSbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_fwCqS7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_fwL0MLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_fwVlOLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_ZUBpFLxuEeGCw9HgBpY34g" name="Retrieve Communication Profile Details"
+        isForCompensation="false" calledElement="_aW7QlrxuEeGCw9HgBpY34g:_aW7QmLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ZUBpFrxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Mq6G4PxiEeOPPNUUqxVo0g">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_fv45SLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_fwL0ObxuEeGCw9HgBpY34g" name="Involved Party Identifier"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00mLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_fv45SrxuEeGCw9HgBpY34g" name="Communication Profile Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIorxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_fwL0OLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_fwL0ObxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_fv45SbxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_fv45SrxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_fwL0OrxuEeGCw9HgBpY34g" name="Involved Party Identifier">
+        <bpmn2:sourceRef>_ZT34ELxuEeGCw9HgBpY34g:_fwL0MLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_ZT34ELxuEeGCw9HgBpY34g:_fwL0ObxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_fv45S7xuEeGCw9HgBpY34g" name="Communication Profile Details">
+        <bpmn2:sourceRef>_ZT34ELxuEeGCw9HgBpY34g:_fv45SrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_ZT34ELxuEeGCw9HgBpY34g:_fv45R7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_ZUBpFbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_ZUBpF7xuEeGCw9HgBpY34g" name="Generate Customer SAR"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_ZUBpK7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ZUBpGbxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Mq6G4vxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_fv45QLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_fv45QrxuEeGCw9HgBpY34g" name="Document Item" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIrLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_fwVlNbxuEeGCw9HgBpY34g" name="Customer Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIqrxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_fwVlOrxuEeGCw9HgBpY34g" name="Document Item" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIrLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_fv45QbxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_fv45QrxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_fwVlNbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_fwVlObxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_fwVlOrxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_fv45Q7xuEeGCw9HgBpY34g" name="Document Item">
+        <bpmn2:sourceRef>_ZT34ELxuEeGCw9HgBpY34g:_fvvIRbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_ZT34ELxuEeGCw9HgBpY34g:_fv45QrxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_fwVlNrxuEeGCw9HgBpY34g" name="Customer Details">
+        <bpmn2:sourceRef>_ZT34ELxuEeGCw9HgBpY34g:_ZUBpKrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_ZT34ELxuEeGCw9HgBpY34g:_fwVlNbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_fwVlO7xuEeGCw9HgBpY34g" name="Document Item">
+        <bpmn2:sourceRef>_ZT34ELxuEeGCw9HgBpY34g:_fwVlOrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_ZT34ELxuEeGCw9HgBpY34g:_fwVlOLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_ZUBpGLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_ZUBpGrxuEeGCw9HgBpY34g" name="Select Customer Suspicious Activity Report Temp"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_ZUBpLbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ZUBpHLxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Mq6G4_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_fvvIRrxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_fwCqQbxuEeGCw9HgBpY34g" name="Communication Profile Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIorxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_fvvISLxuEeGCw9HgBpY34g" name="Document Item" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIrLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_fwCqQLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_fwCqQbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_fvvIR7xuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_fvvISLxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_fwCqQrxuEeGCw9HgBpY34g" name="Communication Profile Details">
+        <bpmn2:sourceRef>_ZT34ELxuEeGCw9HgBpY34g:_fv45R7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_ZT34ELxuEeGCw9HgBpY34g:_fwCqQbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_fvvISbxuEeGCw9HgBpY34g" name="Document Item">
+        <bpmn2:sourceRef>_ZT34ELxuEeGCw9HgBpY34g:_fvvISLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_ZT34ELxuEeGCw9HgBpY34g:_fvvIRbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_ZUBpG7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_ZUBpHbxuEeGCw9HgBpY34g" name="Send Suspicious Activity Report"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_ZDxmlLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ZUBpH7xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Mq6G5PxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_fwCqTbxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_fwVlP7xuEeGCw9HgBpY34g" name="Document Item" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIrLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_Pne8YBwsEeOMUpRtwvEXUw" name="Suspicious Activity Report"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UrySqLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_fwCqT7xuEeGCw9HgBpY34g" name="Suspicious Activity Report"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UrySqLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_Pne8YRwsEeOMUpRtwvEXUw" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_fwVlPrxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_fwVlP7xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_Pne8YBwsEeOMUpRtwvEXUw</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_fwCqTrxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_fwCqT7xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_Pne8YRwsEeOMUpRtwvEXUw</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_fwVlQLxuEeGCw9HgBpY34g" name="Document Item">
+        <bpmn2:sourceRef>_ZT34ELxuEeGCw9HgBpY34g:_fwVlOLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_ZT34ELxuEeGCw9HgBpY34g:_fwVlP7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_fwCqULxuEeGCw9HgBpY34g" name="Suspicious Activity Report">
+        <bpmn2:sourceRef>_ZT34ELxuEeGCw9HgBpY34g:_fwCqT7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_ZT34ELxuEeGCw9HgBpY34g:_ZUBpJ7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_ZUBpHrxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_ZUBpILxuEeGCw9HgBpY34g" name="XMap Cust Details to IP Identifier"
+        isForCompensation="false" calledElement="_UhqGQLxuEeGCw9HgBpY34g:_ZUBpL7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ZUBpIrxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Mq6G5fxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_fwL0MbxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_fwVlMbxuEeGCw9HgBpY34g" name="Customer Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIqrxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_fwL0M7xuEeGCw9HgBpY34g" name="Involved Party Identifier"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00mLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_fwVlMLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_fwVlMbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_fwL0MrxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_fwL0M7xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_fwVlMrxuEeGCw9HgBpY34g" name="Customer Details">
+        <bpmn2:sourceRef>_ZT34ELxuEeGCw9HgBpY34g:_ZUBpKrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_ZT34ELxuEeGCw9HgBpY34g:_fwVlMbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_fwL0NLxuEeGCw9HgBpY34g" name="Involved Party Identifier">
+        <bpmn2:sourceRef>_ZT34ELxuEeGCw9HgBpY34g:_fwL0M7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_ZT34ELxuEeGCw9HgBpY34g:_fwL0MLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_ZUBpIbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:startEvent id="_ZUBpI7xuEeGCw9HgBpY34g" name="Start">
+      <bpmn2:messageEventDefinition id="_K6oLsBwsEeOMUpRtwvEXUw" name="Suspicious Activity Report Required">
+        <bpmn2:documentation id="_K6oLsRwsEeOMUpRtwvEXUw">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="_ZUBpJLxuEeGCw9HgBpY34g" name="End">
+      <bpmn2:messageEventDefinition id="_fwCqRrxuEeGCw9HgBpY34g" name="Suspicious Activity Report Generated">
+        <bpmn2:documentation id="_fwCqR7xuEeGCw9HgBpY34g">FULL NAME: Information Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of information has been caused by the enterprise to be directed or transmitted to another place.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has sent the details of a mortgage Arrangement offer to the customer's solicitor, or has sent a detailed list of collateral held in safe keeping for a particular customer.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="_fvvIQbxuEeGCw9HgBpY34g" name="Communication Profile Retrieved"
+        sourceRef="_ZUBpFLxuEeGCw9HgBpY34g" targetRef="_ZUBpGrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_fvvIQrxuEeGCw9HgBpY34g">FULL NAME: Information Received&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: Some form of information has become known to the enterprise.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used where the precise nature of the information received is not yet known, or where multiple information types are concerned.&#xD;
+&#xD;
+For example, all new or changed information which has been received by the Financial Institution may be processed by the incoming mail department.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_fvvIQ7xuEeGCw9HgBpY34g" name="Suspicious Activity Report Template Selected"
+        sourceRef="_ZUBpGrxuEeGCw9HgBpY34g" targetRef="_ZUBpF7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_fvvIRLxuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_fvvIRbxuEeGCw9HgBpY34g" name="Document Item" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIrLxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_fv45R7xuEeGCw9HgBpY34g" name="Communication Profile Details"
+        isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIorxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_fwCqRbxuEeGCw9HgBpY34g" name="Suspicious Activity Report Required"
+        sourceRef="_ZUBpI7xuEeGCw9HgBpY34g" targetRef="_ZUBpILxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_fwCqSLxuEeGCw9HgBpY34g" name="Suspicious Activity Report Generated"
+        sourceRef="_ZUBpHbxuEeGCw9HgBpY34g" targetRef="_ZUBpJLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_fwCqSbxuEeGCw9HgBpY34g" name="Suspicious Activity Report Generated"
+        sourceRef="_ZUBpF7xuEeGCw9HgBpY34g" targetRef="_ZUBpHbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_fwCqSrxuEeGCw9HgBpY34g">FULL NAME: Information Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of information has been caused by the enterprise to be directed or transmitted to another place.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has sent the details of a mortgage Arrangement offer to the customer's solicitor, or has sent a detailed list of collateral held in safe keeping for a particular customer.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_fwCqS7xuEeGCw9HgBpY34g" name="Data Mapped" sourceRef="_ZUBpILxuEeGCw9HgBpY34g"
+        targetRef="_ZUBpFLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_fwCqTLxuEeGCw9HgBpY34g">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_fwL0MLxuEeGCw9HgBpY34g" name="Involved Party Identifier"
+        isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00mLxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_fwVlOLxuEeGCw9HgBpY34g" name="Document Item" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIrLxuEeGCw9HgBpY34g"/>
+  </bpmn2:process>
+</bpmn2:definitions>

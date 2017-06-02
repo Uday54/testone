@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_GWk2MMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"
+    xmlns:_GXn_EMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"
+    xmlns:_HE7KKsT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_HE7KKsT2EeGIlOhhn7SrtQ"
+    xmlns:_tmocgl8tEeGYvOQYZS-meA="http://www.ibm.com/uml2/Rational/_tmocgl8tEeGYvOQYZS-meA"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_HE7KKsT2EeGIlOhhn7SrtQ" name="Analyze Counterparty Limit Service"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_HE7KKsT2EeGIlOhhn7SrtQ"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_HE7KLcT2EeGIlOhhn7SrtQ"
+      visible="true" type="Bpmn2" element="_HE7KLMT2EeGIlOhhn7SrtQ" name="Analyze Counterparty Limit Service Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_HFET4cT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_HFET7MT2EeGIlOhhn7SrtQ" importType="http://www.eclipse.org/uml2/3.0.0/UML"
+      location="../../../../B_SDM.emx" namespace="http://www.ibm.com/uml2/Rational/_tmocgl8tEeGYvOQYZS-meA"/>
+  <bpmn2:import xmi:id="_4GRegEIYEeSedtiJ0SK07w" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:extension xmi:id="_HE7KK8T2EeGIlOhhn7SrtQ" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_ofX4cihgEeOjHu3a6otf0Q" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_KAAH8iiMEeO1PvbDA98QvA" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_HE7KLMT2EeGIlOhhn7SrtQ" name="Analyze Counterparty Limit Service">
+    <bpmn2:extensionElements xmi:id="_ofX4cChgEeOjHu3a6otf0Q">
+      <tagging:tag id="_ofX4cShgEeOjHu3a6otf0Q">ValueChain_TradeProcessing_OperationalAndCreditRiskManagement</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_HFET-cT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_HFET_MT2EeGIlOhhn7SrtQ" name="Financial Market Offering Transaction"
+          isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_HAJ-zMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_HFET_cT2EeGIlOhhn7SrtQ" name="Involved Party Details"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_HFET_sT2EeGIlOhhn7SrtQ" name="Limit Breached" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GdIxMMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_HFET-sT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_HFET_MT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_HFET_cT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_HFET-8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_HFET_sT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_HFET4sT2EeGIlOhhn7SrtQ" name="Service" partitionElementRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GX66AMT2EeGIlOhhn7SrtQ">
+      <bpmn2:flowElementRef>_HFET48T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HFET5MT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HFET5sT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HFET6MT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HFET78T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HFET8cT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HFET8sT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HFET88T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HFET9MT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HFEUGsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HFEUG8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:startEvent id="_HFET48T2EeGIlOhhn7SrtQ" name="Start"/>
+    <bpmn2:endEvent id="_HFET5MT2EeGIlOhhn7SrtQ" name="End"/>
+    <bpmn2:callActivity id="_HFET5sT2EeGIlOhhn7SrtQ" name="pre-analyzeCounterpartyLimit"
+        isForCompensation="false" calledElement="_HE7KKsT2EeGIlOhhn7SrtQ:_HFET5cT2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_KAAH8SiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_HFEUBcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_HFEUCMT2EeGIlOhhn7SrtQ" name="Financial Market Offering Transaction"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_HAJ-zMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_HFEUCcT2EeGIlOhhn7SrtQ" name="Involved Party Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_HFEUCsT2EeGIlOhhn7SrtQ" name="Analyze Counterparty Limit Request"
+            isCollection="false" itemSubjectRef="_HE7KKsT2EeGIlOhhn7SrtQ:_HFET9cT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_HFEUBsT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_HFEUCMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_HFEUCcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_HFEUB8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_HFEUCsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_HFEUHMT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HE7KKsT2EeGIlOhhn7SrtQ:_HFET_MT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HE7KKsT2EeGIlOhhn7SrtQ:_HFEUCMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_HFEUHcT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HE7KKsT2EeGIlOhhn7SrtQ:_HFET_cT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HE7KKsT2EeGIlOhhn7SrtQ:_HFEUCcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_HFEUHsT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HE7KKsT2EeGIlOhhn7SrtQ:_HFEUCsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HE7KKsT2EeGIlOhhn7SrtQ:_HFEUGsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_HFET58T2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GX66AMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:serviceTask id="_HFET6MT2EeGIlOhhn7SrtQ" name="analyzeCounterpartyLimit"
+        isForCompensation="false" implementation="WebService">
+      <bpmn2:documentation id="_HFET6cT2EeGIlOhhn7SrtQ">This command analyzes the limit of the counterparty to ensure there is no overexposure to that particular financial institution, its parent organization or geographical region.</bpmn2:documentation>
+      <bpmn2:ioSpecification id="_HFEUC8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_HFEUDsT2EeGIlOhhn7SrtQ" name="Analyze Counterparty Limit Request"
+            isCollection="false" itemSubjectRef="_HE7KKsT2EeGIlOhhn7SrtQ:_HFET9cT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_HFEUD8T2EeGIlOhhn7SrtQ" name="Analyze Counterparty Limit Response"
+            isCollection="false" itemSubjectRef="_HE7KKsT2EeGIlOhhn7SrtQ:_HFET98T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_HFEUDMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_HFEUDsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_HFEUDcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_HFEUD8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_HFEUH8T2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HE7KKsT2EeGIlOhhn7SrtQ:_HFEUGsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HE7KKsT2EeGIlOhhn7SrtQ:_HFEUDsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_HFEUIMT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HE7KKsT2EeGIlOhhn7SrtQ:_HFEUD8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HE7KKsT2EeGIlOhhn7SrtQ:_HFEUG8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_HFET7cT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GX66AMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:serviceTask>
+    <bpmn2:callActivity id="_HFET78T2EeGIlOhhn7SrtQ" name="post-analyzeCounterpartyLimit"
+        isForCompensation="false" calledElement="_HE7KKsT2EeGIlOhhn7SrtQ:_HFET7sT2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_KAAH8yiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_HFEUFcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_HFEUGMT2EeGIlOhhn7SrtQ" name="Analyze Counterparty Limit Response"
+            isCollection="false" itemSubjectRef="_HE7KKsT2EeGIlOhhn7SrtQ:_HFET98T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_HFEUGcT2EeGIlOhhn7SrtQ" name="Limit Breached" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GdIxMMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_HFEUFsT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_HFEUGMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_HFEUF8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_HFEUGcT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_HFEUIcT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HE7KKsT2EeGIlOhhn7SrtQ:_HFEUG8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HE7KKsT2EeGIlOhhn7SrtQ:_HFEUGMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_HFEUIsT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_HE7KKsT2EeGIlOhhn7SrtQ:_HFEUGcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_HE7KKsT2EeGIlOhhn7SrtQ:_HFET_sT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_HFET8MT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GX66AMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_HFET8cT2EeGIlOhhn7SrtQ" sourceRef="_HFET48T2EeGIlOhhn7SrtQ"
+        targetRef="_HFET5sT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_HFET8sT2EeGIlOhhn7SrtQ" sourceRef="_HFET5sT2EeGIlOhhn7SrtQ"
+        targetRef="_HFET6MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_HFET88T2EeGIlOhhn7SrtQ" sourceRef="_HFET6MT2EeGIlOhhn7SrtQ"
+        targetRef="_HFET78T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_HFET9MT2EeGIlOhhn7SrtQ" sourceRef="_HFET78T2EeGIlOhhn7SrtQ"
+        targetRef="_HFET5MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_HFEUGsT2EeGIlOhhn7SrtQ" name="Analyze Counterparty Limit Request"
+        isCollection="false" itemSubjectRef="_HE7KKsT2EeGIlOhhn7SrtQ:_HFET9cT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_HFEUG8T2EeGIlOhhn7SrtQ" name="Analyze Counterparty Limit Response"
+        isCollection="false" itemSubjectRef="_HE7KKsT2EeGIlOhhn7SrtQ:_HFET98T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:resourceRole id="_HFET4MT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+      <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GX66AMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+    </bpmn2:resourceRole>
+  </bpmn2:process>
+  <bpmn2:globalTask id="_HFET5cT2EeGIlOhhn7SrtQ" name="pre-analyzeCounterpartyLimit">
+    <bpmn2:ioSpecification id="_HFET_8T2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_HFEUAsT2EeGIlOhhn7SrtQ" name="Financial Market Offering Transaction"
+          isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_HAJ-zMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_HFEUA8T2EeGIlOhhn7SrtQ" name="Involved Party Details"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_HFEUBMT2EeGIlOhhn7SrtQ" name="Analyze Counterparty Limit Request"
+          isCollection="false" itemSubjectRef="_HE7KKsT2EeGIlOhhn7SrtQ:_HFET9cT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_HFEUAMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_HFEUAsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_HFEUA8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_HFEUAcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_HFEUBMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_HFET7sT2EeGIlOhhn7SrtQ" name="post-analyzeCounterpartyLimit">
+    <bpmn2:ioSpecification id="_HFEUEMT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_HFEUE8T2EeGIlOhhn7SrtQ" name="Analyze Counterparty Limit Response"
+          isCollection="false" itemSubjectRef="_HE7KKsT2EeGIlOhhn7SrtQ:_HFET98T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_HFEUFMT2EeGIlOhhn7SrtQ" name="Limit Breached" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GdIxMMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_HFEUEcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_HFEUE8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_HFEUEsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_HFEUFMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:itemDefinition id="_HFET9cT2EeGIlOhhn7SrtQ" name="Analyze Counterparty Limit Request"
+      isCollection="false" structureRef="_tmocgl8tEeGYvOQYZS-meA:_YJ_pebxvEeGCw9HgBpY34g">
+    <bpmn2:documentation id="_HFET9sT2EeGIlOhhn7SrtQ">IDM Mapping: : B_SDM::com::ibm::ima::bps::Services::Service Interfaces::Financial Market Offering Management::Service Parameters::IFMOTransactionAnalysis::analyzeCounterpartyLimitRequest</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_ofYfgChgEeOjHu3a6otf0Q">
+      <tagging:tag id="_ofYfgShgEeOjHu3a6otf0Q">Analyze Counterparty Limit Request</tagging:tag>
+    </bpmn2:extensionElements>
+  </bpmn2:itemDefinition>
+  <bpmn2:itemDefinition id="_HFET98T2EeGIlOhhn7SrtQ" name="Analyze Counterparty Limit Response"
+      isCollection="false" structureRef="_tmocgl8tEeGYvOQYZS-meA:_YKJadLxvEeGCw9HgBpY34g">
+    <bpmn2:documentation id="_HFET-MT2EeGIlOhhn7SrtQ">IDM Mapping: : B_SDM::com::ibm::ima::bps::Services::Service Interfaces::Financial Market Offering Management::Service Parameters::IFMOTransactionAnalysis::analyzeCounterpartyLimitResponse</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_ofYfgihgEeOjHu3a6otf0Q">
+      <tagging:tag id="_ofYfgyhgEeOjHu3a6otf0Q">Analyze Counterparty Limit Response</tagging:tag>
+    </bpmn2:extensionElements>
+  </bpmn2:itemDefinition>
+  <bpmn2:relationship id="_HFET6sT2EeGIlOhhn7SrtQ" name="analyzeCounterpartyLimit"
+      direction="none" type="ExternalDomainOperation">
+    <bpmn2:documentation id="_HFET68T2EeGIlOhhn7SrtQ">This command analyzes the limit of the counterparty to ensure there is no overexposure to that particular financial institution, its parent organization or geographical region.</bpmn2:documentation>
+    <bpmn2:source>_HE7KKsT2EeGIlOhhn7SrtQ:_HFET6MT2EeGIlOhhn7SrtQ</bpmn2:source>
+    <bpmn2:target>_tmocgl8tEeGYvOQYZS-meA:_YJ_pdrxvEeGCw9HgBpY34g</bpmn2:target>
+  </bpmn2:relationship>
+</bpmn2:definitions>

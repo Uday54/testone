@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_G5mEBMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_G5mEBMT2EeGIlOhhn7SrtQ"
+    xmlns:_GWk2MMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"
+    xmlns:_GXn_EMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"
+    xmlns:_KnbAVMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_KnbAVMT2EeGIlOhhn7SrtQ"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_KnbAVMT2EeGIlOhhn7SrtQ" name="Retrieve Line of Credit Arrangement Details"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_KnbAVMT2EeGIlOhhn7SrtQ"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_KnbAV8T2EeGIlOhhn7SrtQ"
+      visible="true" type="Bpmn2" element="_KnbAVsT2EeGIlOhhn7SrtQ" name="Retrieve Line of Credit Arrangement Details Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_N1gGVsT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_OOPWW8T2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Service%20Processes/Arrangement%20Reporting/IArrangementReporting/Retrieve%20Arrangement%20Details%20Service.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_G5mEBMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_OOPWYcT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:extension xmi:id="_KnbAVcT2EeGIlOhhn7SrtQ" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_ZUUDgihgEeOjHu3a6otf0Q" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_ImA2MSiMEeO1PvbDA98QvA" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_KnbAVsT2EeGIlOhhn7SrtQ" name="Retrieve Line of Credit Arrangement Details">
+    <bpmn2:documentation id="_KnkKQMT2EeGIlOhhn7SrtQ">SHORT NAME: Rtrv Line of Crdt AR Dtls&#xD;
+&#xD;
+B LEVEL ROOT: Retrieve Reported Information &#xD;
+&#xD;
+DEFINITION: To recover line of credit arrangement details or to make line of credit arrangement details available for use.&#xD;
+&#xD;
+DESCRIPTION: Retrieve the details of a specified arrangement in relation to a customer's line of credit terms, limit, expiry date, amount drawn and outstanding etc.&#xD;
+&#xD;
+FLOW DIAGRAM: AS Chart for Retrieve Customer Credit Limit AR</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_ZUUDgChgEeOjHu3a6otf0Q">
+      <tagging:tag xmi:id="_Il9y4CiMEeO1PvbDA98QvA" id="_ZUUDgShgEeOjHu3a6otf0Q">Arrangement Negotiation</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_KnkKQcT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_PZfBKsT2EeGIlOhhn7SrtQ" name="Arrangement Identifier"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM18T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_PZfBK8T2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_KnkKQsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_PZfBKsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_KnkKQ8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_PZfBK8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_N1gGVcT2EeGIlOhhn7SrtQ" name="Enterprise Process" partitionElementRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_zS0M4ShgEeOjHu3a6otf0Q">The default role for all enterprise process activities not explicitly assigned to other roles.</bpmn2:documentation>
+      <bpmn2:flowElementRef>_OOPWWcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOPWY8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOPWZcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOPWbMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOPWdcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOPWd8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OOPWfcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PBf_vsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PBf_v8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PBf_wsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PDu0McT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PHmnBcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PHmnBsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PHmnB8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PHmnCMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0KO9EChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0Nkk_ChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_OOPWWcT2EeGIlOhhn7SrtQ" name="Retrieve Arrangement Details"
+        isForCompensation="false" calledElement="_G5mEBMT2EeGIlOhhn7SrtQ:_G5mEBsT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OOPWWsT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_ImA2MCiMEeO1PvbDA98QvA">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OOPWacT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_OOPWa8T2EeGIlOhhn7SrtQ" name="Arrangement Identifier"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_OOPWfMT2EeGIlOhhn7SrtQ" name="Arrangement" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GbM3lMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OOPWasT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_OOPWa8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OOPWe8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_OOPWfMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_OOPWbsT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KnbAVMT2EeGIlOhhn7SrtQ:_OOPWbMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KnbAVMT2EeGIlOhhn7SrtQ:_OOPWa8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_OOPWfsT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KnbAVMT2EeGIlOhhn7SrtQ:_OOPWfMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KnbAVMT2EeGIlOhhn7SrtQ:_OOPWfcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OOPWgsT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OOPWY8T2EeGIlOhhn7SrtQ" name="Map to Retrieve Arrangement Details"
+        isForCompensation="false" calledElement="_KnbAVMT2EeGIlOhhn7SrtQ:_OOPWXMT2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_ImA2MiiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OOPWZsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PmAaOMT2EeGIlOhhn7SrtQ" name="Arrangement Identifier"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM18T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_OOPWaMT2EeGIlOhhn7SrtQ" name="Arrangement Identifier"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OOPWgMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PmAaOMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OOPWZ8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_OOPWaMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_P0dGYcT2EeGIlOhhn7SrtQ" name="Arrangement Identifier">
+        <bpmn2:sourceRef>_KnbAVMT2EeGIlOhhn7SrtQ:_PZfBKsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KnbAVMT2EeGIlOhhn7SrtQ:_PmAaOMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_OOPWbcT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KnbAVMT2EeGIlOhhn7SrtQ:_OOPWaMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KnbAVMT2EeGIlOhhn7SrtQ:_OOPWbMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OOPWZMT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_OOPWZcT2EeGIlOhhn7SrtQ" sourceRef="_OOPWY8T2EeGIlOhhn7SrtQ"
+        targetRef="_OOPWWcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_OOPWbMT2EeGIlOhhn7SrtQ" name="Arrangement Identifier" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_OOPWdcT2EeGIlOhhn7SrtQ" name="Map from Retrieve Arrangement Details"
+        isForCompensation="false" calledElement="_KnbAVMT2EeGIlOhhn7SrtQ:_OOPWb8T2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_ImA2MyiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OOPWeMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_OOPWesT2EeGIlOhhn7SrtQ" name="Arrangement" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GbM3lMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PmAaOcT2EeGIlOhhn7SrtQ" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OOPWecT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_OOPWesT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OOPWgcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PmAaOcT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_OOPWf8T2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KnbAVMT2EeGIlOhhn7SrtQ:_OOPWfcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KnbAVMT2EeGIlOhhn7SrtQ:_OOPWesT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_P0dGYsT2EeGIlOhhn7SrtQ" name="Arrangement Details">
+        <bpmn2:sourceRef>_KnbAVMT2EeGIlOhhn7SrtQ:_PmAaOcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KnbAVMT2EeGIlOhhn7SrtQ:_PZfBK8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OOPWdsT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_OOPWd8T2EeGIlOhhn7SrtQ" sourceRef="_OOPWWcT2EeGIlOhhn7SrtQ"
+        targetRef="_OOPWdcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_OOPWfcT2EeGIlOhhn7SrtQ" name="Arrangement" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GbM3lMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:startEvent id="_PBf_vsT2EeGIlOhhn7SrtQ" name="Start">
+      <bpmn2:messageEventDefinition id="_0KOWDShgEeOjHu3a6otf0Q" name="Data Mapped">
+        <bpmn2:documentation id="_0KOWDihgEeOjHu3a6otf0Q">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="_PBf_v8T2EeGIlOhhn7SrtQ" name="End">
+      <bpmn2:messageEventDefinition id="_PBf_wMT2EeGIlOhhn7SrtQ" name="Arrangement Details Not Retrieved">
+        <bpmn2:documentation id="_PBf_wcT2EeGIlOhhn7SrtQ">FULL NAME: Information Not Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has not resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has not retrieved information on deposit products and has been unable to made it available for use by a clerk following a customer enquiry. &#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_PBf_wsT2EeGIlOhhn7SrtQ" name="End:1">
+      <bpmn2:messageEventDefinition id="_PBf_w8T2EeGIlOhhn7SrtQ" name="Arrangement Details Retrieved">
+        <bpmn2:documentation id="_PBf_xMT2EeGIlOhhn7SrtQ">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:exclusiveGateway id="_PDu0McT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PHmnBcT2EeGIlOhhn7SrtQ" name="Data Mapped" sourceRef="_PBf_vsT2EeGIlOhhn7SrtQ"
+        targetRef="_OOPWY8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PHmnBsT2EeGIlOhhn7SrtQ" sourceRef="_OOPWdcT2EeGIlOhhn7SrtQ"
+        targetRef="_PDu0McT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PHmnB8T2EeGIlOhhn7SrtQ" name="Arrangement Details Not Retrieved"
+        sourceRef="_PDu0McT2EeGIlOhhn7SrtQ" targetRef="_PBf_v8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PHmnCMT2EeGIlOhhn7SrtQ" name="Arrangement Details Retrieved"
+        sourceRef="_PDu0McT2EeGIlOhhn7SrtQ" targetRef="_PBf_wsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:startEvent id="_0KO9EChgEeOjHu3a6otf0Q" name="Start:1"/>
+    <bpmn2:sequenceFlow id="_0Nkk_ChgEeOjHu3a6otf0Q" name="Invoked By Business Process"
+        sourceRef="_0KO9EChgEeOjHu3a6otf0Q" targetRef="_OOPWY8T2EeGIlOhhn7SrtQ"/>
+  </bpmn2:process>
+  <bpmn2:globalTask id="_OOPWXMT2EeGIlOhhn7SrtQ" name="Map to Retrieve Arrangement Details">
+    <bpmn2:ioSpecification id="_OOPWXcT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_OOPWYMT2EeGIlOhhn7SrtQ" name="Arrangement Identifier"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM18T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_OOPWYsT2EeGIlOhhn7SrtQ" name="Arrangement Identifier"
+          isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_OOPWXsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_OOPWYMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_OOPWX8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_OOPWYsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_OOPWb8T2EeGIlOhhn7SrtQ" name="Map from Retrieve Arrangement Details">
+    <bpmn2:ioSpecification id="_OOPWcMT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_OOPWc8T2EeGIlOhhn7SrtQ" name="Arrangement" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GbM3lMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_OOPWdMT2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_OOPWccT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_OOPWc8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_OOPWcsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_OOPWdMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+</bpmn2:definitions>

@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_UfkbkLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"
+    xmlns:_UhWkQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"
+    xmlns:_UhqGQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UhqGQLxuEeGCw9HgBpY34g"
+    xmlns:_dUnwtbxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_dUnwtbxuEeGCw9HgBpY34g"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_dUnwtbxuEeGCw9HgBpY34g" name="Authorize Point Of Sale Transaction"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_dUnwtbxuEeGCw9HgBpY34g"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_dUnwuLxuEeGCw9HgBpY34g"
+      visible="true" type="Bpmn2" element="_dUnwt7xuEeGCw9HgBpY34g" name="Authorize Point Of Sale Transaction Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_dUw6o7xuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_dU6rp7xuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_zQdV-rxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Maps.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UhqGQLxuEeGCw9HgBpY34g"/>
+  <bpmn2:extension xmi:id="_dUnwtrxuEeGCw9HgBpY34g" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_BjT3AhwsEeOMUpRtwvEXUw" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_Kl3tAfxiEeOPPNUUqxVo0g" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_dUnwt7xuEeGCw9HgBpY34g" name="Authorize Point Of Sale Transaction">
+    <bpmn2:documentation id="_dUw6oLxuEeGCw9HgBpY34g">SHORT NAME: Authrz POS Trnsctn&#xD;
+&#xD;
+B LEVEL ROOT: Authorize Arrangement&#xD;
+&#xD;
+DEFINITION: To allow the establishment of a point of sale (POS) transaction between two or more parties, in which the financial institution has an interest.&#xD;
+&#xD;
+DESCRIPTION: This workflow encompasses the activities necessary for the financial institution to approve or reject an on-line transaction between the debit card holder and a retail outlet providing cash or goods or services. The settlement of this transaction may or may not be on-line once authorization is given.&#xD;
+&#xD;
+SEPA 2.1 Card Framework defines POS as Point of Interaction (POI) acknowledging traditional points of transaction as well the Internet based sales, where financial cards are used as method of payment.&#xD;
+&#xD;
+FLOW DIAGRAM: WF Chart for Authorize POS Transaction&#xD;
+&#xD;
+IBM Unique ID: CBPC02361</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_BjT3ABwsEeOMUpRtwvEXUw">
+      <tagging:tag id="_BjT3ARwsEeOMUpRtwvEXUw">Resource Item Management</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_dU6rpLxuEeGCw9HgBpY34g">
+      <bpmn2:dataInput id="_dU6rprxuEeGCw9HgBpY34g" name="Financial Transaction Card Details"
+          isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+      <bpmn2:dataOutput id="_dU6rs7xuEeGCw9HgBpY34g" name="Financial Transaction Card Details"
+          isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+      <bpmn2:dataOutput id="_dU6rurxuEeGCw9HgBpY34g" name="Communication Details"
+          isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+      <bpmn2:inputSet id="_dU6rpbxuEeGCw9HgBpY34g">
+        <bpmn2:dataInputRefs>_dU6rprxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_dU6rsrxuEeGCw9HgBpY34g">
+        <bpmn2:dataOutputRefs>_dU6rs7xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_dU6rurxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_dUw6orxuEeGCw9HgBpY34g" name="Merchant" partitionElementRef="_UhWkQLxuEeGCw9HgBpY34g:_dUw6obxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_dUw6pLxuEeGCw9HgBpY34g">The involved party engaged in the acceptance of payment for goods or services offered.&#xD;
+&#xD;
+IBM Unique ID: CBPC03282</bpmn2:documentation>
+      <bpmn2:flowElementRef>_dUw6qrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dUw6rbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dUw6sLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dUw6sbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dUw6srxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dUw6tbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dUw6x7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dUw6yLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dUw6ybxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dU6roLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dU6robxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dU6rrrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_wZB1wLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_wZB1wbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_wZB1wrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_wZB1xLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_waEXkrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_waEXlbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_waEXmLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_waEXm7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_waEXnLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_waEXnrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_waqNc7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_waqNdLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dU6rq7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_waqNeLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:lane id="_dUw6prxuEeGCw9HgBpY34g" name="Card Service Provider" partitionElementRef="_UhWkQLxuEeGCw9HgBpY34g:_dUw6pbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_dUw6p7xuEeGCw9HgBpY34g">The Financial Institution which provides a Payment Card to a Customer and manages the particular payment card service for that customer.&#xD;
+&#xD;
+IBM Unique ID: CBPC03280</bpmn2:documentation>
+      <bpmn2:flowElementRef>_dUw6uLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dUw6u7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dUw6vrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dU6rqLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dU6rr7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dU6rsbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dU6rtLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_waqNdrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_waqNeLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_waqNerxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_wbabYLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_wbabYrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_wbabZbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_wbaba7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_wdCzELxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_wdCzErxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_wdCzFrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_wdWVErxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_wein4LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_we_T0LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eY8FAEIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eY8FA0IVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eY8FCUIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:lane id="_dUw6qLxuEeGCw9HgBpY34g" name="Enterprise Process" partitionElementRef="_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_dUw6qbxuEeGCw9HgBpY34g">The default role for all enterprise process activities not explicitly assigned to other roles.&#xD;
+&#xD;
+IBM Unique ID: CBPC03281</bpmn2:documentation>
+      <bpmn2:flowElementRef>_dUw6wbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dUw6xLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dU6rsLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dU6rt7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_wbabYbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_wbabY7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_wbabZ7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_wbababxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_wbtWU7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_wdCzFLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_wd8K87xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_eY8FBkIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_dUw6qrxuEeGCw9HgBpY34g" name="Approve Point Of Sale Transaction"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_dUd_y7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_dUw6rLxuEeGCw9HgBpY34g">SEPA Cards Framework 2.1 mentions that if the transaction card details are approved the next step of the process, payment completion, can take place.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Kl3tAPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_wcc9M7xuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_whhDYbxuEeGCw9HgBpY34g" name="Financial Transaction Card Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_wcc9NbxuEeGCw9HgBpY34g" name="Financial Transaction Card Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_whhDYLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_whhDYbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_wcc9NLxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_wcc9NbxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_whhDYrxuEeGCw9HgBpY34g" name="Financial Transaction Card Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_dU6rprxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_whhDYbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_wcc9NrxuEeGCw9HgBpY34g" name="Financial Transaction Card Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_wcc9NbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_dU6rs7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_dUw6q7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_dUw6obxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_dUw6rbxuEeGCw9HgBpY34g" name="Offer Financial Txn Card at Point Of Sale"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_dUd_z7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_dUw6r7xuEeGCw9HgBpY34g">SEPA Cards Framework 2.1 defines two types of authorisation:&#xD;
+1. Pre-authorisation, which allows the merchant (hotel, car rental) to reserve an amount for specified period of time. It is used only to secure the amount since neither the final amount nor the final date and time of the actual payment are known)  &#xD;
+2. Authorisation at the point of sale of goods or services which can be attended (in a shop) or unattended (remote through Internet, etc.)</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Kl3tAvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_waXSgrxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_waXShLxuEeGCw9HgBpY34g" name="Financial Transaction Card Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_waXSg7xuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_waXShLxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_waXShbxuEeGCw9HgBpY34g" name="Financial Transaction Card Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_dU6rprxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_waXShLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_dUw6rrxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_dUw6obxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:parallelGateway id="_dUw6sLxuEeGCw9HgBpY34g"/>
+    <bpmn2:exclusiveGateway id="_dUw6sbxuEeGCw9HgBpY34g"/>
+    <bpmn2:callActivity id="_dUw6srxuEeGCw9HgBpY34g" name="Reject POS Transaction"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_BRH60BwsEeOMUpRtwvEXUw">
+      <bpmn2:documentation id="_dUw6tLxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Kl3tA_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_wbG5YLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_wbG5YrxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_whOIcLxuEeGCw9HgBpY34g" name="Financial Transaction Card Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_wbG5YbxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_wbG5YrxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_whOIcLxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_wbG5Y7xuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_waqNerxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_wbG5YrxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_whOIcbxuEeGCw9HgBpY34g" name="Financial Transaction Card Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_dU6rprxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_whOIcLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_dUw6s7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_dUw6obxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_dUw6tbxuEeGCw9HgBpY34g" name="Send Transaction Authorization Request"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_dU6ru7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_dUw6t7xuEeGCw9HgBpY34g">SEPA Cards Framework 2.1 defines 4 methods of cardholder's details verification:&#xD;
+1. Online PIN&#xD;
+2. Offline PIN&#xD;
+3. Signature&#xD;
+4. No CVM</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Kl3tBPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_wZB1xbxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_waEXobxuEeGCw9HgBpY34g" name="Financial Transaction Card Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_wZB1x7xuEeGCw9HgBpY34g" name="Financial Transaction Card Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_waEXoLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_waEXobxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_wZB1xrxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_wZB1x7xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_waEXorxuEeGCw9HgBpY34g" name="Financial Transaction Card Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_dU6rprxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_waEXobxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_wZB1yLxuEeGCw9HgBpY34g" name="Financial Transaction Card Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_wZB1x7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_wZB1xLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_dUw6trxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_dUw6obxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_dUw6uLxuEeGCw9HgBpY34g" name="Initiate Financial Txn Card Detail Verification"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_dUd_zbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_dUw6urxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Kl3tBfxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_wZK_s7xuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_wZK_tbxuEeGCw9HgBpY34g" name="Financial Transaction Card Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_wZd6pbxuEeGCw9HgBpY34g" name="Financial Transaction Card Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_wZK_tLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_wZK_tbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_wZd6pLxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_wZd6pbxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_wZK_trxuEeGCw9HgBpY34g" name="Financial Transaction Card Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_wZB1xLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_wZK_tbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_eY8FAUIVEeSFpMLLUsMfuA" name="Financial Transaction Card Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_wZd6pbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_eY8FAEIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_eY8FBEIVEeSFpMLLUsMfuA" name="Financial Transaction Card Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_wZd6pbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_eY8FA0IVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_eY8FCkIVEeSFpMLLUsMfuA" name="Financial Transaction Card Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_wZd6pbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_eY8FCUIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_dUw6ubxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_dUw6pbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_dUw6u7xuEeGCw9HgBpY34g" name="Send Approved Transaction Notice"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_dUd_0bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_dUw6vbxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Kl3tBvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_wcKCQLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_wcKCQrxuEeGCw9HgBpY34g" name="Financial Transaction Card Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_wein4rxuEeGCw9HgBpY34g" name="Financial Transaction Card Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_wcKCQbxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_wcKCQrxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_wein4bxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_wein4rxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_wcKCQ7xuEeGCw9HgBpY34g" name="Financial Transaction Card Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_wbtWU7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_wcKCQrxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_wein47xuEeGCw9HgBpY34g" name="Financial Transaction Card Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_wein4rxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_wein4LxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_dUw6vLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_dUw6pbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_dUw6vrxuEeGCw9HgBpY34g" name="Send Failed Transaction Notice"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_dUnwsbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_dUw6wLxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Kl3tB_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_wbabbbxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_wbabb7xuEeGCw9HgBpY34g" name="Financial Transaction Card Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_wdWVFLxuEeGCw9HgBpY34g" name="Financial Transaction Card Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_wbabbrxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_wbabb7xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_wdWVE7xuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_wdWVFLxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_eY8FBUIVEeSFpMLLUsMfuA" name="Financial Transaction Card Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_eY8FA0IVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_wbabb7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_eY8FCEIVEeSFpMLLUsMfuA" name="Financial Transaction Card Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_eY8FBkIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_wbabb7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_wdWVFbxuEeGCw9HgBpY34g" name="Financial Transaction Card Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_wdWVFLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_wdWVErxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_dUw6v7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_dUw6pbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_dUw6wbxuEeGCw9HgBpY34g" name="Send Transaction Authorization Status"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_dUnws7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_dUw6w7xuEeGCw9HgBpY34g">The communication report on the POS Transaction must be sent in both cases: when the transaction is accepted or when it is rejected (insufficient funds are available or that the card has been blocked from use).</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Kl3tCPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_wbtWVLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_wdCzGbxuEeGCw9HgBpY34g" name="Financial Transaction Card Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_wbtWVrxuEeGCw9HgBpY34g" name="Financial Transaction Card Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_wdCzGLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_wdCzGbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_wbtWVbxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_wbtWVrxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_eY8FC0IVEeSFpMLLUsMfuA" name="Financial Transaction Card Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_eY8FCUIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_wdCzGbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_wbtWV7xuEeGCw9HgBpY34g" name="Financial Transaction Card Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_wbtWVrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_wbtWU7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_eY8FB0IVEeSFpMLLUsMfuA" name="Financial Transaction Card Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_wbtWVrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_eY8FBkIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_dUw6wrxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_dUw6xLxuEeGCw9HgBpY34g" name="Verify Financial Transaction Card Details"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_AyIRsBwsEeOMUpRtwvEXUw">
+      <bpmn2:documentation id="_dUw6xrxuEeGCw9HgBpY34g">For Credit Cards new over limit fees rules must be implemented to customers' arrangements, in order to adhere to US Credit Card Act of 2009 the Section 102 of the Act. &#xD;
+Customers must be given the option to opt in to over-limit fees. Customers who agree will have their over the limit transactions accepted. Otherwise, if they attempt to make purchases that exceed their limits, the transactions will be rejected.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Kl3tCfxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_wZxcorxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_wZxcpLxuEeGCw9HgBpY34g" name="Financial Transaction Card Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_wZxco7xuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_wZxcpLxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_eY8FAkIVEeSFpMLLUsMfuA" name="Financial Transaction Card Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_eY8FAEIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_wZxcpLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_dUw6xbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:startEvent id="_dUw6x7xuEeGCw9HgBpY34g" name="Start">
+      <bpmn2:messageEventDefinition id="_waEXkLxuEeGCw9HgBpY34g" name="Financial Transaction Card Facilities Available">
+        <bpmn2:documentation id="_waEXkbxuEeGCw9HgBpY34g">FULL NAME: Confirmation Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to endorse a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: Susan Brown's promotion to acting supervisor has been confirmed, and she will now retain the post permanently.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="_dUw6yLxuEeGCw9HgBpY34g" name="End">
+      <bpmn2:messageEventDefinition id="_waEXk7xuEeGCw9HgBpY34g" name="Point Of Sale Transaction Approval Given">
+        <bpmn2:documentation id="_waEXlLxuEeGCw9HgBpY34g">FULL NAME: Approval Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to approve a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: A personal loan can be offered to John Smith because his application has been approved by the Financial Institution.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="_dUw6ybxuEeGCw9HgBpY34g" name="Start:1">
+      <bpmn2:messageEventDefinition id="_waEXlrxuEeGCw9HgBpY34g" name="Customer Financial Requirement Identified">
+        <bpmn2:documentation id="_waEXl7xuEeGCw9HgBpY34g">FULL NAME: Identification Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A decision has been made to regard a person or thing as being a specific instance,  based on available evidence.&#xD;
+&#xD;
+EXAMPLES OF USE: A customer has been identified after comparing their signature with a specimen on file.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="_dU6roLxuEeGCw9HgBpY34g" name="End:1">
+      <bpmn2:messageEventDefinition id="_waEXmbxuEeGCw9HgBpY34g" name="Point of Sale Transaction Rejected">
+        <bpmn2:documentation id="_waEXmrxuEeGCw9HgBpY34g">FULL NAME: Rejection Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to reject a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: A mortgage refusal will be sent to William Brown because his application has been rejected.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:callActivity id="_dU6robxuEeGCw9HgBpY34g" name="Calculate Transaction Value"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_a0ldI7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_dU6ro7xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Kl3tCvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_dU6rorxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_dUw6obxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_dU6rqLxuEeGCw9HgBpY34g" name="Generate Communication Details"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_a4E8UBwrEeOMUpRtwvEXUw">
+      <bpmn2:documentation id="_dU6rqrxuEeGCw9HgBpY34g">Send failed transaction notification that card details could not be verified or card was blocked</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Kl3tC_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_waqNe7xuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_wfSOwbxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_TlQZgBwsEeOMUpRtwvEXUw" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_waqNfbxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_wfSOwLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_wfSOwbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_TlQZgBwsEeOMUpRtwvEXUw</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_waqNfLxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_waqNfbxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_wfSOwrxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_we_T0LxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_wfSOwbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_waqNfrxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_waqNfbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_waqNerxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_dU6rqbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_dUw6pbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_dU6rq7xuEeGCw9HgBpY34g" name="Generate Communication Details"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_a4E8UBwrEeOMUpRtwvEXUw">
+      <bpmn2:documentation id="_dU6rrbxuEeGCw9HgBpY34g">Send notification that card transaction has been approved.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Kl3tDPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_wePF4bxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_wePF47xuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_TlQZgRwsEeOMUpRtwvEXUw" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_whz-U7xuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_wePF4rxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_wePF47xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_TlQZgRwsEeOMUpRtwvEXUw</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_whz-UrxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_whz-U7xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_wePF5LxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_wd8K87xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_wePF47xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_whz-VLxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_whz-U7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_dU6rurxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_dU6rrLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_dUw6obxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:exclusiveGateway id="_dU6rrrxuEeGCw9HgBpY34g"/>
+    <bpmn2:exclusiveGateway id="_dU6rr7xuEeGCw9HgBpY34g"/>
+    <bpmn2:exclusiveGateway id="_dU6rsLxuEeGCw9HgBpY34g"/>
+    <bpmn2:exclusiveGateway id="_dU6rsbxuEeGCw9HgBpY34g"/>
+    <bpmn2:callActivity id="_dU6rtLxuEeGCw9HgBpY34g" name="XMap Fin Trans Card Dtls to Comm Dtls"
+        isForCompensation="false" calledElement="_UhqGQLxuEeGCw9HgBpY34g:_dU6rvbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_dU6rtrxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Kl3tDfxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_wdpQArxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_wdpQBLxuEeGCw9HgBpY34g" name="Financial Transaction Card Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_we_T0rxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_wdpQA7xuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_wdpQBLxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_we_T0bxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_we_T0rxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_wdpQBbxuEeGCw9HgBpY34g" name="Financial Transaction Card Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_wdWVErxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_wdpQBLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_we_T07xuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_we_T0rxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_we_T0LxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_dU6rtbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_dUw6pbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_dU6rt7xuEeGCw9HgBpY34g" name="XMap Fin Trans Card Dtls to Comm Dtls"
+        isForCompensation="false" calledElement="_UhqGQLxuEeGCw9HgBpY34g:_dU6rvbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_dU6rubxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Kl3tDvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_wd8K9LxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_we1i07xuEeGCw9HgBpY34g" name="Financial Transaction Card Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_wd8K9rxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_we1i0rxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_we1i07xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_wd8K9bxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_wd8K9rxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_we1i1LxuEeGCw9HgBpY34g" name="Financial Transaction Card Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_wein4LxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_we1i07xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_wd8K97xuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_dUnwtbxuEeGCw9HgBpY34g:_wd8K9rxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_dUnwtbxuEeGCw9HgBpY34g:_wd8K87xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_dU6ruLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_wZB1wLxuEeGCw9HgBpY34g" sourceRef="_dUw6sLxuEeGCw9HgBpY34g"
+        targetRef="_dUw6rbxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_wZB1wbxuEeGCw9HgBpY34g" sourceRef="_dUw6rbxuEeGCw9HgBpY34g"
+        targetRef="_dUw6sbxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_wZB1wrxuEeGCw9HgBpY34g" name="Transaction Authorization Request Sent"
+        sourceRef="_dUw6tbxuEeGCw9HgBpY34g" targetRef="_dUw6uLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_wZB1w7xuEeGCw9HgBpY34g">FULL NAME: Request Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request has been caused by the enterprise to be directed or transmitted to another place. &#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has asked for or demanded additional collateral to be provided as security on a loan.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_wZB1xLxuEeGCw9HgBpY34g" name="Financial Transaction Card Details"
+        isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_waEXkrxuEeGCw9HgBpY34g" name="Financial Transaction Card Facilities Available"
+        sourceRef="_dUw6x7xuEeGCw9HgBpY34g" targetRef="_dUw6sLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_waEXlbxuEeGCw9HgBpY34g" name="Point Of Sale Transaction Approval Given"
+        sourceRef="_dUw6qrxuEeGCw9HgBpY34g" targetRef="_dUw6yLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_waEXmLxuEeGCw9HgBpY34g" name="Customer Financial Requirement Identified"
+        sourceRef="_dUw6ybxuEeGCw9HgBpY34g" targetRef="_dUw6sLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_waEXm7xuEeGCw9HgBpY34g" name="Point of Sale Transaction Rejected"
+        sourceRef="_dUw6srxuEeGCw9HgBpY34g" targetRef="_dU6roLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_waEXnLxuEeGCw9HgBpY34g" name="Transaction Value Calculated"
+        sourceRef="_dU6robxuEeGCw9HgBpY34g" targetRef="_dUw6tbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_waEXnbxuEeGCw9HgBpY34g">FULL NAME: Value Calculated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the mathematical determination of a monetary, financial amount.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has calculated a monthly loan repayment figure using loan amount, interest rate and term. The Financial Institution has calculated an amount which represents the total current commercial loan exposure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Calculate, Accumulate and sometimes Determine.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_waEXnrxuEeGCw9HgBpY34g" name="Financial Txn Card Accepted"
+        sourceRef="_dUw6sbxuEeGCw9HgBpY34g" targetRef="_dU6robxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_waEXn7xuEeGCw9HgBpY34g">FULL NAME: Acceptance Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to accept a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has accepted the obligation of paying a cheque when it certifies or endorses the cheque for negotiation. The payment of a Bill of Exchange is guaranteed when a Banker's Acceptance has been given or negotiated.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_waqNc7xuEeGCw9HgBpY34g" sourceRef="_dU6rrrxuEeGCw9HgBpY34g"
+        targetRef="_dUw6srxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_waqNdLxuEeGCw9HgBpY34g" name="Financial Transaction Card Rejected"
+        sourceRef="_dUw6sbxuEeGCw9HgBpY34g" targetRef="_dU6rrrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_waqNdbxuEeGCw9HgBpY34g">FULL NAME: Rejection Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to reject a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: A mortgage refusal will be sent to William Brown because his application has been rejected.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_waqNdrxuEeGCw9HgBpY34g" name="Communication Completed"
+        sourceRef="_dU6rqLxuEeGCw9HgBpY34g" targetRef="_dU6rrrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_waqNd7xuEeGCw9HgBpY34g">FULL NAME: Expected Activity Completed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected specific, but otherwise not categorized occurrence of interest to the business has ended.&#xD;
+&#xD;
+EXAMPLES OF USE: A plan to relocate headquarters staff has been set in motion on the completion of negotiations to buy a development site.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_waqNeLxuEeGCw9HgBpY34g" name="Communication Completed"
+        sourceRef="_dU6rq7xuEeGCw9HgBpY34g" targetRef="_dUw6qrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_waqNebxuEeGCw9HgBpY34g">FULL NAME: Expected Activity Completed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected specific, but otherwise not categorized occurrence of interest to the business has ended.&#xD;
+&#xD;
+EXAMPLES OF USE: A plan to relocate headquarters staff has been set in motion on the completion of negotiations to buy a development site.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_waqNerxuEeGCw9HgBpY34g" name="Communication Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_wbabYLxuEeGCw9HgBpY34g" sourceRef="_dU6rr7xuEeGCw9HgBpY34g"
+        targetRef="_dUw6vrxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_wbabYbxuEeGCw9HgBpY34g" sourceRef="_dUw6wbxuEeGCw9HgBpY34g"
+        targetRef="_dU6rsLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_wbabYrxuEeGCw9HgBpY34g" sourceRef="_dUw6uLxuEeGCw9HgBpY34g"
+        targetRef="_dU6rsbxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_wbabY7xuEeGCw9HgBpY34g" name="Transaction Rejection Status Sent"
+        sourceRef="_dU6rsLxuEeGCw9HgBpY34g" targetRef="_dU6rr7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_wbabZLxuEeGCw9HgBpY34g">FULL NAME: Information Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of information has been caused by the enterprise to be directed or transmitted to another place.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has sent the details of a mortgage Arrangement offer to the customer's solicitor, or has sent a detailed list of collateral held in safe keeping for a particular customer.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_wbabZbxuEeGCw9HgBpY34g" name="On-line Authorization Available"
+        sourceRef="_dU6rsbxuEeGCw9HgBpY34g" targetRef="_dUw6xLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_wbabZrxuEeGCw9HgBpY34g">FULL NAME: Confirmation Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to endorse a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: Susan Brown's promotion to acting supervisor has been confirmed, and she will now retain the post permanently.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_wbabZ7xuEeGCw9HgBpY34g" name="Transaction Approval Status Sent"
+        sourceRef="_dU6rsLxuEeGCw9HgBpY34g" targetRef="_dUw6u7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_wbabaLxuEeGCw9HgBpY34g">FULL NAME: Communication Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: Some form of substantive contact has been caused by the enterprise to be directed or transmitted to another place.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used to formally mark the sending of any type of communication to enable the date or time of that communication to be referenced in the future.&#xD;
+&#xD;
+It is often used to 'start a clock' against which subsequent activity can be measured. For example, the sending of a Loan Arrangement Offer marks the start the one month period for which that offer is valid.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_wbababxuEeGCw9HgBpY34g" name="Transaction Card Status Provided"
+        sourceRef="_dUw6xLxuEeGCw9HgBpY34g" targetRef="_dUw6wbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_wbabarxuEeGCw9HgBpY34g">FULL NAME: Selection Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A selection has been made from available alternatives.&#xD;
+&#xD;
+EXAMPLES OF USE: Mary Jones can be formally offered the post of Marketing Director as she has been selected from a short list of candidates.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_wbaba7xuEeGCw9HgBpY34g" name="On-line Authorization Not Available"
+        sourceRef="_dU6rsbxuEeGCw9HgBpY34g" targetRef="_dU6rr7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_wbabbLxuEeGCw9HgBpY34g">FULL NAME: Confirmation Not Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to not endorse a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: Susan Brown's promotion to acting supervisor has not been confirmed so no confirmation letter has been issued.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_wbtWU7xuEeGCw9HgBpY34g" name="Financial Transaction Card Details"
+        isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_wdCzELxuEeGCw9HgBpY34g" name="Communication Required"
+        sourceRef="_dUw6u7xuEeGCw9HgBpY34g" targetRef="_dU6rt7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_wdCzEbxuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_wdCzErxuEeGCw9HgBpY34g" name="Communication Required"
+        sourceRef="_dU6rtLxuEeGCw9HgBpY34g" targetRef="_dU6rqLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_wdCzE7xuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_wdCzFLxuEeGCw9HgBpY34g" name="Communication Required"
+        sourceRef="_dU6rt7xuEeGCw9HgBpY34g" targetRef="_dU6rq7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_wdCzFbxuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_wdCzFrxuEeGCw9HgBpY34g" name="Communication Required"
+        sourceRef="_dUw6vrxuEeGCw9HgBpY34g" targetRef="_dU6rtLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_wdCzF7xuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_wdWVErxuEeGCw9HgBpY34g" name="Financial Transaction Card Details"
+        isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_wd8K87xuEeGCw9HgBpY34g" name="Communication Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_wein4LxuEeGCw9HgBpY34g" name="Financial Transaction Card Details"
+        isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_we_T0LxuEeGCw9HgBpY34g" name="Communication Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_eY8FAEIVEeSFpMLLUsMfuA" name="Financial Transaction Card Details"
+        isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_eY8FA0IVEeSFpMLLUsMfuA" name="Financial Transaction Card Details"
+        isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_eY8FBkIVEeSFpMLLUsMfuA" name="Financial Transaction Card Details"
+        isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_eY8FCUIVEeSFpMLLUsMfuA" name="Financial Transaction Card Details"
+        isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+  </bpmn2:process>
+</bpmn2:definitions>

@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_UfkbkLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"
+    xmlns:_UhWkQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"
+    xmlns:_a165qrxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_a165qrxuEeGCw9HgBpY34g"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_a165qrxuEeGCw9HgBpY34g" name="Monitor Market Price" expressionLanguage="http://www.w3.org/1999/XPath"
+    targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_a165qrxuEeGCw9HgBpY34g" typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_a165rbxuEeGCw9HgBpY34g"
+      visible="true" type="Bpmn2" element="_a165rLxuEeGCw9HgBpY34g" name="Monitor Market Price Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_a2hWkbxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_a2hWo7xuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"/>
+  <bpmn2:extension xmi:id="_a165q7xuEeGCw9HgBpY34g" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_d9qNMxwrEeOMUpRtwvEXUw" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_LuMnAfxiEeOPPNUUqxVo0g" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_a165rLxuEeGCw9HgBpY34g" name="Monitor Market Price">
+    <bpmn2:documentation id="_a2XlkLxuEeGCw9HgBpY34g">SHORT NAME: Mntr Mkt Price&#xD;
+&#xD;
+B LEVEL ROOT: Monitor Reported Information&#xD;
+&#xD;
+DEFINITION: To observe market price reported information continuously, regularly over a period of time.&#xD;
+&#xD;
+DESCRIPTION: This activity string identifies the venues where the trade can be executed and monitors the market price movements of the financial market instrument to be traded, or comparing one instrument to another, or various markets to each other. This is a constant observation from the time the transaction request is received or scheduled in order to ascertain market prices. Examples of prices monitored are: anticipated auction prices, current bid/ask ranges, spot price indicators, fixed term deposit interest rates, and so on. These prices are provided by online information services such as Reuters or Telerate, or through a voice or data link with a broker. Monitoring includes receiving other types of reported information which could affect prices and these could be factual, such as an announcement of a country's actual trade figures, or rumor, such as speculation about a company merger or acquisition.&#xD;
+&#xD;
+FLOW DIAGRAM: AS Chart for Monitor Market Price&#xD;
+&#xD;
+IBM Unique ID: CBPC2026</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_d9qNMBwrEeOMUpRtwvEXUw">
+      <tagging:tag id="_d9qNMRwrEeOMUpRtwvEXUw">Financial Market Offering Management</tagging:tag>
+      <tagging:tag id="_d9qNMhwrEeOMUpRtwvEXUw">ValueChain_TradeProcessing_Execution</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_a2hWoLxuEeGCw9HgBpY34g">
+      <bpmn2:dataInput id="_a2hWorxuEeGCw9HgBpY34g" name="FMO Instruction" isCollection="false"
+          itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDkrxuEeGCw9HgBpY34g"/>
+      <bpmn2:dataInput id="_a2hWprxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+          itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+      <bpmn2:dataOutput id="_a2hWpbxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+          itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+      <bpmn2:inputSet id="_a2hWobxuEeGCw9HgBpY34g">
+        <bpmn2:dataInputRefs>_a2hWorxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_a2hWprxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_a2hWpLxuEeGCw9HgBpY34g">
+        <bpmn2:dataOutputRefs>_a2hWpbxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_a2hWkLxuEeGCw9HgBpY34g" name="Dealer" partitionElementRef="_UhWkQLxuEeGCw9HgBpY34g:_ay8eJLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_a2hWkrxuEeGCw9HgBpY34g">An employee of the financial institution who trades securities on their own account, or on behalf of customers.&#xD;
+&#xD;
+IBM Unique ID: CBPC05590</bpmn2:documentation>
+      <bpmn2:flowElementRef>_a2hWk7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_a2hWlrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_a2hWmbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_a2hWnLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_a2hWn7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_mAlbRbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_mAlbR7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_mAlbS7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_mAlbTLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_mCEpAbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KjF1cRwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KrSIKBwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KrSIKRwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_L-k8CxwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_L-k8DhwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_L-k8ERwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dr8cK0IVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dr8cLkIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dr8cMUIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_dr8cNEIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_a2hWk7xuEeGCw9HgBpY34g" name="Determine Price Available"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_a165prxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_a2hWlbxuEeGCw9HgBpY34g">Identify the prices that the various venues are trading at.  Note that the quantity is also important to filling the order - particularly for large orders.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_LuMnAPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_mAlbTrxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_mAlbULxuEeGCw9HgBpY34g" name="FMO Instruction" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDkrxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_mBCHM7xuEeGCw9HgBpY34g" name="Involved Party Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00lrxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_mBn9FbxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_mAlbT7xuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_mAlbULxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_mBCHM7xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_mBn9FLxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_mBn9FbxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_mAlbUbxuEeGCw9HgBpY34g" name="FMO Instruction">
+        <bpmn2:sourceRef>_a165qrxuEeGCw9HgBpY34g:_a2hWorxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_a165qrxuEeGCw9HgBpY34g:_mAlbULxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_dr8cLUIVEeSFpMLLUsMfuA" name="Involved Party Details">
+        <bpmn2:sourceRef>_a165qrxuEeGCw9HgBpY34g:_dr8cK0IVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_a165qrxuEeGCw9HgBpY34g:_mBCHM7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_dr8cL0IVEeSFpMLLUsMfuA" name="Accounting Unit">
+        <bpmn2:sourceRef>_a165qrxuEeGCw9HgBpY34g:_mBn9FbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_a165qrxuEeGCw9HgBpY34g:_dr8cLkIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_dr8cMkIVEeSFpMLLUsMfuA" name="Accounting Unit">
+        <bpmn2:sourceRef>_a165qrxuEeGCw9HgBpY34g:_mBn9FbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_a165qrxuEeGCw9HgBpY34g:_dr8cMUIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_a2hWlLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_ay8eJLxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_a2hWlrxuEeGCw9HgBpY34g" name="Select Venue Intermediary"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_a165orxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_a2hWmLxuEeGCw9HgBpY34g">Select the venue/market maker offering the best price for this transaction.  Note that this does not have to be an exchange or another dealer, the financial institution may fill the order from its own inventory.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_LuMnAvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_mBVCJ7xuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_mBVCKbxuEeGCw9HgBpY34g" name="FMO Instruction" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDkrxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_mBxuErxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_mCOaCbxuEeGCw9HgBpY34g" name="Involved Party Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00lrxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_mCEpA7xuEeGCw9HgBpY34g" name="Involved Party Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00lrxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_mBVCKLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_mBVCKbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_mBxuErxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_mCOaCbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_mCEpArxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_mCEpA7xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_mBVCKrxuEeGCw9HgBpY34g" name="FMO Instruction">
+        <bpmn2:sourceRef>_a165qrxuEeGCw9HgBpY34g:_a2hWorxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_a165qrxuEeGCw9HgBpY34g:_mBVCKbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_dr8cMEIVEeSFpMLLUsMfuA" name="Accounting Unit">
+        <bpmn2:sourceRef>_a165qrxuEeGCw9HgBpY34g:_dr8cLkIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_a165qrxuEeGCw9HgBpY34g:_mBxuErxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_dr8cNkIVEeSFpMLLUsMfuA" name="Involved Party Details">
+        <bpmn2:sourceRef>_a165qrxuEeGCw9HgBpY34g:_dr8cNEIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_a165qrxuEeGCw9HgBpY34g:_mCOaCbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_mCEpBLxuEeGCw9HgBpY34g" name="Involved Party Details">
+        <bpmn2:sourceRef>_a165qrxuEeGCw9HgBpY34g:_mCEpA7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_a165qrxuEeGCw9HgBpY34g:_mCEpAbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_a2hWl7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_ay8eJLxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_a2hWmbxuEeGCw9HgBpY34g" name="Select Market Price" isForCompensation="false"
+        calledElement="_UhWkQLxuEeGCw9HgBpY34g:_a165qLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_a2hWm7xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_LuMnA_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_mAulM7xuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_mBVCI7xuEeGCw9HgBpY34g" name="FMO Instruction" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDkrxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_mCOaArxuEeGCw9HgBpY34g" name="Involved Party Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00lrxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_mCOaBrxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_mAulNbxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_mBVCIrxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_mBVCI7xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_mCOaArxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_mCOaBrxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_mAulNLxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_mAulNbxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_mBVCJLxuEeGCw9HgBpY34g" name="FMO Instruction">
+        <bpmn2:sourceRef>_a165qrxuEeGCw9HgBpY34g:_a2hWorxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_a165qrxuEeGCw9HgBpY34g:_mBVCI7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_mCOaA7xuEeGCw9HgBpY34g" name="Involved Party Details">
+        <bpmn2:sourceRef>_a165qrxuEeGCw9HgBpY34g:_mCEpAbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_a165qrxuEeGCw9HgBpY34g:_mCOaArxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_dr8cM0IVEeSFpMLLUsMfuA" name="Accounting Unit">
+        <bpmn2:sourceRef>_a165qrxuEeGCw9HgBpY34g:_dr8cMUIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_a165qrxuEeGCw9HgBpY34g:_mCOaBrxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_mAulNrxuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_a165qrxuEeGCw9HgBpY34g:_mAulNbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_a165qrxuEeGCw9HgBpY34g:_a2hWpbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_a2hWmrxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_ay8eJLxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_a2hWnLxuEeGCw9HgBpY34g" name="Determine Potential Execution Venue"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_a165pLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_a2hWnrxuEeGCw9HgBpY34g">Identify execution venues to be monitored for this transaction.  This may depend on the firms Execution Policy - for example, the firm may have identified a couple of execution venues for a particular class of instrument.  Alternatively, the customer may have identified how orders for a particular asset class should be executed.&#xD;
+&#xD;
+The potential venue may also depend on whehter the trade will be subject to best execution (based on instrument type, customer classification, liquid market in instrument, order size)&#xD;
+&#xD;
+For Over the Counter (OTC) transactions, this may involve identifying market makers for this instrument/transaction type away from organized markets.  &#xD;
+&#xD;
+For customer orders, it may also involve crossing orders from customers or filling the order from inventory away from the marketplace.  Note that if the financial institution is a Systematic Internalizer (that is, on a consistent basis crosses trades away from the market) then these transaction may have to be reported to the marketplace according to the European Unions Markets in Financial Instruments Directive (MiFID).</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_LuMnBPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_mAulO7xuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_mBLRIrxuEeGCw9HgBpY34g" name="FMO Instruction" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDkrxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_mB64AbxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_mAulPbxuEeGCw9HgBpY34g" name="Involved Party Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00lrxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_mBLRIbxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_mBLRIrxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_mB64AbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_mAulPLxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_mAulPbxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_mBLRI7xuEeGCw9HgBpY34g" name="FMO Instruction">
+        <bpmn2:sourceRef>_a165qrxuEeGCw9HgBpY34g:_a2hWorxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_a165qrxuEeGCw9HgBpY34g:_mBLRIrxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_mB64ArxuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_a165qrxuEeGCw9HgBpY34g:_a2hWprxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_a165qrxuEeGCw9HgBpY34g:_mB64AbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_dr8cLEIVEeSFpMLLUsMfuA" name="Involved Party Details">
+        <bpmn2:sourceRef>_a165qrxuEeGCw9HgBpY34g:_mAulPbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_a165qrxuEeGCw9HgBpY34g:_dr8cK0IVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_dr8cNUIVEeSFpMLLUsMfuA" name="Involved Party Details">
+        <bpmn2:sourceRef>_a165qrxuEeGCw9HgBpY34g:_mAulPbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_a165qrxuEeGCw9HgBpY34g:_dr8cNEIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_a2hWnbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_ay8eJLxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:endEvent id="_a2hWn7xuEeGCw9HgBpY34g" name="End">
+      <bpmn2:messageEventDefinition id="_mAlbSbxuEeGCw9HgBpY34g" name="Market Price Information Provided">
+        <bpmn2:documentation id="_mAlbSrxuEeGCw9HgBpY34g">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="_mAlbRbxuEeGCw9HgBpY34g" name="Venue Intermediary Selected"
+        sourceRef="_a2hWlrxuEeGCw9HgBpY34g" targetRef="_a2hWmbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_mAlbRrxuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_mAlbR7xuEeGCw9HgBpY34g" name="Execution Venue Identified"
+        sourceRef="_a2hWnLxuEeGCw9HgBpY34g" targetRef="_a2hWk7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_mAlbSLxuEeGCw9HgBpY34g">FULL NAME: Identification Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A decision has been made to regard a person or thing as being a specific instance, based on available evidence.&#xD;
+&#xD;
+EXAMPLES OF USE: A customer has been identified after comparing their signature with a specimen on file.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_mAlbS7xuEeGCw9HgBpY34g" name="Market Price Information Provided"
+        sourceRef="_a2hWmbxuEeGCw9HgBpY34g" targetRef="_a2hWn7xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_mAlbTLxuEeGCw9HgBpY34g" name="Best Price Determined"
+        sourceRef="_a2hWk7xuEeGCw9HgBpY34g" targetRef="_a2hWlrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_mAlbTbxuEeGCw9HgBpY34g">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_mCEpAbxuEeGCw9HgBpY34g" name="Involved Party Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00lrxuEeGCw9HgBpY34g"/>
+    <bpmn2:exclusiveGateway id="_KjF1cRwsEeOMUpRtwvEXUw" name="ExclusiveGateway1"/>
+    <bpmn2:startEvent id="_KrSIKBwsEeOMUpRtwvEXUw" name="Start:1">
+      <bpmn2:messageEventDefinition id="_L-k8DBwsEeOMUpRtwvEXUw" name="FMO Order Validated">
+        <bpmn2:documentation id="_L-k8DRwsEeOMUpRtwvEXUw">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:startEvent id="_KrSIKRwsEeOMUpRtwvEXUw" name="Start:2">
+      <bpmn2:messageEventDefinition id="_L-k8DxwsEeOMUpRtwvEXUw" name="Market Price Monitoring Required">
+        <bpmn2:documentation id="_L-k8EBwsEeOMUpRtwvEXUw">FULL NAME: Information Received&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: Some form of information has become known to the enterprise.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used where the precise nature of the information received is not yet known, or where multiple information types are concerned.&#xD;
+&#xD;
+For example, all new or changed information which has been received by the Financial Institution may be processed by the incoming mail department.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="_L-k8CxwsEeOMUpRtwvEXUw" name="" sourceRef="_KjF1cRwsEeOMUpRtwvEXUw"
+        targetRef="_a2hWnLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_L-k8DhwsEeOMUpRtwvEXUw" name="FMO Order Validated" sourceRef="_KrSIKBwsEeOMUpRtwvEXUw"
+        targetRef="_KjF1cRwsEeOMUpRtwvEXUw"/>
+    <bpmn2:sequenceFlow id="_L-k8ERwsEeOMUpRtwvEXUw" name="Market Price Monitoring Required"
+        sourceRef="_KrSIKRwsEeOMUpRtwvEXUw" targetRef="_KjF1cRwsEeOMUpRtwvEXUw"/>
+    <bpmn2:dataObject id="_dr8cK0IVEeSFpMLLUsMfuA" name="Involved Party Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00lrxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_dr8cLkIVEeSFpMLLUsMfuA" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_dr8cMUIVEeSFpMLLUsMfuA" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_dr8cNEIVEeSFpMLLUsMfuA" name="Involved Party Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00lrxuEeGCw9HgBpY34g"/>
+  </bpmn2:process>
+</bpmn2:definitions>

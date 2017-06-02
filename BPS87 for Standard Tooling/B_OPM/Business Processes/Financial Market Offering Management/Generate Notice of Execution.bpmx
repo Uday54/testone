@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_GWk2MMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"
+    xmlns:_GXn_EMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"
+    xmlns:_GXxJAMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GXxJAMT2EeGIlOhhn7SrtQ"
+    xmlns:_L1f9BMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_L1f9BMT2EeGIlOhhn7SrtQ"
+    xmlns:_LgMbYMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_LgMbYMT2EeGIlOhhn7SrtQ"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_L1f9BMT2EeGIlOhhn7SrtQ" name="Generate Notice of Execution"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_L1f9BMT2EeGIlOhhn7SrtQ"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_L1f9B8T2EeGIlOhhn7SrtQ"
+      visible="true" type="Bpmn2" element="_L1f9BsT2EeGIlOhhn7SrtQ" name="Generate Notice of Execution Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_N1p25cT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_OgkcgMT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Service%20Processes/Communication%20Management/ICommunicationResponseProvision/Generate%20Communication%20Details%20Service.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_LgMbYMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_OgkchsT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_OgtmFcT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Maps.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GXxJAMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:extension xmi:id="_L1f9BcT2EeGIlOhhn7SrtQ" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_btBnUyhgEeOjHu3a6otf0Q" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_KBCCsSiMEeO1PvbDA98QvA" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_L1f9BsT2EeGIlOhhn7SrtQ" name="Generate Notice of Execution">
+    <bpmn2:documentation id="_L1puAMT2EeGIlOhhn7SrtQ">SHORT NAME: Gnrte Ntc Exctn&#xD;
+&#xD;
+B LEVEL ROOT: Generate Communication&#xD;
+&#xD;
+DEFINITION: To produce a notice of execution (NoE), using precise criteria or rules. &#xD;
+&#xD;
+It confirms to a customer that a particular trade or group of trades was executed on his behalf for a given instrument, price at a date and time. This may be a partial or final notice depending on the customers requirements. The Final NoE may be generated once the customer notifies the financial institution that they are 'done for the day'. The Notice of Execution details the gross monies on the transaction.&#xD;
+&#xD;
+A Notice of Execution outlines details of a trade including:&#xD;
+Customer Id&#xD;
+Instrument Id&#xD;
+Instrument Name&#xD;
+Trade Date and Time&#xD;
+Place of Trade&#xD;
+Trade Price&#xD;
+Gross Monies&#xD;
+Currency&#xD;
+&#xD;
+It could also cover net monies if the transaction charges calculation (Figuration) occurs beforehand. &#xD;
+&#xD;
+The message, MT513 Client Advice of Execution could be used to notify the client. This message type is sent by the executing party, eg, the broker-dealer, to an instructing party, eg, an institution, or its authorised representative. It may also be sent by a point of execution to the party which had previously submitted an order to buy or sell. This message is used to provide the instructing party with brief and early information about a deal executed at its instruction. This advice applies to a deal that cannot yet be fully confirmed, for example, because it is a block trade which is to be allocated.&#xD;
+&#xD;
+This message may also be used to:&#xD;
+request the cancellation of a previously sent advice of execution&#xD;
+&#xD;
+re-send an advice of execution previously sent&#xD;
+&#xD;
+provide a third party with a copy of the message (be it the advice of execution or request for cancellation) being sent.&#xD;
+&#xD;
+This message may be sent directly or via an ETC service provider between the parties to the deal. It must not be sent to a custodian.&#xD;
+&#xD;
+FLOW DIAGRAM: AS Chart for Generate Notice of Execution</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_btBnUChgEeOjHu3a6otf0Q">
+      <tagging:tag xmi:id="_KA9xQCiMEeO1PvbDA98QvA" id="_btBnUShgEeOjHu3a6otf0Q">Financial Market Offering Management</tagging:tag>
+      <tagging:tag xmi:id="_KA9xQSiMEeO1PvbDA98QvA" id="_btBnUihgEeOjHu3a6otf0Q">ValueChain_TradeProcessing_Execution</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_L1puAcT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_Pba61MT2EeGIlOhhn7SrtQ" name="FMO Transaction Details"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHz8T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_Pba61cT2EeGIlOhhn7SrtQ" name="Communication Details"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_L1puAsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_Pba61MT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_L1puA8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_Pba61cT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_N1p25MT2EeGIlOhhn7SrtQ" name="Portfolio Manager" partitionElementRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gamar8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_zS5FYShgEeOjHu3a6otf0Q">Employee(s) of the financial institution responsible for investing a mutual, exchange-traded or closed-end fund's assets, implementing its investment strategy and managing the day-to-day portfolio trading.</bpmn2:documentation>
+      <bpmn2:flowElementRef>_OgkcfsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OgkcisT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OgkcjMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Ogkcl8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OgtmE8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PCF1ccT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJ2DIcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJ2DI8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Pba608T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0KpMxyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0N243ChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_E19dMEIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_E19dM0IZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HuvBIEIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_IIXpJUIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_OgkcfsT2EeGIlOhhn7SrtQ" name="Generate Communication Details"
+        isForCompensation="false" calledElement="_LgMbYMT2EeGIlOhhn7SrtQ:_LgMbYsT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_Ogkcf8T2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KBCCsCiMEeO1PvbDA98QvA">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OgkcksT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_OgkclMT2EeGIlOhhn7SrtQ" name="Information Content" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Ggj4vMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_OgkclcT2EeGIlOhhn7SrtQ" name="Channel" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWwcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_OgkclsT2EeGIlOhhn7SrtQ" name="Commuication Targets"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_OgkcrcT2EeGIlOhhn7SrtQ" name="Communication" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_Ogkck8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_OgkclMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_OgkclcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_OgkclsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OgkcrMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_OgkcrcT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_OgkcmcT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_L1f9BMT2EeGIlOhhn7SrtQ:_Ogkcl8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_L1f9BMT2EeGIlOhhn7SrtQ:_OgkclMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_E19dMkIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_L1f9BMT2EeGIlOhhn7SrtQ:_E19dMEIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_L1f9BMT2EeGIlOhhn7SrtQ:_OgkclcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_E19dNUIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_L1f9BMT2EeGIlOhhn7SrtQ:_E19dM0IZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_L1f9BMT2EeGIlOhhn7SrtQ:_OgkclsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_Lj24vEIZEeSedtiJ0SK07w" name="Communication Details">
+        <bpmn2:sourceRef>_L1f9BMT2EeGIlOhhn7SrtQ:_OgkcrcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_L1f9BMT2EeGIlOhhn7SrtQ:_Pba61cT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OgtmEsT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gamar8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OgkcisT2EeGIlOhhn7SrtQ" name="Map to Generate Communication Details"
+        isForCompensation="false" calledElement="_L1f9BMT2EeGIlOhhn7SrtQ:_OgkcgcT2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_KBCCsiiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OgkcjcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PqxlgcT2EeGIlOhhn7SrtQ" name="Communication Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_Ogkcj8T2EeGIlOhhn7SrtQ" name="Information Content"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Ggj4vMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_OgkckMT2EeGIlOhhn7SrtQ" name="Channel" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWwcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_OgkckcT2EeGIlOhhn7SrtQ" name="Commuication Targets"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OgtmEMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PqxlgcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OgkcjsT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_Ogkcj8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_OgkckMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_OgkckcT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_P1zJw8T2EeGIlOhhn7SrtQ" name="Communication Details">
+        <bpmn2:sourceRef>_L1f9BMT2EeGIlOhhn7SrtQ:_Pba608T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_L1f9BMT2EeGIlOhhn7SrtQ:_PqxlgcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_OgkcmMT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_L1f9BMT2EeGIlOhhn7SrtQ:_Ogkcj8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_L1f9BMT2EeGIlOhhn7SrtQ:_Ogkcl8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_E19dMUIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_L1f9BMT2EeGIlOhhn7SrtQ:_OgkckMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_L1f9BMT2EeGIlOhhn7SrtQ:_E19dMEIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_E19dNEIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_L1f9BMT2EeGIlOhhn7SrtQ:_OgkckcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_L1f9BMT2EeGIlOhhn7SrtQ:_E19dM0IZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_Ogkci8T2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gamar8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_OgkcjMT2EeGIlOhhn7SrtQ" sourceRef="_OgkcisT2EeGIlOhhn7SrtQ"
+        targetRef="_OgkcfsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_Ogkcl8T2EeGIlOhhn7SrtQ" name="Information Content" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Ggj4vMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_OgtmE8T2EeGIlOhhn7SrtQ" name="XMap FMO Trans Details to Comm Details"
+        isForCompensation="false" calledElement="_GXxJAMT2EeGIlOhhn7SrtQ:_IJwrscT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OgtmFMT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_KBCCtCiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OgtmFsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_Pqxlg8T2EeGIlOhhn7SrtQ" name="FMO Transaction Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHz8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PqxlhMT2EeGIlOhhn7SrtQ" name="Communication Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OgtmF8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_Pqxlg8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OgtmGMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PqxlhMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_P1zJxcT2EeGIlOhhn7SrtQ" name="FMO Transaction Details">
+        <bpmn2:sourceRef>_L1f9BMT2EeGIlOhhn7SrtQ:_Pba61MT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_L1f9BMT2EeGIlOhhn7SrtQ:_Pqxlg8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_P1zJxsT2EeGIlOhhn7SrtQ" name="Communication Details">
+        <bpmn2:sourceRef>_L1f9BMT2EeGIlOhhn7SrtQ:_PqxlhMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_L1f9BMT2EeGIlOhhn7SrtQ:_Pba608T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OgtmGcT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gamar8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:startEvent id="_PCF1ccT2EeGIlOhhn7SrtQ" name="Start">
+      <bpmn2:messageEventDefinition id="_0KpMxShgEeOjHu3a6otf0Q" name="Communication Modification Required">
+        <bpmn2:documentation id="_0KpMxihgEeOjHu3a6otf0Q">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="_PJ2DIcT2EeGIlOhhn7SrtQ" name="Communication Modification Required"
+        sourceRef="_PCF1ccT2EeGIlOhhn7SrtQ" targetRef="_OgtmE8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PJ2DI8T2EeGIlOhhn7SrtQ" name="Communication Required"
+        sourceRef="_OgtmE8T2EeGIlOhhn7SrtQ" targetRef="_OgkcisT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PJ2DJMT2EeGIlOhhn7SrtQ">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_Pba608T2EeGIlOhhn7SrtQ" name="Communication Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:startEvent id="_0KpMxyhgEeOjHu3a6otf0Q" name="Start:1"/>
+    <bpmn2:sequenceFlow id="_0N243ChgEeOjHu3a6otf0Q" name="Invoked By Business Process"
+        sourceRef="_0KpMxyhgEeOjHu3a6otf0Q" targetRef="_OgtmE8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_E19dMEIZEeSedtiJ0SK07w" name="Channel" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWwcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_E19dM0IZEeSedtiJ0SK07w" name="Commuication Targets" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:endEvent id="_HuvBIEIZEeSedtiJ0SK07w" name="End">
+      <bpmn2:messageEventDefinition id="_HuvBIUIZEeSedtiJ0SK07w" name="Communication Completed">
+        <bpmn2:documentation id="_HuvBIkIZEeSedtiJ0SK07w">FULL NAME: Expected Activity Completed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected specific, but otherwise not categorized occurrence of interest to the business has ended.&#xD;
+&#xD;
+EXAMPLES OF USE: A plan to relocate headquarters staff has been set in motion on the completion of negotiations to buy a development site.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="_IIXpJUIZEeSedtiJ0SK07w" name="Communication Completed"
+        sourceRef="_OgkcfsT2EeGIlOhhn7SrtQ" targetRef="_HuvBIEIZEeSedtiJ0SK07w"/>
+  </bpmn2:process>
+  <bpmn2:globalTask id="_OgkcgcT2EeGIlOhhn7SrtQ" name="Map to Generate Communication Details">
+    <bpmn2:ioSpecification id="_OgkcgsT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_OgkchcT2EeGIlOhhn7SrtQ" name="Communication Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_Ogkch8T2EeGIlOhhn7SrtQ" name="Information Content" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Ggj4vMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_OgkciMT2EeGIlOhhn7SrtQ" name="Channel" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWwcT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_OgkcicT2EeGIlOhhn7SrtQ" name="Commuication Targets" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_Ogkcg8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_OgkchcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_OgkchMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_Ogkch8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_OgkciMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_OgkcicT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+</bpmn2:definitions>

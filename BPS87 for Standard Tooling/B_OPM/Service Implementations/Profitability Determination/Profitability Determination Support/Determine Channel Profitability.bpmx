@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_GWk2MMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"
+    xmlns:_GXn_EMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"
+    xmlns:_ILQf4MT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_ILQf4MT2EeGIlOhhn7SrtQ"
+    xmlns:_zN2NUChgEeOjHu3a6otf0Q="http://www.ibm.com/xtools/bpmn/2.0/_zN2NUChgEeOjHu3a6otf0Q"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_zN2NUChgEeOjHu3a6otf0Q" name="Determine Channel Profitability"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_zN2NUChgEeOjHu3a6otf0Q"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_zN2NUyhgEeOjHu3a6otf0Q"
+      visible="true" type="Bpmn2" element="_zN2NUihgEeOjHu3a6otf0Q" name="Determine%20Channel%20Profitability Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_zTXmjihgEeOjHu3a6otf0Q" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_0GNYsihgEeOjHu3a6otf0Q" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_0GPN6ChgEeOjHu3a6otf0Q" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Business%20Processes/Financial%20Transaction%20Processing/Apply%20Accounting%20Entry%20Details.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_ILQf4MT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:extension xmi:id="_zN2NUShgEeOjHu3a6otf0Q" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_zN7F1ChgEeOjHu3a6otf0Q" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_PoKqUSiMEeO1PvbDA98QvA" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_zN2NUihgEeOjHu3a6otf0Q" name="Determine Channel Profitability">
+    <bpmn2:documentation id="_zN7F1ShgEeOjHu3a6otf0Q">SHORT NAME: Dtrmn Chnl Prftblty&#xD;
+&#xD;
+B LEVEL ROOT: Determine Condition&#xD;
+ &#xD;
+DEFINITION: To ascertain, conclude or arrive at a measure of channel profitability.&#xD;
+&#xD;
+DESCRIPTION: This activity string encompasses the activities necessary for the financial institution to determine how profitable, beneficial or lucrative the business accounts and arrangements of a channel are to the bank. This is a scheduled, periodic calculation that begins with the arrangement profitability rating scale applied, and carries through retrieving and accumulating profitability control account values for all arrangements belonging to one distribution channel. A control accounting entry is generated to record the accumulated profitability value for the current period. Year-to-date profitability values are accumulated and new rating scale results applied at the channel level.&#xD;
+&#xD;
+FLOW DIAGRAM: UC: Determine Channel Profitability</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_zN7F0ChgEeOjHu3a6otf0Q">
+      <tagging:tag id="_zN7F0ShgEeOjHu3a6otf0Q">Profitability Determination</tagging:tag>
+      <tagging:tag id="_zN7F0ihgEeOjHu3a6otf0Q">ValueChain_CardProductsAdministration_Monitoring,ControlAndCustomerInsight</tagging:tag>
+      <tagging:tag id="_zN7F0yhgEeOjHu3a6otf0Q">ValueChain_ProductMarketingManagement_Review</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_zN7F1ihgEeOjHu3a6otf0Q">
+      <bpmn2:dataInput id="_0aV1oihgEeOjHu3a6otf0Q" name="Channel Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWwcT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_0aV1oyhgEeOjHu3a6otf0Q" name="Profitability Rating" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GamamsT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_zN7F1yhgEeOjHu3a6otf0Q">
+        <bpmn2:dataInputRefs>_0aV1oihgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_zN7F2ChgEeOjHu3a6otf0Q">
+        <bpmn2:dataOutputRefs>_0aV1oyhgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_zTXmjShgEeOjHu3a6otf0Q" name="Enterprise Process" partitionElementRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_zTXmjyhgEeOjHu3a6otf0Q">The default role for all enterprise process activities not explicitly assigned to other roles.</bpmn2:documentation>
+      <bpmn2:flowElementRef>_0GMxpyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0GNYuihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0GNYvChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0GN_xyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0GN_yihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0GN_zShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0GN_0ChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0GN_0yhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0GN_1ihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0GOm0ChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0GOm1ihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0GPN4ChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0GPN5ihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0GP08ShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0GP09yhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0MN6FyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0MN6GihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0Q6z9ShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0Q6z9yhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0Q6z-ShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0Q6z-yhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0Q6z_ShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0Q7a8ChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0Q7a8ShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0aVOlChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0aVOlShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0aVOlihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0aV1oChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0aV1oShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_0GMxpyhgEeOjHu3a6otf0Q" name="Retrieve Profitability Control Account Value"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_H2r-IcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_0GMxqChgEeOjHu3a6otf0Q">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_PoKqUCiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_0GNYxihgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_0GN_wChgEeOjHu3a6otf0Q" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_0GN_wShgEeOjHu3a6otf0Q" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_0GN_wihgEeOjHu3a6otf0Q" name="Customer Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHwMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_0GN_wyhgEeOjHu3a6otf0Q" name="Market Segment Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZtCscT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_0GN_xChgEeOjHu3a6otf0Q" name="Product Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2zv8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_0GN_xShgEeOjHu3a6otf0Q" name="Channel Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWwcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_0GN_xihgEeOjHu3a6otf0Q" name="Full Customer Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaH2MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_0hip1yhgEeOjHu3a6otf0Q" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_0GNYxyhgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_0GN_wChgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_0GN_wShgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_0GN_wihgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_0GN_wyhgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_0GN_xChgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_0GN_xShgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_0GN_xihgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_0GOm1ChgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_0hip1yhgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_0GN_yShgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_zN2NUChgEeOjHu3a6otf0Q:_0GN_xyhgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_zN2NUChgEeOjHu3a6otf0Q:_0GN_wChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_0GN_zChgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_zN2NUChgEeOjHu3a6otf0Q:_0GN_yihgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_zN2NUChgEeOjHu3a6otf0Q:_0GN_wShgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_0GN_zyhgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_zN2NUChgEeOjHu3a6otf0Q:_0GN_zShgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_zN2NUChgEeOjHu3a6otf0Q:_0GN_wihgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_0GN_0ihgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_zN2NUChgEeOjHu3a6otf0Q:_0GN_0ChgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_zN2NUChgEeOjHu3a6otf0Q:_0GN_wyhgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_0GN_1ShgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_zN2NUChgEeOjHu3a6otf0Q:_0GN_0yhgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_zN2NUChgEeOjHu3a6otf0Q:_0GN_xChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_0GN_2ChgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_zN2NUChgEeOjHu3a6otf0Q:_0GN_1ihgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_zN2NUChgEeOjHu3a6otf0Q:_0GN_xShgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_0GOm0ihgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_zN2NUChgEeOjHu3a6otf0Q:_0GOm0ChgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_zN2NUChgEeOjHu3a6otf0Q:_0GN_xihgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_0lhx9yhgEeOjHu3a6otf0Q" name="Accounting Unit">
+        <bpmn2:sourceRef>_zN2NUChgEeOjHu3a6otf0Q:_0hip1yhgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_zN2NUChgEeOjHu3a6otf0Q:_0aVOlChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_0GOm1ShgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_0GNYuihgEeOjHu3a6otf0Q" name="Map to Retrieve Profitability Control Account Value"
+        isForCompensation="false" calledElement="_zN2NUChgEeOjHu3a6otf0Q:_0GMxqShgEeOjHu3a6otf0Q">
+      <bpmn2:extensionElements xmi:id="_PoKqUiiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_0GNYvShgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_0hip1ihgEeOjHu3a6otf0Q" name="Channel Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWwcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_0GNYvyhgEeOjHu3a6otf0Q" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_0GNYwChgEeOjHu3a6otf0Q" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_0GNYwShgEeOjHu3a6otf0Q" name="Customer Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHwMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_0GNYwihgEeOjHu3a6otf0Q" name="Market Segment Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZtCscT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_0GNYwyhgEeOjHu3a6otf0Q" name="Product Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2zv8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_0GNYxChgEeOjHu3a6otf0Q" name="Channel Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWwcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_0GNYxShgEeOjHu3a6otf0Q" name="Full Customer Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaH2MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_0GOm0yhgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_0hip1ihgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_0GNYvihgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_0GNYvyhgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_0GNYwChgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_0GNYwShgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_0GNYwihgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_0GNYwyhgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_0GNYxChgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_0GNYxShgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_0lhx9ihgEeOjHu3a6otf0Q" name="Channel Details">
+        <bpmn2:sourceRef>_zN2NUChgEeOjHu3a6otf0Q:_0aV1oihgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_zN2NUChgEeOjHu3a6otf0Q:_0hip1ihgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_0GN_yChgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_zN2NUChgEeOjHu3a6otf0Q:_0GNYvyhgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_zN2NUChgEeOjHu3a6otf0Q:_0GN_xyhgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_0GN_yyhgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_zN2NUChgEeOjHu3a6otf0Q:_0GNYwChgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_zN2NUChgEeOjHu3a6otf0Q:_0GN_yihgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_0GN_zihgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_zN2NUChgEeOjHu3a6otf0Q:_0GNYwShgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_zN2NUChgEeOjHu3a6otf0Q:_0GN_zShgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_0GN_0ShgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_zN2NUChgEeOjHu3a6otf0Q:_0GNYwihgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_zN2NUChgEeOjHu3a6otf0Q:_0GN_0ChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_0GN_1ChgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_zN2NUChgEeOjHu3a6otf0Q:_0GNYwyhgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_zN2NUChgEeOjHu3a6otf0Q:_0GN_0yhgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_0GN_1yhgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_zN2NUChgEeOjHu3a6otf0Q:_0GNYxChgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_zN2NUChgEeOjHu3a6otf0Q:_0GN_1ihgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_0GOm0ShgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_zN2NUChgEeOjHu3a6otf0Q:_0GNYxShgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_zN2NUChgEeOjHu3a6otf0Q:_0GOm0ChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_0GNYuyhgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_0GNYvChgEeOjHu3a6otf0Q" sourceRef="_0GNYuihgEeOjHu3a6otf0Q"
+        targetRef="_0GMxpyhgEeOjHu3a6otf0Q"/>
+    <bpmn2:dataObject id="_0GN_xyhgEeOjHu3a6otf0Q" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_0GN_yihgEeOjHu3a6otf0Q" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_0GN_zShgEeOjHu3a6otf0Q" name="Customer Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHwMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_0GN_0ChgEeOjHu3a6otf0Q" name="Market Segment Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZtCscT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_0GN_0yhgEeOjHu3a6otf0Q" name="Product Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2zv8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_0GN_1ihgEeOjHu3a6otf0Q" name="Channel Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWwcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_0GOm0ChgEeOjHu3a6otf0Q" name="Full Customer Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaH2MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_0GOm1ihgEeOjHu3a6otf0Q" name="Accumulate Profitability Control Account Value"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_H2_gE8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_0GOm1yhgEeOjHu3a6otf0Q">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_PoKqUyiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_0GOm2ChgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_0hip2ChgEeOjHu3a6otf0Q" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_0hip2ShgEeOjHu3a6otf0Q" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_0GOm2ShgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_0hip2ChgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_0GOm2ihgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_0hip2ShgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_0lhx-ChgEeOjHu3a6otf0Q" name="Accounting Unit">
+        <bpmn2:sourceRef>_zN2NUChgEeOjHu3a6otf0Q:_0aVOlChgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_zN2NUChgEeOjHu3a6otf0Q:_0hip2ChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_0lhx-ShgEeOjHu3a6otf0Q" name="Accounting Unit">
+        <bpmn2:sourceRef>_zN2NUChgEeOjHu3a6otf0Q:_0hip2ShgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_zN2NUChgEeOjHu3a6otf0Q:_0aVOlihgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_0GOm2yhgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_0GPN4ChgEeOjHu3a6otf0Q" name="Accumulate YTD Prfty Control Account Value"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_s0BkhChgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_0GPN4ShgEeOjHu3a6otf0Q">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_PoKqVCiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_0GPN4ihgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_0hjQ4ChgEeOjHu3a6otf0Q" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_0hjQ4ShgEeOjHu3a6otf0Q" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_0GPN4yhgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_0hjQ4ChgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_0GPN5ChgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_0hjQ4ShgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_0lhx-ihgEeOjHu3a6otf0Q" name="Accounting Unit">
+        <bpmn2:sourceRef>_zN2NUChgEeOjHu3a6otf0Q:_0aV1oShgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_zN2NUChgEeOjHu3a6otf0Q:_0hjQ4ChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_0lhx-yhgEeOjHu3a6otf0Q" name="Accounting Unit">
+        <bpmn2:sourceRef>_zN2NUChgEeOjHu3a6otf0Q:_0hjQ4ShgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_zN2NUChgEeOjHu3a6otf0Q:_0aVOlShgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_0GPN5ShgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_0GPN5ihgEeOjHu3a6otf0Q" name="Apply Accounting Entry Details"
+        isForCompensation="false" calledElement="_ILQf4MT2EeGIlOhhn7SrtQ:_ILQf4sT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_0GPN5yhgEeOjHu3a6otf0Q">In this context, a control accounting entry is required to be posted.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_PoKqVSiMEeO1PvbDA98QvA">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_0GPN6ShgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_0hjQ4ihgEeOjHu3a6otf0Q" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_0hjQ4yhgEeOjHu3a6otf0Q" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_0GPN6ihgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_0hjQ4ihgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_0GPN6yhgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_0hjQ4yhgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_0lhx_ChgEeOjHu3a6otf0Q" name="Accounting Unit">
+        <bpmn2:sourceRef>_zN2NUChgEeOjHu3a6otf0Q:_0aV1oChgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_zN2NUChgEeOjHu3a6otf0Q:_0hjQ4ihgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_0lhx_ShgEeOjHu3a6otf0Q" name="Accounting Unit">
+        <bpmn2:sourceRef>_zN2NUChgEeOjHu3a6otf0Q:_0hjQ4yhgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_zN2NUChgEeOjHu3a6otf0Q:_0aV1oShgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_0GP08ChgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_0GP08ShgEeOjHu3a6otf0Q" name="Apply Channel Prfty Rating Scale"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_s0FO4ChgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_0GP08ihgEeOjHu3a6otf0Q">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_PoKqViiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_0GP08yhgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_0hjQ5ChgEeOjHu3a6otf0Q" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_0hjQ5ShgEeOjHu3a6otf0Q" name="Profitability Rating"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GamamsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_0GP09ChgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_0hjQ5ChgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_0GP09ShgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_0hjQ5ShgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_0lhx_ihgEeOjHu3a6otf0Q" name="Accounting Unit">
+        <bpmn2:sourceRef>_zN2NUChgEeOjHu3a6otf0Q:_0aVOlShgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_zN2NUChgEeOjHu3a6otf0Q:_0hjQ5ChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_0lhx_yhgEeOjHu3a6otf0Q" name="Profitability Rating">
+        <bpmn2:sourceRef>_zN2NUChgEeOjHu3a6otf0Q:_0hjQ5ShgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_zN2NUChgEeOjHu3a6otf0Q:_0aV1oyhgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_0GP09ihgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_0GP09yhgEeOjHu3a6otf0Q" name="Generate Profitability Control Accounting Entry"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_H2r-F8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_0GP0-ChgEeOjHu3a6otf0Q">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_PoKqVyiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_0GQcAChgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_0hjQ5ihgEeOjHu3a6otf0Q" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_0hjQ5yhgEeOjHu3a6otf0Q" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_0GQcAShgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_0hjQ5ihgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_0GQcAihgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_0hjQ5yhgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_0lhyAChgEeOjHu3a6otf0Q" name="Accounting Unit">
+        <bpmn2:sourceRef>_zN2NUChgEeOjHu3a6otf0Q:_0aVOlihgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_zN2NUChgEeOjHu3a6otf0Q:_0hjQ5ihgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_0lhyAShgEeOjHu3a6otf0Q" name="Accounting Unit">
+        <bpmn2:sourceRef>_zN2NUChgEeOjHu3a6otf0Q:_0hjQ5yhgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_zN2NUChgEeOjHu3a6otf0Q:_0aV1oChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_0GQcAyhgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:endEvent id="_0MN6FyhgEeOjHu3a6otf0Q" name="End">
+      <bpmn2:messageEventDefinition id="_0MN6GChgEeOjHu3a6otf0Q" name="Channel Profitability Rating Scale Applied">
+        <bpmn2:documentation id="_0MN6GShgEeOjHu3a6otf0Q">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident driven&#xD;
+&#xD;
+DEFINITION: An expected occurence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution logs the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="_0MN6GihgEeOjHu3a6otf0Q" name="Start">
+      <bpmn2:messageEventDefinition id="_0MN6GyhgEeOjHu3a6otf0Q" name="Arrangement Prfty Rating Scale Applied">
+        <bpmn2:documentation id="_0MN6HChgEeOjHu3a6otf0Q">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution retrieves information on deposit products and makes it available for use by a clerk following a customer enquiry.  The Financial Institution completes the specification of a new foreign exchange service, and the details are made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="_0Q6z9ShgEeOjHu3a6otf0Q" name="Profitability Control Account Value Retrieved"
+        sourceRef="_0GMxpyhgEeOjHu3a6otf0Q" targetRef="_0GOm1ihgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_0Q6z9ihgEeOjHu3a6otf0Q">TRIGGER TYPE: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution retrieves information on deposit products and makes it available for use by a clerk following a customer enquiry. The Financial Institution completes the specification of a new foreign exchange service, and the details are made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_0Q6z9yhgEeOjHu3a6otf0Q" name="Accounting Entry Balanced"
+        sourceRef="_0GPN5ihgEeOjHu3a6otf0Q" targetRef="_0GPN4ChgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_0Q6z-ChgEeOjHu3a6otf0Q">FULL NAME: Value Calculated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the mathematical determination of a monetary, financial amount.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has calculated a monthly loan repayment figure using loan amount, interest rate and term. The Financial Institution has calculated an amount which represents the total current commercial loan exposure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Calculate, Accumulate and sometimes Determine.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_0Q6z-ShgEeOjHu3a6otf0Q" name="YTD Prfty Control Account Value Accumulated"
+        sourceRef="_0GPN4ChgEeOjHu3a6otf0Q" targetRef="_0GP08ShgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_0Q6z-ihgEeOjHu3a6otf0Q">FULL NAME: Value Calculated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the mathematical determination of a monetary, financial amount.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has calculated a monthly loan repayment figure using loan amount, interest rate and term. The Financial Institution has calculated an amount which represents the total current commercial loan exposure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Calculate, Accumulate and sometimes Determine.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_0Q6z-yhgEeOjHu3a6otf0Q" name="Profitability Control Account Value Accumulated"
+        sourceRef="_0GOm1ihgEeOjHu3a6otf0Q" targetRef="_0GP09yhgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_0Q6z_ChgEeOjHu3a6otf0Q">FULL NAME: Value Calculated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the mathematical determination of a monetary, financial amount.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution calculates a monthly loan repayment figure using loan amount, interest rate and term. The Financial Institution calculates an amount which represents the total current commercial loan exposure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Calculate, Accumulate and sometimes Determine.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_0Q6z_ShgEeOjHu3a6otf0Q" name="Accounting Entry Required"
+        sourceRef="_0GP09yhgEeOjHu3a6otf0Q" targetRef="_0GPN5ihgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_0Q6z_ihgEeOjHu3a6otf0Q">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_0Q7a8ChgEeOjHu3a6otf0Q" name="Channel Profitability Rating Scale Applied"
+        sourceRef="_0GP08ShgEeOjHu3a6otf0Q" targetRef="_0MN6FyhgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0Q7a8ShgEeOjHu3a6otf0Q" name="Arrangement Prfty Rating Scale Applied"
+        sourceRef="_0MN6GihgEeOjHu3a6otf0Q" targetRef="_0GNYuihgEeOjHu3a6otf0Q"/>
+    <bpmn2:dataObject id="_0aVOlChgEeOjHu3a6otf0Q" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_0aVOlShgEeOjHu3a6otf0Q" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_0aVOlihgEeOjHu3a6otf0Q" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_0aV1oChgEeOjHu3a6otf0Q" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_0aV1oShgEeOjHu3a6otf0Q" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+  </bpmn2:process>
+  <bpmn2:globalTask id="_0GMxqShgEeOjHu3a6otf0Q" name="Map to Retrieve Profitability Control Account Value">
+    <bpmn2:ioSpecification id="_0GMxqihgEeOjHu3a6otf0Q">
+      <bpmn2:dataInput id="_0GNYsShgEeOjHu3a6otf0Q" name="Channel Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWwcT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_0GNYsyhgEeOjHu3a6otf0Q" name="Accounting Unit" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GYXl8MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_0GNYtChgEeOjHu3a6otf0Q" name="Arrangement Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_0GNYtShgEeOjHu3a6otf0Q" name="Customer Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHwMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_0GNYtihgEeOjHu3a6otf0Q" name="Market Segment Details"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZtCscT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_0GNYtyhgEeOjHu3a6otf0Q" name="Product Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2zv8T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_0GNYuChgEeOjHu3a6otf0Q" name="Channel Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWwcT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_0GNYuShgEeOjHu3a6otf0Q" name="Full Customer Details"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaH2MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_0GMxqyhgEeOjHu3a6otf0Q">
+        <bpmn2:dataInputRefs>_0GNYsShgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_0GNYsChgEeOjHu3a6otf0Q">
+        <bpmn2:dataOutputRefs>_0GNYsyhgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_0GNYtChgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_0GNYtShgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_0GNYtihgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_0GNYtyhgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_0GNYuChgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_0GNYuShgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+</bpmn2:definitions>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_GWk2MMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"
+    xmlns:_GXn_EMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"
+    xmlns:_HHTv3sT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_HHTv3sT2EeGIlOhhn7SrtQ"
+    xmlns:_y4MGYChgEeOjHu3a6otf0Q="http://www.ibm.com/xtools/bpmn/2.0/_y4MGYChgEeOjHu3a6otf0Q"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_y4MGYChgEeOjHu3a6otf0Q" name="Record FMO Transaction Details"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_y4MGYChgEeOjHu3a6otf0Q"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_y4MGYyhgEeOjHu3a6otf0Q"
+      visible="true" type="Bpmn2" element="_y4MGYihgEeOjHu3a6otf0Q" name="Record%20FMO%20Transaction%20Details Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_zTRf4ShgEeOjHu3a6otf0Q" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_z9uLEChgEeOjHu3a6otf0Q" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Service%20Processes/Financial%20Transaction%20Processing/IPaymentProcessing/Record%20Transaction%20Details%20Service.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_HHTv3sT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_z9uLGihgEeOjHu3a6otf0Q" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:extension xmi:id="_y4MGYShgEeOjHu3a6otf0Q" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_y4Q-4ihgEeOjHu3a6otf0Q" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_PBAjsSiMEeO1PvbDA98QvA" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_y4MGYihgEeOjHu3a6otf0Q" name="Record FMO Transaction Details">
+    <bpmn2:documentation id="_y4Q-4yhgEeOjHu3a6otf0Q">SHORT NAME: Rcrd FMO Trans Dtls&#xD;
+&#xD;
+B LEVEL ROOT: Record * Details&#xD;
+&#xD;
+DEFINITION: To take formal note of the details about a financial market offering (FMO) transaction.&#xD;
+&#xD;
+DESCRIPTION: Record the details of the financial market offering transaction, using an automated deal capture system, inputting to a dealing system manually or by generating a paper deal ticket which is later manually input. For issuing a Certificate of Deposit, Money Market Loan or Deposit, record the customer name, address, account number to be charged, deal date, start date, maturity date, issue date, currency and amount, nominal interest rate, percentage price, yield rate, drawing commission fee, safekeeping instructions, last interest date, whether interest is on a 360 or 365 day calculation basis, the dealer, broker and counterparty details, any special conditions such as interest payment frequency, interest anniversary, method of payment, and rollover instructions. &#xD;
+&#xD;
+For a foreign exchange transaction, record additional details such as value date, bought or sold amount, cross rate, Euro rate, United States Dollar rate, commission, charges, total amount, settlement instructions including our purchase or sale nostro accounts, their agent, instructions and beneficiary, who pays the brokerage fee. &#xD;
+&#xD;
+For a listed security, record details such as the side (buy or sell), instrument traded, quantity, trade date, settlement date, price, price type (yield or amount), trade currency, settlement currency, place of trade, place of settlement, who pays brokerage fees.&#xD;
+&#xD;
+For an Interest Rate Swap, record additional spot and forward details, fixing details, payment conventions, premiums, etc. &#xD;
+&#xD;
+For an Equity Swap, record details of the instrument(s) being swapped, the interest fixing and payment conventions (such as fixing date, roll date, period start and end dates, initial and/or final stubs, how interest is calculated, etc).&#xD;
+&#xD;
+Such a record will pass details of the transaction to the counterparty's broker or clearing house, the dealer's profit and loss accounts, dealing room profit and loss accounts, position keeper's record, the Financial Institution's general ledger, a risk management system, confirmation, reconciliation, settlement and payment systems.&#xD;
+&#xD;
+FLOW DIAGRAM: AS Chart for Record FMO Transaction Details</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_y4Q-4ChgEeOjHu3a6otf0Q">
+      <tagging:tag id="_y4Q-4ShgEeOjHu3a6otf0Q">Financial Market Offering Management</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_y4Q-5ChgEeOjHu3a6otf0Q">
+      <bpmn2:dataInput id="_0ZT64ShgEeOjHu3a6otf0Q" name="FMO Transaction Details"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHz8T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_y4Q-5ShgEeOjHu3a6otf0Q">
+        <bpmn2:dataInputRefs>_0ZT64ShgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_zTRf4ChgEeOjHu3a6otf0Q" name="Enterprise Process" partitionElementRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_zTRf4ihgEeOjHu3a6otf0Q">The default role for all enterprise process activities not explicitly assigned to other roles.</bpmn2:documentation>
+      <bpmn2:flowElementRef>_z9tkBShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z9uLHChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z9uLHihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_z9uLIihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0LuK0ihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0LuK1ShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0QEfaChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0QEfaShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HxuDsUIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_IPhaAUIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_z9tkBShgEeOjHu3a6otf0Q" name="Record Transaction Details"
+        isForCompensation="false" calledElement="_HHTv3sT2EeGIlOhhn7SrtQ:_HHTv4MT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_z9tkBihgEeOjHu3a6otf0Q">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_PBAjsCiMEeO1PvbDA98QvA">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_z9uLEShgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_z9uLFChgEeOjHu3a6otf0Q" name="Transaction Details" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GkbsHMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_z9uLEihgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_z9uLFChgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_z9uLEyhgEeOjHu3a6otf0Q"/>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_z9uLJChgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_y4MGYChgEeOjHu3a6otf0Q:_z9uLIihgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y4MGYChgEeOjHu3a6otf0Q:_z9uLFChgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_z9uLJihgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_z9uLHChgEeOjHu3a6otf0Q" name="Map to Record Transaction Details"
+        isForCompensation="false" calledElement="_y4MGYChgEeOjHu3a6otf0Q:_z9uLFShgEeOjHu3a6otf0Q">
+      <bpmn2:extensionElements xmi:id="_PBAjsiiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_z9uLHyhgEeOjHu3a6otf0Q">
+        <bpmn2:dataInput id="_0ftd1ihgEeOjHu3a6otf0Q" name="FMO Transaction Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHz8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_z9uLIShgEeOjHu3a6otf0Q" name="Transaction Details"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GkbsHMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_z9uLJShgEeOjHu3a6otf0Q">
+          <bpmn2:dataInputRefs>_0ftd1ihgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_z9uLIChgEeOjHu3a6otf0Q">
+          <bpmn2:dataOutputRefs>_z9uLIShgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_0k9KQChgEeOjHu3a6otf0Q" name="FMO Transaction Details">
+        <bpmn2:sourceRef>_y4MGYChgEeOjHu3a6otf0Q:_0ZT64ShgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y4MGYChgEeOjHu3a6otf0Q:_0ftd1ihgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_z9uLIyhgEeOjHu3a6otf0Q">
+        <bpmn2:sourceRef>_y4MGYChgEeOjHu3a6otf0Q:_z9uLIShgEeOjHu3a6otf0Q</bpmn2:sourceRef>
+        <bpmn2:targetRef>_y4MGYChgEeOjHu3a6otf0Q:_z9uLIihgEeOjHu3a6otf0Q</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_z9uLHShgEeOjHu3a6otf0Q" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_z9uLHihgEeOjHu3a6otf0Q" sourceRef="_z9uLHChgEeOjHu3a6otf0Q"
+        targetRef="_z9tkBShgEeOjHu3a6otf0Q"/>
+    <bpmn2:dataObject id="_z9uLIihgEeOjHu3a6otf0Q" name="Transaction Details" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GkbsHMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:startEvent id="_0LuK0ihgEeOjHu3a6otf0Q" name="Start">
+      <bpmn2:messageEventDefinition id="_0LuK0yhgEeOjHu3a6otf0Q" name="Counterparty Risk Acceptable">
+        <bpmn2:documentation id="_0LuK1ChgEeOjHu3a6otf0Q">FULL NAME: Positive Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to accept an offer or approve or endorse a course of action, or a selection has been made from available alternatives.&#xD;
+&#xD;
+EXAMPLES OF USE: Projected expenditure for the coming financial year will only be required if the budgeted items have received positive decisions. The type of decision will depend on the nature of the projected expense.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="_0LuK1ShgEeOjHu3a6otf0Q" name="End">
+      <bpmn2:messageEventDefinition id="_0LuK1ihgEeOjHu3a6otf0Q" name="FMO Transaction Details Recorded">
+        <bpmn2:documentation id="_0LuK1yhgEeOjHu3a6otf0Q">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="_0QEfaChgEeOjHu3a6otf0Q" name="Counterparty Risk Acceptable"
+        sourceRef="_0LuK0ihgEeOjHu3a6otf0Q" targetRef="_z9uLHChgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0QEfaShgEeOjHu3a6otf0Q" name="FMO Transaction Details Recorded"
+        sourceRef="_z9tkBShgEeOjHu3a6otf0Q" targetRef="_0LuK1ShgEeOjHu3a6otf0Q"/>
+    <bpmn2:startEvent id="_HxuDsUIZEeSedtiJ0SK07w" name="Start:1"/>
+    <bpmn2:sequenceFlow id="_IPhaAUIZEeSedtiJ0SK07w" name="Invoked By Business Process"
+        sourceRef="_HxuDsUIZEeSedtiJ0SK07w" targetRef="_z9uLHChgEeOjHu3a6otf0Q"/>
+  </bpmn2:process>
+  <bpmn2:globalTask id="_z9uLFShgEeOjHu3a6otf0Q" name="Map to Record Transaction Details">
+    <bpmn2:ioSpecification id="_z9uLFihgEeOjHu3a6otf0Q">
+      <bpmn2:dataInput id="_z9uLGShgEeOjHu3a6otf0Q" name="FMO Transaction Details"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHz8T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_z9uLGyhgEeOjHu3a6otf0Q" name="Transaction Details" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GkbsHMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_z9uLFyhgEeOjHu3a6otf0Q">
+        <bpmn2:dataInputRefs>_z9uLGShgEeOjHu3a6otf0Q</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_z9uLGChgEeOjHu3a6otf0Q">
+        <bpmn2:dataOutputRefs>_z9uLGyhgEeOjHu3a6otf0Q</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+</bpmn2:definitions>

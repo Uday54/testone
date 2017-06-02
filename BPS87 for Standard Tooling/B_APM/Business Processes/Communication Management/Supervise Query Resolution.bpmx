@@ -1,0 +1,1072 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_UfkbkLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"
+    xmlns:_UhWkQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"
+    xmlns:_aXq3fbxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_aXq3fbxuEeGCw9HgBpY34g"
+    xmlns:_arDGbLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_arDGbLxuEeGCw9HgBpY34g"
+    xmlns:_auLS5LxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_auLS5LxuEeGCw9HgBpY34g"
+    xmlns:_dq-bMLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_dq-bMLxuEeGCw9HgBpY34g"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_auLS5LxuEeGCw9HgBpY34g" name="Supervise Query Resolution"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_auLS5LxuEeGCw9HgBpY34g"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_auLS57xuEeGCw9HgBpY34g"
+      visible="true" type="Bpmn2" element="_auLS5rxuEeGCw9HgBpY34g" name="Supervise Query Resolution Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_auUc0rxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_aueN2LxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_zNoEW7xuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="Issue%20Query%20Response.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_arDGbLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_zNoEXbxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="Review%20Risk%20Position.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_dq-bMLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_zNoEXrxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../Arrangement%20Negotiation/Send%20Risk%20Report.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_aXq3fbxuEeGCw9HgBpY34g"/>
+  <bpmn2:extension xmi:id="_auLS5bxuEeGCw9HgBpY34g" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_a3xaUxwrEeOMUpRtwvEXUw" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_I4bTwfxiEeOPPNUUqxVo0g" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_auLS5rxuEeGCw9HgBpY34g" name="Supervise Query Resolution">
+    <bpmn2:documentation id="_auUc0LxuEeGCw9HgBpY34g">SHORT NAME: Sprvs Qury Rsln&#xD;
+&#xD;
+B LEVEL ROOT: Supervise General Business Event&#xD;
+&#xD;
+DEFINITION: To oversee the performance or operation of query resolution.&#xD;
+&#xD;
+DESCRIPTION: This workflow encompasses the activities necessary to supervise and identify trends in query resolution (such as volumes, service levels and timeliness of resolution) within the financial institution and to investigate the status of a particular query, compare the service level agreed with actual resolution performance, and, if unacceptable, consult with the query resolution owner to identify the problem causing delay, and take action to resolve the query. The query may either be resolved, or closed unresolved, with the customer being notified. In some cases the procedure may be modified to correct or prevent future occurrence of problems, and a risk report generated to alert the parties concerned of a trend that has been addressed.&#xD;
+&#xD;
+FLOW DIAGRAM: WF Chart for Supervise Query Resolution&#xD;
+&#xD;
+IBM Unique ID: CBPC0454</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_a3xaUBwrEeOMUpRtwvEXUw">
+      <tagging:tag id="_a3xaURwrEeOMUpRtwvEXUw">Communication Management</tagging:tag>
+      <tagging:tag id="_a3xaUhwrEeOMUpRtwvEXUw">ValueChain_SalesRelationshipManagement_Service</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_aueN1bxuEeGCw9HgBpY34g">
+      <bpmn2:dataInput id="_aueN17xuEeGCw9HgBpY34g" name="Communication Details" isCollection="false"
+          itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+      <bpmn2:dataOutput id="_aueN2rxuEeGCw9HgBpY34g" name="Communication Details"
+          isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+      <bpmn2:inputSet id="_aueN1rxuEeGCw9HgBpY34g">
+        <bpmn2:dataInputRefs>_aueN17xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_aueN2bxuEeGCw9HgBpY34g">
+        <bpmn2:dataOutputRefs>_aueN2rxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_auUc0bxuEeGCw9HgBpY34g" name="Customer Representative" partitionElementRef="_UhWkQLxuEeGCw9HgBpY34g:_U6igUbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_auUc07xuEeGCw9HgBpY34g">An employee of the financial institution who acts as a liason between the FI and the customer.&#xD;
+&#xD;
+IBM Unique ID: CBPC0646</bpmn2:documentation>
+      <bpmn2:flowElementRef>_auUc1rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_auUc2bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_auUc3LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_auUc4rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_auUc5bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_auUc6LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_auUc67xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_auUc7rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_auUc9LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_auUc97xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_auUc-rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_auUc_bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_auUdALxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_auUdA7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_auUdBrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_auUdDLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_auUdDbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_auUdDrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_auUdD7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_auUdELxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_auUdErxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_auUdE7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_aueN0LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_aueN0rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_aueN07xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_aueN27xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_aueN3LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_aueN3bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_aueN4rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_d8hLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_d8hbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_d8hrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_d8h7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_d8iLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_d8irxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_d8jrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_d8kbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_d8krxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_d8lLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_d8lrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_d8mLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_d8nLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_d8nbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_d8n7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_d8obxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_d8o7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_d8pbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_d8p7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_nGc7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_nGd7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_nGerxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_nGe7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_nGfbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_nGf7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_nGgbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_nGiLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_w3c7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_lADyYLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_lAWtVrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_lB_sELxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_lCSnAbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_lCvS87xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_lDe50bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_lDe50rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_lDe51bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_lDe53bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ddVYYUIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ddVYZEIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ddVYZ0IVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:lane id="_auUc1LxuEeGCw9HgBpY34g" name="Risk Manager" partitionElementRef="_UhWkQLxuEeGCw9HgBpY34g:_U6igVbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_auUc1bxuEeGCw9HgBpY34g">Manager responsible for the process of identification, analysis and either acceptance or mitigation of uncertainty in investment decision-making. Essentially, risk management occurs anytime an investor or fund manager analyzes and attempts to quantify the potential for losses in an investment and then takes the appropriate action (or inaction) given their investment objectives and risk tolerance.&#xD;
+&#xD;
+IBM Unique ID: CBP04673</bpmn2:documentation>
+      <bpmn2:flowElementRef>_auUc37xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_auUc8bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_auUdCbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_auUdEbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_aueN0bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_aueN1LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_aueN3rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_aueN4bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_d8ibxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_nGcrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_nGhbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_k_nGhrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_lDe51rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_lDe52rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ddVYa0IVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ddfJYkIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_auUc1rxuEeGCw9HgBpY34g" name="Consult Query Resolution Owner"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_at3xDrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_auUc2LxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_I4bTwPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_lANjYLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_lANjYrxuEeGCw9HgBpY34g" name="Involved Party Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00lrxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_lAqPU7xuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_lCSnA7xuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_lANjYbxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_lANjYrxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_lAqPU7xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_lCSnArxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_lCSnA7xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_lANjY7xuEeGCw9HgBpY34g" name="Involved Party Details">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_lADyYLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_lANjYrxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_lAqPVLxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_aueN17xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_lAqPU7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_lCSnBLxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_lCSnA7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_lCSnAbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_auUc17xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igUbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_auUc2bxuEeGCw9HgBpY34g" name="Initiate Performance Reward"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_at3xErxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_auUc27xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_I4bTwvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_auUc2rxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igUbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_auUc3LxuEeGCw9HgBpY34g" name="Analyze Query Resolution Status Details"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_at3xCLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_auUc3rxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_I4bTw_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_lAWtV7xuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_lB_sF7xuEeGCw9HgBpY34g" name="Communication Case" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlO-sLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_lDVv4LxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_lAWtWbxuEeGCw9HgBpY34g" name="Communication Case" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlO-sLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_lB_sFrxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_lB_sF7xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_lDVv4LxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_lAWtWLxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_lAWtWbxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_lB_sGLxuEeGCw9HgBpY34g" name="Communication Case">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_lB_sELxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_lB_sF7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_lDVv4bxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_aueN17xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_lDVv4LxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_lAWtWrxuEeGCw9HgBpY34g" name="Communication Case">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_lAWtWbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_lAWtVrxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_auUc3bxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igUbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_auUc37xuEeGCw9HgBpY34g" name="Generate Operational Risk Report"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_ULg9sBwrEeOMUpRtwvEXUw">
+      <bpmn2:documentation id="_auUc4bxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_I4bTxPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_Q9d34RwsEeOMUpRtwvEXUw" name="InputOutputSpecification1">
+        <bpmn2:dataInput id="_Q9d34xwsEeOMUpRtwvEXUw" name="Operational Risk Assessment"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UtRga7xuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_Q9d35BwsEeOMUpRtwvEXUw" name="Involved Party Identifier"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00mLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_Q9d35hwsEeOMUpRtwvEXUw" name="Risk Report" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UsYvo7xuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_Q9d34hwsEeOMUpRtwvEXUw" name="InputSet1">
+          <bpmn2:dataInputRefs>_Q9d34xwsEeOMUpRtwvEXUw</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_Q9d35BwsEeOMUpRtwvEXUw</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_Q9d35RwsEeOMUpRtwvEXUw" name="OutputSet1">
+          <bpmn2:dataOutputRefs>_Q9d35hwsEeOMUpRtwvEXUw</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_ddfJYUIVEeSFpMLLUsMfuA" name="Operational Risk Assessment">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_ddVYa0IVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_Q9d34xwsEeOMUpRtwvEXUw</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_ddfJY0IVEeSFpMLLUsMfuA" name="Risk Report">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_Q9d35hwsEeOMUpRtwvEXUw</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_ddfJYkIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_auUc4LxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igVbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_auUc4rxuEeGCw9HgBpY34g" name="Issue Query Response" isForCompensation="false"
+        calledElement="_arDGbLxuEeGCw9HgBpY34g:_arMQULxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_auUc5LxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_I4b60PxiEeOPPNUUqxVo0g">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_k_6BYLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_k_6BYrxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_Q9d36BwsEeOMUpRtwvEXUw" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_k_6BYbxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_k_6BYrxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_Q9d35xwsEeOMUpRtwvEXUw" name="OutputSet1">
+          <bpmn2:dataOutputRefs>_Q9d36BwsEeOMUpRtwvEXUw</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_k_6BY7xuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_k_w3c7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_k_6BYrxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_auUc47xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igUbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_auUc5bxuEeGCw9HgBpY34g" name="Select Query" isForCompensation="false"
+        calledElement="_UhWkQLxuEeGCw9HgBpY34g:_auLS4LxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_auUc57xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_I4b60fxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_lA9KQ7xuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_lA9KRbxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_lA9KRLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_lA9KRbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_lA9KRrxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_aueN17xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_lA9KRbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_auUc5rxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igUbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_auUc6LxuEeGCw9HgBpY34g" name="Generate Communication Details"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_a4E8UBwrEeOMUpRtwvEXUw">
+      <bpmn2:documentation id="_auUc6rxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_I4b60vxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_lBjAI7xuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_lBjAJbxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_Q9nB0BwsEeOMUpRtwvEXUw" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_lDL-47xuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_lBjAJLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_lBjAJbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_Q9nB0BwsEeOMUpRtwvEXUw</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_lDL-4rxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_lDL-47xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_ddVYZkIVEeSFpMLLUsMfuA" name="Communication Details">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_ddVYZEIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_lBjAJbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_lDL-5LxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_lDL-47xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_aueN2rxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_auUc6bxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igUbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_auUc67xuEeGCw9HgBpY34g" name="Modify Procedure" isForCompensation="false"
+        calledElement="_UhWkQLxuEeGCw9HgBpY34g:_dragGrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_auUc7bxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_I4b60_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_Q9nB0RwsEeOMUpRtwvEXUw" name="InputOutputSpecification1">
+        <bpmn2:dataInput id="_Q9nB0xwsEeOMUpRtwvEXUw" name="Procedure Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UsYvl7xuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_Q9nB0hwsEeOMUpRtwvEXUw" name="InputSet1">
+          <bpmn2:dataInputRefs>_Q9nB0xwsEeOMUpRtwvEXUw</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:resourceRole id="_auUc7LxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igUbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_auUc7rxuEeGCw9HgBpY34g" name="Close Unresolved Query"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_at3xCrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_auUc8LxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_I4b61PxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_lA9KUrxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_lA9KVLxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_lA9KU7xuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_lA9KVLxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_ddVYY0IVEeSFpMLLUsMfuA" name="Communication Details">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_ddVYYUIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_lA9KVLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_auUc77xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igUbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_auUc8bxuEeGCw9HgBpY34g" name="Review Risk Position" isForCompensation="false"
+        calledElement="_dq-bMLxuEeGCw9HgBpY34g:_dq-bMrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_auUc87xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_I4ch4PxiEeOPPNUUqxVo0g">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_auUc8rxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igVbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_auUc9LxuEeGCw9HgBpY34g" name="Prepare Query Response"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_arfLTrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_auUc9rxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_I4ch4fxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_k_w3dLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_lB2iIbxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_k_w3drxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_lB2iILxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_lB2iIbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_k_w3dbxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_k_w3drxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_ddVYaUIVEeSFpMLLUsMfuA" name="Communication Details">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_ddVYZ0IVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_lB2iIbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_k_w3d7xuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_k_w3drxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_k_w3c7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_auUc9bxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igUbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_auUc97xuEeGCw9HgBpY34g" name="Identify Problem Condition"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_at3xELxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_auUc-bxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_I4ch4vxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_lCmJArxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_lCmJBLxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_lC5D8bxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_lCmJA7xuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_lCmJBLxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_lC5D8LxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_lC5D8bxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_lCmJBbxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_lCSnAbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_lCmJBLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_lC5D8rxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_lC5D8bxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_lCvS87xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_auUc-LxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igUbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_auUc-rxuEeGCw9HgBpY34g" name="Select Resolution Option"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_auLS4rxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_auUc_LxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_I4ch4_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_lA9KS7xuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_lDC087xuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_lA9KTbxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_lDC08rxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_lDC087xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_lA9KTLxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_lA9KTbxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_lDC09LxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_lCvS87xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_lDC087xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_ddVYYkIVEeSFpMLLUsMfuA" name="Communication Details">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_lA9KTbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_ddVYYUIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_ddVYZUIVEeSFpMLLUsMfuA" name="Communication Details">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_lA9KTbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_ddVYZEIVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_ddVYaEIVEeSFpMLLUsMfuA" name="Communication Details">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_lA9KTbxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_ddVYZ0IVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_auUc-7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igUbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_auUc_bxuEeGCw9HgBpY34g" name="Analyze Potential Query Trend"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_at3xBrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_auUc_7xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_I4ch5PxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_lAgeU7xuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_lAgeVbxuEeGCw9HgBpY34g" name="Communication Case" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlO-sLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_lCJdErxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_lAgeVLxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_lAgeVbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_lCJdErxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_lAgeVrxuEeGCw9HgBpY34g" name="Communication Case">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_lAWtVrxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_lAgeVbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_lCJdE7xuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_aueN17xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_lCJdErxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_auUc_rxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igUbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_auUdALxuEeGCw9HgBpY34g" name="Compare Service Level with Performance"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_at3xDLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_auUdArxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_I4ch5fxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_k_nGirxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_k_nGjLxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_k_nGi7xuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_k_nGjLxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_k_nGjbxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_aueN17xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_k_nGjLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_auUdAbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igUbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_auUdA7xuEeGCw9HgBpY34g" name="Identify Query Resolution Owner"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_arfLSrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_auUdBbxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_I4ch5vxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_lADyYbxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_lAWtVLxuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_Q9wy0BwsEeOMUpRtwvEXUw" name="Involved Party Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00lrxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_lADyY7xuEeGCw9HgBpY34g" name="Involved Party Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00lrxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_Q9wy0RwsEeOMUpRtwvEXUw" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_lAWtU7xuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_lAWtVLxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_Q9wy0BwsEeOMUpRtwvEXUw</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_lADyYrxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_lADyY7xuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_Q9wy0RwsEeOMUpRtwvEXUw</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_lAWtVbxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_aueN17xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_lAWtVLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_lADyZLxuEeGCw9HgBpY34g" name="Involved Party Details">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_lADyY7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_lADyYLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_auUdBLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igUbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_auUdBrxuEeGCw9HgBpY34g" name="Retrieve Summary Query Resolution Status"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_at3xFLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_auUdCLxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_I4ch5_xiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_lAzZQbxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_lAzZQ7xuEeGCw9HgBpY34g" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_lB_sErxuEeGCw9HgBpY34g" name="Communication Case" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlO-sLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_lAzZQrxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_lAzZQ7xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_lB_sEbxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_lB_sErxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_lAzZRLxuEeGCw9HgBpY34g" name="Communication Details">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_aueN17xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_lAzZQ7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_lB_sE7xuEeGCw9HgBpY34g" name="Communication Case">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_lB_sErxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_lB_sELxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_auUdB7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igUbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_auUdCbxuEeGCw9HgBpY34g" name="Evaluate Operational Risk"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_aWoVnLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_auUdC7xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_I4ch6PxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_Q9wy0hwsEeOMUpRtwvEXUw" name="InputOutputSpecification1">
+        <bpmn2:dataInput id="_Q9wy1BwsEeOMUpRtwvEXUw" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_Q9wy1hwsEeOMUpRtwvEXUw" name="Operational Risk Assessment"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UtRga7xuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_Q9wy0xwsEeOMUpRtwvEXUw" name="InputSet1">
+          <bpmn2:dataInputRefs>_Q9wy1BwsEeOMUpRtwvEXUw</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_Q9wy1RwsEeOMUpRtwvEXUw" name="OutputSet1">
+          <bpmn2:dataOutputRefs>_Q9wy1hwsEeOMUpRtwvEXUw</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataOutputAssociation id="_ddfJYEIVEeSFpMLLUsMfuA" name="Operational Risk Assessment">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_Q9wy1hwsEeOMUpRtwvEXUw</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_ddVYa0IVEeSFpMLLUsMfuA</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_auUdCrxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igVbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:exclusiveGateway id="_auUdDLxuEeGCw9HgBpY34g"/>
+    <bpmn2:exclusiveGateway id="_auUdDbxuEeGCw9HgBpY34g"/>
+    <bpmn2:exclusiveGateway id="_auUdDrxuEeGCw9HgBpY34g"/>
+    <bpmn2:exclusiveGateway id="_auUdD7xuEeGCw9HgBpY34g"/>
+    <bpmn2:exclusiveGateway id="_auUdELxuEeGCw9HgBpY34g"/>
+    <bpmn2:exclusiveGateway id="_auUdEbxuEeGCw9HgBpY34g"/>
+    <bpmn2:endEvent id="_auUdErxuEeGCw9HgBpY34g" name="End">
+      <bpmn2:messageEventDefinition id="_k_d8jLxuEeGCw9HgBpY34g" name="Performance Reward Initiated">
+        <bpmn2:documentation id="_k_d8jbxuEeGCw9HgBpY34g">FULL NAME: Expected Activity Initiated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected specific, but otherwise not categorized occurrence of interest to the business has commenced.&#xD;
+&#xD;
+EXAMPLES OF USE: A procedure to optimise foreign currency holdings has been set in motion at beginning of an important series of international trade talks.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_auUdE7xuEeGCw9HgBpY34g" name="End:1">
+      <bpmn2:messageEventDefinition id="_k_d8j7xuEeGCw9HgBpY34g" name="Query Trend Not Verified">
+        <bpmn2:documentation id="_k_d8kLxuEeGCw9HgBpY34g">FULL NAME: Confirmation Not Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to not endorse a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: Susan Brown's promotion to acting supervisor has not been confirmed so no confirmation letter has been issued.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_aueN0LxuEeGCw9HgBpY34g" name="End:2">
+      <bpmn2:messageEventDefinition id="_k_d8mrxuEeGCw9HgBpY34g" name="Query Response Issued">
+        <bpmn2:documentation id="_k_d8m7xuEeGCw9HgBpY34g">FULL NAME: Communication Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: Some form of substantive contact has been caused by the enterprise to be directed or transmitted to another place.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used to formally mark the sending of any type of communication to enable the date or time of that communication to be referenced in the future.&#xD;
+&#xD;
+It is often used to 'start a clock' against which subsequent activity can be measured. For example, the sending of a Loan Arrangement Offer marks the start the one month period for which that offer is valid.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_aueN0bxuEeGCw9HgBpY34g" name="End:3">
+      <bpmn2:messageEventDefinition id="_k_nGcLxuEeGCw9HgBpY34g" name="Operational Risk Report Not Required">
+        <bpmn2:documentation id="_k_nGcbxuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_aueN0rxuEeGCw9HgBpY34g" name="End:4">
+      <bpmn2:messageEventDefinition id="_k_nGdbxuEeGCw9HgBpY34g" name="Unresolved Query Closed">
+        <bpmn2:documentation id="_k_nGdrxuEeGCw9HgBpY34g">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_aueN07xuEeGCw9HgBpY34g" name="End:5">
+      <bpmn2:messageEventDefinition id="_k_nGeLxuEeGCw9HgBpY34g" name="Procedure Modified">
+        <bpmn2:documentation id="_k_nGebxuEeGCw9HgBpY34g">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_aueN1LxuEeGCw9HgBpY34g" name="End:6">
+      <bpmn2:messageEventDefinition id="_k_nGg7xuEeGCw9HgBpY34g" name="Risk Review Position Reviewed">
+        <bpmn2:documentation id="_k_nGhLxuEeGCw9HgBpY34g">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:exclusiveGateway id="_aueN27xuEeGCw9HgBpY34g"/>
+    <bpmn2:startEvent id="_aueN3LxuEeGCw9HgBpY34g" name="Start">
+      <bpmn2:messageEventDefinition id="_L9sLMBwsEeOMUpRtwvEXUw" name="Query Resolution Supervision Scheduled">
+        <bpmn2:documentation id="_L9sLMRwsEeOMUpRtwvEXUw">FULL NAME:  Event Scheduled&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION:  An expected occurrence of interest to the business has resulted in the planning of an event to occur at a specified time in the future.&#xD;
+&#xD;
+EXAMPLES OF USE:  A meeting has been scheduled as a result of a customer enquiry activity to discuss product requirements.  A loan repayment schedule has been created to establish of a series of repayment due dates.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:startEvent id="_aueN3bxuEeGCw9HgBpY34g" name="Start:1">
+      <bpmn2:timerEventDefinition id="_lDe507xuEeGCw9HgBpY34g" name="Date Reached">
+        <bpmn2:documentation id="_lDe51LxuEeGCw9HgBpY34g">FULL NAME: Date Reached&#xD;
+&#xD;
+TRIGGER CATEGORY: Time Driven&#xD;
+&#xD;
+DEFINITION: A Time Trigger Type denoting that a specified date has been reached.&#xD;
+&#xD;
+EXAMPLES OF USE: On 25th June 1993, an insurance policy has matured and a payment to the customer is generated.</bpmn2:documentation>
+      </bpmn2:timerEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:callActivity id="_aueN3rxuEeGCw9HgBpY34g" name="Send Risk Report" isForCompensation="false"
+        calledElement="_aXq3fbxuEeGCw9HgBpY34g:_aXq3f7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_aueN4LxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_I4ch6fxiEeOPPNUUqxVo0g">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_Q9wy1xwsEeOMUpRtwvEXUw" name="InputOutputSpecification1">
+        <bpmn2:dataInput id="_Q9wy2RwsEeOMUpRtwvEXUw" name="Risk Report" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UsYvo7xuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_Q9wy2xwsEeOMUpRtwvEXUw" name="Communication Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_Q9wy2BwsEeOMUpRtwvEXUw" name="InputSet1">
+          <bpmn2:dataInputRefs>_Q9wy2RwsEeOMUpRtwvEXUw</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_Q9wy2hwsEeOMUpRtwvEXUw" name="OutputSet1">
+          <bpmn2:dataOutputRefs>_Q9wy2xwsEeOMUpRtwvEXUw</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_ddfJZEIVEeSFpMLLUsMfuA" name="Risk Report">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_ddfJYkIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_Q9wy2RwsEeOMUpRtwvEXUw</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_ddVYakIVEeSFpMLLUsMfuA" name="Communication Details">
+        <bpmn2:sourceRef>_auLS5LxuEeGCw9HgBpY34g:_Q9wy2xwsEeOMUpRtwvEXUw</bpmn2:sourceRef>
+        <bpmn2:targetRef>_auLS5LxuEeGCw9HgBpY34g:_aueN2rxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_aueN37xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_U6igVbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:endEvent id="_aueN4bxuEeGCw9HgBpY34g" name="End:7">
+      <bpmn2:messageEventDefinition id="_lDe52LxuEeGCw9HgBpY34g" name="Communication Completed">
+        <bpmn2:documentation id="_lDe52bxuEeGCw9HgBpY34g">FULL NAME: Expected Activity Completed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected specific, but otherwise not categorized occurrence of interest to the business has ended.&#xD;
+&#xD;
+EXAMPLES OF USE: A plan to relocate headquarters staff has been set in motion on the completion of negotiations to buy a development site.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_aueN4rxuEeGCw9HgBpY34g" name="End:8">
+      <bpmn2:messageEventDefinition id="_lDe527xuEeGCw9HgBpY34g" name="Communication Completed">
+        <bpmn2:documentation id="_lDe53LxuEeGCw9HgBpY34g">FULL NAME: Expected Activity Completed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected specific, but otherwise not categorized occurrence of interest to the business has ended.&#xD;
+&#xD;
+EXAMPLES OF USE: A plan to relocate headquarters staff has been set in motion on the completion of negotiations to buy a development site.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="_k_d8hLxuEeGCw9HgBpY34g" sourceRef="_auUc3LxuEeGCw9HgBpY34g"
+        targetRef="_auUdDLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_k_d8hbxuEeGCw9HgBpY34g" sourceRef="_auUdDbxuEeGCw9HgBpY34g"
+        targetRef="_auUc97xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_k_d8hrxuEeGCw9HgBpY34g" sourceRef="_auUc-rxuEeGCw9HgBpY34g"
+        targetRef="_auUdDrxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_k_d8h7xuEeGCw9HgBpY34g" sourceRef="_auUc_bxuEeGCw9HgBpY34g"
+        targetRef="_auUdD7xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_k_d8iLxuEeGCw9HgBpY34g" sourceRef="_auUdALxuEeGCw9HgBpY34g"
+        targetRef="_auUdELxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_k_d8ibxuEeGCw9HgBpY34g" sourceRef="_auUdCbxuEeGCw9HgBpY34g"
+        targetRef="_auUdEbxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_k_d8irxuEeGCw9HgBpY34g" name="Query Resolution Required"
+        sourceRef="_auUdDrxuEeGCw9HgBpY34g" targetRef="_auUc9LxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_k_d8i7xuEeGCw9HgBpY34g">FULL NAME: Selection Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A selection has been made from available alternatives.&#xD;
+&#xD;
+EXAMPLES OF USE: Mary Jones can be formally offered the post of Marketing Director as she has been selected from a short list of candidates.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_k_d8jrxuEeGCw9HgBpY34g" name="Performance Reward Initiated"
+        sourceRef="_auUc2bxuEeGCw9HgBpY34g" targetRef="_auUdErxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_k_d8kbxuEeGCw9HgBpY34g" name="Query Trend Not Verified"
+        sourceRef="_auUdD7xuEeGCw9HgBpY34g" targetRef="_auUdE7xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_k_d8krxuEeGCw9HgBpY34g" name="Query Selected" sourceRef="_auUc5bxuEeGCw9HgBpY34g"
+        targetRef="_auUdALxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_k_d8k7xuEeGCw9HgBpY34g">FULL NAME: Selection Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A selection has been made from available alternatives.&#xD;
+&#xD;
+EXAMPLES OF USE: Mary Jones can be formally offered the post of Marketing Director as she has been selected from a short list of candidates.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_k_d8lLxuEeGCw9HgBpY34g" name="Operational Risk Evaluation Required"
+        sourceRef="_auUdDrxuEeGCw9HgBpY34g" targetRef="_auUdCbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_k_d8lbxuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_k_d8lrxuEeGCw9HgBpY34g" name="Communication Required"
+        sourceRef="_auUdDrxuEeGCw9HgBpY34g" targetRef="_auUc6LxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_k_d8l7xuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_k_d8mLxuEeGCw9HgBpY34g" name="Potential Query Trend Identified"
+        sourceRef="_auUdDLxuEeGCw9HgBpY34g" targetRef="_auUc_bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_k_d8mbxuEeGCw9HgBpY34g">FULL NAME: Identification Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A decision has been made to regard a person or thing as being a specific instance, based on available evidence.&#xD;
+&#xD;
+EXAMPLES OF USE: A customer has been identified after comparing their signature with a specimen on file.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_k_d8nLxuEeGCw9HgBpY34g" name="Query Response Issued"
+        sourceRef="_auUc4rxuEeGCw9HgBpY34g" targetRef="_aueN0LxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_k_d8nbxuEeGCw9HgBpY34g" name="Query Closure Required"
+        sourceRef="_auUdDrxuEeGCw9HgBpY34g" targetRef="_auUc7rxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_k_d8nrxuEeGCw9HgBpY34g">FULL NAME: Selection Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A selection has been made from available alternatives.&#xD;
+&#xD;
+EXAMPLES OF USE: Mary Jones can be formally offered the post of Marketing Director as she has been selected from a short list of candidates.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_k_d8n7xuEeGCw9HgBpY34g" name="Query Resolution Service Review Required"
+        sourceRef="_auUdDLxuEeGCw9HgBpY34g" targetRef="_auUc5bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_k_d8oLxuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_k_d8obxuEeGCw9HgBpY34g" name="Query Resolution Owner Consulted"
+        sourceRef="_auUc1rxuEeGCw9HgBpY34g" targetRef="_auUdDbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_k_d8orxuEeGCw9HgBpY34g">FULL NAME: Expected Activity Completed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected specific, but otherwise not categorized occurrence of interest to the business has ended.&#xD;
+&#xD;
+EXAMPLES OF USE: A plan to relocate headquarters staff has been set in motion on the completion of negotiations to buy a development site.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_k_d8o7xuEeGCw9HgBpY34g" name="Risk Policy Review Scheduled"
+        sourceRef="_auUdDrxuEeGCw9HgBpY34g" targetRef="_auUc8bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_k_d8pLxuEeGCw9HgBpY34g">FULL NAME: Event Scheduled&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the planning of an event to occur at a specified time in the future.&#xD;
+&#xD;
+EXAMPLES OF USE: A meeting has been scheduled as a result of a customer enquiry activity to discuss product requirements. A loan repayment schedule has been created to establish of a series of repayment due dates.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_k_d8pbxuEeGCw9HgBpY34g" name="Query Resolution Owner Identified"
+        sourceRef="_auUdA7xuEeGCw9HgBpY34g" targetRef="_auUc1rxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_k_d8prxuEeGCw9HgBpY34g">FULL NAME: Identification Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A decision has been made to regard a person or thing as being a specific instance, based on available evidence.&#xD;
+&#xD;
+EXAMPLES OF USE: A customer has been identified after comparing their signature with a specimen on file.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_k_d8p7xuEeGCw9HgBpY34g" name="Query Response Prepared"
+        sourceRef="_auUc9LxuEeGCw9HgBpY34g" targetRef="_auUc4rxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_k_d8qLxuEeGCw9HgBpY34g">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_k_nGcrxuEeGCw9HgBpY34g" name="Operational Risk Report Not Required"
+        sourceRef="_auUdEbxuEeGCw9HgBpY34g" targetRef="_aueN0bxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_k_nGc7xuEeGCw9HgBpY34g" name="Summary Query Resolution Status Retrieved"
+        sourceRef="_auUdBrxuEeGCw9HgBpY34g" targetRef="_auUc3LxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_k_nGdLxuEeGCw9HgBpY34g">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_k_nGd7xuEeGCw9HgBpY34g" name="Unresolved Query Closed"
+        sourceRef="_auUc7rxuEeGCw9HgBpY34g" targetRef="_aueN0rxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_k_nGerxuEeGCw9HgBpY34g" name="Procedure Modified" sourceRef="_auUc67xuEeGCw9HgBpY34g"
+        targetRef="_aueN07xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_k_nGe7xuEeGCw9HgBpY34g" name="Query Trend Confirmed"
+        sourceRef="_auUdD7xuEeGCw9HgBpY34g" targetRef="_auUdDbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_k_nGfLxuEeGCw9HgBpY34g">FULL NAME: Confirmation Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to endorse a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: Susan Brown's promotion to acting supervisor has been confirmed, and she will now retain the post permanently.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_k_nGfbxuEeGCw9HgBpY34g" name="Problem Condition Identified"
+        sourceRef="_auUc97xuEeGCw9HgBpY34g" targetRef="_auUc-rxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_k_nGfrxuEeGCw9HgBpY34g">FULL NAME: Identification Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A decision has been made to regard a person or thing as being a specific instance, based on available evidence.&#xD;
+&#xD;
+EXAMPLES OF USE: A customer has been identified after comparing their signature with a specimen on file.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_k_nGf7xuEeGCw9HgBpY34g" name="Procedure Modification Required"
+        sourceRef="_auUdDrxuEeGCw9HgBpY34g" targetRef="_auUc67xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_k_nGgLxuEeGCw9HgBpY34g">FULL NAME: Service Quality Opportunity Identified&#xD;
+&#xD;
+TRIGGER CATEGORY: Opportunity Driven&#xD;
+&#xD;
+DEFINITION: An opportunity has been identified which addresses the degree of excellence found in the Financial Institution's goods and services and their delivery.&#xD;
+&#xD;
+EXAMPLES OF USE: It has been identified that the introduction of a new queuing system in bank branches will reduce the average customer waiting time by two minutes.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_k_nGgbxuEeGCw9HgBpY34g" name="Service Level Performance Unacceptable"
+        sourceRef="_auUdELxuEeGCw9HgBpY34g" targetRef="_auUdA7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_k_nGgrxuEeGCw9HgBpY34g">FULL NAME: Negative Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A negative choice has been made regarding a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: A risk management group is set up within the Financial Institution to review arrangement risk analysis and to apply internal controls to stop risky transactions from proceeding.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_k_nGhbxuEeGCw9HgBpY34g" name="Risk Review Position Reviewed"
+        sourceRef="_auUc8bxuEeGCw9HgBpY34g" targetRef="_aueN1LxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_k_nGhrxuEeGCw9HgBpY34g" name="Operational Risk Report Required"
+        sourceRef="_auUdEbxuEeGCw9HgBpY34g" targetRef="_auUc37xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_k_nGh7xuEeGCw9HgBpY34g">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_k_nGiLxuEeGCw9HgBpY34g" name="Service Level Performance Acceptable"
+        sourceRef="_auUdELxuEeGCw9HgBpY34g" targetRef="_auUc2bxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_k_nGibxuEeGCw9HgBpY34g">FULL NAME: Positive Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to accept an offer or approve or endorse a course of action, or a selection has been made from available alternatives.&#xD;
+&#xD;
+EXAMPLES OF USE: Projected expenditure for the coming financial year will only be required if the budgeted items have received positive decisions. The type of decision will depend on the nature of the projected expense.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_k_w3c7xuEeGCw9HgBpY34g" name="Communication Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_lADyYLxuEeGCw9HgBpY34g" name="Involved Party Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_Ul00lrxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_lAWtVrxuEeGCw9HgBpY34g" name="Communication Case" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlO-sLxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_lB_sELxuEeGCw9HgBpY34g" name="Communication Case" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlO-sLxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_lCSnAbxuEeGCw9HgBpY34g" name="Communication Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_lCvS87xuEeGCw9HgBpY34g" name="Communication Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_lDe50bxuEeGCw9HgBpY34g" sourceRef="_aueN27xuEeGCw9HgBpY34g"
+        targetRef="_auUdBrxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_lDe50rxuEeGCw9HgBpY34g" name="Query Resolution Supervision Scheduled"
+        sourceRef="_aueN3LxuEeGCw9HgBpY34g" targetRef="_aueN27xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_lDe51bxuEeGCw9HgBpY34g" name="Date Reached" sourceRef="_aueN3bxuEeGCw9HgBpY34g"
+        targetRef="_aueN27xuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_lDe51rxuEeGCw9HgBpY34g" name="Risk Report Generated"
+        sourceRef="_auUc37xuEeGCw9HgBpY34g" targetRef="_aueN3rxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_lDe517xuEeGCw9HgBpY34g">FULL NAME: Regulatory Information Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of Regulatory Information has been caused by the enterprise to be directed or transmitted to another place.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has sent a Balance Sheet Report to the Central Bank at the end of the month.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_lDe52rxuEeGCw9HgBpY34g" name="Communication Completed"
+        sourceRef="_aueN3rxuEeGCw9HgBpY34g" targetRef="_aueN4bxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_lDe53bxuEeGCw9HgBpY34g" name="Communication Completed"
+        sourceRef="_auUc6LxuEeGCw9HgBpY34g" targetRef="_aueN4rxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_ddVYYUIVEeSFpMLLUsMfuA" name="Communication Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_ddVYZEIVEeSFpMLLUsMfuA" name="Communication Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_ddVYZ0IVEeSFpMLLUsMfuA" name="Communication Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlYIoLxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_ddVYa0IVEeSFpMLLUsMfuA" name="Operational Risk Assessment"
+        isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UtRga7xuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_ddfJYkIVEeSFpMLLUsMfuA" name="Risk Report" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UsYvo7xuEeGCw9HgBpY34g"/>
+  </bpmn2:process>
+</bpmn2:definitions>

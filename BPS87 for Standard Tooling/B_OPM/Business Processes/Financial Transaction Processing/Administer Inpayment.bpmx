@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_GWk2MMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"
+    xmlns:_GXn_EMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"
+    xmlns:_MUC6MMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_MUC6MMT2EeGIlOhhn7SrtQ"
+    xmlns:_MY0FdMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_MY0FdMT2EeGIlOhhn7SrtQ"
+    xmlns:_MYq7gMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_MYq7gMT2EeGIlOhhn7SrtQ"
+    xmlns:_MhA_a8T2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_MhA_a8T2EeGIlOhhn7SrtQ"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_MYq7gMT2EeGIlOhhn7SrtQ" name="Administer Inpayment" expressionLanguage="http://www.w3.org/1999/XPath"
+    targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_MYq7gMT2EeGIlOhhn7SrtQ" typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_MYq7g8T2EeGIlOhhn7SrtQ"
+      visible="true" type="Bpmn2" element="_MYq7gsT2EeGIlOhhn7SrtQ" name="Administer Inpayment Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_N1p3dMT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_Or47nsT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="Administer%20Interbank%20Inpayment.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_MY0FdMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_Or47pcT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="Administer%20Deposit.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_MUC6MMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_Or47ssT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Service%20Processes/Financial%20Transaction%20Processing/IItemClearing/Administer%20Transaction%20Card%20Clearing%20Service.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_MhA_a8T2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_Or47uMT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:extension xmi:id="_MYq7gcT2EeGIlOhhn7SrtQ" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_eTq5dihgEeOjHu3a6otf0Q" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_LinKOSiMEeO1PvbDA98QvA" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_MYq7gsT2EeGIlOhhn7SrtQ" name="Administer Inpayment">
+    <bpmn2:documentation id="_MY0FcMT2EeGIlOhhn7SrtQ">SHORT NAME: Admin Inpymnt&#xD;
+&#xD;
+B LEVEL ROOT: Administer * Details&#xD;
+&#xD;
+DEFINITION: To receive as adequate or valid a payment to be credited to a customer's account.&#xD;
+&#xD;
+DESCRIPTION: This workflow encompasses the activities necessary for the financial institution to receive and accept cash or foreign currency or a guaranteed check or remittance in the form of settlement from a clearing system for which immediate credit is given.&#xD;
+&#xD;
+This also includes administering any batch files that may be received from the systems of the financial institution specifying payments from suppliers. In addition, it also covers the remittance received from a collection item for which no provisional credit was given originally, but which is now being credited in full to the depositor's account.&#xD;
+&#xD;
+This workflow handles the request for acceptance of an in-payment or funds receipt in a retail or wholesale (B2B, B2C) environment.&#xD;
+&#xD;
+FLOW DIAGRAM: WF Chart for Administer Inpayment</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_eTq5cChgEeOjHu3a6otf0Q">
+      <tagging:tag xmi:id="_Lg89UCiMEeO1PvbDA98QvA" id="_eTq5cShgEeOjHu3a6otf0Q">Financial Transaction Processing</tagging:tag>
+      <tagging:tag xmi:id="_Lg89USiMEeO1PvbDA98QvA" id="_eTq5cihgEeOjHu3a6otf0Q">ValueChain_TradeFinance_Payment</tagging:tag>
+      <tagging:tag xmi:id="_Lg89UiiMEeO1PvbDA98QvA" id="_eTq5cyhgEeOjHu3a6otf0Q">ValueChain_Payments_ReceiveVerify</tagging:tag>
+      <tagging:tag xmi:id="_Lg89UyiMEeO1PvbDA98QvA" id="_eTq5dChgEeOjHu3a6otf0Q">ValueChain_WealthManagement_Settle</tagging:tag>
+      <tagging:tag xmi:id="_Lg89VCiMEeO1PvbDA98QvA" id="_eTq5dShgEeOjHu3a6otf0Q">ValueChain_RegulatoryCompliance_Implement</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_MY0FccT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_PcLI-8T2EeGIlOhhn7SrtQ" name="Payment Instruction" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj4x8T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_PcUSsMT2EeGIlOhhn7SrtQ" name="Batch Payment Instruction"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM4MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_PcUSscT2EeGIlOhhn7SrtQ" name="Communication Details"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_MY0FcsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_PcLI-8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_PcUSsMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_MY0Fc8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_PcUSscT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_N1p3c8T2EeGIlOhhn7SrtQ" name="Customer Representative" partitionElementRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_zS_MBChgEeOjHu3a6otf0Q">An employee of the financial institution who acts as a liason between the FI and the customer.</bpmn2:documentation>
+      <bpmn2:flowElementRef>_Or47nMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Or47o8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Or47qsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Or47sMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Or47u8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Or47vcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Or47xMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Or47zcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Or47z8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PCig7MT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PCig78T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PCig8sT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PCig9cT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PE7G6MT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PKuz9MT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PKuz9cT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PKuz9sT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PKuz-MT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PKuz-sT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PKuz_MT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PKuz_cT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PKuz_sT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_FUXQcEIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KRwXhEIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KRwXhUIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KRwXhkIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KRwXh0IZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KRwXiEIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_Or47nMT2EeGIlOhhn7SrtQ" name="Administer Interbank Inpayment"
+        isForCompensation="false" calledElement="_MY0FdMT2EeGIlOhhn7SrtQ:_MY0FdsT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_Or47ncT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_LinKOCiMEeO1PvbDA98QvA">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_Or47n8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_Ps3QPcT2EeGIlOhhn7SrtQ" name="Batch Payment Instruction"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM4MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_Ps3QPsT2EeGIlOhhn7SrtQ" name="Payment Instruction" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj4x8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_Ps3QP8T2EeGIlOhhn7SrtQ" name="Communication Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_Or47oMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_Ps3QPcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_Ps3QPsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_Or47ocT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_Ps3QP8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_Lm17REIZEeSedtiJ0SK07w" name="Batch Payment Instruction">
+        <bpmn2:sourceRef>_MYq7gMT2EeGIlOhhn7SrtQ:_KRwXhUIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MYq7gMT2EeGIlOhhn7SrtQ:_Ps3QPcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_Lm17RUIZEeSedtiJ0SK07w" name="Payment Instruction">
+        <bpmn2:sourceRef>_MYq7gMT2EeGIlOhhn7SrtQ:_KRwXhkIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MYq7gMT2EeGIlOhhn7SrtQ:_Ps3QPsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_P2P2VcT2EeGIlOhhn7SrtQ" name="Communication Details">
+        <bpmn2:sourceRef>_MYq7gMT2EeGIlOhhn7SrtQ:_Ps3QP8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MYq7gMT2EeGIlOhhn7SrtQ:_PcUSscT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_Or47osT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_Or47o8T2EeGIlOhhn7SrtQ" name="Administer Deposit" isForCompensation="false"
+        calledElement="_MUC6MMT2EeGIlOhhn7SrtQ:_MUC6MsT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_Or47pMT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_LinxQCiMEeO1PvbDA98QvA">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_Or47psT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_Ps3QQMT2EeGIlOhhn7SrtQ" name="Payment Instruction" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj4x8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_Ps3QQcT2EeGIlOhhn7SrtQ" name="Communication Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_Or47p8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_Ps3QQMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_Or47qMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_Ps3QQcT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_Lm17RkIZEeSedtiJ0SK07w" name="Payment Instruction">
+        <bpmn2:sourceRef>_MYq7gMT2EeGIlOhhn7SrtQ:_KRwXhEIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MYq7gMT2EeGIlOhhn7SrtQ:_Ps3QQMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_P2P2V8T2EeGIlOhhn7SrtQ" name="Communication Details">
+        <bpmn2:sourceRef>_MYq7gMT2EeGIlOhhn7SrtQ:_Ps3QQcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MYq7gMT2EeGIlOhhn7SrtQ:_PcUSscT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_Or47qcT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_Or47qsT2EeGIlOhhn7SrtQ" name="Determine Payment Instruction Type"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_HfSyB8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_Or47q8T2EeGIlOhhn7SrtQ">Throw exception and exit process, if payment type is not 'DEPOSIT', 'INTERBANK INPAYMENT'</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_LinxQSiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_Or47rMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_Ps3QQsT2EeGIlOhhn7SrtQ" name="Payment Instruction" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj4x8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_Ps3QQ8T2EeGIlOhhn7SrtQ" name="Batch Payment Instruction"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM4MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_Ps3QRMT2EeGIlOhhn7SrtQ" name="Payment Instruction"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj4x8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_Ps3QRcT2EeGIlOhhn7SrtQ" name="Batch Payment Instruction"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM4MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_Or47rcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_Ps3QQsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_Ps3QQ8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_Or47rsT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_Ps3QRMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_Ps3QRcT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_P2P2WMT2EeGIlOhhn7SrtQ" name="Payment Instruction">
+        <bpmn2:sourceRef>_MYq7gMT2EeGIlOhhn7SrtQ:_PcLI-8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MYq7gMT2EeGIlOhhn7SrtQ:_Ps3QQsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_P2P2WcT2EeGIlOhhn7SrtQ" name="Batch Payment Instruction">
+        <bpmn2:sourceRef>_MYq7gMT2EeGIlOhhn7SrtQ:_PcUSsMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MYq7gMT2EeGIlOhhn7SrtQ:_Ps3QQ8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_Lm17R0IZEeSedtiJ0SK07w" name="Payment Instruction">
+        <bpmn2:sourceRef>_MYq7gMT2EeGIlOhhn7SrtQ:_Ps3QRMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MYq7gMT2EeGIlOhhn7SrtQ:_KRwXhEIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_Lm17SEIZEeSedtiJ0SK07w" name="Batch Payment Instruction">
+        <bpmn2:sourceRef>_MYq7gMT2EeGIlOhhn7SrtQ:_Ps3QRcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MYq7gMT2EeGIlOhhn7SrtQ:_KRwXhUIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_Lm17SUIZEeSedtiJ0SK07w" name="Payment Instruction">
+        <bpmn2:sourceRef>_MYq7gMT2EeGIlOhhn7SrtQ:_Ps3QRMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MYq7gMT2EeGIlOhhn7SrtQ:_KRwXhkIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_Lm17SkIZEeSedtiJ0SK07w" name="Payment Instruction">
+        <bpmn2:sourceRef>_MYq7gMT2EeGIlOhhn7SrtQ:_Ps3QRMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MYq7gMT2EeGIlOhhn7SrtQ:_KRwXh0IZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_Lm17S0IZEeSedtiJ0SK07w" name="Batch Payment Instruction">
+        <bpmn2:sourceRef>_MYq7gMT2EeGIlOhhn7SrtQ:_Ps3QRcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MYq7gMT2EeGIlOhhn7SrtQ:_KRwXiEIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_Or47r8T2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_Or47sMT2EeGIlOhhn7SrtQ" name="Administer Transaction Card Clearing"
+        isForCompensation="false" calledElement="_MhA_a8T2EeGIlOhhn7SrtQ:_MhA_bcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_Or47scT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_Liw7MyiMEeO1PvbDA98QvA">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_Or47wcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_Or47w8T2EeGIlOhhn7SrtQ" name="Card Payment Transaction"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GkbsHMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_Or471MT2EeGIlOhhn7SrtQ" name="Payment Status" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_Or47wsT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_Or47w8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_Or4708T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_Or471MT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_Or47xsT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_MYq7gMT2EeGIlOhhn7SrtQ:_Or47xMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MYq7gMT2EeGIlOhhn7SrtQ:_Or47w8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_FUXQcUIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_MYq7gMT2EeGIlOhhn7SrtQ:_Or471MT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MYq7gMT2EeGIlOhhn7SrtQ:_FUXQcEIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_Or472sT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_Or47u8T2EeGIlOhhn7SrtQ" name="Map to Administer Transaction Card Clearing"
+        isForCompensation="false" calledElement="_MYq7gMT2EeGIlOhhn7SrtQ:_Or47s8T2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_Liw7NCiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_Or47vsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_Ps3QRsT2EeGIlOhhn7SrtQ" name="Payment Instruction" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj4x8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_Ps3QR8T2EeGIlOhhn7SrtQ" name="Batch Payment Instruction"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM4MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_Or47wMT2EeGIlOhhn7SrtQ" name="Card Payment Transaction"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GkbsHMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_Or472MT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_Ps3QRsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_Ps3QR8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_Or47v8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_Or47wMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_Lm17TEIZEeSedtiJ0SK07w" name="Payment Instruction">
+        <bpmn2:sourceRef>_MYq7gMT2EeGIlOhhn7SrtQ:_KRwXh0IZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MYq7gMT2EeGIlOhhn7SrtQ:_Ps3QRsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_Lm17TUIZEeSedtiJ0SK07w" name="Batch Payment Instruction">
+        <bpmn2:sourceRef>_MYq7gMT2EeGIlOhhn7SrtQ:_KRwXiEIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MYq7gMT2EeGIlOhhn7SrtQ:_Ps3QR8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_Or47xcT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_MYq7gMT2EeGIlOhhn7SrtQ:_Or47wMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MYq7gMT2EeGIlOhhn7SrtQ:_Or47xMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_Or47vMT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_Or47vcT2EeGIlOhhn7SrtQ" sourceRef="_Or47u8T2EeGIlOhhn7SrtQ"
+        targetRef="_Or47sMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_Or47xMT2EeGIlOhhn7SrtQ" name="Card Payment Transaction"
+        isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GkbsHMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_Or47zcT2EeGIlOhhn7SrtQ" name="Map from Administer Transaction Card Clearing"
+        isForCompensation="false" calledElement="_MYq7gMT2EeGIlOhhn7SrtQ:_Or47x8T2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_Liw7NSiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_Or470MT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_Or470sT2EeGIlOhhn7SrtQ" name="Payment Status" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_Ps3QSMT2EeGIlOhhn7SrtQ" name="Communication Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_Or470cT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_Or470sT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_Or472cT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_Ps3QSMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_FUXQckIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_MYq7gMT2EeGIlOhhn7SrtQ:_FUXQcEIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MYq7gMT2EeGIlOhhn7SrtQ:_Or470sT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_P2P2XsT2EeGIlOhhn7SrtQ" name="Communication Details">
+        <bpmn2:sourceRef>_MYq7gMT2EeGIlOhhn7SrtQ:_Ps3QSMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_MYq7gMT2EeGIlOhhn7SrtQ:_PcUSscT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_Or47zsT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_Or47z8T2EeGIlOhhn7SrtQ" sourceRef="_Or47sMT2EeGIlOhhn7SrtQ"
+        targetRef="_Or47zcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:startEvent id="_PCig7MT2EeGIlOhhn7SrtQ" name="Start">
+      <bpmn2:messageEventDefinition id="_PCig7cT2EeGIlOhhn7SrtQ" name="Payment Instruction Received">
+        <bpmn2:documentation id="_PCig7sT2EeGIlOhhn7SrtQ">FULL NAME: Information Received&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: Some form of information has become known to the enterprise.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used where the precise nature of the information received is not yet known, or where multiple information types are concerned.&#xD;
+&#xD;
+For example, all new or changed information which has been received by the Financial Institution may be processed by the incoming mail department.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="_PCig78T2EeGIlOhhn7SrtQ" name="End">
+      <bpmn2:messageEventDefinition id="_PCig8MT2EeGIlOhhn7SrtQ" name="Communication Completed">
+        <bpmn2:documentation id="_PCig8cT2EeGIlOhhn7SrtQ">FULL NAME: Expected Activity Completed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected specific, but otherwise not categorized occurrence of interest to the business has ended.&#xD;
+&#xD;
+EXAMPLES OF USE: A plan to relocate headquarters staff has been set in motion on the completion of negotiations to buy a development site.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_PCig8sT2EeGIlOhhn7SrtQ" name="End:1">
+      <bpmn2:messageEventDefinition id="_PCig88T2EeGIlOhhn7SrtQ" name="Communication Completed">
+        <bpmn2:documentation id="_PCig9MT2EeGIlOhhn7SrtQ">FULL NAME: Expected Activity Completed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected specific, but otherwise not categorized occurrence of interest to the business has ended.&#xD;
+&#xD;
+EXAMPLES OF USE: A plan to relocate headquarters staff has been set in motion on the completion of negotiations to buy a development site.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_PCig9cT2EeGIlOhhn7SrtQ" name="End:2">
+      <bpmn2:messageEventDefinition id="_PCig9sT2EeGIlOhhn7SrtQ" name="Communication Completed">
+        <bpmn2:documentation id="_PCig98T2EeGIlOhhn7SrtQ">FULL NAME: Expected Activity Completed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected specific, but otherwise not categorized occurrence of interest to the business has ended.&#xD;
+&#xD;
+EXAMPLES OF USE: A plan to relocate headquarters staff has been set in motion on the completion of negotiations to buy a development site.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:exclusiveGateway id="_PE7G6MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PKuz9MT2EeGIlOhhn7SrtQ" sourceRef="_Or47qsT2EeGIlOhhn7SrtQ"
+        targetRef="_PE7G6MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PKuz9cT2EeGIlOhhn7SrtQ" name="Payment Instruction Received"
+        sourceRef="_PCig7MT2EeGIlOhhn7SrtQ" targetRef="_Or47qsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PKuz9sT2EeGIlOhhn7SrtQ" name="Deposit Instruction Received"
+        sourceRef="_PE7G6MT2EeGIlOhhn7SrtQ" targetRef="_Or47o8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PKuz98T2EeGIlOhhn7SrtQ">FULL NAME: Information Received&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: Some form of information has become known to the enterprise.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used where the precise nature of the information received is not yet known, or where multiple information types are concerned.&#xD;
+&#xD;
+For example, all new or changed information which has been received by the Financial Institution may be processed by the incoming mail department.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PKuz-MT2EeGIlOhhn7SrtQ" name="B2B Payment Instruction Received"
+        sourceRef="_PE7G6MT2EeGIlOhhn7SrtQ" targetRef="_Or47nMT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PKuz-cT2EeGIlOhhn7SrtQ">A Trigger Category encompassing all Trigger Types concerned with communications.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PKuz-sT2EeGIlOhhn7SrtQ" name="Point Of Sale Transaction Approval Given"
+        sourceRef="_PE7G6MT2EeGIlOhhn7SrtQ" targetRef="_Or47u8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PKuz-8T2EeGIlOhhn7SrtQ">FULL NAME: Approval Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to approve a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: A personal loan can be offered to John Smith because his application has been approved by the Financial Institution.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PKuz_MT2EeGIlOhhn7SrtQ" name="Communication Completed"
+        sourceRef="_Or47nMT2EeGIlOhhn7SrtQ" targetRef="_PCig78T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PKuz_cT2EeGIlOhhn7SrtQ" name="Communication Completed"
+        sourceRef="_Or47zcT2EeGIlOhhn7SrtQ" targetRef="_PCig8sT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PKuz_sT2EeGIlOhhn7SrtQ" name="Communication Completed"
+        sourceRef="_Or47o8T2EeGIlOhhn7SrtQ" targetRef="_PCig9cT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_FUXQcEIZEeSedtiJ0SK07w" name="Payment Status" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_KRwXhEIZEeSedtiJ0SK07w" name="Payment Instruction" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj4x8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_KRwXhUIZEeSedtiJ0SK07w" name="Batch Payment Instruction"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM4MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_KRwXhkIZEeSedtiJ0SK07w" name="Payment Instruction" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj4x8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_KRwXh0IZEeSedtiJ0SK07w" name="Payment Instruction" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj4x8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_KRwXiEIZEeSedtiJ0SK07w" name="Batch Payment Instruction"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM4MT2EeGIlOhhn7SrtQ"/>
+  </bpmn2:process>
+  <bpmn2:globalTask id="_Or47s8T2EeGIlOhhn7SrtQ" name="Map to Administer Transaction Card Clearing">
+    <bpmn2:ioSpecification id="_Or47tMT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_Or47t8T2EeGIlOhhn7SrtQ" name="Payment Instruction" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj4x8T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_Or47ucT2EeGIlOhhn7SrtQ" name="Batch Payment Instruction"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM4MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_Or47usT2EeGIlOhhn7SrtQ" name="Card Payment Transaction"
+          isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GkbsHMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_Or47tcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_Or47t8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_Or47ucT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_Or47tsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_Or47usT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_Or47x8T2EeGIlOhhn7SrtQ" name="Map from Administer Transaction Card Clearing">
+    <bpmn2:ioSpecification id="_Or47yMT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_Or47y8T2EeGIlOhhn7SrtQ" name="Payment Status" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_Or47zMT2EeGIlOhhn7SrtQ" name="Communication Details"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_Or47ycT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_Or47y8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_Or47ysT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_Or47zMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+</bpmn2:definitions>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_GWk2MMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"
+    xmlns:_GXn_EMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"
+    xmlns:_ItEzgMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_ItEzgMT2EeGIlOhhn7SrtQ"
+    xmlns:_LgMbYMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_LgMbYMT2EeGIlOhhn7SrtQ"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_ItEzgMT2EeGIlOhhn7SrtQ" name="Generate Payment Authorization Communication"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_ItEzgMT2EeGIlOhhn7SrtQ"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_ItEzg8T2EeGIlOhhn7SrtQ"
+      visible="true" type="Bpmn2" element="_ItEzgsT2EeGIlOhhn7SrtQ" name="Generate Payment Authorization Communication Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_N1WVP8T2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_N6bC8MT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Service%20Processes/Communication%20Management/ICommunicationResponseProvision/Generate%20Communication%20Details%20Service.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_LgMbYMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_N6bC9sT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:extension xmi:id="_ItEzgcT2EeGIlOhhn7SrtQ" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_ToGHkihgEeOjHu3a6otf0Q" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_GW1B0iiMEeO1PvbDA98QvA" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_ItEzgsT2EeGIlOhhn7SrtQ" name="Generate Payment Authorization Communication">
+    <bpmn2:documentation id="_ItOkgMT2EeGIlOhhn7SrtQ">SHORT NAME: Gnrte Pymt Athrztn Comm&#xD;
+&#xD;
+B LEVEL ROOT: Generate Communication&#xD;
+&#xD;
+DEFINITION: To produce a payment authorization communication using precise criteria or rules.&#xD;
+   &#xD;
+DESCRIPTION: This activity string encompasses the activities necessary for the financial institution to generate a payment authorization communication.&#xD;
+&#xD;
+SWIFT MT Message 752 - Authorization of Payment or Acceptance or Negotiation.&#xD;
+&#xD;
+Advises a bank which has requested authorization to pay, accept, negotiate or incur a deferred payment undertaking that the presentation of the documents may be honored, notwithstanding the discrepancies, provided they are otherwise in order.&#xD;
+&#xD;
+MT 752&#xD;
+----------&#xD;
+- Presenting Bank's Reference&#xD;
+- Further Identification&#xD;
+- Date of Advice of Discrepancy or Mailing&#xD;
+- Total Amount Advised&#xD;
+- Charges Deducted&#xD;
+- Net Amount - Sender's Correspondent&#xD;
+- Receiver's Correspondent&#xD;
+- Sender to Receiver Information&#xD;
+&#xD;
+FLOW DIAGRAM: AS Chart for Generate Payment Authorization Com</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_ToGHkChgEeOjHu3a6otf0Q">
+      <tagging:tag xmi:id="_GWx-gCiMEeO1PvbDA98QvA" id="_ToGHkShgEeOjHu3a6otf0Q">Arrangement Administration</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_ItOkgcT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_PWzgo8T2EeGIlOhhn7SrtQ" name="Communication Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_PWzgpMT2EeGIlOhhn7SrtQ" name="Communication Details"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_ItOkgsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_PWzgo8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_ItOkg8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_PWzgpMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_N1WVPsT2EeGIlOhhn7SrtQ" name="Enterprise Process" partitionElementRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_zSqb6ChgEeOjHu3a6otf0Q">The default role for all enterprise process activities not explicitly assigned to other roles.</bpmn2:documentation>
+      <bpmn2:flowElementRef>_N6bC7sT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_N6bC-sT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_N6bC_MT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_N6bDB8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PBDTBsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PF0e_8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0Jy4MihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0MeYwChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_BvVDdkIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_BvVDeUIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HspWmEIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_HzDggkIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_N6bC7sT2EeGIlOhhn7SrtQ" name="Generate Communication Details"
+        isForCompensation="false" calledElement="_LgMbYMT2EeGIlOhhn7SrtQ:_LgMbYsT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_N6bC78T2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_GW1B0SiMEeO1PvbDA98QvA">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_N6bDAsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_N6bDBMT2EeGIlOhhn7SrtQ" name="Information Content" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Ggj4vMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_N6bDBcT2EeGIlOhhn7SrtQ" name="Channel" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWwcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_N6bDBsT2EeGIlOhhn7SrtQ" name="Commuication Targets"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_N6kMGMT2EeGIlOhhn7SrtQ" name="Communication" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_N6bDA8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_N6bDBMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_N6bDBcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_N6bDBsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_N6kMF8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_N6kMGMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_N6bDCcT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_ItEzgMT2EeGIlOhhn7SrtQ:_N6bDB8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_ItEzgMT2EeGIlOhhn7SrtQ:_N6bDBMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_BvVDeEIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_ItEzgMT2EeGIlOhhn7SrtQ:_BvVDdkIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_ItEzgMT2EeGIlOhhn7SrtQ:_N6bDBcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_BvVDe0IZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_ItEzgMT2EeGIlOhhn7SrtQ:_BvVDeUIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_ItEzgMT2EeGIlOhhn7SrtQ:_N6bDBsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_LSIPuUIZEeSedtiJ0SK07w" name="Communication Details">
+        <bpmn2:sourceRef>_ItEzgMT2EeGIlOhhn7SrtQ:_N6kMGMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_ItEzgMT2EeGIlOhhn7SrtQ:_PWzgpMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_N6kMHsT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_N6bC-sT2EeGIlOhhn7SrtQ" name="Map to Generate Communication Details"
+        isForCompensation="false" calledElement="_ItEzgMT2EeGIlOhhn7SrtQ:_N6bC8cT2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_GW1B0yiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_N6bC_cT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PgoyDcT2EeGIlOhhn7SrtQ" name="Communication Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_N6bC_8T2EeGIlOhhn7SrtQ" name="Information Content"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Ggj4vMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_N6bDAMT2EeGIlOhhn7SrtQ" name="Channel" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWwcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_N6bDAcT2EeGIlOhhn7SrtQ" name="Commuication Targets"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_N6kMHMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PgoyDcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_N6bC_sT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_N6bC_8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_N6bDAMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_N6bDAcT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_Py94h8T2EeGIlOhhn7SrtQ" name="Communication Details">
+        <bpmn2:sourceRef>_ItEzgMT2EeGIlOhhn7SrtQ:_PWzgo8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_ItEzgMT2EeGIlOhhn7SrtQ:_PgoyDcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_N6bDCMT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_ItEzgMT2EeGIlOhhn7SrtQ:_N6bC_8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_ItEzgMT2EeGIlOhhn7SrtQ:_N6bDB8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_BvVDd0IZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_ItEzgMT2EeGIlOhhn7SrtQ:_N6bDAMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_ItEzgMT2EeGIlOhhn7SrtQ:_BvVDdkIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_BvVDekIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_ItEzgMT2EeGIlOhhn7SrtQ:_N6bDAcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_ItEzgMT2EeGIlOhhn7SrtQ:_BvVDeUIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_N6bC-8T2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_N6bC_MT2EeGIlOhhn7SrtQ" sourceRef="_N6bC-sT2EeGIlOhhn7SrtQ"
+        targetRef="_N6bC7sT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_N6bDB8T2EeGIlOhhn7SrtQ" name="Information Content" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Ggj4vMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:startEvent id="_PBDTBsT2EeGIlOhhn7SrtQ" name="Start"/>
+    <bpmn2:sequenceFlow id="_PF0e_8T2EeGIlOhhn7SrtQ" name="Doc Credit Payment Authorization Comm Required"
+        sourceRef="_PBDTBsT2EeGIlOhhn7SrtQ" targetRef="_N6bC-sT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:startEvent id="_0Jy4MihgEeOjHu3a6otf0Q" name="Start:1"/>
+    <bpmn2:sequenceFlow id="_0MeYwChgEeOjHu3a6otf0Q" name="Invoked By Business Process"
+        sourceRef="_0Jy4MihgEeOjHu3a6otf0Q" targetRef="_N6bC-sT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_BvVDdkIZEeSedtiJ0SK07w" name="Channel" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWwcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_BvVDeUIZEeSedtiJ0SK07w" name="Commuication Targets" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:endEvent id="_HspWmEIZEeSedtiJ0SK07w" name="End">
+      <bpmn2:messageEventDefinition id="_HspWmUIZEeSedtiJ0SK07w" name="Communication Completed">
+        <bpmn2:documentation id="_HspWmkIZEeSedtiJ0SK07w">FULL NAME: Expected Activity Completed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected specific, but otherwise not categorized occurrence of interest to the business has ended.&#xD;
+&#xD;
+EXAMPLES OF USE: A plan to relocate headquarters staff has been set in motion on the completion of negotiations to buy a development site.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="_HzDggkIZEeSedtiJ0SK07w" name="Communication Completed"
+        sourceRef="_N6bC7sT2EeGIlOhhn7SrtQ" targetRef="_HspWmEIZEeSedtiJ0SK07w"/>
+  </bpmn2:process>
+  <bpmn2:globalTask id="_N6bC8cT2EeGIlOhhn7SrtQ" name="Map to Generate Communication Details">
+    <bpmn2:ioSpecification id="_N6bC8sT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_N6bC9cT2EeGIlOhhn7SrtQ" name="Communication Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_N6bC98T2EeGIlOhhn7SrtQ" name="Information Content" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Ggj4vMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_N6bC-MT2EeGIlOhhn7SrtQ" name="Channel" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWwcT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_N6bC-cT2EeGIlOhhn7SrtQ" name="Commuication Targets" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_N6bC88T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_N6bC9cT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_N6bC9MT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_N6bC98T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_N6bC-MT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_N6bC-cT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+</bpmn2:definitions>

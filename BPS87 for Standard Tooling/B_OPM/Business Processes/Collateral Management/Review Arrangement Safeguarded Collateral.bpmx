@@ -1,0 +1,1082 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_GWk2MMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"
+    xmlns:_GXn_EMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"
+    xmlns:_GXxJAMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GXxJAMT2EeGIlOhhn7SrtQ"
+    xmlns:_LF0MxcT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_LF0MxcT2EeGIlOhhn7SrtQ"
+    xmlns:_LFOW18T2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_LFOW18T2EeGIlOhhn7SrtQ"
+    xmlns:_LRlXoMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_LRlXoMT2EeGIlOhhn7SrtQ"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_LRlXoMT2EeGIlOhhn7SrtQ" name="Review Arrangement Safeguarded Collateral"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_LRlXoMT2EeGIlOhhn7SrtQ"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_LRlXo8T2EeGIlOhhn7SrtQ"
+      visible="true" type="Bpmn2" element="_LRlXosT2EeGIlOhhn7SrtQ" name="Review Arrangement Safeguarded Collateral Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_N1gGrcT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_OaKS3cT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_OaTchcT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Service%20Processes/Risk%20Management/IRiskMonitoring/Generate%20Operational%20Risk%20Report%20Service.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_LFOW18T2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_OaTczcT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../Arrangement%20Negotiation/Send%20Risk%20Report.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_LF0MxcT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_OaTc1MT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Maps.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GXxJAMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:extension xmi:id="_LRlXocT2EeGIlOhhn7SrtQ" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_aTVQhyhgEeOjHu3a6otf0Q" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_JjqxQSiMEeO1PvbDA98QvA" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_LRlXosT2EeGIlOhhn7SrtQ" name="Review Arrangement Safeguarded Collateral">
+    <bpmn2:documentation id="_LRvIoMT2EeGIlOhhn7SrtQ">SHORT NAME: Rvw AR Sfgrd Cltrl&#xD;
+&#xD;
+B LEVEL ROOT: Review * Details&#xD;
+&#xD;
+DEFINITION: To look at or examine arrangement safeguarded collateral again.&#xD;
+&#xD;
+DESCRIPTION: This workflow encompasses the activities necessary to review safeguarded collateral for a specified financial institution arrangement in response to a request received from internal sources such as the auditors or accountants, or when a scheduled arrangement safeguarded collateral review date is reached. It includes identifying discrepancies in safeguarded collateral records versus physical documents held in the vault, reviewing the safeguarded collateral procedures, preparing and approving a review document, and if necessary requesting corrective action to be taken based on the finding and recommendations made in the review.&#xD;
+&#xD;
+FLOW DIAGRAM: WF Chart for Review Arrangement Safe Collateral</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_aTVQgChgEeOjHu3a6otf0Q">
+      <tagging:tag xmi:id="_JjNeQCiMEeO1PvbDA98QvA" id="_aTVQgShgEeOjHu3a6otf0Q">Collateral Management</tagging:tag>
+      <tagging:tag xmi:id="_JjNeQSiMEeO1PvbDA98QvA" id="_aTVQgihgEeOjHu3a6otf0Q">ValueChain_KYCAccountOpening_OperationalAndCreditRiskManagement</tagging:tag>
+      <tagging:tag xmi:id="_JjNeQiiMEeO1PvbDA98QvA" id="_aTVQgyhgEeOjHu3a6otf0Q">ValueChain_Lending_OperationalAndCreditRiskManagement</tagging:tag>
+      <tagging:tag xmi:id="_JjNeQyiMEeO1PvbDA98QvA" id="_aTVQhChgEeOjHu3a6otf0Q">ValueChain_CommercialSyndicatedLending_Settle</tagging:tag>
+      <tagging:tag xmi:id="_JjNeRCiMEeO1PvbDA98QvA" id="_aTVQhShgEeOjHu3a6otf0Q">ValueChain_Mortgages_OperationalAndCreditRiskManagement</tagging:tag>
+      <tagging:tag xmi:id="_JjNeRSiMEeO1PvbDA98QvA" id="_aTVQhihgEeOjHu3a6otf0Q">ValueChain_TradeFinance_OperationalAndCreditRiskManagement</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_LRvIocT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_ParUDsT2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_ParUD8T2EeGIlOhhn7SrtQ" name="Communication Details"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_LRvIosT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_ParUDsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_LRvIo8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_ParUD8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_N1gGrMT2EeGIlOhhn7SrtQ" name="Risk Manager" partitionElementRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GamaoMT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_zS2CEihgEeOjHu3a6otf0Q">Manager responsible for the process of identification, analysis and either acceptance or mitigation of uncertainty in investment decision-making. Essentially, risk management occurs anytime an investor or fund manager analyzes and attempts to quantify the potential for losses in an investment and then takes the appropriate action (or inaction) given their investment objectives and risk tolerance.</bpmn2:documentation>
+      <bpmn2:flowElementRef>_OaKS0MT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaKS1sT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaKS4MT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaKS4sT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTcFMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTcF8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTcHMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTcI8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTcJcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTcLMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTcQMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTcQ8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTcYMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTcacT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTca8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTcdMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTcd8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTcfcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTcg8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTcksT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTclMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTcpcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTcqMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTcq8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTcrsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTcscT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTctMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTcvcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTcv8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTcxcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTcy8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_OaTc0sT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PB8q-cT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PB8q_MT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PB8q_8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PB8rAsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PB8rBcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PB8rCMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PExVccT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PExVcsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PExVc8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PExVdMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJZW5MT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJZW7MT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJZW7cT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJZW7sT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJZW8MT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJZW88T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJZW98T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJZW-MT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJZW-sT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJZW-8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJZW_MT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJZW_cT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJZW_sT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJZXAMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PJZXAsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ParUBcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ParUBsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ParUB8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ParUCcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ParUCsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ParUC8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ParUDMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ParUDcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0IZxEyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0IZxFChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0IZxFShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0NsgwyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0NsgxChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0NsgxihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0NsgxyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0NsgyChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0NsgyihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0NsgzChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0NsgzihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0Nsg0ChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KKwXpEIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KKwXpUIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KKwXpkIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_OaKS0MT2EeGIlOhhn7SrtQ" name="Prepare Safeguarded Collateral Review Document"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_G96jCsT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OaKS0cT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JjqxQCiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OaKS0sT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PpSXu8T2EeGIlOhhn7SrtQ" name="Collateral Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWzcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_PpSXvMT2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PpSXvcT2EeGIlOhhn7SrtQ" name="Collateral Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWzcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PpSXvsT2EeGIlOhhn7SrtQ" name="Document Item" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHw8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PpSXv8T2EeGIlOhhn7SrtQ" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OaKS08T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PpSXu8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_PpSXvMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OaKS1MT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PpSXvcT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_PpSXvsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_PpSXv8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_P1Wd9sT2EeGIlOhhn7SrtQ" name="Collateral Details">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_ParUCcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_PpSXu8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_P1Wd98T2EeGIlOhhn7SrtQ" name="Arrangement Details">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_ParUCsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_PpSXvMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_P1Wd-MT2EeGIlOhhn7SrtQ" name="Collateral Details">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_PpSXvcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_ParUBcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_P1Wd-cT2EeGIlOhhn7SrtQ" name="Document Item">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_PpSXvsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_ParUBsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_P1Wd-sT2EeGIlOhhn7SrtQ" name="Arrangement Details">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_PpSXv8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_ParUB8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OaKS1cT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamaoMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OaKS1sT2EeGIlOhhn7SrtQ" name="Request Collateral Corrective Action"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_G96jD8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OaKS18T2EeGIlOhhn7SrtQ">It will be necessary to either update the Financial Institution's records or physically alter the amount of collateral held, or, if procedural discrepancies are detected, the procedure forsafeguarding collateral may need to be updated or enforced.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JjqxQiiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OaTcEMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_OaTcEsT2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_OaTcE8T2EeGIlOhhn7SrtQ" name="Collateral Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWzcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OaTcEcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_OaTcEsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_OaTcE8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_OaTcFsT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcFMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcEsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_OaTcGcT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcF8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcE8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_OaTcG8T2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamaoMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OaKS4MT2EeGIlOhhn7SrtQ" name="Map to Request Collateral Corrective Action"
+        isForCompensation="false" calledElement="_LRlXoMT2EeGIlOhhn7SrtQ:_OaKS2MT2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_JjqxQyiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OaKS48T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PpSXwMT2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_OaKS5cT2EeGIlOhhn7SrtQ" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_OaKS5sT2EeGIlOhhn7SrtQ" name="Collateral Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWzcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OaTcGsT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PpSXwMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OaKS5MT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_OaKS5cT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_OaKS5sT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_LjaMoUIZEeSedtiJ0SK07w" name="Arrangement Details">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_KKwXpEIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_PpSXwMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_OaTcFcT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaKS5cT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcFMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_OaTcGMT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaKS5sT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcF8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OaKS4cT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamaoMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_OaKS4sT2EeGIlOhhn7SrtQ" sourceRef="_OaKS4MT2EeGIlOhhn7SrtQ"
+        targetRef="_OaKS1sT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_OaTcFMT2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_OaTcF8T2EeGIlOhhn7SrtQ" name="Collateral Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWzcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_OaTcHMT2EeGIlOhhn7SrtQ" name="Review Collateral Safeguarding Procedure"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_G96jE8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OaTcHcT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JjqxRCiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OaTcKcT2EeGIlOhhn7SrtQ" name="InputOutputSpecification1">
+        <bpmn2:dataInput id="_OaTcK8T2EeGIlOhhn7SrtQ" name="Collateral Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWzcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_OaTcO8T2EeGIlOhhn7SrtQ" name="Collateral Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWzcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OaTcKsT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_OaTcK8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OaTcOsT2EeGIlOhhn7SrtQ" name="OutputSet1">
+          <bpmn2:dataOutputRefs>_OaTcO8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_OaTcLsT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcLMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcK8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_OaTcP8T2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamaoMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OaTcI8T2EeGIlOhhn7SrtQ" name="Map to Review Collateral Safeguarding Procedure"
+        isForCompensation="false" calledElement="_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcHsT2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_JjqxRSiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OaTcJsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutput id="_OaTcKMT2EeGIlOhhn7SrtQ" name="Collateral Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWzcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_zkB4sChgEeOjHu3a6otf0Q" name="InputSet1"/>
+        <bpmn2:outputSet id="_OaTcJ8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_OaTcKMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataOutputAssociation id="_OaTcLcT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcKMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcLMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OaTcJMT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamaoMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_OaTcJcT2EeGIlOhhn7SrtQ" sourceRef="_OaTcI8T2EeGIlOhhn7SrtQ"
+        targetRef="_OaTcHMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_OaTcLMT2EeGIlOhhn7SrtQ" name="Collateral Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWzcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_OaTcQMT2EeGIlOhhn7SrtQ" name="Schedule AR Safeguarded Collateral Review"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_G9xZZsT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OaTcQcT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JjqxRiiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:resourceRole id="_OaTcQsT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamaoMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OaTcQ8T2EeGIlOhhn7SrtQ" name="Approve Safeguarded Collateral Review Document"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_G96jAMT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OaTcRMT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JjqxRyiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OaTcU8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PpSXwcT2EeGIlOhhn7SrtQ" name="Collateral Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWzcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_PpSXwsT2EeGIlOhhn7SrtQ" name="Document Item" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHw8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_PpSXw8T2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_OaTcVcT2EeGIlOhhn7SrtQ" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_OaTcVsT2EeGIlOhhn7SrtQ" name="Collateral Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWzcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OaTcXcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PpSXwcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_PpSXwsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_PpSXw8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OaTcVMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_OaTcVcT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_OaTcVsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_P1Wd_MT2EeGIlOhhn7SrtQ" name="Collateral Details">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_ParUBcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_PpSXwcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_P1Wd_cT2EeGIlOhhn7SrtQ" name="Document Item">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_ParUBsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_PpSXwsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_P1Wd_sT2EeGIlOhhn7SrtQ" name="Arrangement Details">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_ParUB8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_PpSXw8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_LjaMokIZEeSedtiJ0SK07w" name="Arrangement Details">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcVcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_KKwXpEIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_LjaMo0IZEeSedtiJ0SK07w" name="Arrangement Details">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcVcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_KKwXpUIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_LjaMpEIZEeSedtiJ0SK07w" name="Arrangement Details">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcVcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_KKwXpkIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OaTcX8T2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamaoMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OaTcYMT2EeGIlOhhn7SrtQ" name="Compare Safeguarded Collateral with AR Details"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_G96jBcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OaTcYcT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JjqxSCiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OaTccMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_OaTccsT2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_OaTcc8T2EeGIlOhhn7SrtQ" name="Collateral Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWzcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PpSXxsT2EeGIlOhhn7SrtQ" name="Collateral Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWzcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PpSXx8T2EeGIlOhhn7SrtQ" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OaTcccT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_OaTccsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_OaTcc8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OaTce8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PpSXxsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_PpSXx8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_OaTcdsT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcdMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTccsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_OaTcecT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcd8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcc8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_P1WeAcT2EeGIlOhhn7SrtQ" name="Collateral Details">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_PpSXxsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_ParUCcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_P1WeAsT2EeGIlOhhn7SrtQ" name="Arrangement Details">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_PpSXx8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_ParUCsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OaTcfMT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamaoMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OaTcacT2EeGIlOhhn7SrtQ" name="Map to Compare Safeguarded Collateral with AR Details"
+        isForCompensation="false" calledElement="_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcYsT2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_JjqxSSiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OaTcbMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PpSXxcT2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_OaTcbsT2EeGIlOhhn7SrtQ" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_OaTcb8T2EeGIlOhhn7SrtQ" name="Collateral Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWzcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OaTcesT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PpSXxcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OaTcbcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_OaTcbsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_OaTcb8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_P1WeAMT2EeGIlOhhn7SrtQ" name="Arrangement Details">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_ParUDsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_PpSXxcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_OaTcdcT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcbsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcdMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_OaTceMT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcb8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcd8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OaTcasT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamaoMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_OaTca8T2EeGIlOhhn7SrtQ" sourceRef="_OaTcacT2EeGIlOhhn7SrtQ"
+        targetRef="_OaTcYMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_OaTcdMT2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_OaTcd8T2EeGIlOhhn7SrtQ" name="Collateral Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWzcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_OaTcfcT2EeGIlOhhn7SrtQ" name="Evaluate Operational Risk"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_G5TI2cT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OaTcfsT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JjqxSiiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OaTcf8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PpSXyMT2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PpSXycT2EeGIlOhhn7SrtQ" name="Operational Risk Assessment"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GamalMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OaTcgMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PpSXyMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OaTcgcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PpSXycT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_LjaMpUIZEeSedtiJ0SK07w" name="Arrangement Details">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_KKwXpkIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_PpSXyMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_P1WeBMT2EeGIlOhhn7SrtQ" name="Operational Risk Assessment">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_PpSXycT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_ParUDcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OaTcgsT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamaoMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OaTcg8T2EeGIlOhhn7SrtQ" name="Generate Operational Risk Report"
+        isForCompensation="false" calledElement="_LFOW18T2EeGIlOhhn7SrtQ:_LFOW2cT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OaTchMT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JjqxSyiMEeO1PvbDA98QvA">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OaTcncT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_OaTcn8T2EeGIlOhhn7SrtQ" name="Risk Score" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Hd9VIcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_OaTcoMT2EeGIlOhhn7SrtQ" name="Period Start" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GhTfoMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_OaTcocT2EeGIlOhhn7SrtQ" name="Period End" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GhTfoMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_OaTcosT2EeGIlOhhn7SrtQ" name="Expected Loss" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GjsFPcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_OaTco8T2EeGIlOhhn7SrtQ" name="Capital Coverage" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GjsFPcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_OaTcpMT2EeGIlOhhn7SrtQ" name="Mitigants" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GwqKPMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_OaTcxMT2EeGIlOhhn7SrtQ" name="Operational Risk Report"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_HGtSrsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OaTcnsT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_OaTcn8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_OaTcoMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_OaTcocT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_OaTcosT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_OaTco8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_OaTcpMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OaTcw8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_OaTcxMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_OaTcp8T2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcpcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcn8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_OaTcqsT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcqMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcoMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_OaTcrcT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcq8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcocT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_OaTcsMT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcrsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcosT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_OaTcs8T2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcscT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTco8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_OaTctsT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTctMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcpMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_OaTcxsT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcxMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcxcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OaTcysT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamaoMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OaTcksT2EeGIlOhhn7SrtQ" name="Map to Generate Operational Risk Report"
+        isForCompensation="false" calledElement="_LRlXoMT2EeGIlOhhn7SrtQ:_OaTchsT2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_JjqxTCiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OaTclcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PpSXysT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj41sT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_PpSXy8T2EeGIlOhhn7SrtQ" name="Operational Risk Assessment"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GamalMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_OaTcl8T2EeGIlOhhn7SrtQ" name="Risk Score" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Hd9VIcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_OaTcmMT2EeGIlOhhn7SrtQ" name="Period Start" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GhTfoMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_OaTcmcT2EeGIlOhhn7SrtQ" name="Period End" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GhTfoMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_OaTcmsT2EeGIlOhhn7SrtQ" name="Expected Loss" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GjsFPcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_OaTcm8T2EeGIlOhhn7SrtQ" name="Capital Coverage" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GjsFPcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_OaTcnMT2EeGIlOhhn7SrtQ" name="Mitigants" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GwqKPMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OaTcyMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PpSXysT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_PpSXy8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OaTclsT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_OaTcl8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_OaTcmMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_OaTcmcT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_OaTcmsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_OaTcm8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_OaTcnMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_P1WeBcT2EeGIlOhhn7SrtQ" name="Involved Party Identifier">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_ParUC8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_PpSXysT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_P1WeBsT2EeGIlOhhn7SrtQ" name="Operational Risk Assessment">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_ParUDcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_PpSXy8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_OaTcpsT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcl8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcpcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_OaTcqcT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcmMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcqMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_OaTcrMT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcmcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcq8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_OaTcr8T2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcmsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcrsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_OaTcssT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcm8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcscT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_OaTctcT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcnMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTctMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OaTck8T2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamaoMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_OaTclMT2EeGIlOhhn7SrtQ" sourceRef="_OaTcksT2EeGIlOhhn7SrtQ"
+        targetRef="_OaTcg8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_OaTcpcT2EeGIlOhhn7SrtQ" name="Risk Score" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Hd9VIcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_OaTcqMT2EeGIlOhhn7SrtQ" name="Period Start" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GhTfoMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_OaTcq8T2EeGIlOhhn7SrtQ" name="Period End" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GhTfoMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_OaTcrsT2EeGIlOhhn7SrtQ" name="Expected Loss" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GjsFPcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_OaTcscT2EeGIlOhhn7SrtQ" name="Capital Coverage" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GjsFPcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_OaTctMT2EeGIlOhhn7SrtQ" name="Mitigants" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GwqKPMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_OaTcvcT2EeGIlOhhn7SrtQ" name="Map from Generate Operational Risk Report"
+        isForCompensation="false" calledElement="_LRlXoMT2EeGIlOhhn7SrtQ:_OaTct8T2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_JjqxTSiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OaTcwMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_OaTcwsT2EeGIlOhhn7SrtQ" name="Operational Risk Report"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_HGtSrsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PpSXzMT2EeGIlOhhn7SrtQ" name="Risk Report" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GacprsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OaTcwcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_OaTcwsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OaTcycT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PpSXzMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_OaTcx8T2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcxcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_OaTcwsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_P1WeB8T2EeGIlOhhn7SrtQ" name="Risk Report">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_PpSXzMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_ParUDMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OaTcvsT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamaoMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_OaTcv8T2EeGIlOhhn7SrtQ" sourceRef="_OaTcg8T2EeGIlOhhn7SrtQ"
+        targetRef="_OaTcvcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_OaTcxcT2EeGIlOhhn7SrtQ" name="Operational Risk Report"
+        isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_HGtSrsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_OaTcy8T2EeGIlOhhn7SrtQ" name="Send Risk Report" isForCompensation="false"
+        calledElement="_LF0MxcT2EeGIlOhhn7SrtQ:_LF0Mx8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OaTczMT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JjqxTiiMEeO1PvbDA98QvA">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OaTczsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PpSXzcT2EeGIlOhhn7SrtQ" name="Risk Report" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GacprsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PpSXzsT2EeGIlOhhn7SrtQ" name="Communication Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OaTcz8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PpSXzcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OaTc0MT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PpSXzsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_P1WeCMT2EeGIlOhhn7SrtQ" name="Risk Report">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_ParUDMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_PpSXzcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_P1WeCcT2EeGIlOhhn7SrtQ" name="Communication Details">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_PpSXzsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_ParUD8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OaTc0cT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamaoMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_OaTc0sT2EeGIlOhhn7SrtQ" name="XMap AR Details to IP Identifier"
+        isForCompensation="false" calledElement="_GXxJAMT2EeGIlOhhn7SrtQ:_IJwrTcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_OaTc08T2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_JjqxTyiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_OaTc1cT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PpSXz8T2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PpSX0MT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj41sT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_OaTc1sT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PpSXz8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_OaTc18T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PpSX0MT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_LjaMpkIZEeSedtiJ0SK07w" name="Arrangement Details">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_KKwXpUIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_PpSXz8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_P1WeC8T2EeGIlOhhn7SrtQ" name="Involved Party Identifier">
+        <bpmn2:sourceRef>_LRlXoMT2EeGIlOhhn7SrtQ:_PpSX0MT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_LRlXoMT2EeGIlOhhn7SrtQ:_ParUC8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_OaTc2MT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamaoMT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:endEvent id="_PB8q-cT2EeGIlOhhn7SrtQ" name="End">
+      <bpmn2:messageEventDefinition id="_PB8q-sT2EeGIlOhhn7SrtQ" name="Operational Risk Report Not Required">
+        <bpmn2:documentation id="_PB8q-8T2EeGIlOhhn7SrtQ">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_PB8q_MT2EeGIlOhhn7SrtQ" name="End:1">
+      <bpmn2:messageEventDefinition id="_PB8q_cT2EeGIlOhhn7SrtQ" name="Safeguarded Collateral Review Document Approved">
+        <bpmn2:documentation id="_PB8q_sT2EeGIlOhhn7SrtQ">FULL NAME: Approval Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to approve a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: A personal loan can be offered to John Smith because his application has been approved by the Financial Institution.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_PB8q_8T2EeGIlOhhn7SrtQ" name="End:2">
+      <bpmn2:messageEventDefinition id="_PB8rAMT2EeGIlOhhn7SrtQ" name="Collateral Corrective Action Requested">
+        <bpmn2:documentation id="_PB8rAcT2EeGIlOhhn7SrtQ">FULL NAME: Expected Activity Initiated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected specific, but otherwise not categorized occurrence of interest to the business has commenced.&#xD;
+&#xD;
+EXAMPLES OF USE: A procedure to optimise foreign currency holdings has been set in motion at beginning of an important series of international trade talks.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="_PB8rAsT2EeGIlOhhn7SrtQ" name="Start">
+      <bpmn2:messageEventDefinition id="_PB8rA8T2EeGIlOhhn7SrtQ" name="Arrangement Safegd Collateral Review Requested">
+        <bpmn2:documentation id="_PB8rBMT2EeGIlOhhn7SrtQ">FULL NAME: Expected Activity Initiated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION:  An expected specific, but otherwise not categorized occurrence of interest to the business has commenced.&#xD;
+&#xD;
+EXAMPLES OF USE:  A procedure to optimize foreign currency holdings has been set in motion at beginning of an important series of international trade talks.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:startEvent id="_PB8rBcT2EeGIlOhhn7SrtQ" name="Start:1">
+      <bpmn2:timerEventDefinition id="_PB8rBsT2EeGIlOhhn7SrtQ" name="Date Reached">
+        <bpmn2:documentation id="_PB8rB8T2EeGIlOhhn7SrtQ">FULL NAME: Date Reached&#xD;
+&#xD;
+TRIGGER CATEGORY: Time Driven&#xD;
+&#xD;
+DEFINITION: A Time Trigger Type denoting that a specified date has been reached.&#xD;
+&#xD;
+EXAMPLES OF USE: On 25th June 1993, an insurance policy has matured and a payment to the customer is generated.</bpmn2:documentation>
+      </bpmn2:timerEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="_PB8rCMT2EeGIlOhhn7SrtQ" name="End:3">
+      <bpmn2:messageEventDefinition id="_PB8rCcT2EeGIlOhhn7SrtQ" name="Communication Completed">
+        <bpmn2:documentation id="_PB8rCsT2EeGIlOhhn7SrtQ">FULL NAME: Expected Activity Completed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected specific, but otherwise not categorized occurrence of interest to the business has ended.&#xD;
+&#xD;
+EXAMPLES OF USE: A plan to relocate headquarters staff has been set in motion on the completion of negotiations to buy a development site.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:exclusiveGateway id="_PExVccT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:parallelGateway id="_PExVcsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:exclusiveGateway id="_PExVc8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:exclusiveGateway id="_PExVdMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PJZW5MT2EeGIlOhhn7SrtQ" name="Safeguarded Collateral Review Document Prepared"
+        sourceRef="_OaKS0MT2EeGIlOhhn7SrtQ" targetRef="_OaTcQ8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PJZW5cT2EeGIlOhhn7SrtQ">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PJZW7MT2EeGIlOhhn7SrtQ" sourceRef="_PExVccT2EeGIlOhhn7SrtQ"
+        targetRef="_OaTcacT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PJZW7cT2EeGIlOhhn7SrtQ" sourceRef="_PExVcsT2EeGIlOhhn7SrtQ"
+        targetRef="_PExVccT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PJZW7sT2EeGIlOhhn7SrtQ" name="Arrangement Safegd Collateral Review Scheduled"
+        sourceRef="_OaTcQMT2EeGIlOhhn7SrtQ" targetRef="_PExVcsT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PJZW78T2EeGIlOhhn7SrtQ">FULL NAME: Event Scheduled&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the planning of an event to occur at a specified time in the future.&#xD;
+&#xD;
+EXAMPLES OF USE: A meeting has been scheduled as a result of a customer enquiry activity to discuss product requirements. A loan repayment schedule has been created to establish of a series of repayment due dates.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PJZW8MT2EeGIlOhhn7SrtQ" sourceRef="_OaTcYMT2EeGIlOhhn7SrtQ"
+        targetRef="_PExVc8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PJZW88T2EeGIlOhhn7SrtQ" name="Safeguarded Collateral Discrepancy Identified"
+        sourceRef="_PExVc8T2EeGIlOhhn7SrtQ" targetRef="_OaTcI8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PJZW9MT2EeGIlOhhn7SrtQ">FULL NAME: Identification Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A decision has been made to regard a person or thing as being a specific instance, based on available evidence.&#xD;
+&#xD;
+EXAMPLES OF USE: A customer has been identified after comparing their signature with a specimen on file.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PJZW98T2EeGIlOhhn7SrtQ" sourceRef="_OaTcfcT2EeGIlOhhn7SrtQ"
+        targetRef="_PExVdMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PJZW-MT2EeGIlOhhn7SrtQ" name="Operational Risk Report Not Required"
+        sourceRef="_PExVdMT2EeGIlOhhn7SrtQ" targetRef="_PB8q-cT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PJZW-sT2EeGIlOhhn7SrtQ" name="Collateral Corrective Action Requested"
+        sourceRef="_OaKS1sT2EeGIlOhhn7SrtQ" targetRef="_PB8q_8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PJZW-8T2EeGIlOhhn7SrtQ" name="Arrangement Safegd Collateral Review Requested"
+        sourceRef="_PB8rAsT2EeGIlOhhn7SrtQ" targetRef="_PExVccT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PJZW_MT2EeGIlOhhn7SrtQ" name="Date Reached" sourceRef="_PB8rBcT2EeGIlOhhn7SrtQ"
+        targetRef="_PExVcsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PJZW_cT2EeGIlOhhn7SrtQ" name="Communication Completed"
+        sourceRef="_OaTcy8T2EeGIlOhhn7SrtQ" targetRef="_PB8rCMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PJZW_sT2EeGIlOhhn7SrtQ" name="Risk Report Generated"
+        sourceRef="_OaTcvcT2EeGIlOhhn7SrtQ" targetRef="_OaTcy8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PJZW_8T2EeGIlOhhn7SrtQ">FULL NAME: Regulatory Information Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of Regulatory Information has been caused by the enterprise to be directed or transmitted to another place.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has sent a Balance Sheet Report to the Central Bank at the end of the month.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PJZXAMT2EeGIlOhhn7SrtQ" name="Operational Risk Report Required"
+        sourceRef="_OaTc0sT2EeGIlOhhn7SrtQ" targetRef="_OaTcksT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PJZXAcT2EeGIlOhhn7SrtQ">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PJZXAsT2EeGIlOhhn7SrtQ" name="Operational Risk Report Required"
+        sourceRef="_PExVdMT2EeGIlOhhn7SrtQ" targetRef="_OaTc0sT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PJZXA8T2EeGIlOhhn7SrtQ">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_ParUBcT2EeGIlOhhn7SrtQ" name="Collateral Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWzcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_ParUBsT2EeGIlOhhn7SrtQ" name="Document Item" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHw8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_ParUB8T2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_ParUCcT2EeGIlOhhn7SrtQ" name="Collateral Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWzcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_ParUCsT2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_ParUC8T2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj41sT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_ParUDMT2EeGIlOhhn7SrtQ" name="Risk Report" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GacprsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_ParUDcT2EeGIlOhhn7SrtQ" name="Operational Risk Assessment"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GamalMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:exclusiveGateway id="_0IZxEyhgEeOjHu3a6otf0Q"/>
+    <bpmn2:exclusiveGateway id="_0IZxFChgEeOjHu3a6otf0Q"/>
+    <bpmn2:parallelGateway id="_0IZxFShgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0NsgwyhgEeOjHu3a6otf0Q" sourceRef="_0IZxEyhgEeOjHu3a6otf0Q"
+        targetRef="_OaKS0MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_0NsgxChgEeOjHu3a6otf0Q" name="Collateral Safeguarding Procedure Reviewed"
+        sourceRef="_OaTcHMT2EeGIlOhhn7SrtQ" targetRef="_0IZxEyhgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_0NsgxShgEeOjHu3a6otf0Q">FULL NAME: Service Quality Opportunity Identified&#xD;
+&#xD;
+TRIGGER CATEGORY: Opportunity Driven&#xD;
+&#xD;
+DEFINITION: An opportunity has been identified which addresses the degree of excellence found in the Financial Institution's goods and services and their delivery.&#xD;
+&#xD;
+EXAMPLES OF USE: It has been identified that the introduction of a new queuing system in bank branches will reduce the average customer waiting time by two minutes.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_0NsgxihgEeOjHu3a6otf0Q" sourceRef="_OaTcQ8T2EeGIlOhhn7SrtQ"
+        targetRef="_0IZxFChgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0NsgxyhgEeOjHu3a6otf0Q" sourceRef="_0IZxFChgEeOjHu3a6otf0Q"
+        targetRef="_0IZxFShgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0NsgyChgEeOjHu3a6otf0Q" name="Collateral Corrective Action Required"
+        sourceRef="_0IZxFShgEeOjHu3a6otf0Q" targetRef="_OaKS4MT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_0NsgyShgEeOjHu3a6otf0Q">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_0NsgyihgEeOjHu3a6otf0Q" name="Collateral Corrective Action Required"
+        sourceRef="_0IZxFShgEeOjHu3a6otf0Q" targetRef="_OaTcQMT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_0NsgyyhgEeOjHu3a6otf0Q">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_0NsgzChgEeOjHu3a6otf0Q" name="Sfgrdd Collateral Discrepancy Not Identified"
+        sourceRef="_PExVc8T2EeGIlOhhn7SrtQ" targetRef="_0IZxEyhgEeOjHu3a6otf0Q">
+      <bpmn2:documentation id="_0NsgzShgEeOjHu3a6otf0Q">FULL NAME: Identification Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A decision has been made to regard a person or thing as being a specific instance, based on available evidence.&#xD;
+&#xD;
+EXAMPLES OF USE: A customer has been identified after comparing their signature with a specimen on file.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_0NsgzihgEeOjHu3a6otf0Q" name="Collateral Corrective Action Required"
+        sourceRef="_0IZxFShgEeOjHu3a6otf0Q" targetRef="_OaTcfcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_0NsgzyhgEeOjHu3a6otf0Q">FULL NAME: Decision Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A positive or negative choice has been made with relation to a course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling, to record that a specific activity or set of activities is driven by the making of a decision.&#xD;
+&#xD;
+This Trigger Type is used only if it is not yet known what type of decision will act as the stimulus, or where multiple decision types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_0Nsg0ChgEeOjHu3a6otf0Q" name="Safeguarded Collateral Review Document Approved"
+        sourceRef="_0IZxFChgEeOjHu3a6otf0Q" targetRef="_PB8q_MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_KKwXpEIZEeSedtiJ0SK07w" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_KKwXpUIZEeSedtiJ0SK07w" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_KKwXpkIZEeSedtiJ0SK07w" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+  </bpmn2:process>
+  <bpmn2:globalTask id="_OaKS2MT2EeGIlOhhn7SrtQ" name="Map to Request Collateral Corrective Action">
+    <bpmn2:ioSpecification id="_OaKS2cT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_OaKS3MT2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_OaKS3sT2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_OaKS38T2EeGIlOhhn7SrtQ" name="Collateral Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWzcT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_OaKS2sT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_OaKS3MT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_OaKS28T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_OaKS3sT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_OaKS38T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_OaTcHsT2EeGIlOhhn7SrtQ" name="Map to Review Collateral Safeguarding Procedure">
+    <bpmn2:ioSpecification id="_OaTcH8T2EeGIlOhhn7SrtQ">
+      <bpmn2:dataOutput id="_OaTcIsT2EeGIlOhhn7SrtQ" name="Collateral Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWzcT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_OaTcIMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:outputSet id="_OaTcIcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_OaTcIsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_OaTcYsT2EeGIlOhhn7SrtQ" name="Map to Compare Safeguarded Collateral with AR Details">
+    <bpmn2:ioSpecification id="_OaTcY8T2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_OaTcZsT2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_OaTcZ8T2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_OaTcaMT2EeGIlOhhn7SrtQ" name="Collateral Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQWzcT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_OaTcZMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_OaTcZsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_OaTcZcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_OaTcZ8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_OaTcaMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_OaTchsT2EeGIlOhhn7SrtQ" name="Map to Generate Operational Risk Report">
+    <bpmn2:ioSpecification id="_OaTch8T2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_OaTcisT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj41sT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_OaTci8T2EeGIlOhhn7SrtQ" name="Operational Risk Assessment"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GamalMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_OaTcjMT2EeGIlOhhn7SrtQ" name="Risk Score" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Hd9VIcT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_OaTcjcT2EeGIlOhhn7SrtQ" name="Period Start" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GhTfoMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_OaTcjsT2EeGIlOhhn7SrtQ" name="Period End" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GhTfoMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_OaTcj8T2EeGIlOhhn7SrtQ" name="Expected Loss" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GjsFPcT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_OaTckMT2EeGIlOhhn7SrtQ" name="Capital Coverage" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GjsFPcT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_OaTckcT2EeGIlOhhn7SrtQ" name="Mitigants" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GwqKPMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_OaTciMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_OaTcisT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_OaTci8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_OaTcicT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_OaTcjMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_OaTcjcT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_OaTcjsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_OaTcj8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_OaTckMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_OaTckcT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_OaTct8T2EeGIlOhhn7SrtQ" name="Map from Generate Operational Risk Report">
+    <bpmn2:ioSpecification id="_OaTcuMT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_OaTcu8T2EeGIlOhhn7SrtQ" name="Operational Risk Report"
+          isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_HGtSrsT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_OaTcvMT2EeGIlOhhn7SrtQ" name="Risk Report" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GacprsT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_OaTcucT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_OaTcu8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_OaTcusT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_OaTcvMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+</bpmn2:definitions>

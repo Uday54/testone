@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_UfkbkLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"
+    xmlns:_UhWkQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"
+    xmlns:_aclzprxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_aclzprxuEeGCw9HgBpY34g"
+    xmlns:_aijRsLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_aijRsLxuEeGCw9HgBpY34g"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_aclzprxuEeGCw9HgBpY34g" name="Calculate Average Undisbursed Balance"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_aclzprxuEeGCw9HgBpY34g"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_aclzqbxuEeGCw9HgBpY34g"
+      visible="true" type="Bpmn2" element="_aclzqLxuEeGCw9HgBpY34g" name="Calculate Average Undisbursed Balance Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_afuAIrxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_afuANrxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_zNVJZrxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../Arrangement%20Reporting%20Support/Calculate%20Undisbursed%20Balance.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_aijRsLxuEeGCw9HgBpY34g"/>
+  <bpmn2:extension xmi:id="_aclzp7xuEeGCw9HgBpY34g" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_WT3KQhwrEeOMUpRtwvEXUw" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_LXq9YfxiEeOPPNUUqxVo0g" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_aclzqLxuEeGCw9HgBpY34g" name="Calculate Average Undisbursed Balance">
+    <bpmn2:documentation id="_afuAILxuEeGCw9HgBpY34g">SHORT NAME: Calc Avg Undspd Bal&#xD;
+&#xD;
+B LEVEL ROOT: Calculate * Value&#xD;
+&#xD;
+DEFINITION: To determine the average undisbursed balance using mathematical procedures.&#xD;
+&#xD;
+DESCRIPTION: This activity string encompasses the activities required to calculate the monetary, financial amount equal to the average difference for the current period between the fully disbursed amount and the amount actually disbursed for a &lt;Finance Service Arrangement>.&#xD;
+&#xD;
+FLOW DIAGRAM: UC: Calculate Average Undisbursed Balance&#xD;
+&#xD;
+IBM Unique ID: CBPC04017</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_WT3KQBwrEeOMUpRtwvEXUw">
+      <tagging:tag id="_WT3KQRwrEeOMUpRtwvEXUw">Arrangement Reporting</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_afuAM7xuEeGCw9HgBpY34g">
+      <bpmn2:dataInput id="_afuAObxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+          itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+      <bpmn2:dataOutput id="_afuAOLxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+          itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+      <bpmn2:inputSet id="_afuANLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInputRefs>_afuAObxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_afuAN7xuEeGCw9HgBpY34g">
+        <bpmn2:dataOutputRefs>_afuAOLxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_afuAIbxuEeGCw9HgBpY34g" name="Enterprise Process" partitionElementRef="_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_afuAI7xuEeGCw9HgBpY34g">The default role for all enterprise process activities not explicitly assigned to other roles.&#xD;
+&#xD;
+IBM Unique ID: CBPC04192</bpmn2:documentation>
+      <bpmn2:flowElementRef>_afuAJLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_afuAJ7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_afuAKrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_afuALbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_afuAMLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_afuAMbxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_afuAMrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_j82o8rxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_j82o87xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_j82o9bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_j82o-LxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_j82o-bxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_j82o-7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_j9Jj47xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_j9mP07xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_j-C7w7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_KifYgxwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_Kq1cMBwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_LrDjFxwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_LrDjGBwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_LrDjHhwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_LrDjHxwsEeOMUpRtwvEXUw</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_jPCRdEIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_jPCRdUIVEeSFpMLLUsMfuA</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_afuAJLxuEeGCw9HgBpY34g" name="Calculate Average Balance"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_aclzpLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_afuAJrxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_LXq9YPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_j9TU4LxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_j-C7yLxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_j9TU4rxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_j-C7x7xuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_j-C7yLxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_j9TU4bxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_j9TU4rxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_j-C7ybxuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_aclzprxuEeGCw9HgBpY34g:_j-C7w7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_aclzprxuEeGCw9HgBpY34g:_j-C7yLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_j9TU47xuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_aclzprxuEeGCw9HgBpY34g:_j9TU4rxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_aclzprxuEeGCw9HgBpY34g:_afuAOLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_afuAJbxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_afuAJ7xuEeGCw9HgBpY34g" name="Calculate Undisbursed Balance"
+        isForCompensation="false" calledElement="_aijRsLxuEeGCw9HgBpY34g:_aijRsrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_afuAKbxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_LX2jkPxiEeOPPNUUqxVo0g">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_j9Jj6bxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_j9Jj67xuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_j9mP1bxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_j9Jj6rxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_j9Jj67xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_j9mP1LxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_j9mP1bxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_j9Jj7LxuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_aclzprxuEeGCw9HgBpY34g:_j9Jj47xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_aclzprxuEeGCw9HgBpY34g:_j9Jj67xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_j9mP1rxuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_aclzprxuEeGCw9HgBpY34g:_j9mP1bxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_aclzprxuEeGCw9HgBpY34g:_j9mP07xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_afuAKLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_afuAKrxuEeGCw9HgBpY34g" name="Construct Undisbursed Balance List"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_aclzorxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_afuALLxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_LX2jkfxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_j82o_bxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_j82o_7xuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_LrDjIRwsEeOMUpRtwvEXUw" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_j82o_rxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_j82o_7xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_LrDjIBwsEeOMUpRtwvEXUw" name="OutputSet1">
+          <bpmn2:dataOutputRefs>_LrDjIRwsEeOMUpRtwvEXUw</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_j9wA0LxuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_aclzprxuEeGCw9HgBpY34g:_j9mP07xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_aclzprxuEeGCw9HgBpY34g:_j82o_7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_LrDjIhwsEeOMUpRtwvEXUw" name="Accounting Unit">
+        <bpmn2:sourceRef>_aclzprxuEeGCw9HgBpY34g:_LrDjIRwsEeOMUpRtwvEXUw</bpmn2:sourceRef>
+        <bpmn2:targetRef>_aclzprxuEeGCw9HgBpY34g:_LrDjHxwsEeOMUpRtwvEXUw</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_afuAK7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_afuALbxuEeGCw9HgBpY34g" name="Select Sequenced Arrangement"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_afuAOrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_afuAL7xuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_LX2jkvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_j9AZ87xuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_j9AZ9bxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_j-C7wLxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_j9Jj5bxuEeGCw9HgBpY34g" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_j-C7xLxuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_j9AZ9LxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_j9AZ9bxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_j-C7wLxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_j9Jj5LxuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_j9Jj5bxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_j-C7xLxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_j-C7wbxuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_aclzprxuEeGCw9HgBpY34g:_afuAObxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_aclzprxuEeGCw9HgBpY34g:_j-C7wLxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_LrDjJRwsEeOMUpRtwvEXUw" name="Accounting Unit">
+        <bpmn2:sourceRef>_aclzprxuEeGCw9HgBpY34g:_LrDjHxwsEeOMUpRtwvEXUw</bpmn2:sourceRef>
+        <bpmn2:targetRef>_aclzprxuEeGCw9HgBpY34g:_j9AZ9bxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_j9Jj5rxuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_aclzprxuEeGCw9HgBpY34g:_j9Jj5bxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_aclzprxuEeGCw9HgBpY34g:_j9Jj47xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_j-C7xbxuEeGCw9HgBpY34g" name="Accounting Unit">
+        <bpmn2:sourceRef>_aclzprxuEeGCw9HgBpY34g:_j-C7xLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_aclzprxuEeGCw9HgBpY34g:_j-C7w7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_afuALrxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:exclusiveGateway id="_afuAMLxuEeGCw9HgBpY34g"/>
+    <bpmn2:startEvent id="_afuAMbxuEeGCw9HgBpY34g" name="Start">
+      <bpmn2:messageEventDefinition id="_LrDjGhwsEeOMUpRtwvEXUw" name="Qualified Commitment Identified">
+        <bpmn2:documentation id="_LrDjGxwsEeOMUpRtwvEXUw">FULL NAME: Identification Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A decision has been made to regard a person or thing as being a specific instance,  based on available evidence.&#xD;
+&#xD;
+EXAMPLES OF USE: A customer has been identified after comparing their signature with a specimen on file.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="_afuAMrxuEeGCw9HgBpY34g" name="End">
+      <bpmn2:messageEventDefinition id="_j82o9rxuEeGCw9HgBpY34g" name="Average Non disbursed Balance Calculated">
+        <bpmn2:documentation id="_j82o97xuEeGCw9HgBpY34g">FULL NAME: Value Calculated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the mathematical determination of a monetary, financial amount.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has calculated a monthly loan repayment figure using loan amount, interest rate and term. The Financial Institution has calculated an amount which represents the total current commercial loan exposure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Calculate, Accumulate and sometimes Determine.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="_j82o8rxuEeGCw9HgBpY34g" sourceRef="_afuALbxuEeGCw9HgBpY34g"
+        targetRef="_afuAMLxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_j82o87xuEeGCw9HgBpY34g" name="Arrangement Selection Completed"
+        sourceRef="_afuAMLxuEeGCw9HgBpY34g" targetRef="_afuAJLxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_j82o9LxuEeGCw9HgBpY34g">FULL NAME: Selection Not Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A selection has not been made from available alternatives.&#xD;
+&#xD;
+EXAMPLES OF USE: Mary Jones can not be formally offered the post of Marketing Director as she has not been selected. An Internet customer transaction is aborted because a selection of available choices has not been made within the required time-out period.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_j82o9bxuEeGCw9HgBpY34g" name="Qualified Commitment Identified"
+        sourceRef="_afuAMbxuEeGCw9HgBpY34g" targetRef="_KifYgxwsEeOMUpRtwvEXUw"/>
+    <bpmn2:sequenceFlow id="_j82o-LxuEeGCw9HgBpY34g" name="Average Non disbursed Balance Calculated"
+        sourceRef="_afuAJLxuEeGCw9HgBpY34g" targetRef="_afuAMrxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_j82o-bxuEeGCw9HgBpY34g" name="Arrangement Application Request Received"
+        sourceRef="_afuAMLxuEeGCw9HgBpY34g" targetRef="_afuAJ7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_j82o-rxuEeGCw9HgBpY34g">FULL NAME: Information Received&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: Some form of information has become known to the enterprise.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used where the precise nature of the information received is not yet known, or where multiple information types are concerned.&#xD;
+&#xD;
+For example, all new or changed information which has been received by the Financial Institution may be processed by the incoming mail department.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_j82o-7xuEeGCw9HgBpY34g" name="Adjusted Total Balance Calculated"
+        sourceRef="_afuAJ7xuEeGCw9HgBpY34g" targetRef="_afuAKrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_j82o_LxuEeGCw9HgBpY34g">FULL NAME: Value Calculated&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the mathematical determination of a monetary, financial amount.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has calculated a monthly loan repayment figure using loan amount, interest rate and term. The Financial Institution has calculated an amount which represents the total current commercial loan exposure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Calculate, Accumulate and sometimes Determine.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_j9Jj47xuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_j9mP07xuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_j-C7w7xuEeGCw9HgBpY34g" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+    <bpmn2:exclusiveGateway id="_KifYgxwsEeOMUpRtwvEXUw" name="ExclusiveGateway1"/>
+    <bpmn2:startEvent id="_Kq1cMBwsEeOMUpRtwvEXUw" name="Start:1">
+      <bpmn2:messageEventDefinition id="_LrDjHBwsEeOMUpRtwvEXUw" name="Funds Available">
+        <bpmn2:documentation id="_LrDjHRwsEeOMUpRtwvEXUw">FULL NAME: Confirmation Given&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A choice has been made to endorse a proposed course of action.&#xD;
+&#xD;
+EXAMPLES OF USE: Susan Brown's promotion to acting supervisor has been confirmed, and she will now retain the post permanently.&#xD;</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="_LrDjFxwsEeOMUpRtwvEXUw" name="" sourceRef="_KifYgxwsEeOMUpRtwvEXUw"
+        targetRef="_afuALbxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_LrDjGBwsEeOMUpRtwvEXUw" name="Undisbursed Balance Added To List"
+        sourceRef="_afuAKrxuEeGCw9HgBpY34g" targetRef="_KifYgxwsEeOMUpRtwvEXUw">
+      <bpmn2:documentation id="_LrDjGRwsEeOMUpRtwvEXUw">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_LrDjHhwsEeOMUpRtwvEXUw" name="Funds Available" sourceRef="_Kq1cMBwsEeOMUpRtwvEXUw"
+        targetRef="_KifYgxwsEeOMUpRtwvEXUw"/>
+    <bpmn2:dataObject id="_LrDjHxwsEeOMUpRtwvEXUw" name="Accounting Unit" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkCr4LxuEeGCw9HgBpY34g"/>
+    <bpmn2:startEvent id="_jPCRdEIVEeSFpMLLUsMfuA" name="Start:2"/>
+    <bpmn2:sequenceFlow id="_jPCRdUIVEeSFpMLLUsMfuA" name="Invoked By Business Process"
+        sourceRef="_jPCRdEIVEeSFpMLLUsMfuA" targetRef="_afuALbxuEeGCw9HgBpY34g"/>
+  </bpmn2:process>
+</bpmn2:definitions>

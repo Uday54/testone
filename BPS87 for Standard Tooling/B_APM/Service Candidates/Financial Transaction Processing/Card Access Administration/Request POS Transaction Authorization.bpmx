@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_UfkbkLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"
+    xmlns:_UhWkQLxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"
+    xmlns:_bU6iyrxuEeGCw9HgBpY34g="http://www.ibm.com/xtools/bpmn/2.0/_bU6iyrxuEeGCw9HgBpY34g"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_bU6iyrxuEeGCw9HgBpY34g" name="Request POS Transaction Authorization"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_bU6iyrxuEeGCw9HgBpY34g"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_bU6izbxuEeGCw9HgBpY34g"
+      visible="true" type="Bpmn2" element="_bU6izLxuEeGCw9HgBpY34g" name="Request POS Transaction Authorization Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_bWjhgbxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UhWkQLxuEeGCw9HgBpY34g"/>
+  <bpmn2:import xmi:id="_bWjhjrxuEeGCw9HgBpY34g" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_UfkbkLxuEeGCw9HgBpY34g"/>
+  <bpmn2:extension xmi:id="_bU6iy7xuEeGCw9HgBpY34g" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_prV8UhwrEeOMUpRtwvEXUw" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_L3H5gfxiEeOPPNUUqxVo0g" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_bU6izLxuEeGCw9HgBpY34g" name="Request POS Transaction Authorization">
+    <bpmn2:documentation id="_bVETwLxuEeGCw9HgBpY34g">SHORT NAME: Rqst POS Txn Auth&#xD;
+&#xD;
+B LEVEL ROOT: Request Procedure&#xD;
+&#xD;
+DEFINITION: To ask for or demand authorization on a point of sales transaction.&#xD;
+&#xD;
+DESCRIPTION: This activity string encompasses the activities necessary to request the authorization of a POS transaction by verifying that a customer's card has sufficient funds available to meet a proposed accounting transaction and is not blocked from use.&#xD;
+&#xD;
+FLOW DIAGRAM: UC: Request POS Transaction Authorization&#xD;
+&#xD;
+IBM Unique ID: CBPC04075</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_prV8UBwrEeOMUpRtwvEXUw">
+      <tagging:tag id="_prV8URwrEeOMUpRtwvEXUw">Financial Transaction Processing</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_bWjhi7xuEeGCw9HgBpY34g">
+      <bpmn2:dataInput id="_bWjhj7xuEeGCw9HgBpY34g" name="Financial Transaction Card Details"
+          isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+      <bpmn2:dataInput id="_eL-nGUIVEeSFpMLLUsMfuA" name="Transaction Details" isCollection="false"
+          itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UqJT67xuEeGCw9HgBpY34g"/>
+      <bpmn2:inputSet id="_bWjhjLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInputRefs>_bWjhj7xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_eL-nGUIVEeSFpMLLUsMfuA</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_bWjhkLxuEeGCw9HgBpY34g"/>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_bWjhgLxuEeGCw9HgBpY34g" name="Enterprise Process" partitionElementRef="_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_bWjhgrxuEeGCw9HgBpY34g">The default role for all enterprise process activities not explicitly assigned to other roles.&#xD;
+&#xD;
+IBM Unique ID: CBPC04238</bpmn2:documentation>
+      <bpmn2:flowElementRef>_bWjhg7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bWjhhrxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bWjhibxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_bWjhirxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ojv7kLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ojv7lLxuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ojv7l7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_oj5sl7xuEeGCw9HgBpY34g</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_bWjhg7xuEeGCw9HgBpY34g" name="Request Transaction Authorization"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_bQmDhbxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_bWjhhbxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_L3H5gPxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_oj5skrxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_okC2gbxuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataInput id="_RbaYIRwsEeOMUpRtwvEXUw" name="Transaction Details" isCollection="false"
+            itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UqJT67xuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_oj5sk7xuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_okC2gbxuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_RbaYIRwsEeOMUpRtwvEXUw</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_okMngLxuEeGCw9HgBpY34g"/>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_okC2grxuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_bU6iyrxuEeGCw9HgBpY34g:_oj5sl7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_bU6iyrxuEeGCw9HgBpY34g:_okC2gbxuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_eL-nGkIVEeSFpMLLUsMfuA" name="Transaction Details">
+        <bpmn2:sourceRef>_bU6iyrxuEeGCw9HgBpY34g:_eL-nGUIVEeSFpMLLUsMfuA</bpmn2:sourceRef>
+        <bpmn2:targetRef>_bU6iyrxuEeGCw9HgBpY34g:_RbaYIRwsEeOMUpRtwvEXUw</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:resourceRole id="_bWjhhLxuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_bWjhhrxuEeGCw9HgBpY34g" name="Retrieve Financial Trans Card Arrangement"
+        isForCompensation="false" calledElement="_UhWkQLxuEeGCw9HgBpY34g:_bWjhkrxuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_bWjhiLxuEeGCw9HgBpY34g">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_L3H5gvxiEeOPPNUUqxVo0g">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ojv7mLxuEeGCw9HgBpY34g">
+        <bpmn2:dataInput id="_ojv7n7xuEeGCw9HgBpY34g" name="Financial Transaction Card Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UlrDlrxuEeGCw9HgBpY34g"/>
+        <bpmn2:dataOutput id="_oj5smLxuEeGCw9HgBpY34g" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+        <bpmn2:inputSet id="_ojv7mbxuEeGCw9HgBpY34g">
+          <bpmn2:dataInputRefs>_ojv7n7xuEeGCw9HgBpY34g</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ojv7o7xuEeGCw9HgBpY34g">
+          <bpmn2:dataOutputRefs>_oj5smLxuEeGCw9HgBpY34g</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_ojv7oLxuEeGCw9HgBpY34g" name="Financial Transaction Card Details">
+        <bpmn2:sourceRef>_bU6iyrxuEeGCw9HgBpY34g:_bWjhj7xuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_bU6iyrxuEeGCw9HgBpY34g:_ojv7n7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_oj5smbxuEeGCw9HgBpY34g" name="Arrangement Details">
+        <bpmn2:sourceRef>_bU6iyrxuEeGCw9HgBpY34g:_oj5smLxuEeGCw9HgBpY34g</bpmn2:sourceRef>
+        <bpmn2:targetRef>_bU6iyrxuEeGCw9HgBpY34g:_oj5sl7xuEeGCw9HgBpY34g</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_bWjhh7xuEeGCw9HgBpY34g" name="ResourceRole1">
+        <bpmn2:resourceRef>_UhWkQLxuEeGCw9HgBpY34g:_Uvg8EbxuEeGCw9HgBpY34g</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:endEvent id="_bWjhibxuEeGCw9HgBpY34g" name="End">
+      <bpmn2:messageEventDefinition id="_ojv7krxuEeGCw9HgBpY34g" name="Transaction Authorization Requested">
+        <bpmn2:documentation id="_ojv7k7xuEeGCw9HgBpY34g">FULL NAME: Request Sent&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: An expected specific, but otherwise not categorized occurrence of interest to the business has ended.&#xD;
+&#xD;
+EXAMPLES OF USE: A plan to relocate headquarters staff has been set in motion on the completion of negotiations to buy a development site.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="_bWjhirxuEeGCw9HgBpY34g" name="Start">
+      <bpmn2:messageEventDefinition id="_ojv7lbxuEeGCw9HgBpY34g" name="POS Transaction Authorization Received">
+        <bpmn2:documentation id="_ojv7lrxuEeGCw9HgBpY34g">FULL NAME: Arrangement Request Received&#xD;
+&#xD;
+TRIGGER CATEGORY: Communication Driven&#xD;
+&#xD;
+DEFINITION: A communication in the form of a request for an Arrangement has been received by Financial Institution.&#xD;
+&#xD;
+EXAMPLES OF USE: An application assessment procedure is invoked because a completed mortgage loan application has been received from Ms White.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="_ojv7kLxuEeGCw9HgBpY34g" name="Arrangement Retrieved"
+        sourceRef="_bWjhhrxuEeGCw9HgBpY34g" targetRef="_bWjhg7xuEeGCw9HgBpY34g">
+      <bpmn2:documentation id="_ojv7kbxuEeGCw9HgBpY34g">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_ojv7lLxuEeGCw9HgBpY34g" name="Transaction Authorization Requested"
+        sourceRef="_bWjhg7xuEeGCw9HgBpY34g" targetRef="_bWjhibxuEeGCw9HgBpY34g"/>
+    <bpmn2:sequenceFlow id="_ojv7l7xuEeGCw9HgBpY34g" name="POS Transaction Authorization Received"
+        sourceRef="_bWjhirxuEeGCw9HgBpY34g" targetRef="_bWjhhrxuEeGCw9HgBpY34g"/>
+    <bpmn2:dataObject id="_oj5sl7xuEeGCw9HgBpY34g" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_UfkbkLxuEeGCw9HgBpY34g:_UkL11rxuEeGCw9HgBpY34g"/>
+  </bpmn2:process>
+</bpmn2:definitions>

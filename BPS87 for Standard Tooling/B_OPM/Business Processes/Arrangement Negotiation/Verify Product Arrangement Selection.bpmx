@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_G2noOcT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_G2noOcT2EeGIlOhhn7SrtQ"
+    xmlns:_G2wyQ8T2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_G2wyQ8T2EeGIlOhhn7SrtQ"
+    xmlns:_GWk2MMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"
+    xmlns:_GXn_EMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"
+    xmlns:_GXxJAMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GXxJAMT2EeGIlOhhn7SrtQ"
+    xmlns:_KgRPdMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_KgRPdMT2EeGIlOhhn7SrtQ"
+    xmlns:_MzfPQ8T2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_MzfPQ8T2EeGIlOhhn7SrtQ"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_KgRPdMT2EeGIlOhhn7SrtQ" name="Verify Product Arrangement Selection"
+    expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_KgRPdMT2EeGIlOhhn7SrtQ"
+    typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_KgRPd8T2EeGIlOhhn7SrtQ"
+      visible="true" type="Bpmn2" element="_KgRPdsT2EeGIlOhhn7SrtQ" name="Verify Product Arrangement Selection Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_N1gGRMT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_ONDDocT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Service%20Processes/Arrangement%20Negotiation/IArrangementSetup/Verify%20Arrangement%20Suitability%20Service.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_G2wyQ8T2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_ONDDp8T2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_ONDD3sT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Service%20Processes/Arrangement%20Negotiation/IArrangementSetup/Verify%20Arrangement%20Appropriateness%20Service.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_G2noOcT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_ONDEFMT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Service%20Processes/Involved%20Party%20Management/IInvolvedPartyManagement/Retrieve%20Full%20Customer%20Details%20Service.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_MzfPQ8T2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_ONMNZ8T2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Maps.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GXxJAMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:extension xmi:id="_KgRPdcT2EeGIlOhhn7SrtQ" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_ZpN8hShgEeOjHu3a6otf0Q" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_IhfilCiMEeO1PvbDA98QvA" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_KgRPdsT2EeGIlOhhn7SrtQ" name="Verify Product Arrangement Selection">
+    <bpmn2:documentation id="_KgaZYMT2EeGIlOhhn7SrtQ">SHORT NAME: Vrfy PD AR Slctn&#xD;
+&#xD;
+B LEVEL ROOT: Verify Condition&#xD;
+&#xD;
+DEFINITION: To check or determine the appropriateness of an arrangement&#xD;
+&#xD;
+DESCRIPTION: This activity string encompasses the steps necessary for the financial institution to verify that the arrangement is appropriate and suitable to the customers needs. &#xD;
+&#xD;
+Note that the &quot;appropriateness&quot; test is less wide-ranging than the suitability test. &#xD;
+&#xD;
+FLOW DIAGRAM: AS Chart for Verify PD Arrangement Selection</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_ZpN8gChgEeOjHu3a6otf0Q">
+      <tagging:tag xmi:id="_IhAaYCiMEeO1PvbDA98QvA" id="_ZpN8gShgEeOjHu3a6otf0Q">Arrangement Negotiation</tagging:tag>
+      <tagging:tag xmi:id="_IhAaYSiMEeO1PvbDA98QvA" id="_ZpN8gihgEeOjHu3a6otf0Q">ValueChain_KYCAccountOpening_Offer</tagging:tag>
+      <tagging:tag xmi:id="_IhAaYiiMEeO1PvbDA98QvA" id="_ZpN8gyhgEeOjHu3a6otf0Q">ValueChain_RegulatoryCompliance_Implement</tagging:tag>
+      <tagging:tag xmi:id="_IhAaYyiMEeO1PvbDA98QvA" id="_ZpN8hChgEeOjHu3a6otf0Q">ValueChain_BestExecutionMiFID_AccountOpening</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_KgaZYcT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_PZV3OMT2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_PZV3OcT2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_KgaZYsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_PZV3OMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_KgaZY8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_PZV3OcT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_N1gGQ8T2EeGIlOhhn7SrtQ" name="Customer Representative" partitionElementRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_zS0z8ihgEeOjHu3a6otf0Q">An employee of the financial institution who acts as a liason between the FI and the customer.</bpmn2:documentation>
+      <bpmn2:flowElementRef>_ONDDn8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ONDDrMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ONDDrsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ONDDv8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ONDDyMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ONDDysT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ONDD0MT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ONDD1sT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ONDD3MT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ONDD6MT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ONDD6sT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ONDD-8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ONDEBMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ONDEBsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ONDEDMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ONDEEsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ONMNIcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ONMNI8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ONMNKsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ONMNOcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ONMNO8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ONMNXMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ONMNZcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PBf_e8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PBf_fsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PBf_gcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PBf_hMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PDu0H8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PDu0IMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PHddPsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PHddP8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PHddQMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PHddQsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PHddRMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PHddRcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PHddRsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PHddR8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PHddSMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PHddSsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PZV3NMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PZV3NcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PZV3NsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PZV3N8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0KQyRihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0NmaKShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ESWZ0EIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ESWZ00IZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ESWZ1kIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_ESWZ2UIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_EU4JYEIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_EU4JY0IZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_EU4JZkIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_EU4JaUIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_EU4JbEIZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_EU4Jb0IZEeSedtiJ0SK07w</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_ONDDn8T2EeGIlOhhn7SrtQ" name="Verify Arrangement Suitability"
+        isForCompensation="false" calledElement="_G2wyQ8T2EeGIlOhhn7SrtQ:_G2wyRcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_ONDDoMT2EeGIlOhhn7SrtQ">This includes the Market in Financial Instruments Directive (MiFID) compliance requirements.&#xD;
+&#xD;
+Where an investment firm provides an investment service to a professional client it shall be entitled to assume that, in relation to the products, transactions and services for which it is so classified, the client has the necessary level of experience and knowledge for the purposes of paragraph (c) above.&#xD;
+&#xD;
+Where an investment service consists in the provision of investment advice to a professional client, then we assume that the client is able financially to bear any related investment risks consistent with the investment objectives of that client.  &#xD;
+&#xD;
+The information regarding the financial situation of the client or potential client shall include, where relevant, information on the source and extent of his regular income, his assets, including liquid assets, investments and real property, and his regular financial commitments.&#xD;
+&#xD;
+The information regarding the investment objectives of the client or potential client shall include, where relevant, information on the length of time for which the client wishes to hold the investment, his preferences regarding risk taking, his risk profile,&#xD;
+and the purposes of the investment.&#xD;
+&#xD;
+Where, when providing the investment service of investment advice or portfolio management, an investment firm does not obtain the information required, the firm shall not recommend investment&#xD;
+services or financial instruments to the client or potential client.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_IhfikyiMEeO1PvbDA98QvA">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ONDDtMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_ONDDtsT2EeGIlOhhn7SrtQ" name="Financial Market Offering Instruction"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_ONDDt8T2EeGIlOhhn7SrtQ" name="Product Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2zv8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_ONDDuMT2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GbM3lMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_ONDDz8T2EeGIlOhhn7SrtQ" name="Is Suitable" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GdIxMMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_ONDDtcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_ONDDtsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_ONDDt8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_ONDDuMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ONDDzsT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_ONDDz8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_ONDDwcT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONDDv8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONDDuMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_ESWZ0kIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ESWZ0EIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONDDtsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_ESWZ1UIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ESWZ00IZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONDDt8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_ONDD0cT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONDDz8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONDD0MT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_ONDD1cT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_ONDDrMT2EeGIlOhhn7SrtQ" name="Map to Verify Arrangement Suitability"
+        isForCompensation="false" calledElement="_KgRPdMT2EeGIlOhhn7SrtQ:_ONDDosT2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_IhfilSiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ONDDr8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PljuR8T2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_PljuSMT2EeGIlOhhn7SrtQ" name="Full Customer Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaH2MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_ONDDscT2EeGIlOhhn7SrtQ" name="Financial Market Offering Instruction"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_ONDDssT2EeGIlOhhn7SrtQ" name="Product Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2zv8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_ONDDs8T2EeGIlOhhn7SrtQ" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GbM3lMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_ONDD08T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PljuR8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_PljuSMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ONDDsMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_ONDDscT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_ONDDssT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_ONDDs8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_P0T8ncT2EeGIlOhhn7SrtQ" name="Arrangement Details">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_PZV3OMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_PljuR8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_P0T8nsT2EeGIlOhhn7SrtQ" name="Full Customer Details">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_PZV3NsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_PljuSMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_ONDDwMT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONDDs8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONDDv8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_ESWZ0UIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONDDscT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ESWZ0EIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_ESWZ1EIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONDDssT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ESWZ00IZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_ONDDrcT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_ONDDrsT2EeGIlOhhn7SrtQ" sourceRef="_ONDDrMT2EeGIlOhhn7SrtQ"
+        targetRef="_ONDDn8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_ONDDv8T2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GbM3lMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_ONDDyMT2EeGIlOhhn7SrtQ" name="Map from Verify Arrangement Suitability"
+        isForCompensation="false" calledElement="_KgRPdMT2EeGIlOhhn7SrtQ:_ONDDwsT2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_IhfiliiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ONDDy8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_ONDDzcT2EeGIlOhhn7SrtQ" name="Is Suitable" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GdIxMMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PljuScT2EeGIlOhhn7SrtQ" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_ONDDzMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_ONDDzcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ONDD1MT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PljuScT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_ONDD0sT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONDD0MT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONDDzcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_P0T8n8T2EeGIlOhhn7SrtQ" name="Arrangement Details">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_PljuScT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_PZV3OcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_ONDDycT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_ONDDysT2EeGIlOhhn7SrtQ" sourceRef="_ONDDn8T2EeGIlOhhn7SrtQ"
+        targetRef="_ONDDyMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_ONDD0MT2EeGIlOhhn7SrtQ" name="Is Suitable" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GdIxMMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_ONDD1sT2EeGIlOhhn7SrtQ" name="Analyze Customer Financial Experience"
+        isForCompensation="false" calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_G2noNMT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_ONDD18T2EeGIlOhhn7SrtQ">The classification of customers may only be required in the European Union to meet requirements imposed by the Markets in Financial Instrument Directive (MiFID).  &#xD;
+However, the analysis of the customer's investment experience will be required globally.&#xD;
+&#xD;
+Depending on the service being provided to the customer, either its appropriateness or suitability will be verified.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_IhfilyiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ONDD2MT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PljuSsT2EeGIlOhhn7SrtQ" name="Full Customer Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaH2MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PljuS8T2EeGIlOhhn7SrtQ" name="Full Customer Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaH2MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_ONDD2cT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PljuSsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ONDD2sT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PljuS8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_P0T8oMT2EeGIlOhhn7SrtQ" name="Full Customer Details">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_PZV3N8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_PljuSsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_P0T8ocT2EeGIlOhhn7SrtQ" name="Full Customer Details">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_PljuS8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_PZV3NMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_ONDD28T2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_ONDD3MT2EeGIlOhhn7SrtQ" name="Verify Arrangement Appropriateness"
+        isForCompensation="false" calledElement="_G2noOcT2EeGIlOhhn7SrtQ:_G2noO8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_ONDD3cT2EeGIlOhhn7SrtQ">This includes the Market in Financial Instruments Directive (MiFID) compliance requirements.</bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_IhneYiiMEeO1PvbDA98QvA">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ONDD8MT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_ONDD8sT2EeGIlOhhn7SrtQ" name="Financial Market Offering Instruction"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_ONDD88T2EeGIlOhhn7SrtQ" name="Product Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2zv8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_ONDD9MT2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GbM3lMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_ONDEC8T2EeGIlOhhn7SrtQ" name="Is Appropriate" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GdIxMMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_ONDD8cT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_ONDD8sT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_ONDD88T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_ONDD9MT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ONDECsT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_ONDEC8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_ONDD_cT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONDD-8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONDD9MT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_ESWZ2EIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ESWZ1kIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONDD8sT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_ESWZ20IZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ESWZ2UIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONDD88T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_ONDEDcT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONDEC8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONDEDMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_ONDEEcT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_ONDD6MT2EeGIlOhhn7SrtQ" name="Map to Verify Arrangement Appropriateness"
+        isForCompensation="false" calledElement="_KgRPdMT2EeGIlOhhn7SrtQ:_ONDD38T2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_IhneYyiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ONDD68T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PljuTMT2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_PljuTcT2EeGIlOhhn7SrtQ" name="Full Customer Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaH2MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_ONDD7cT2EeGIlOhhn7SrtQ" name="Financial Market Offering Instruction"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_ONDD7sT2EeGIlOhhn7SrtQ" name="Product Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2zv8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_ONDD78T2EeGIlOhhn7SrtQ" name="Arrangement Details"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GbM3lMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_ONDED8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PljuTMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_PljuTcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ONDD7MT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_ONDD7cT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_ONDD7sT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_ONDD78T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_P0T8osT2EeGIlOhhn7SrtQ" name="Arrangement Details">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_PZV3OMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_PljuTMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_P0T8o8T2EeGIlOhhn7SrtQ" name="Full Customer Details">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_PZV3NMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_PljuTcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_ONDD_MT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONDD78T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONDD-8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_ESWZ10IZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONDD7cT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ESWZ1kIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_ESWZ2kIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONDD7sT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ESWZ2UIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_ONDD6cT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_ONDD6sT2EeGIlOhhn7SrtQ" sourceRef="_ONDD6MT2EeGIlOhhn7SrtQ"
+        targetRef="_ONDD3MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_ONDD-8T2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GbM3lMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_ONDEBMT2EeGIlOhhn7SrtQ" name="Map from Verify Arrangement Appropriateness"
+        isForCompensation="false" calledElement="_KgRPdMT2EeGIlOhhn7SrtQ:_ONDD_sT2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_IhneZCiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ONDEB8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_ONDECcT2EeGIlOhhn7SrtQ" name="Is Appropriate" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GdIxMMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PljuTsT2EeGIlOhhn7SrtQ" name="Full Customer Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaH2MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_ONDECMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_ONDECcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ONDEEMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PljuTsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_ONDEDsT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONDEDMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONDECcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_P0T8pMT2EeGIlOhhn7SrtQ" name="Full Customer Details">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_PljuTsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_PZV3NsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_ONDEBcT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_ONDEBsT2EeGIlOhhn7SrtQ" sourceRef="_ONDD3MT2EeGIlOhhn7SrtQ"
+        targetRef="_ONDEBMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_ONDEDMT2EeGIlOhhn7SrtQ" name="Is Appropriate" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GdIxMMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_ONDEEsT2EeGIlOhhn7SrtQ" name="Retrieve Full Customer Details"
+        isForCompensation="false" calledElement="_MzfPQ8T2EeGIlOhhn7SrtQ:_MzfPRcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_ONDEE8T2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_IhneZSiMEeO1PvbDA98QvA">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ONMNJ8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_ONMNKcT2EeGIlOhhn7SrtQ" name="Customer Identifier" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_ONMNRsT2EeGIlOhhn7SrtQ" name="Accessibility Profile"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW1sT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_ONMNR8T2EeGIlOhhn7SrtQ" name="Arrangements" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_ONMNSMT2EeGIlOhhn7SrtQ" name="Contact Preferences"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW2cT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_ONMNScT2EeGIlOhhn7SrtQ" name="Customer" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHwMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_ONMNSsT2EeGIlOhhn7SrtQ" name="Involved Party" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_ONMNS8T2EeGIlOhhn7SrtQ" name="Involved Party Relationship Details"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_G2K8Y8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_ONMNTMT2EeGIlOhhn7SrtQ" name="Related Involved Parties"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_ONMNKMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_ONMNKcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ONMNRcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_ONMNRsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_ONMNR8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_ONMNSMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_ONMNScT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_ONMNSsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_ONMNS8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_ONMNTMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_ONMNLMT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONMNKsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONMNKcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_ONMNXcT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONMNS8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONMNXMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_EU4JYUIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONMNRsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_EU4JYEIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_EU4JZEIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONMNR8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_EU4JY0IZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_EU4JZ0IZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONMNSMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_EU4JZkIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_EU4JakIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONMNScT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_EU4JaUIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_EU4JbUIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONMNSsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_EU4JbEIZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_EU4JcEIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONMNTMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_EU4Jb0IZEeSedtiJ0SK07w</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_ONMNZMT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_ONMNIcT2EeGIlOhhn7SrtQ" name="Map to Retrieve Full Customer Details"
+        isForCompensation="false" calledElement="_KgRPdMT2EeGIlOhhn7SrtQ:_ONDEFcT2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_IhneZiiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ONMNJMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PljuT8T2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj41sT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_ONMNJsT2EeGIlOhhn7SrtQ" name="Customer Identifier"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_ONMNYsT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PljuT8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ONMNJcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_ONMNJsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_P0T8pcT2EeGIlOhhn7SrtQ" name="Involved Party Identifier">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_PZV3NcT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_PljuT8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_ONMNK8T2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONMNJsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONMNKsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_ONMNIsT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_ONMNI8T2EeGIlOhhn7SrtQ" sourceRef="_ONMNIcT2EeGIlOhhn7SrtQ"
+        targetRef="_ONDEEsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_ONMNKsT2EeGIlOhhn7SrtQ" name="Customer Identifier" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_ONMNOcT2EeGIlOhhn7SrtQ" name="Map from Retrieve Full Customer Details"
+        isForCompensation="false" calledElement="_KgRPdMT2EeGIlOhhn7SrtQ:_ONMNLcT2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_IhneZyiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ONMNPMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_ONMNPsT2EeGIlOhhn7SrtQ" name="Accessibility Profile"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW1sT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_ONMNP8T2EeGIlOhhn7SrtQ" name="Arrangements" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_ONMNQMT2EeGIlOhhn7SrtQ" name="Contact Preferences" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW2cT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_ONMNQcT2EeGIlOhhn7SrtQ" name="Customer" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHwMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_ONMNQsT2EeGIlOhhn7SrtQ" name="Involved Party" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_ONMNQ8T2EeGIlOhhn7SrtQ" name="Involved Party Relationship Details"
+            isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_G2K8Y8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_ONMNRMT2EeGIlOhhn7SrtQ" name="Related Involved Parties"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PljuUMT2EeGIlOhhn7SrtQ" name="Full Customer Details"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaH2MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_ONMNPcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_ONMNPsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_ONMNP8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_ONMNQMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_ONMNQcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_ONMNQsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_ONMNQ8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_ONMNRMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ONMNY8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PljuUMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_ONMNXsT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONMNXMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONMNQ8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_EU4JYkIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_EU4JYEIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONMNPsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_EU4JZUIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_EU4JY0IZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONMNP8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_EU4JaEIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_EU4JZkIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONMNQMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_EU4Ja0IZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_EU4JaUIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONMNQcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_EU4JbkIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_EU4JbEIZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONMNQsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_EU4JcUIZEeSedtiJ0SK07w">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_EU4Jb0IZEeSedtiJ0SK07w</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_ONMNRMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_P0T8psT2EeGIlOhhn7SrtQ" name="Full Customer Details">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_PljuUMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_PZV3N8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_ONMNOsT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_ONMNO8T2EeGIlOhhn7SrtQ" sourceRef="_ONDEEsT2EeGIlOhhn7SrtQ"
+        targetRef="_ONMNOcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_ONMNXMT2EeGIlOhhn7SrtQ" name="Involved Party Relationship Details"
+        isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_G2K8Y8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_ONMNZcT2EeGIlOhhn7SrtQ" name="XMap AR Details to IP Identifier"
+        isForCompensation="false" calledElement="_GXxJAMT2EeGIlOhhn7SrtQ:_IJwrTcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_ONMNZsT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_IhneaCiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_ONMNaMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_PljuUcT2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_PljuUsT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+            isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj41sT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_ONMNacT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_PljuUcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_ONMNasT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_PljuUsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_P0T8p8T2EeGIlOhhn7SrtQ" name="Arrangement Details">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_PZV3OMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_PljuUcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_P0T8qMT2EeGIlOhhn7SrtQ" name="Involved Party Identifier">
+        <bpmn2:sourceRef>_KgRPdMT2EeGIlOhhn7SrtQ:_PljuUsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_KgRPdMT2EeGIlOhhn7SrtQ:_PZV3NcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_ONMNa8T2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_Gaman8T2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:endEvent id="_PBf_e8T2EeGIlOhhn7SrtQ" name="End">
+      <bpmn2:messageEventDefinition id="_PBf_fMT2EeGIlOhhn7SrtQ" name="Analysis Result Acceptable">
+        <bpmn2:documentation id="_PBf_fcT2EeGIlOhhn7SrtQ">FULL NAME: Condition Violation Not Detected&#xD;
+&#xD;
+TRIGGER CATEGORY: Condition Driven&#xD;
+&#xD;
+DEFINITION: A business condition is not invoked when it is discovered that a pre-defined condition has not been violated.&#xD;
+&#xD;
+EXAMPLES OF USE: Product arrangements sold by the Financial Institution contain many conditions which are monitored. If those conditions are not violated by the customer, the Financial Institution may decide not to invoke review procedures.&#xD;
+&#xD;
+For example, if a customer makes loan repayments on time, the Financial Institution will probably not conduct a full review of the loan.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_PBf_fsT2EeGIlOhhn7SrtQ" name="End:1">
+      <bpmn2:messageEventDefinition id="_PBf_f8T2EeGIlOhhn7SrtQ" name="Analysis Result Not Acceptable">
+        <bpmn2:documentation id="_PBf_gMT2EeGIlOhhn7SrtQ">FULL NAME: Condition Violation Detected&#xD;
+&#xD;
+TRIGGER CATEGORY: Condition driven&#xD;
+&#xD;
+DEFINITION: A business condition is invoked when it is discovered that a pre-defined condition has been violated.&#xD;
+&#xD;
+EXAMPLES OF USE: Product arrangements sold by the Financial Institution contain many conditions. If those conditions are violated by the customer, the Financial Institution must decide whether to invoke penalty procedures.&#xD;
+&#xD;
+For example, if a customer fails to make loan repayments on time, the Financial Institution will probably call in the full amount of the loan.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_PBf_gcT2EeGIlOhhn7SrtQ" name="End:2">
+      <bpmn2:messageEventDefinition id="_PBf_gsT2EeGIlOhhn7SrtQ" name="Analysis Result Not Acceptable">
+        <bpmn2:documentation id="_PBf_g8T2EeGIlOhhn7SrtQ">FULL NAME: Condition Violation Detected&#xD;
+&#xD;
+TRIGGER CATEGORY: Condition driven&#xD;
+&#xD;
+DEFINITION: A business condition is invoked when it is discovered that a pre-defined condition has been violated.&#xD;
+&#xD;
+EXAMPLES OF USE: Product arrangements sold by the Financial Institution contain many conditions. If those conditions are violated by the customer, the Financial Institution must decide whether to invoke penalty procedures.&#xD;
+&#xD;
+For example, if a customer fails to make loan repayments on time, the Financial Institution will probably call in the full amount of the loan.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="_PBf_hMT2EeGIlOhhn7SrtQ" name="Start">
+      <bpmn2:messageEventDefinition id="_0KQyRChgEeOjHu3a6otf0Q" name="Specialized Product Selected">
+        <bpmn2:documentation id="_0KQyRShgEeOjHu3a6otf0Q">FULL NAME: Selection Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A selection has been made from available alternatives.&#xD;
+&#xD;
+EXAMPLES OF USE: Mary Jones can be formally offered the post of Marketing Director as she has been selected from a short list of candidates.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:exclusiveGateway id="_PDu0H8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:exclusiveGateway id="_PDu0IMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PHddPsT2EeGIlOhhn7SrtQ" sourceRef="_ONDDyMT2EeGIlOhhn7SrtQ"
+        targetRef="_PDu0H8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PHddP8T2EeGIlOhhn7SrtQ" sourceRef="_ONDEBMT2EeGIlOhhn7SrtQ"
+        targetRef="_PDu0IMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PHddQMT2EeGIlOhhn7SrtQ" name="Financial Experience Analyzed"
+        sourceRef="_ONDD1sT2EeGIlOhhn7SrtQ" targetRef="_ONDD6MT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PHddQcT2EeGIlOhhn7SrtQ">FULL NAME: Information Analyzed&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the detailed examination of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has examined information showing two different mailing addresses with the same name to ascertain whether they refer to one or two customers. The Financial Institution has analyzed the sales performance of a recently launched loan product to determine the relative penetration across market sectors.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Administer and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PHddQsT2EeGIlOhhn7SrtQ" name="Analysis Result Acceptable"
+        sourceRef="_PDu0IMT2EeGIlOhhn7SrtQ" targetRef="_ONDDrMT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PHddQ8T2EeGIlOhhn7SrtQ">FULL NAME: Condition Violation Not Detected&#xD;
+&#xD;
+TRIGGER CATEGORY: Condition Driven&#xD;
+&#xD;
+DEFINITION: A business condition is not invoked when it is discovered that a pre-defined condition has not been violated.&#xD;
+&#xD;
+EXAMPLES OF USE: Product arrangements sold by the Financial Institution contain many conditions which are monitored. If those conditions are not violated by the customer, the Financial Institution may decide not to invoke review procedures.&#xD;
+&#xD;
+For example, if a customer makes loan repayments on time, the Financial Institution will probably not conduct a full review of the loan.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PHddRMT2EeGIlOhhn7SrtQ" name="Analysis Result Acceptable"
+        sourceRef="_PDu0H8T2EeGIlOhhn7SrtQ" targetRef="_PBf_e8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PHddRcT2EeGIlOhhn7SrtQ" name="Analysis Result Not Acceptable"
+        sourceRef="_PDu0IMT2EeGIlOhhn7SrtQ" targetRef="_PBf_fsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PHddRsT2EeGIlOhhn7SrtQ" name="Analysis Result Not Acceptable"
+        sourceRef="_PDu0H8T2EeGIlOhhn7SrtQ" targetRef="_PBf_gcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PHddR8T2EeGIlOhhn7SrtQ" name="Specialized Product Selected"
+        sourceRef="_PBf_hMT2EeGIlOhhn7SrtQ" targetRef="_ONMNZcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PHddSMT2EeGIlOhhn7SrtQ" name="Full Customer Details Retrieved"
+        sourceRef="_ONMNOcT2EeGIlOhhn7SrtQ" targetRef="_ONDD1sT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PHddScT2EeGIlOhhn7SrtQ">FULL NAME: Information Provided&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the provision of some form of information for use.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has retrieved information on deposit products and has made it available for use by a clerk following a customer enquiry. The Financial Institution has completed the specification of a new foreign exchange service, and the details have been made available for assessment.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Manipulate, Activate and Prepare.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PHddSsT2EeGIlOhhn7SrtQ" name="Data Mapped" sourceRef="_ONMNZcT2EeGIlOhhn7SrtQ"
+        targetRef="_ONMNIcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PHddS8T2EeGIlOhhn7SrtQ">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_PZV3NMT2EeGIlOhhn7SrtQ" name="Full Customer Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaH2MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_PZV3NcT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj41sT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_PZV3NsT2EeGIlOhhn7SrtQ" name="Full Customer Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaH2MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_PZV3N8T2EeGIlOhhn7SrtQ" name="Full Customer Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaH2MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:startEvent id="_0KQyRihgEeOjHu3a6otf0Q" name="Start:1"/>
+    <bpmn2:sequenceFlow id="_0NmaKShgEeOjHu3a6otf0Q" name="Invoked By Business Process"
+        sourceRef="_0KQyRihgEeOjHu3a6otf0Q" targetRef="_ONMNZcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_ESWZ0EIZEeSedtiJ0SK07w" name="Financial Market Offering Instruction"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_ESWZ00IZEeSedtiJ0SK07w" name="Product Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2zv8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_ESWZ1kIZEeSedtiJ0SK07w" name="Financial Market Offering Instruction"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_ESWZ2UIZEeSedtiJ0SK07w" name="Product Details" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2zv8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_EU4JYEIZEeSedtiJ0SK07w" name="Accessibility Profile" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW1sT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_EU4JY0IZEeSedtiJ0SK07w" name="Arrangements" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_EU4JZkIZEeSedtiJ0SK07w" name="Contact Preferences" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW2cT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_EU4JaUIZEeSedtiJ0SK07w" name="Customer" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHwMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_EU4JbEIZEeSedtiJ0SK07w" name="Involved Party" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_EU4Jb0IZEeSedtiJ0SK07w" name="Related Involved Parties"
+        isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+  </bpmn2:process>
+  <bpmn2:globalTask id="_ONDDosT2EeGIlOhhn7SrtQ" name="Map to Verify Arrangement Suitability">
+    <bpmn2:ioSpecification id="_ONDDo8T2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_ONDDpsT2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_ONDDqMT2EeGIlOhhn7SrtQ" name="Full Customer Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaH2MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_ONDDqcT2EeGIlOhhn7SrtQ" name="Financial Market Offering Instruction"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_ONDDqsT2EeGIlOhhn7SrtQ" name="Product Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2zv8T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_ONDDq8T2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GbM3lMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_ONDDpMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_ONDDpsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_ONDDqMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_ONDDpcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_ONDDqcT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_ONDDqsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_ONDDq8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_ONDDwsT2EeGIlOhhn7SrtQ" name="Map from Verify Arrangement Suitability">
+    <bpmn2:ioSpecification id="_ONDDw8T2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_ONDDxsT2EeGIlOhhn7SrtQ" name="Is Suitable" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GdIxMMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_ONDDx8T2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_ONDDxMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_ONDDxsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_ONDDxcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_ONDDx8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_ONDD38T2EeGIlOhhn7SrtQ" name="Map to Verify Arrangement Appropriateness">
+    <bpmn2:ioSpecification id="_ONDD4MT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_ONDD48T2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_ONDD5MT2EeGIlOhhn7SrtQ" name="Full Customer Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaH2MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_ONDD5cT2EeGIlOhhn7SrtQ" name="Financial Market Offering Instruction"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW08T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_ONDD5sT2EeGIlOhhn7SrtQ" name="Product Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2zv8T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_ONDD58T2EeGIlOhhn7SrtQ" name="Arrangement Details" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GbM3lMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_ONDD4cT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_ONDD48T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_ONDD5MT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_ONDD4sT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_ONDD5cT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_ONDD5sT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_ONDD58T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_ONDD_sT2EeGIlOhhn7SrtQ" name="Map from Verify Arrangement Appropriateness">
+    <bpmn2:ioSpecification id="_ONDD_8T2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_ONDEAsT2EeGIlOhhn7SrtQ" name="Is Appropriate" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GdIxMMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_ONDEA8T2EeGIlOhhn7SrtQ" name="Full Customer Details"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaH2MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_ONDEAMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_ONDEAsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_ONDEAcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_ONDEA8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_ONDEFcT2EeGIlOhhn7SrtQ" name="Map to Retrieve Full Customer Details">
+    <bpmn2:ioSpecification id="_ONDEFsT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_ONDEGcT2EeGIlOhhn7SrtQ" name="Involved Party Identifier"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj41sT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_ONMNIMT2EeGIlOhhn7SrtQ" name="Customer Identifier" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_ONDEF8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_ONDEGcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_ONDEGMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_ONMNIMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_ONMNLcT2EeGIlOhhn7SrtQ" name="Map from Retrieve Full Customer Details">
+    <bpmn2:ioSpecification id="_ONMNLsT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_ONMNMcT2EeGIlOhhn7SrtQ" name="Accessibility Profile" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW1sT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_ONMNMsT2EeGIlOhhn7SrtQ" name="Arrangements" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZHM1MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_ONMNM8T2EeGIlOhhn7SrtQ" name="Contact Preferences" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZQW2cT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_ONMNNMT2EeGIlOhhn7SrtQ" name="Customer" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaHwMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_ONMNNcT2EeGIlOhhn7SrtQ" name="Involved Party" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_ONMNNsT2EeGIlOhhn7SrtQ" name="Involved Party Relationship Details"
+          isCollection="false" itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_G2K8Y8T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataInput id="_ONMNN8T2EeGIlOhhn7SrtQ" name="Related Involved Parties"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZj408T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_ONMNOMT2EeGIlOhhn7SrtQ" name="Full Customer Details"
+          isCollection="false" itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZaH2MT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_ONMNL8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_ONMNMcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_ONMNMsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_ONMNM8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_ONMNNMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_ONMNNcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_ONMNNsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        <bpmn2:dataInputRefs>_ONMNN8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_ONMNMMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_ONMNOMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+</bpmn2:definitions>

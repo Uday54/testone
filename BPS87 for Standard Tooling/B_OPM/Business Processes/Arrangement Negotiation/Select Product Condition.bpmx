@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.bpmn2.model" version="1.90.1"><feature description="" name="com.ibm.xtools.bpmn2.feature" url="" version="1.90.1"/></signature>?>
+<bpmn2:definitions xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:_GWk2MMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"
+    xmlns:_GXn_EMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"
+    xmlns:_GXxJAMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GXxJAMT2EeGIlOhhn7SrtQ"
+    xmlns:_GmrH68T2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_GmrH68T2EeGIlOhhn7SrtQ"
+    xmlns:_I13jJMT2EeGIlOhhn7SrtQ="http://www.ibm.com/xtools/bpmn/2.0/_I13jJMT2EeGIlOhhn7SrtQ"
+    xmlns:bpmn2="http://www.ibm.com/xtools/bpmn/2.0" xmlns:element="http://www.ibm.com/xmlns/calledElement"
+    xmlns:extensions="http://jazz.net/xmlns/xtools/BPMNExtensions/v0.1" xmlns:rmpnotation="http://www.ibm.com/xtools/1.0.0/rmpnotation"
+    xmlns:tagging="http://www.ibm.com/xmlns/tagging" id="_I13jJMT2EeGIlOhhn7SrtQ" name="Select Product Condition" expressionLanguage="http://www.w3.org/1999/XPath"
+    targetNamespace="http://www.ibm.com/xtools/bpmn/2.0/_I13jJMT2EeGIlOhhn7SrtQ" typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <extensions:diagram xsi:type="rmpnotation:RMPDiagram" xmi:id="_I13jJ8T2EeGIlOhhn7SrtQ"
+      visible="true" type="Bpmn2" element="_I13jJsT2EeGIlOhhn7SrtQ" name="Select Product Condition Diagram"
+      measurementUnit="Himetric" pageX="0" pageY="0" pageWidth="100" pageHeight="100"
+      description="" graphLayout="HorizontalOrthogonalHierarchical" linkLayout="None"
+      labelLayout="None"/>
+  <bpmn2:import xmi:id="_N1WVWsT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Definitions.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GXn_EMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_N7wfFMT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Service%20Processes/Product%20Development/IProductPortfolioMaintenance/Retrieve%20Product%20Conditions%20Service.bpmx"
+      namespace="http://www.ibm.com/xtools/bpmn/2.0/_GmrH68T2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_N7wfGsT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Business%20Terms.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GWk2MMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:import xmi:id="_N7wfSsT2EeGIlOhhn7SrtQ" importType="http://www.ibm.com/xtools/bpmn/2.0"
+      location="../../Global%20Items/Global%20Maps.bpmx" namespace="http://www.ibm.com/xtools/bpmn/2.0/_GXxJAMT2EeGIlOhhn7SrtQ"/>
+  <bpmn2:extension xmi:id="_I13jJcT2EeGIlOhhn7SrtQ" definition="extensions:Extensions"
+      mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_Zi210ChgEeOjHu3a6otf0Q" definition="tagging:tags" mustUnderstand="false"/>
+  <bpmn2:extension xmi:id="_IQJT4iiMEeO1PvbDA98QvA" definition="element:calledElementType"
+      mustUnderstand="false"/>
+  <bpmn2:process id="_I13jJsT2EeGIlOhhn7SrtQ" name="Select Product Condition">
+    <bpmn2:documentation id="_I2BUIMT2EeGIlOhhn7SrtQ">SHORT NAME: Slct PD CD&#xD;
+&#xD;
+B LEVEL ROOT: Select Condition&#xD;
+&#xD;
+DEFINITION: To make a choice between a number of available product condition options.&#xD;
+&#xD;
+DESCRIPTION: Select the conditions associated with a particular product. Conditions control the details of a product and its behavior such as which customers are eligible for this product (depending on their age or other characteristics), the various limits a product can have (such as the maximum amount of a loan).&#xD;
+&#xD;
+Select specific conditions to associate with the product(s) to be proposed to the customer. For example the financial institution could tailor the interest rate, term, amount, security requirement or down payment to reflect the nature of the customer's past dealings with the financial institution.&#xD;
+&#xD;
+Select which product facilities will be associated with a previously defined 'core' product and thus enhance and complete its features. Product facilities are products or services that can only be sold in conjunction with another single product or package product. Typical product facilities are statement, checkbook, passbook, card access service, and so on. Where the 'core' product is based on a product template, the product facilities available for selection would be predefined and restricted to those associated with the product template. A product is made of several components grouped around a 'core' product definition. &#xD;
+&#xD;
+Select the product distribution method(s) or channel(s) that are best suited to the delivery of the product. Product arrangements could be sold, for example, through the branch network, over the telephone, by direct mail solicitation with tear-off reply card or newspaper advertisement with a reply coupon to cut out and send to a central product sales operation. Consider the most convenient and easily accessible channel for the customer, and the most cost-effective channel for the financial institution.&#xD;
+&#xD;
+Select the currency or currencies associated with a particular product. Decide in which currency or currencies a particular product will be made available. Arrangements based on this product can only be created in one of the currencies in which the product is available. For example, the high interest savings product is available in US Dollar, Euro and Sterling, but not in any other currency. Any high interest savings arrangement will have to be set up in one of those three currencies.&#xD;
+&#xD;
+For alignment with Basel II requirements, it is important to avoid operational risk in terms of recommending products that fit client objectives. This activity must avoid consequential losses arising from an unintentional or negligent failure to meet a professional obligation specific to clients (including fiduciary and suitability requirements), or from the nature or design of a product.&#xD;
+&#xD;
+FLOW DIAGRAM: AS Chart for Select Product Conditions</bpmn2:documentation>
+    <bpmn2:extensionElements xmi:id="_Zi2OwChgEeOjHu3a6otf0Q">
+      <tagging:tag xmi:id="_IQD0UCiMEeO1PvbDA98QvA" id="_Zi2OwShgEeOjHu3a6otf0Q">Arrangement Negotiation</tagging:tag>
+      <tagging:tag xmi:id="_IQD0USiMEeO1PvbDA98QvA" id="_Zi2OwihgEeOjHu3a6otf0Q">ValueChain_Savings_Offer</tagging:tag>
+    </bpmn2:extensionElements>
+    <bpmn2:ioSpecification id="_I2BUIcT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_PW9RyMT2EeGIlOhhn7SrtQ" name="Product Details" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2zv8T2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_PXGbgMT2EeGIlOhhn7SrtQ" name="Product Conditions" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2zvMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_I2BUIsT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_PW9RyMT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_I2BUI8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_PXGbgMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+    <bpmn2:lane id="_N1WVWcT2EeGIlOhhn7SrtQ" name="Enterprise Process" partitionElementRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_zS0M5yhgEeOjHu3a6otf0Q">The default role for all enterprise process activities not explicitly assigned to other roles.</bpmn2:documentation>
+      <bpmn2:flowElementRef>_N7wfEsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_N7wfHcT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_N7wfH8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_N7wfKMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_N7wfK8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_N7wfNMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_N7wfNsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_N7wfPMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_N7wfQsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_N7wfSMT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PBDTh8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PBDTisT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PDlCv8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PF9o38T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PF9o4MT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PF9o4cT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PF9o48T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PF9o5cT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PW9RxsT2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_PW9Rx8T2EeGIlOhhn7SrtQ</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0IX74ChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0KQLNShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0KQLOChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0KQLOyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0NmaIChgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0NmaIShgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0NmaIihgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+      <bpmn2:flowElementRef>_0NmaIyhgEeOjHu3a6otf0Q</bpmn2:flowElementRef>
+    </bpmn2:lane>
+    <bpmn2:callActivity id="_N7wfEsT2EeGIlOhhn7SrtQ" name="Retrieve Product Conditions"
+        isForCompensation="false" calledElement="_GmrH68T2EeGIlOhhn7SrtQ:_GmrH7cT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_N7wfE8T2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_IQJT4SiMEeO1PvbDA98QvA">
+        <element:type>Process</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_N7wfJMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_N7wfJsT2EeGIlOhhn7SrtQ" name="Product Identifier" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataInput id="_N7wfJ8T2EeGIlOhhn7SrtQ" name="Channel Identifier" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_N7wfO8T2EeGIlOhhn7SrtQ" name="Conditions" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GeLTHcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_N7wfJcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_N7wfJsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_N7wfJ8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_N7wfOsT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_N7wfO8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_N7wfKsT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_I13jJMT2EeGIlOhhn7SrtQ:_N7wfKMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_I13jJMT2EeGIlOhhn7SrtQ:_N7wfJsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_N7wfLcT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_I13jJMT2EeGIlOhhn7SrtQ:_N7wfK8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_I13jJMT2EeGIlOhhn7SrtQ:_N7wfJ8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_N7wfPcT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_I13jJMT2EeGIlOhhn7SrtQ:_N7wfO8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_I13jJMT2EeGIlOhhn7SrtQ:_N7wfPMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_N7wfQcT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_N7wfHcT2EeGIlOhhn7SrtQ" name="Map to Retrieve Product Conditions"
+        isForCompensation="false" calledElement="_I13jJMT2EeGIlOhhn7SrtQ:_N7wfFcT2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_IQJT4yiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_N7wfIMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_Pg8ULcT2EeGIlOhhn7SrtQ" name="Product Identifier" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2zwsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_N7wfIsT2EeGIlOhhn7SrtQ" name="Product Identifier" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_N7wfI8T2EeGIlOhhn7SrtQ" name="Channel Identifier" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_N7wfP8T2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_Pg8ULcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_N7wfIcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_N7wfIsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_N7wfI8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_PzHpX8T2EeGIlOhhn7SrtQ" name="Product Identifier">
+        <bpmn2:sourceRef>_I13jJMT2EeGIlOhhn7SrtQ:_PW9Rx8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_I13jJMT2EeGIlOhhn7SrtQ:_Pg8ULcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_N7wfKcT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_I13jJMT2EeGIlOhhn7SrtQ:_N7wfIsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_I13jJMT2EeGIlOhhn7SrtQ:_N7wfKMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_N7wfLMT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_I13jJMT2EeGIlOhhn7SrtQ:_N7wfI8T2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_I13jJMT2EeGIlOhhn7SrtQ:_N7wfK8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_N7wfHsT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_N7wfH8T2EeGIlOhhn7SrtQ" sourceRef="_N7wfHcT2EeGIlOhhn7SrtQ"
+        targetRef="_N7wfEsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_N7wfKMT2EeGIlOhhn7SrtQ" name="Product Identifier" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_N7wfK8T2EeGIlOhhn7SrtQ" name="Channel Identifier" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_N7wfNMT2EeGIlOhhn7SrtQ" name="Map from Retrieve Product Conditions"
+        isForCompensation="false" calledElement="_I13jJMT2EeGIlOhhn7SrtQ:_N7wfLsT2EeGIlOhhn7SrtQ">
+      <bpmn2:extensionElements xmi:id="_IQJT5CiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_N7wfN8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_N7wfOcT2EeGIlOhhn7SrtQ" name="Conditions" isCollection="false"
+            itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GeLTHcT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_Pg8ULsT2EeGIlOhhn7SrtQ" name="Product Conditions" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2zvMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_N7wfOMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_N7wfOcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_N7wfQMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_Pg8ULsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_N7wfPsT2EeGIlOhhn7SrtQ">
+        <bpmn2:sourceRef>_I13jJMT2EeGIlOhhn7SrtQ:_N7wfPMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_I13jJMT2EeGIlOhhn7SrtQ:_N7wfOcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_PzHpYMT2EeGIlOhhn7SrtQ" name="Product Conditions">
+        <bpmn2:sourceRef>_I13jJMT2EeGIlOhhn7SrtQ:_Pg8ULsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_I13jJMT2EeGIlOhhn7SrtQ:_PW9RxsT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_N7wfNcT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="_N7wfNsT2EeGIlOhhn7SrtQ" sourceRef="_N7wfEsT2EeGIlOhhn7SrtQ"
+        targetRef="_N7wfNMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_N7wfPMT2EeGIlOhhn7SrtQ" name="Conditions" isCollection="false"
+        itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GeLTHcT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:callActivity id="_N7wfQsT2EeGIlOhhn7SrtQ" name="Select Condition" isForCompensation="false"
+        calledElement="_GXn_EMT2EeGIlOhhn7SrtQ:_Gm0R48T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_N7wfQ8T2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_IQJT5SiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_N7wfRMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_Pg8UL8T2EeGIlOhhn7SrtQ" name="Product Conditions" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2zvMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_Pg8UMMT2EeGIlOhhn7SrtQ" name="Product Conditions" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2zvMT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_N7wfRcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_Pg8UL8T2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_N7wfRsT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_Pg8UMMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_PzHpYcT2EeGIlOhhn7SrtQ" name="Product Conditions">
+        <bpmn2:sourceRef>_I13jJMT2EeGIlOhhn7SrtQ:_PW9RxsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_I13jJMT2EeGIlOhhn7SrtQ:_Pg8UL8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_PzHpYsT2EeGIlOhhn7SrtQ" name="Product Conditions">
+        <bpmn2:sourceRef>_I13jJMT2EeGIlOhhn7SrtQ:_Pg8UMMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_I13jJMT2EeGIlOhhn7SrtQ:_PXGbgMT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_N7wfR8T2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_N7wfSMT2EeGIlOhhn7SrtQ" name="XMap Product Details to PD Identifier"
+        isForCompensation="false" calledElement="_GXxJAMT2EeGIlOhhn7SrtQ:_IJnhf8T2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_N7wfScT2EeGIlOhhn7SrtQ">  </bpmn2:documentation>
+      <bpmn2:extensionElements xmi:id="_IQJT5iiMEeO1PvbDA98QvA">
+        <element:type>GlobalTask</element:type>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_N7wfS8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInput id="_Pg8UMcT2EeGIlOhhn7SrtQ" name="Product Details" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2zv8T2EeGIlOhhn7SrtQ"/>
+        <bpmn2:dataOutput id="_Pg8UMsT2EeGIlOhhn7SrtQ" name="Product Identifier" isCollection="false"
+            itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2zwsT2EeGIlOhhn7SrtQ"/>
+        <bpmn2:inputSet id="_N7wfTMT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataInputRefs>_Pg8UMcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_N7wfTcT2EeGIlOhhn7SrtQ">
+          <bpmn2:dataOutputRefs>_Pg8UMsT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_PzHpY8T2EeGIlOhhn7SrtQ" name="Product Details">
+        <bpmn2:sourceRef>_I13jJMT2EeGIlOhhn7SrtQ:_PW9RyMT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_I13jJMT2EeGIlOhhn7SrtQ:_Pg8UMcT2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_PzHpZMT2EeGIlOhhn7SrtQ" name="Product Identifier">
+        <bpmn2:sourceRef>_I13jJMT2EeGIlOhhn7SrtQ:_Pg8UMsT2EeGIlOhhn7SrtQ</bpmn2:sourceRef>
+        <bpmn2:targetRef>_I13jJMT2EeGIlOhhn7SrtQ:_PW9Rx8T2EeGIlOhhn7SrtQ</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:resourceRole id="_N7wfTsT2EeGIlOhhn7SrtQ" name="ResourceRole1">
+        <bpmn2:resourceRef>_GXn_EMT2EeGIlOhhn7SrtQ:_GamancT2EeGIlOhhn7SrtQ</bpmn2:resourceRef>
+      </bpmn2:resourceRole>
+    </bpmn2:callActivity>
+    <bpmn2:endEvent id="_PBDTh8T2EeGIlOhhn7SrtQ" name="End">
+      <bpmn2:messageEventDefinition id="_PBDTiMT2EeGIlOhhn7SrtQ" name="Product Condition Not Selected">
+        <bpmn2:documentation id="_PBDTicT2EeGIlOhhn7SrtQ">FULL NAME: Selection Not Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A selection has not been made from available alternatives.&#xD;
+&#xD;
+EXAMPLES OF USE: Mary Jones can not be formally offered the post of Marketing Director as she has not been selected. An Internet customer transaction is aborted because a selection of available choices has not been made within the required time-out period.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_PBDTisT2EeGIlOhhn7SrtQ" name="End:1">
+      <bpmn2:messageEventDefinition id="_PBDTi8T2EeGIlOhhn7SrtQ" name="Product Condition Selected">
+        <bpmn2:documentation id="_PBDTjMT2EeGIlOhhn7SrtQ">FULL NAME: Selection Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A selection has been made from available alternatives.&#xD;
+&#xD;
+EXAMPLES OF USE: Mary Jones can be formally offered the post of Marketing Director as she has been selected from a short list of candidates.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:endEvent>
+    <bpmn2:exclusiveGateway id="_PDlCv8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PF9o38T2EeGIlOhhn7SrtQ" sourceRef="_N7wfQsT2EeGIlOhhn7SrtQ"
+        targetRef="_PDlCv8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PF9o4MT2EeGIlOhhn7SrtQ" name="Product Condition Not Selected"
+        sourceRef="_PDlCv8T2EeGIlOhhn7SrtQ" targetRef="_PBDTh8T2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PF9o4cT2EeGIlOhhn7SrtQ" name="Product Conditions Retrieved"
+        sourceRef="_N7wfNMT2EeGIlOhhn7SrtQ" targetRef="_N7wfQsT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PF9o4sT2EeGIlOhhn7SrtQ">FULL NAME: Condition Invoked&#xD;
+&#xD;
+TRIGGER CATEGORY: Condition Driven&#xD;
+&#xD;
+DEFINITION: Something has occurred which causes a pre-defined business rule or condition to come into operation.&#xD;
+&#xD;
+EXAMPLES OF USE: This Trigger Type is used during the early stages or at high levels of modelling to denote that a particular activity or set of activities is condition driven.&#xD;
+&#xD;
+This Trigger Type is used when the precise nature of the condition is not yet known, or where multiple condition types are concerned.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_PF9o48T2EeGIlOhhn7SrtQ" name="Product Condition Selected"
+        sourceRef="_PDlCv8T2EeGIlOhhn7SrtQ" targetRef="_PBDTisT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_PF9o5cT2EeGIlOhhn7SrtQ" name="Data Mapped" sourceRef="_N7wfSMT2EeGIlOhhn7SrtQ"
+        targetRef="_N7wfHcT2EeGIlOhhn7SrtQ">
+      <bpmn2:documentation id="_PF9o5sT2EeGIlOhhn7SrtQ">FULL NAME: Information Recorded&#xD;
+&#xD;
+TRIGGER CATEGORY: Incident Driven&#xD;
+&#xD;
+DEFINITION: An expected occurrence of interest to the business has resulted in the formal noting of some form of information.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution has logged the receipt of a piece of customer correspondence, together with its arrival date and time, as part of its communication handling and tracking procedure.&#xD;
+&#xD;
+N.B. This Trigger Type covers the outcome of Activities using verbs such as Record, Document, Register, and Manipulate.</bpmn2:documentation>
+    </bpmn2:sequenceFlow>
+    <bpmn2:dataObject id="_PW9RxsT2EeGIlOhhn7SrtQ" name="Product Conditions" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2zvMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:dataObject id="_PW9Rx8T2EeGIlOhhn7SrtQ" name="Product Identifier" isCollection="false"
+        itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2zwsT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:exclusiveGateway id="_0IX74ChgEeOjHu3a6otf0Q" name="ExclusiveGateway1"/>
+    <bpmn2:startEvent id="_0KQLNShgEeOjHu3a6otf0Q" name="Start:1">
+      <bpmn2:messageEventDefinition id="_0KQLNihgEeOjHu3a6otf0Q" name="Product Match Found">
+        <bpmn2:documentation id="_0KQLNyhgEeOjHu3a6otf0Q">FULL NAME: Sale Opportunity Identified&#xD;
+&#xD;
+TRIGGER CATEGORY: Opportunity Driven&#xD;
+&#xD;
+DEFINITION: An opportunity has been identified for a new sale of one or more of the Financial Institution's products.&#xD;
+&#xD;
+EXAMPLES OF USE: The Financial Institution matches the characteristics of a new consumer loan product against individual customer profiles to produce a list of prospects for whom a sale opportunity has been identified.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:startEvent id="_0KQLOChgEeOjHu3a6otf0Q" name="Start:2">
+      <bpmn2:messageEventDefinition id="_0KQLOShgEeOjHu3a6otf0Q" name="Product Selected">
+        <bpmn2:documentation id="_0KQLOihgEeOjHu3a6otf0Q">FULL NAME: Selection Made&#xD;
+&#xD;
+TRIGGER CATEGORY: Decision Driven&#xD;
+&#xD;
+DEFINITION: A selection has been made from available alternatives.&#xD;
+&#xD;
+EXAMPLES OF USE: Mary Jones can be formally offered the post of Marketing Director as she has been selected from a short list of candidates.</bpmn2:documentation>
+      </bpmn2:messageEventDefinition>
+    </bpmn2:startEvent>
+    <bpmn2:startEvent id="_0KQLOyhgEeOjHu3a6otf0Q" name="Start:3"/>
+    <bpmn2:sequenceFlow id="_0NmaIChgEeOjHu3a6otf0Q" sourceRef="_0IX74ChgEeOjHu3a6otf0Q"
+        targetRef="_N7wfSMT2EeGIlOhhn7SrtQ"/>
+    <bpmn2:sequenceFlow id="_0NmaIShgEeOjHu3a6otf0Q" name="Product Match Found" sourceRef="_0KQLNShgEeOjHu3a6otf0Q"
+        targetRef="_0IX74ChgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0NmaIihgEeOjHu3a6otf0Q" name="Product Selected" sourceRef="_0KQLOChgEeOjHu3a6otf0Q"
+        targetRef="_0IX74ChgEeOjHu3a6otf0Q"/>
+    <bpmn2:sequenceFlow id="_0NmaIyhgEeOjHu3a6otf0Q" name="Invoked By Business Process"
+        sourceRef="_0KQLOyhgEeOjHu3a6otf0Q" targetRef="_N7wfSMT2EeGIlOhhn7SrtQ"/>
+  </bpmn2:process>
+  <bpmn2:globalTask id="_N7wfFcT2EeGIlOhhn7SrtQ" name="Map to Retrieve Product Conditions">
+    <bpmn2:ioSpecification id="_N7wfFsT2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_N7wfGcT2EeGIlOhhn7SrtQ" name="Product Identifier" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2zwsT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_N7wfG8T2EeGIlOhhn7SrtQ" name="Product Identifier" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_N7wfHMT2EeGIlOhhn7SrtQ" name="Channel Identifier" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_Gc_ATsT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_N7wfF8T2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_N7wfGcT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_N7wfGMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_N7wfG8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+        <bpmn2:dataOutputRefs>_N7wfHMT2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+  <bpmn2:globalTask id="_N7wfLsT2EeGIlOhhn7SrtQ" name="Map from Retrieve Product Conditions">
+    <bpmn2:ioSpecification id="_N7wfL8T2EeGIlOhhn7SrtQ">
+      <bpmn2:dataInput id="_N7wfMsT2EeGIlOhhn7SrtQ" name="Conditions" isCollection="false"
+          itemSubjectRef="_GXn_EMT2EeGIlOhhn7SrtQ:_GeLTHcT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:dataOutput id="_N7wfM8T2EeGIlOhhn7SrtQ" name="Product Conditions" isCollection="false"
+          itemSubjectRef="_GWk2MMT2EeGIlOhhn7SrtQ:_GZ2zvMT2EeGIlOhhn7SrtQ"/>
+      <bpmn2:inputSet id="_N7wfMMT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataInputRefs>_N7wfMsT2EeGIlOhhn7SrtQ</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:outputSet id="_N7wfMcT2EeGIlOhhn7SrtQ">
+        <bpmn2:dataOutputRefs>_N7wfM8T2EeGIlOhhn7SrtQ</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+    </bpmn2:ioSpecification>
+  </bpmn2:globalTask>
+</bpmn2:definitions>
